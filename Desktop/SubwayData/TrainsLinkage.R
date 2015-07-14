@@ -49,21 +49,10 @@ trains_info$counter=1
 trains_info <- trains_info %>% group_by(TrainStop) %>% mutate(cdf = cumsum(counter))
 trains_info <- filter(trains_info,cdf==1)
 
-
 #Clean the duration so that we get rid of the weird durations (-7k etc)
-trains_unique <- filter(trains_info, Stop=="01")
-trains_info2<- filter(trains_info,Stop!="01")
-trains_unique$Duration = 0
+trains_info[trains_info$Stop == "01",]$Duration=0
 
-#trains_info2 <- merge(trains_info2,trains_unique)
+#Parse so we only have the information we need aka the Trains/Stops , Station Name , and the Duration
+trains_info<-data.frame(trains_info[,c(5,2,4)])
 
-#trains_info<- rbind(trains_info2,trains_unique)
 
-#trains_info2<-trains_info
-#typeof(trains_info2$TrainStop)
-#trains_info2$TrainStop <- sapply(trains_info2$TrainStop, as.factor)
-#trains_info2$TrainStop <- sapply(trains_info2$TrainStop, as.integer)
-#trains_info2 <- trains_info2 %>% group_by(Train) %>% arrange(TrainStop)
-#View(trains_info2)
-#Filtering our data to project only certain columns 
-#trains_info<- data.frame(trains_info[,c(5,2,4)])
