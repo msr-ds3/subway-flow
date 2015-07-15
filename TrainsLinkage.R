@@ -60,7 +60,7 @@ trains_info <- mutate(trains_info, TrainStop2 = lag(TrainStop))
 trains_info <- mutate(trains_info, Station2= lag(Station))
 
 #Get rid of NA
-trains_info[trains_info$Stop == "01",]$Station2=NA
+trains_info[trains_info$Stop == "01",]g$Station2=NA
 trains_info<- trains_info[complete.cases(trains_info),]
 
 #Change the names of the columns and add a column with the train being tracked
@@ -71,4 +71,4 @@ names(trains_info) <- c("Train","Train_Stop","Train_Stop2","From_Station","To_St
 trains_info$Travel_Time <- as.numeric(trains_info$Travel_Time)
 
 #Export as R file - change the dir/file name per needs
-write.table(trains_info, "/home/ewahmed/subway-flow/TrainTravel.csv", sep=",") 
+write.csv(trains_info, "/home/ewahmed/subway-flow/TrainTravel.csv")
