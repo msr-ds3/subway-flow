@@ -1,0 +1,33 @@
+To get git to track a file, you write:
+
+git add foo.sh
+
+Now it's "tracked."
+
+If you do git status you can check the difference. When you're ready to put it in the repo, you can save the current version:
+
+git commit
+
+or 
+
+git commit foo.sh -m "New foo does this thing."
+
+NOT
+
+"Committed."
+
+git commit -am "asdlfkj;we"
+
+This commits all the files.
+
+Then when you push, it goes to the repo. 
+
+Everyday, just:
+
+pull  --- commit --- push
+      ^(Maybe add, for new stuff).
+
+If you try to push without pulling, git will complain on you.
+
+If you edited the same line, you'll have a merge conflict. It'll be sad.
+
