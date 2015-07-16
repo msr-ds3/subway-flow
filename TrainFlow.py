@@ -1,12 +1,13 @@
 import sys
 import fileinput
 import networkx as nx
+import matplotlib.pyplot as plt
 
 ################################################################################################################################
 #########################                      FOR A SPECIFIC TRAIN'S FLOW RUN THE FOLLOWING          ###########################
 #################################################################################################################################
 
-graphme = raw_input("Which train's flow would you like me to graph?      ") 
+graphme = raw_input("Which train are you taking?      ") 
 
 #change this directory to wherever you located the TrainTravel.csv file 
 openingfile = open("/home/ewahmed/subway-flow/TrainTravel.csv")
@@ -65,7 +66,8 @@ Gtraveltime = traveltime[startindex:endindex]
 length= range(0,len(Gfromstation))
 
 for i in length:
-	G.add_edge(Gfromstation[i],Gtostation[i])
+	G.add_cycle([Gfromstation[i],Gtostation[i]])
+	#G.add_edge(Gfromstation[i],Gtostation[i])
 	G.edge[Gfromstation[i]][Gtostation[i]]['weight'] = Gtraveltime[i]
 
 def print_flow(flow):
@@ -73,15 +75,13 @@ def print_flow(flow):
          n1, n2 = edge
          print edge, flow[n1][n2]
 
-print_flow(G)
+fromhere = raw_input("Which train station are you departuring from?            ")
+tothere = raw_input("Which train station are you trying to go to               ") 
 
-#print nx.shortest_path(G,'Brighton Beach','Sheepshead Bay')
+print "You will arrive at your desination in ",len(nx.shortest_path(G, fromhere, tothere))-1, " stops" 
+print "The train will travel in the following format:     ", nx.shortest_path(G, fromhere, tothere)
 
-# max_flow_value = nx.maximum_flow_value(G, 'Brighton Beach', 'Sheepshead Bay')
-# min_cut_value = nx.minimum_cut_value(G, 'Brighton Beach', 'Sheepshead Bay')
-
-# print max_flow_value
-# print min_cut_value
-# print max_flow_value == min_cut_value
+nx.draw(G, with_labels=True, node_color='w', node_size=500)
+plt.show()
 
 openingfile.close()
