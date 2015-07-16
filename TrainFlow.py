@@ -1,3 +1,4 @@
+#Author : Eiman Ahmed
 import sys
 import fileinput
 import networkx as nx
@@ -66,22 +67,41 @@ Gtraveltime = traveltime[startindex:endindex]
 length= range(0,len(Gfromstation))
 
 for i in length:
-	G.add_cycle([Gfromstation[i],Gtostation[i]])
-	#G.add_edge(Gfromstation[i],Gtostation[i])
-	G.edge[Gfromstation[i]][Gtostation[i]]['weight'] = Gtraveltime[i]
+	G.add_cycle([Gfromstation[i],Gtostation[i]],weight=Gtraveltime[i])
 
 def print_flow(flow):
      for edge in G.edges():
          n1, n2 = edge
          print edge, flow[n1][n2]
 
-fromhere = raw_input("Which train station are you departuring from?            ")
-tothere = raw_input("Which train station are you trying to go to               ") 
+##################################################################################################################################
+################################ 			FOR GRAPH WITHOUT WEIGHTS 				##############################################
+##################################################################################################################################
 
-print "You will arrive at your desination in ",len(nx.shortest_path(G, fromhere, tothere))-1, " stops" 
-print "The train will travel in the following format:     ", nx.shortest_path(G, fromhere, tothere)
+# fromhere = raw_input("Which train station are you departuring from?            ")
+# tothere = raw_input("Which train station are you trying to go to               ") 
 
-nx.draw(G, with_labels=True, node_color='w', node_size=500)
-plt.show()
+# print "You will arrive at your desination in ",len(nx.shortest_path(G, fromhere, tothere))-1, " stops" 
+# print "The train will travel in the following format:     ", nx.shortest_path(G, fromhere, tothere)
+
+# nx.draw(G, with_labels=True, node_color='w', node_size=500)
+# plt.show()
+
+####################################################################################################################################
+####################################        FOR GRAPH WITH WEIGHTS                ##################################################
+####################################################################################################################################
+
+elarge=[(u,v) for (u,v,d) in G.edges(data=True) if d['weight'] >120] #takes more than 2 minutes
+esmall=[(u,v) for (u,v,d) in G.edges(data=True) if d['weight'] <=120] #takes less than 2 minutes 
+
+pos=nx.spring_layout(G) # positions for all nodes
+
+nx.draw_networkx_nodes(G,pos,node_size=300) #nodes
+nx.draw_networkx_edges(G,pos,edgelist=elarge, width=2) #edges
+nx.draw_networkx_edges(G,pos,edgelist=esmall, width=2,alpha=0.5,edge_color='b',style='dashed') #edges
+nx.draw_networkx_labels(G,pos,font_size=10,font_family='sans-serif') #labels
+
+plt.axis('off') #turning off grid
+plt.show() #showing graph
 
 openingfile.close()
