@@ -4,13 +4,13 @@ function shut(list){
     }
 }
 BEGIN{
-file1 = "./tssample.txt"
+file1 = "./mta_html.txt"
 
 RS = "</a>"
 FS = "/"
 while((getline < file1) > 0){
     split($5, v, /"/)
-    print v[1]
+    print v[1] > "./mta_data_files.txt"
 }
 
 shut(file1)
