@@ -106,7 +106,7 @@ B = nx.DiGraph()
 for t in turns:
     a = t.strip()
     if a not in path:
-        temp1 = one_ave(a.lower().strip(), pattern, "av")
+        temp1 = one_ave(a.lower().replace('/"', '').strip(), pattern, "av")
         turn_terms.append(temp1)
         orig_turn.append(a)
         B.add_node(temp1, demand = 1)
@@ -114,7 +114,7 @@ for t in turns:
 f1.close()
 
 for g in google:
-    temp1 = one_ave(g.lower().strip(), pattern, "av")
+    temp1 = one_ave(g.lower().replace('"', '').strip(), pattern, "av")
     google_terms.append(temp1)
     orig_google.append(g)
     B.add_node(temp1, demand = -1)
@@ -124,7 +124,6 @@ B.add_node("Dummy2", demand = 1)
 
 turn_terms.append("Dummy1")
 turn_terms.append("Dummy2")
-
 
 f2.close()
 
@@ -145,7 +144,7 @@ for t in turn_terms:
 
 
 
-
+print B.number_of_nodes()
 #Min cost flow
 
 #flow = nx.min_cost_flow(B)
