@@ -119,14 +119,20 @@ for g in google:
     orig_google.append(g)
     B.add_node(temp1, demand = -1)
 
+B.add_node("Dummy1", demand = 1)
+B.add_node("Dummy2", demand = 1)
+
+turn_terms.append("Dummy1")
+turn_terms.append("Dummy2")
+
+
 f2.close()
 
 bestmatches = {}
 sawts = {}
 
+#Add dummy nodes
 
-#print len(turn_terms)
-#print len(google_terms)
 for t in turn_terms:		
     for g in google_terms:      
          #Compute distance with levenshtein and numbers
@@ -137,37 +143,16 @@ for t in turn_terms:
         #if distance < 3:
         #    print "google = ", g, "turn = ", t, "distance = ",  distance
 
-#Add dummy nodes
-#for t in turn_terms:
-#    print len(B.neighbors(t))
+
+
 
 #Min cost flow
-BD = B.copy()
-BD.add_node('source')
-BD.add_node('terminal')
 
-for node in B.nodes():
-     demand = B.node[node]['demand']
-     if demand < 0:
-         BD.add_edge('source', node)
-         BD['source'][node]['capacity'] = -demand
-     if demand > 0:
-         BD.add_edge(node, 'terminal')
-         BD[node]['terminal']['capacity'] = demand          
+#flow = nx.min_cost_flow(B)
+#print flow
 
-flow_value, matching_flow = nx.maximum_flow(BD, 'source', 'terminal')
 
-BD.remove_node('source')
-BD.remove_node('terminal')
 
-print 'Matching size =', flow_value
-for (u,v) in BD.edges():
-    if matching_flow[u][v] == 1:
-        #print (u,v)
-        pass
-
-#print B.edges(google_terms[0])
-print [(u,v,edata['weight']) for u,v,edata in BD.edges(data=True) if matching_flow[u][v] == 1]
 
 #Go through dictionary, value of each edge = 1 or 0
 
