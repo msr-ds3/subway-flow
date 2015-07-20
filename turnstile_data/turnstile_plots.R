@@ -2,6 +2,10 @@
 # Plots
 ########################################################################################################
 library(ggplot2)
+library(reshape)
+library(scales)
+library(plotrix)
+library(locfit)
 # plot no. entries vs. date
 qplot(day_of_week, num_entries, data=ts,
       geom_histogram(),
@@ -48,6 +52,30 @@ daily_entries <- tapply(ts$num_entries, ts$date, FUN=sum)
 
 # total exits per day dataframe
 daily_exits <- tapply(ts$num_exits,ts$date,FUN=sum)
+
+# Lexington Ave
+lexave_subwaydata <- filter(subwaydata_fil, "LEXINGTON AVE" %in% station) 
+# find mean No. Entries vs. time
+means <- lexave_subwaydata %>%
+  group_by(time) %>%
+  mutate(mean_entries = mean(entries.delta))
+
+lexave_fit <- locfit(entries.delta~date.time,
+                     data=lexave_subwaydata,
+                     alpha=0.5)
+plot(, lexave_subwaydata$entries.delta)
+lexave_fit
+par("mar"=c(1,1,1,1))
+lines(lexave_fit)
+plot(lexave_fit, ylim=c(0,6000))
+
+axis.POSIXct(1, at=lexave_subwaydata$date.time, format = "H:%M")
+plot(fit.mo, get.data=T, xlim =c(0,24),ylim=c(0,6000))
+
+ggplot(data=means, aes(x=time)) +
+  ylim(0,6000) + 
+  geom_point(aes(y=exits.delta, colour= 'exits')) +
+  geom_point(aes(y=entries.delta, colour='entries'))
 
 str(daily_entries)
 head(daily_entries)
