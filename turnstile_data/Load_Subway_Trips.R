@@ -19,7 +19,7 @@ for (txt in txts) {
 }
 
 # creating dataframe with num_entries, num_exits, and time difference
-# subwaydata <- read.delim('turnstile_150530.txt', header=TRUE, sep=',')
+#subwaydata <- read.delim('turnstile_150530.txt', header=TRUE, sep=',')
 names(subwaydata) <- tolower(names(subwaydata))
 subwaydata$date.time <- with(subwaydata, paste(date, time, sep=' '))
 subwaydata$date.time <- with(subwaydata, strptime(date.time, "%m/%d/%Y %H:%M:%S"))
@@ -47,8 +47,8 @@ subwaydata_fil <- subwaydata_fil %>%
 # percent of rows kept - 99.3%
 length(subwaydata_fil$station) / length(subwaydata$station) 
 
-time_pos <- strftime(strptime(subwaydata$time, format="%H:%M:%S"),"%H") 
-time_pos <- as.POSIXlt(subway)
+time_pos <- as.POSIXlt(strftime(strptime(subwaydata$time, format="%H:%M:%S"),"%H")) 
+time_pos <- as.POSIXlt(time_pos)
 # ratios, time of day, variation 
 
 write.csv(ts, file = "turnstyle_df.csv")

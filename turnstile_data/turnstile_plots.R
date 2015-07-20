@@ -35,23 +35,23 @@ qplot(ts, num_entries, )
 head(ts)
 
 # No. Entries vs. Time for each day of week
-ggplot(data=ts, aes(x=time,y=num_entries))+
+ggplot(data=subwaydata, aes(x=time,y=entries.delta))+
   facet_wrap(~ day_of_week)+
   geom_line()
 
 # total entries per day of week
-ggplot(data=ts, aes(x=day_of_week,y=num_entries))+
+ggplot(data=subwaydata, aes(x=day_of_week,y=entries.delta))+
   geom_line()
 
 # total exits per day of week
-ggplot(data=ts, aes(x=day_of_week,y=num_exits))+
+ggplot(data=subwaydata, aes(x=day_of_week,y=exits.delta))+
   geom_line()
 
 # total entries per day dataframe
-daily_entries <- tapply(ts$num_entries, ts$date, FUN=sum)
+daily_entries <- tapply(subwaydata$entries.delta, subwaydata$date, FUN=sum)
 
 # total exits per day dataframe
-daily_exits <- tapply(ts$num_exits,ts$date,FUN=sum)
+daily_exits <- tapply(subwaydata$num_exits,subwaydata$date,FUN=sum)
 
 # Lexington Ave
 lexave_subwaydata <- filter(subwaydata_fil, "LEXINGTON AVE" %in% station) 
@@ -69,17 +69,38 @@ par("mar"=c(1,1,1,1))
 lines(lexave_fit)
 plot(lexave_fit, ylim=c(0,6000))
 
-axis.POSIXct(1, at=lexave_subwaydata$date.time, format = "H:%M")
-plot(fit.mo, get.data=T, xlim =c(0,24),ylim=c(0,6000))
+# aggregate
+mean_time_entries <- aggregate( formula=entries.delta~time+day_of_week, data=lexave_subwaydata, FUN=mean)
+mean_time_exits <- aggregate( formula=exits.delta~time+day_of_week, data=lexave_subwaydata, FUN=mean)
 
-ggplot(data=means, aes(x=time)) +
-  ylim(0,6000) + 
-  geom_point(aes(y=exits.delta, colour= 'exits')) +
-  geom_point(aes(y=entries.delta, colour='entries'))
+# Entries vs. Time
+ggplot(data=mean_time_entries, aes(x=time, y = entries.delta)) +
+  facet_wrap(~day_of_week) +
+  ylim(0,500) + 
+  geom_point()
 
-str(daily_entries)
-head(daily_entries)
+# Exits vs. Time
+ggplot(data=mean_time_exits, aes(x=time, y = exits.delta)) +
+  facet_wrap(~day_of_week) +
+  ylim(0,500) + 
+  geom_point()
 
-length(unique(ts$station))
-# search for outliers
-head(unique(ts$time)) # time changes =(
+# 42 St-Times Sq
+ts_subwaydata <- filter(subwaydata_fil, "42 ST-TIMES SQ" %in% station)
+
+# aggregate
+# create rate have denominator be # of hours 
+mean_time_entries <- aggregate( formula=entries.delta~time+day_of_week, data=ts_subwaydata, FUN=mean)
+mean_time_exits <- aggregate( formula=exits.delta~time+day_of_week, data=ts_subwaydata, FUN=mean)
+
+# Entries vs. Time
+ggplot(data=mean_time_entries, aes(x=time, y = entries.delta))+
+  facet_wrap(~day_of_week) +
+  ylim(0,500) + 
+  geom_point()
+
+# Exits vs. Time
+ggplot(data=mean_time_exits, aes(x=time, y = exits.delta, group = 1)) +
+  facet_wrap(~day_of_week) +
+  ylim(0,500) + 
+  geom_smooth()
