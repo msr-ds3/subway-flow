@@ -70,5 +70,6 @@ names(trains_info) <- c("Train","Train_Stop","Train_Stop2","From_Station","To_St
 #Debug - convert from secs to numbers
 trains_info$Travel_Time <- as.numeric(trains_info$Travel_Time)
 
+
 #Export as R file - change the dir/file name per needs
 write.csv(trains_info, "/home/ewahmed/subway-flow/TrainTravel.csv")
