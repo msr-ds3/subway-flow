@@ -2,7 +2,6 @@ import pylev
 import re
 import sys
 
-
 #Function to give numbers larger weight for distance
 def samewords(name1, name2):
     set1 = set()
@@ -96,11 +95,11 @@ r_best = {}
 
 pattern = re.compile(r'av[enu]+')
 
-path = set(["NEWARK BM BW", "NEWARK C", "NEWARK HM HE", "NEWARK HW BMEBE", "HARRISON", "JOURNAL SQUARE", "GROVE STREET", "EXCHANGE PLACE", "PAVONIA/NEWPORT", "CHRISTOPHER ST"]) #Hard Coded Path trains.
+path = set(["NEWARK BM BW", "NEWARK C", "NEWARK HM HE", "NEWARK HW BMEBE", "HARRISON", "JOURNAL SQUARE", "GROVE STREET", "EXCHANGE PLACE", "PAVONIA NEWPORT", "CHRISTOPHER ST", "CITY   BUS"]) #Hard Coded Path trains.
 
 SIRS = set(["Nassau", "Annadale", "Tottenville", "Stapleton", "Clifton", "Grasmere", "Old Town", "Dongan Hills", "Jefferson Av", "Grant City", "New Dorp", "Oakwood Heights", "Bay Terrace", "Great Kills", "Eltingville", "Huguenot", "Prince's Bay", "Pleasant Plains", "Richmond Valley", "Nassau", "Atlantic"])
 for t in turns:
-    a = t.strip('\"').strip()
+    a = t.strip('"').replace("/", ' ').replace("-", " ").strip()
     if a not in path:
         temp1 = one_ave(a.lower(), pattern, "av")
         turn_terms.append(temp1)
@@ -109,9 +108,8 @@ for t in turns:
 f1.close()
 
 for g in google:
-    a = g.replace('"', '').strip()
+    a = g.replace('"', '').replace("/", ' ').replace("-", " ").strip()
     if a not in SIRS:
-        
         temp1 = one_ave(a.lower(), pattern, "av")
         google_terms.append(temp1)
         orig_google.append(g)
@@ -119,8 +117,7 @@ for g in google:
 f2.close()
 
 bestmatches = {}
-print "Length of google = ", len(google_terms)
-print "Length of turns = ", len(turn_terms)
+
 #Compare each station in the turnstile data to each station in the google feed. 
 for t in xrange(0, len(turn_terms)):
     for g in xrange(0, len(google_terms)):
@@ -134,8 +131,6 @@ for t in xrange(0, len(turn_terms)):
             bestmatches[turn_terms[t]] = tinylist
             r_best[g] = [tinylist[0], turn_terms[t]]
 
-            
-
 f3 = open('./matchtable.txt', 'w')
 
 for g in bestmatches:
@@ -146,5 +141,4 @@ for g in bestmatches:
         else:
             f3.write(str(bestmatches[g][x]).strip() + ",")
     f3.write("\n")
-
 f3.close()
