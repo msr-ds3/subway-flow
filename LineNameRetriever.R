@@ -106,16 +106,19 @@ unique_train_lines<- inner_join(unique_train_lines,unique_stopids)
 unique_train_lines <- mutate(unique_train_lines, TrainStop2 = lag(TrainStop))
 unique_train_lines<- mutate(unique_train_lines, Station2= lag(Station))
 unique_train_lines<- mutate(unique_train_lines, FirstStopID = lag(StopID))
+unique_train_lines<-mutate(unique_train_lines,FromLine=lag(LineName))
 
 #Get rid of NA
 unique_train_lines[unique_train_lines$Stop == "01",]$Station2=NA
 unique_train_lines<- unique_train_lines[complete.cases(unique_train_lines),]
 
 #Reformatting and getting rid of FromStop and ToStop ( you can add this back if you want but its not accurate)
-unique_train_lines <-data.frame(unique_train_lines[,c(1,10,9,5,3,4,7)])
+unique_train_lines <-data.frame(unique_train_lines[,c(1,10,9,11,5,3,7,4)])
 
 #Renaming
-names(unique_train_lines)<- c('Train','FromStopID','FromStation','ToStopID','ToStation','TravelTime','LineName')
+names(unique_train_lines)<- c('Train','FromStopID','FromStation','FromLine', 'ToStopID','ToStation','ToLine' ,'TravelTime')
+
+#Seperate data frame for all the 
 
 #Export as R file - change the dir/file name per needs
 write.csv(unique_train_lines, "/home/ewahmed/subway-flow/TrainTravel_LineNames_StopIDs.csv") 
