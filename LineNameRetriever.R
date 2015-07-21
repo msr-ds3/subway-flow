@@ -118,6 +118,6 @@ unique_train_lines <-data.frame(unique_train_lines[,c(1,10,9,5,3,4,7)])
 names(unique_train_lines)<- c('Train','FromStopID','FromStation','ToStopID','ToStation','TravelTime','LineName')
 
 #Export as R file - change the dir/file name per needs
-write.table(unique_train_lines, "/home/ewahmed/subway-flow/TrainTravel_LineNames_StopIDs.csv", sep=",") 
+write.csv(unique_train_lines, "/home/ewahmed/subway-flow/TrainTravel_LineNames_StopIDs.csv") 
 
 
