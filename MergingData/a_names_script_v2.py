@@ -2,7 +2,6 @@ import pylev
 import re
 import sys
 
-
 #Function to give numbers larger weight for distance
 def samewords(name1, name2):
     set1 = set()
@@ -24,33 +23,27 @@ def distanceoffset(name1, name2):
     if (not a.match(name1) and a.match(name2)) or (not a.match(name2) and a.match(name1)):
         #print >> sys.stderr, name1 + " has numbers ", name2 + " doesn't."
         return 2
-    if not a.match(name1) and a.match(name2):
-        #print >> sys.stderr, name1 + " doesn't have any numbers!"
+    if not a.match(name1): #(and not a.match(name2)):
         return 0 #Don't affect the distance at all.
-    
-    set1 = set()
-    set2 = set()
+
     match1 = re.findall(a, name1) #Find all the numbers in the string.
     match2 = re.findall(a, name2) #Find all the numbers in the string.
-    for x in match1:
-        set1.add(x)
-    for v in match2:
-        set2.add(v)
     
-    if len(match1) != len(match2): #Different amounts of numbers in the string.
+    set1 = set(match1)
+    set2 = set(match2)
+
+    if len(set1) != len(set2): #Different amounts of numbers in the string.
         if match1[0] != match2[0]:
-            #print >> sys.stderr, name1 + " doesn't match " + name2 + " at all."
             return len(max(name1, name2)) #Return the largest length as the distance so practically any match will be better.
         else:
-            #print >> sys.stderr, "One of your strings has more numbers than the other, but the most of them match."
+            #print >> sys.stderr, "One of your strings has more numbers than the other, but the first pair matches."
             return 2
     else: #If there are the same amount of numbers in the string...
         if set1 != set2:
             #print >> sys.stderr, "Your numbers don't match."
             return len(max(name1, name2))
         else:
-            #print >> sys.stderr, name1 + " and " + name2 + " match!"
-            return -5
+            return -5 #Same # of numbers, same numbers.
 
 #Returns a given phrase without any of the spaces
 def wordnospaces(name1):
@@ -59,7 +52,6 @@ def wordnospaces(name1):
     for x in arr:
         name1_ns = name1_ns + x
     return name1_ns
-#?Regex?
 
 def isinside(name1, name2):
     if name1 in name2 or name2 in name1:
@@ -71,15 +63,16 @@ def one_ave(string1, pattern, string2):
     outbound = ""
     for x in xrange(0, len(arr1)):
         if pattern.match(arr1[x]):
-            #print "changed something"
             arr1[x] = string2
         outbound = outbound + " " + arr1[x]
     return outbound
 
+def penalize(string1, string2):
+    if pylev.levenshtein(string1, string2) > min(len(string1), len(string2)):
+        return 3
+    return 0
 
-        
 #Break up dataset into numbered and non-numbered streets
-
 
 ################################################################################
 
@@ -94,52 +87,52 @@ google = f2.readlines()
 
 #Making lists to read all the station names into.
 
-turn_terms = []
-google_terms = []
-orig_turn = []
+turn_terms = [] #Turnstile
+google_terms = [] #Google
+orig_turn = []    
 orig_google = []
+r_best = {}
 
-pattern = re.compile(r'av[nue]+')
+pattern = re.compile(r'av[enu]+')
 
+path = set(["NEWARK BM BW", "NEWARK C", "NEWARK HM HE", "NEWARK HW BMEBE", "HARRISON", "JOURNAL SQUARE", "GROVE STREET", "EXCHANGE PLACE", "PAVONIA NEWPORT", "CHRISTOPHER ST", "CITY   BUS"]) #Hard Coded Path trains.
+
+SIRS = set(["Nassau", "Annadale", "Tottenville", "Stapleton", "Clifton", "Grasmere", "Old Town", "Dongan Hills", "Jefferson Av", "Grant City", "New Dorp", "Oakwood Heights", "Bay Terrace", "Great Kills", "Eltingville", "Huguenot", "Prince's Bay", "Pleasant Plains", "Richmond Valley", "Nassau", "Atlantic"])
 for t in turns:
-    temp1 = one_ave(t.lower(), pattern, "av")
-    #if t != temp1:
-    #    print t, temp1
-    turn_terms.append(temp1)
-    orig_turn.append(t)
-
-for g in google:
-    fields = g.split(",")
-    temp1 = one_ave(fields[1].lower(), pattern, "av")
-    google_terms.append(temp1)
-    orig_google.append(g)
-
-#for v in xrange(0, len(ts_terms)):
-#    print ts_terms[v], orig_ts[v]
+    a = t.strip('"').replace("/", ' ').replace("-", " ").strip()
+    if a not in path:
+        temp1 = one_ave(a.lower(), pattern, "av")
+        turn_terms.append(temp1)
+        orig_turn.append(t)
 
 f1.close()
+
+for g in google:
+    a = g.replace('"', '').replace("/", ' ').replace("-", " ").strip()
+    if a not in SIRS:
+        temp1 = one_ave(a.lower(), pattern, "av")
+        google_terms.append(temp1)
+        orig_google.append(g)
+
 f2.close()
 
 bestmatches = {}
-sawts = {}
 
 #Compare each station in the turnstile data to each station in the google feed. 
-for t in xrange(0, len(turn_terms)):		
+for t in xrange(0, len(turn_terms)):
     for g in xrange(0, len(google_terms)):
-        #Make the highest default so anything better will take its place.
+    #Make the highest default so anything better will take its place.          
+        tinylist = [int(distanceoffset(turn_terms[t], google_terms[g])) + int(pylev.levenshtein(google_terms[g], turn_terms[t])) + isinside(turn_terms[t], google_terms[g]) + samewords(turn_terms[t], google_terms[g]) + penalize(turn_terms[t], google_terms[g]), orig_google[g], google_terms[g], orig_turn[t]]
+        
         bestmatches.setdefault(turn_terms[t], [len(turn_terms[t])])
-            
-            #Compute distance with levenshtein and numbers
-        tinylist = [int(distanceoffset(turn_terms[t], google_terms[g])) + int(pylev.levenshtein(google_terms[g], turn_terms[t])) + isinside(turn_terms[t], google_terms[g]) + samewords(turn_terms[t], turn_terms[t]), orig_google[g], google_terms[g], orig_turn[t]]
-
-        if tinylist[0] < bestmatches[turn_terms[t]][0]:
+        r_best.setdefault(g, [len(google_terms[g])])
+        #Compute distance with levenshtein and numbers
+        if tinylist[0] < bestmatches[turn_terms[t]][0] and tinylist[0] < r_best[g]:
             bestmatches[turn_terms[t]] = tinylist
+            r_best[g] = [tinylist[0], turn_terms[t]]
 
 f3 = open('./matchtable.txt', 'w')
 
-#for g in xrange(0, len(bestmatches)):
-#    for x in xrange(0, len(g)):
-#        print 
 for g in bestmatches:
     f3.write(g + ",")
     for x in xrange(0, len(bestmatches[g])):
@@ -148,11 +141,4 @@ for g in bestmatches:
         else:
             f3.write(str(bestmatches[g][x]).strip() + ",")
     f3.write("\n")
-#for g in bestmatches:
-#    print g, bestmatches[g]
-    
-#    if g is list:
-#       for x in g:
-#           print x
-#print bestmatches
 f3.close()
