@@ -45,7 +45,7 @@ for (txt in txts) {
 
 df<-arrange(mydata,desc(as.factor(DATE))) %>%
   group_by(SCP,C.A, UNIT,STATION) %>%
-  mutate(num_enteries = ENTRIES -lag(ENTRIES),
+  mutate(num_entries = ENTRIES -lag(ENTRIES),
          num_exits = EXITS -lag(EXITS))
 
 #GIO<-dfarr %>%
