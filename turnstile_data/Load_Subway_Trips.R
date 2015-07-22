@@ -1,92 +1,52 @@
-############################################################
-# Different Entries
-############################################################
+#################################################################
+# Description: Code to load turnstile data into master dataframe
+#################################################################
+# *Note: C.A is unique to station
 library(dplyr)
+library(timeDate) # to get day of week function
+
 # get data
 # note is sorted by SCP (individual turnstyles)
 # when dealing with more weeks, should be sorted by SCP
-currentTsData = read.table("turnstile_150704.txt",header=TRUE, sep=",", # current turnstyle dataframe
-                           fill=TRUE,quote = "", row.names = NULL, 
-                           stringsAsFactors = FALSE) 
-
-num_entries <- c() # intialize empty vector
-num_exits <- c() # initialize empty vector
-error_dates <- c() # keep track of dates where turnstyle acting up
-error_stations <- c() # keep track of station where turnstyle acting up
-pre_entry <- currentTsData$ENTRIES[1] # holds previous entry
-pre_exit <- currentTsData$EXITS[1] # holds previous exits
-scp <- as.character('0')
-j <- 1
-
-# find number of entries 
-for(i in currentTsData$ENTRIES){
-  if(scp == currentTsData$SCP[j]){ # check if scp has changed
-    num_entries <- c(num_entries,i-pre_entry)
-    pre_entry <- i
-  }
-  else{ # if scp has changed
-    pre_entry <- i # set to next entry and cancel
-    num_entries <- c(num_entries, 0) # set new scp num_entries to 0
-  }
-  
-#  if(currentTsData$ENTRIES[j]==currentTsData$ENTRIES[j+1]==currentTsData$ENTRIES[j+2]){ # if within 12 hours there
-#    error_dates <- c(error_dates, currentTsData$DATE[j])                                # are no entries indicate
-#    error_stations <- c(error_stations, currentTsData$STATION[j])                       # there is an error
-#  }
-  
-  scp <- currentTsData$SCP[j]
-  j <- j + 1
+data_dir <- '.'
+# load each month of the trip data into one big data frame
+txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', data_dir))
+subwaydata <- data.frame()
+for (txt in txts) {
+  tmp <- read.table(txt, header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
+  subwaydata <- rbind(subwaydata, tmp)
 }
 
-j <- 1 # reset j 
+subwaydata <- read.delim('turnstile_150530.txt', header=TRUE, sep=',')
+# creating dataframe with num_entries, num_exits, and time difference
+names(subwaydata) <- tolower(names(subwaydata))
+subwaydata$date.time <- with(subwaydata, paste(date, time, sep=' '))
+subwaydata$date.time <- with(subwaydata, strptime(date.time, "%m/%d/%Y %H:%M:%S"))
+subwaydata$date.time <- with(subwaydata, as.POSIXct((date.time)))
+subwaydata <- group_by(subwaydata, c.a, unit, scp, station)
+subwaydata <- mutate(subwaydata,
+               time.delta = order_by(date.time, difftime(date.time, lag(date.time), units = "hours")),
+               entries.delta = order_by(date.time, entries - lag(entries)),
+               exits.delta = order_by(date.time, exits - lag(exits)),
+               day_of_week = dayOfWeek(as.timeDate(date)),
+               entries_per_timediff = entries.delta / as.integer(time.delta),
+               exits_per_timediff = exits.delta / as.integer(time.delta)) 
 
-# find number of exits 
-for(i in currentTsData$EXITS){
-  if(scp == currentTsData$SCP[j]){ # check if scp has changed
-    num_exits <- c(num_exits,i-pre_exits)
-    pre_exits <- i
-  }
-  else{ # if scp has changed
-    pre_exits <- i # set to next entry and cancel
-    num_exits <- c(num_exits, 0) # set new scp num_entries to 0
-  }
-  scp <- currentTsData$SCP[j]
-  j <- j + 1
-}
+# filter subwaydata
+# removed NAs and rows with 0 < num_entries or num_exits < 6000 
+subwaydata_fil <- subwaydata
+subwaydata_fil <- subwaydata_fil %>% 
+  filter(entries.delta < 6000) %>%
+  filter(exits.delta < 6000) %>%
+  filter(exits.delta > -1) %>%
+  filter(entries.delta > -1)
 
-# append entries column
-currentTsData <- cbind(currentTsData, num_entries)
+# percent of rows kept - 99.3%
+length(subwaydata_fil$station) / length(subwaydata$station) 
 
-# append exits column
-currentTsData <- cbind(currentTsData, num_exits)
+# ratios, time of day, variation 
 
-currentTsData <-dfarr %>%
-  group_by(as.factor(SCP)) %>%
-  mutate(num_enteries = lag(ENTRIES -lag(ENTRIES,default=ENTRIES[1])),
-  num_exits = lag(EXITS -lag(EXITS,default=EXITS[1]))) 
-
-# percent of negative values
-filter(currentTsData, num_entries < 0) %>% nrow()
-select(currentTsData, num_entries) %>% nrow()
-923/191033 # = 0.004831626
-
-# play with data without negative values
-ts <- currentTsData
-ts <- filter(currentTsData, num_entries < 10000 & num_entries >= 0 & num_exits < 100000 & num_exits >= 0) 
-
-# convert date column 
-library(timeDate) # to get day of week
-dates <- as.timeDate(ts$DATE)
-day_of_week <- dayOfWeek(dates)
-
-# convert exits to integer
-num_exits <- as.integer(ts$num_exits)
-
-# create newly formatted dataframe
-ts <- select(ts, C.A, SCP, STATION, LINENAME, TIME, num_entries)
-ts <- cbind(ts, num_exits, dates, day_of_week)
-names(ts) <- c('c.a','scp','station','line_name','time','num_entries','num_exits','dates','day_of_week')
-
+# create rate have denominator be # of hours 
 
 write.csv(ts, file = "turnstyle_df.csv")
 

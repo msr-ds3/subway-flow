@@ -1,57 +1,129 @@
 ########################################################################################################
 # Plots
+# *Note: facet wrapping dataframe is only used where facet wrapping or filling occurs
 ########################################################################################################
 library(ggplot2)
-# plot no. entries vs. date
-qplot(day_of_week, num_entries, data=ts,
-      geom_histogram(),
-      color = station,
-      main="No. Entries vs. Dates",
-      xlab="Dates", ylab="No. Entries")
+library(reshape)
+library(scales)
+library(plotrix)
 
-# plot no. exits vs. date
-qplot(day_of_week, num_exits, data=ts,
-      geom_histogram(),
-      color = station,
-      main="No. Exits vs. Dates",
-      xlab="Dates", ylab="No. Exits")
+#########################################
+# create new dataframe for facet graphing
+#########################################
+# entries dataframe
+entries <- subwaydata_fil %>%
+  select(station, linename,date.time, time, day_of_week,entries.delta, entries_per_timediff) %>%
+  mutate(type = "entry")
+entries <- dplyr::rename(entries, entries_exits_rate = entries_per_timediff)
+entries <- dplyr::rename(entries, entries_exits = entries.delta)
 
-# seperate graphs by days of the week
-# plot no. exits vs. date
+# exits dataframee
+exits <- subwaydata_fil %>%
+  select(station, linename,date.time, time, day_of_week, exits.delta, exits_per_timediff) %>%
+  mutate(type = "exit")
+exits <- dplyr::rename(exits, entries_exits_rate = exits_per_timediff) 
+exits <- dplyr::rename(exits, entries_exits = exits.delta)
 
-
-# No. entries vs. time
-qplot(data = ts, x = time, y = num_entries, color = as.factor(day_of_week))
-
-qplot(data = ts, x = time, y = num_exits, color = as.factor(day_of_week))
-
-qplot(data = ts, x = day_of_week, y = num_entries, color = as.factor(station))
-
-qplot(ts, num_entries, )
-head(ts)
-
-# No. Entries vs. Time for each day of week
-ggplot(data=ts, aes(x=time,y=num_entries))+
-  facet_wrap(~ day_of_week)+
-  geom_line()
-
-# total entries per day of week
-ggplot(data=ts, aes(x=day_of_week,y=num_entries))+
-  geom_line()
-
-# total exits per day of week
-ggplot(data=ts, aes(x=day_of_week,y=num_exits))+
-  geom_line()
-
+# bind dataframes
+subway_facet <- data.frame()
+subway_facet <- rbind(entries,exits)
+subway_facet <- as.data.frame(subway_facet)
+subway_facet$entries_exits_rate[is.infinite(subway_facet$entries_exits_rate)] <- 0
+##########################################
+  
 # total entries per day dataframe
-daily_entries <- tapply(ts$num_entries, ts$date, FUN=sum)
+daily_entries <- tapply(subwaydata$entries.delta, subwaydata$date, FUN=sum)
 
 # total exits per day dataframe
-daily_exits <- tapply(ts$num_exits,ts$date,FUN=sum)
+daily_exits <- tapply(subwaydata$num_exits,subwaydata$date,FUN=sum)
 
-str(daily_entries)
-head(daily_entries)
+##############################################
+# plots
+##############################################
+##############################################
+# Lexington Ave
+##############################################
+lexave_subwaydata <- subset(subwaydata_fil, station == "LEXINGTON AVE") 
 
-length(unique(ts$station))
-# search for outliers
-head(unique(ts$time)) # time changes =(
+# plot
+ggplot(data=lexave_subwaydata, aes(x=time,
+                               y=entries_exits_rate,
+                               group=type,
+                               colour=type)) +
+  ggtitle("Lexington Ave - FNQR456 ") +
+  xlab("Time of Day") +
+  ylab("No. Entries & Exits")+
+  geom_smooth() +
+  facet_wrap(~ day_of_week) 
+
+######################################
+# 42 St-Times Sq
+######################################
+ts_subwaydata <- subset(subway_facet, station == "42 ST-TIMES SQ")
+
+# plot
+ggplot(data=ts_subwaydata, aes(x=time,
+                               y=entries_exits_rate,
+                               group=type,
+                               colour=type)) +
+  ggtitle("42-st Times Square") +
+  xlab("Time of Day") +
+  ylab("No. Entries & Exits")+
+  geom_smooth() +
+  facet_wrap(~ day_of_week) 
+
+######################################
+# Westchest Sq
+######################################
+ws_subwaydata <- subset(subway_facet, station == "WESTCHESTER SQ")
+
+# Mean Entry and Exit Rates vs. Time
+ggplot(data=ws_subwaydata, aes(x=time,
+                      y=entries_exits_rate,
+                      group=type,
+                      colour=type)) +
+  ggtitle("Westchester Square") +
+  xlab("Time of Day") +
+  ylab("No. Entries & Exits")+
+  geom_smooth() +
+  facet_wrap(~ day_of_week) 
+
+# Rate of people entering/exitting
+mean(subwaydata_fil$entries.delta) / mean(subwaydata_fil$exits.delta) # percent of people
+
+##############################
+# total exits vs. total time
+##############################
+t <- subwaydata_fil
+entries <- subwaydata_fil %>%
+  select(station, linename,date.time, time, day_of_week,entries.delta, entries_per_timediff) %>%
+  mutate(type = "entry")
+entries <- dplyr::rename(entries, entries_exits_rate = entries_per_timediff)
+entries <- dplyr::rename(entries, entries_exits = entries.delta)
+
+# exits dataframee
+exits <- subwaydata_fil %>%
+  select(station, linename,date.time, time, day_of_week, exits.delta, exits_per_timediff) %>%
+  mutate(type = "exit")
+exits <- dplyr::rename(exits, entries_exits_rate = exits_per_timediff) 
+exits <- dplyr::rename(exits, entries_exits = exits.delta)
+
+# bind dataframes
+subwaydata_fil <- data.frame()
+subwaydata_fil <- rbind(entries,exits)
+subwaydata_fil <- as.data.frame(subwaydata_fil)
+subwaydata_fil$entries_exits_rate[is.infinite(subwaydata_fil$entries_exits_rate)] <- 0
+
+# plot it
+ggplot(data=subwaydata_fil, aes(x=time,
+                               y=entries_exits_rate,
+                               group=type,
+                               colour=type)) +
+  ggtitle("Total Entries and Exits vs. Time of Day") +
+  xlab("Time of Day") +
+  ylab("No. Entries & Exits")+
+  geom_smooth() +
+  facet_wrap(~ day_of_week) 
+
+# get patterns of stations ex. commuter station, residential station, commercial station
+# might have rule 
