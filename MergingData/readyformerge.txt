@@ -263,9 +263,11 @@
  clark st,-4,"Clark St",clark st,CLARK ST
  25 av,-9,"25 Av",25 av,25 AVE
  hudson 80 st,3,"80 St",80 st,HUDSON-80 ST
+ lackawanna , 0 , None , None , LACKAWANNA
  110 st cathedrl , 0 , Cathedral Pkwy (110 St) , Cathedral Pkwy (110 St) , 110 ST-CATHEDRL
  brooklyn bridge,8,"Brooklyn Bridge - City Hall",brooklyn bridge city hall,BROOKLYN BRIDGE
  broadway eny , 0 , Broadway Jct , Broadway Jct , BROADWAY-ENY
+ station , 0 , None , None , STATION
  28 st broadway,5,"28 St",28 st,28 ST-BROADWAY
  69 st fisk av,4,"69 St",69 st,69 ST-FISK AVE
  bushwick av , 0 , Bushwick Av - Aberdeen St , Bushwick Av - Aberdeen St , BUSHWICK AVE
@@ -292,6 +294,7 @@
  myrtle willough,4,"Myrtle - Willoughby Avs",myrtle willoughby avs,MYRTLE-WILLOUGH
  howard bch jfk , 0 , Howard Beach - JFK Airport , Howard Beach - JFK Airport , HOWARD BCH-JFK
  barclays center , 0 , Atlantic Av - Barclays Ctr , Atlantic Av - Barclays Ctr , BARCLAYS CENTER
+ path wtc , 0 , None , None , PATH WTC
  bay pky 22 av,8,"Bay Ridge Av",bay ridge av,BAY PKY-22 AVE
  e 143 st , 0 , E 143 St - St Mary's St , E 143 St - St Mary's St , E 143 ST
  greenwood 111 , 0 , 111 St , 111 St , GREENWOOD-111
@@ -303,6 +306,7 @@
  5 av bryant pk , 0 , 42 St - Bryant Pk , 42 St - Bryant Pk , 5 AVE-BRYANT PK
  52 st lincoln,4,"52 St",52 st,52 ST-LINCOLN
  149 st gr conc,3,"149 St - Grand Concourse",149 st grand concourse,149 ST-GR CONC
+ thirty st , 0 , None , None , THIRTY ST
  40 st lowery st,6,"40 St",40 st,40 ST-LOWERY ST
  elderts lane , 0 , 75 St , 75 St , ELDERTS LANE
  ocean parkway,3,"Ocean Pkwy",ocean pkwy,OCEAN PARKWAY
@@ -310,6 +314,7 @@
  world trade ctr,3,"World Trade Center",world trade center,WORLD TRADE CTR
  e 177 st parkch , 0 , Parkchester , Parkchester , E 177 ST-PARKCH
  roosevelt is,2,"Roosevelt Island",roosevelt island,ROOSEVELT IS
+ broadway 31 st , 0 , None , None , BROADWAY-31 ST
  orchard beach , 0 , Pelham Bay Park , Pelham Bay Park , ORCHARD BEACH
  eastern pkwy , 0 , Eastern Pkwy - Brooklyn Museum , Eastern Pkwy - Brooklyn Museum , EASTERN PKWY
  van alston 21st,10,"21 St",21 st,VAN ALSTON-21ST
@@ -340,6 +345,7 @@
  queensboro plz,2,"Queensboro Plaza",queensboro plaza,QUEENSBORO PLZ
  42 st times sq , 0 , Times Sq - 42 St , Times Sq - 42 St , 42 ST-TIMES SQ
  7 av 53 st , 0 , 7 Av , 7 Av , 7 AVE-53 ST
+ path wtc 2 , 0 , None , None , PATH WTC 2
  ditmars bl 31 s , 0 , Astoria - Ditmars Blvd , Astoria - Ditmars Blvd , DITMARS BL-31 S
  mosholu parkway,3,"Mosholu Pkwy",mosholu pkwy,MOSHOLU PARKWAY
  42 st pa bus te , 0 , 42 St - Port Authority Bus Terminal , 42 St - Port Authority Bus Terminal , 42 ST-PA BUS TE
@@ -355,6 +361,7 @@
  vernon jackson,8,"Vernon Blvd - Jackson Av",vernon blvd jackson av,VERNON/JACKSON
  22 av bay pky,9,"Bay Pkwy",bay pkwy,22 AVE-BAY PKY
  61 st woodside,5,"Woodside - 61 St",woodside 61 st,61 ST/WOODSIDE
+ rit manhattan , 0 , None , None , RIT-MANHATTAN
  far rockaway,6,"Far Rockaway - Mott Av",far rockaway mott av,FAR ROCKAWAY
  46 st bliss st,5,"46 St",46 st,46 ST-BLISS ST
  168 st broadway,5,"168 St",168 st,168 ST-BROADWAY
