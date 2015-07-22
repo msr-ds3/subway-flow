@@ -1,374 +1,374 @@
- 121 st,-9,"121 St",121 st,121 ST
- york st,-4,"York St",york st,YORK ST
- 96 st,-9,"96 St",96 st,96 ST
- bay ridge 95 st,-9,"Bay Ridge - 95 St",bay ridge 95 st,BAY RIDGE-95 ST
- 2 av,-9,"2 Av",2 av,2 AVE
- baychester av,-4,"Baychester Av",baychester av,BAYCHESTER AVE
- 42 st bryant pk,-9,"42 St - Bryant Pk",42 st bryant pk,42 ST-BRYANT PK
- houston st,-4,"Houston St",houston st,HOUSTON ST
- sutphin blvd,-4,"Sutphin Blvd",sutphin blvd,SUTPHIN BLVD
- knickerbocker,1,"Knickerbocker Av",knickerbocker av,KNICKERBOCKER
- w 8 st aquarium,-2,"W 8 St - NY Aquarium",w 8 st ny aquarium,W 8 ST-AQUARIUM
- crown hts utica,1,"Crown Hts - Utica Av",crown hts utica av,CROWN HTS-UTICA
- 9 av,-9,"9 Av",9 av,9 AVE
- 18 av,-9,"18 Av",18 av,18 AVE
- hoyt st,-4,"Hoyt St",hoyt st,HOYT ST
- high st,-4,"High St",high st,HIGH ST
- 90 st elmhurst,-4,"90 St - Elmhurst Av",90 st elmhurst av,90 ST-ELMHURST
- 111 st,-9,"111 St",111 st,111 ST
- utica av,-4,"Utica Av",utica av,UTICA AVE
- bowling green,-4,"Bowling Green",bowling green,BOWLING GREEN
- grand army plaz,-1,"Grand Army Plaza",grand army plaza,GRAND ARMY PLAZ
- 59 st,-9,"59 St",59 st,59 ST
- junction blvd,-4,"Junction Blvd",junction blvd,JUNCTION BLVD
- 9 st,-9,"9 St",9 st,9 ST
- bronx park east,-4,"Bronx Park East",bronx park east,BRONX PARK EAST
- borough hall ct,1,"Borough Hall",borough hall,BOROUGH HALL/CT
- saratoga av,-4,"Saratoga Av",saratoga av,SARATOGA AVE
- east broadway,-4,"East Broadway",east broadway,EAST BROADWAY
- 163 st amsterdm,-1,"163 St - Amsterdam Av",163 st amsterdam av,163 ST-AMSTERDM
- nostrand av,-4,"Nostrand Av",nostrand av,NOSTRAND AVE
- kosciuszko st,-4,"Kosciuszko St",kosciuszko st,KOSCIUSZKO ST
- 3 av,-9,"3 Av",3 av,3 AVE
- dekalb av,-4,"DeKalb Av",dekalb av,DEKALB AVE
- 110 st,-9,"110 St",110 st,110 ST
- sterling st,-4,"Sterling St",sterling st,STERLING ST
- union st,-4,"Union St",union st,UNION ST
- church av,-4,"Church Av",church av,CHURCH AVE
- st. george,1,"St George",st george,ST. GEORGE
- van siclen av,-4,"Van Siclen Av",van siclen av,VAN SICLEN AVE
- central av,-4,"Central Av",central av,CENTRAL AVE
- 181 st,-9,"181 St",181 st,181 ST
- bleecker st,-4,"Bleecker St",bleecker st,BLEECKER ST
- forest av,-4,"Forest Av",forest av,FOREST AVE
- 225 st,-9,"225 St",225 st,225 ST
- 23 st,-9,"23 St",23 st,23 ST
- 68st hunter col,0,"68 St - Hunter College",68 st hunter college,68ST-HUNTER COL
- allerton av,-4,"Allerton Av",allerton av,ALLERTON AVE
- metropolitan av,-4,"Metropolitan Av",metropolitan av,METROPOLITAN AV
- graham av,-4,"Graham Av",graham av,GRAHAM AVE
- marble hill 225,-4,"Marble Hill - 225 St",marble hill 225 st,MARBLE HILL-225
- jay st metrotec,-1,"Jay St - MetroTech",jay st metrotech,JAY ST-METROTEC
- bay ridge av,-4,"Bay Ridge Av",bay ridge av,BAY RIDGE AVE
- zerega av,-4,"Zerega Av",zerega av,ZEREGA AVE
- pelham bay park,-4,"Pelham Bay Park",pelham bay park,PELHAM BAY PARK
- park place,1,"Park Pl",park pl,PARK PLACE
- pennsylvania av,-4,"Pennsylvania Av",pennsylvania av,PENNSYLVANIA AV
- cleveland st,-4,"Cleveland St",cleveland st,CLEVELAND ST
- 20 av,-9,"20 Av",20 av,20 AVE
- inwood 207 st,-9,"Inwood - 207 St",inwood 207 st,INWOOD-207 ST
- flushing av,-4,"Flushing Av",flushing av,FLUSHING AVE
- 8 st b'way nyu,1,"8 St - NYU",8 st nyu,8 ST-B'WAY NYU
- st lawrence av,-4,"St Lawrence Av",st lawrence av,ST LAWRENCE AVE
- 21 st,-9,"21 St",21 st,21 ST
- 231 st,-9,"231 St",231 st,231 ST
- 86 st,-9,"86 St",86 st,86 ST
- 138 st 3 av,1,"3 Av - 138 St",3 av 138 st,138 ST-3 AVE
- 125 st,-9,"125 St",125 st,125 ST
- jamaica van wyc,-1,"Jamaica - Van Wyck",jamaica van wyck,JAMAICA-VAN WYC
- 191 st,-9,"191 St",191 st,191 ST
- 5 av 53 st,-9,"5 Av/53 St",5 av 53 st,5 AVE-53 ST
- broadway,-4,"Broadway",broadway,BROADWAY
- livonia av,-4,"Livonia Av",livonia av,LIVONIA AVE
- 63 dr rego park,-9,"63 Dr - Rego Park",63 dr rego park,63 DR-REGO PARK
- president st,-4,"President St",president st,PRESIDENT ST
- halsey st,-4,"Halsey St",halsey st,HALSEY ST
- 15 st prospect,-2,"15 St - Prospect Park",15 st prospect park,15 ST-PROSPECT
- dyckman st,-4,"Dyckman St",dyckman st,DYCKMAN ST
- 233 st,-9,"233 St",233 st,233 ST
- 33 st,-9,"33 St",33 st,33 ST
- beach 67 st,-9,"Beach 67 St",beach 67 st,BEACH 67 ST
- 4 av,-9,"4 Av",4 av,4 AVE
- lafayette av,-4,"Lafayette Av",lafayette av,LAFAYETTE AVE
- lorimer st,-4,"Lorimer St",lorimer st,LORIMER ST
- junius st,-4,"Junius St",junius st,JUNIUS ST
- norwood av,-4,"Norwood Av",norwood av,NORWOOD AVE
- east 105 st,-2,"Beach 105 St",beach 105 st,EAST 105 ST
- grand 30 av,-1,"30 Av",30 av,GRAND-30 AVE
- av j,-4,"Avenue J",av j,AVE J
- kingsbridge rd,-4,"Kingsbridge Rd",kingsbridge rd,KINGSBRIDGE RD
- burke av,-4,"Burke Av",burke av,BURKE AVE
- tompkinsville,-4,"Tompkinsville",tompkinsville,TOMPKINSVILLE
- bedford park bl,0,"Bedford Park Blvd",bedford park blvd,BEDFORD PARK BL
- grant av,-4,"Grant Av",grant av,GRANT AVE
- hunts point av,-4,"Hunts Point Av",hunts point av,HUNTS POINT AVE
- bedford av,-4,"Bedford Av",bedford av,BEDFORD AVE
- smith 9 st,-6,"Smith - 9 Sts",smith 9 sts,SMITH-9 ST
- 14th street,1,"14 St",14 st,14TH STREET
- tremont av,-4,"Tremont Av",tremont av,TREMONT AVE
- classon av,-4,"Classon Av",classon av,CLASSON AVE
- morris park,-4,"Morris Park",morris park,MORRIS PARK
- 57 st,-9,"57 St",57 st,57 ST
- beebe 39 av,-1,"39 Av",39 av,BEEBE-39 AVE
- 157 st,-9,"157 St",157 st,157 ST
- 215 st,-9,"215 St",215 st,215 ST
- jamaica 179 st,-9,"Jamaica - 179 St",jamaica 179 st,JAMAICA-179 ST
- 5 av 59 st,-9,"5 Av/59 St",5 av 59 st,5 AVE-59 ST
- 207 st,-9,"207 St",207 st,207 ST
- 110 st cpn,-3,"110 St",110 st,110 ST-CPN
- winthrop st,-4,"Winthrop St",winthrop st,WINTHROP ST
- whitlock av,-4,"Whitlock Av",whitlock av,WHITLOCK AVE
- 65 st,-9,"65 St",65 st,65 ST
- 36 st,-9,"36 St",36 st,36 ST
- 104 st,-9,"104 St",104 st,104 ST
- sheepshead bay,-4,"Sheepshead Bay",sheepshead bay,SHEEPSHEAD BAY
- 79 st,-9,"79 St",79 st,79 ST
- spring st,-4,"Spring St",spring st,SPRING ST
- 6 av,-9,"6 Av",6 av,6 AVE
- marcy av,-4,"Marcy Av",marcy av,MARCY AVE
- gates av,-4,"Gates Av",gates av,GATES AVE
- bergen st,-4,"Bergen St",bergen st,BERGEN ST
- brook av,-4,"Brook Av",brook av,BROOK AVE
- 155 st,-9,"155 St",155 st,155 ST
- neptune av,-4,"Neptune Av",neptune av,NEPTUNE AVE
- 82 st jackson h,-5,"82 St - Jackson Hts",82 st jackson hts,82 ST-JACKSON H
- parsons blvd,-4,"Parsons Blvd",parsons blvd,PARSONS BLVD
- 55 st,-9,"55 St",55 st,55 ST
- elmhurst av,-4,"Elmhurst Av",elmhurst av,ELMHURST AVE
- freeman st,-4,"Freeman St",freeman st,FREEMAN ST
- jackson av,-4,"Jackson Av",jackson av,JACKSON AVE
- new lots av,-4,"New Lots Av",new lots av,NEW LOTS AVE
- 182 183 st,-6,"182-183 Sts",182 183 sts,182-183 ST
- 175 st,-9,"175 St",175 st,175 ST
- new utrecht av,-4,"New Utrecht Av",new utrecht av,NEW UTRECHT AVE
- nassau av,-4,"Nassau Av",nassau av,NASSAU AV
- 75 av,-9,"75 Av",75 av,75 AVE
- montrose av,-4,"Montrose Av",montrose av,MONTROSE AVE
- rockaway av,-4,"Rockaway Av",rockaway av,ROCKAWAY AVE
- jefferson st,-4,"Jefferson St",jefferson st,JEFFERSON ST
- 7 av,-9,"7 Av",7 av,7 AVE
- crescent st,-4,"Crescent St",crescent st,CRESCENT ST
- wall st,-4,"Wall St",wall st,WALL ST
- 67 av,-9,"67 Av",67 av,67 AVE
- hewes st,-4,"Hewes St",hewes st,HEWES ST
- botanic garden,-4,"Botanic Garden",botanic garden,BOTANIC GARDEN
- chauncey st,-4,"Chauncey St",chauncey st,CHAUNCEY ST
- lexington 53 st,-2,"Lexington Av/53 St",lexington av 53 st,LEXINGTON-53 ST
- 77 st,-9,"77 St",77 st,77 ST
- franklin st,-4,"Franklin St",franklin st,FRANKLIN ST
- seneca av,-4,"Seneca Av",seneca av,SENECA AVE
- newkirk plaza,-4,"Newkirk Plaza",newkirk plaza,NEWKIRK PLAZA
- beach 60 st,-9,"Beach 60 St",beach 60 st,BEACH 60 ST
- 176 st,-9,"176 St",176 st,176 ST
- 1 av,-9,"1 Av",1 av,1 AVE
- 183 st,-9,"183 St",183 st,183 ST
- 174 st,-9,"174 St",174 st,174 ST
- 238 st,-9,"238 St",238 st,238 ST
- 50 st,-9,"50 St",50 st,50 ST
- northern blvd,-4,"Northern Blvd",northern blvd,NORTHERN BLVD
- steinway st,-4,"Steinway St",steinway st,STEINWAY ST
- 169 st,-9,"169 St",169 st,169 ST
- parkside av,-4,"Parkside Av",parkside av,PARKSIDE AVE
- elder av,-4,"Elder Av",elder av,ELDER AVE
- 103 st corona,-1,"103 St - Corona Plaza",103 st corona plaza,103 ST-CORONA
- chambers st,-4,"Chambers St",chambers st,CHAMBERS ST
- canal st,-4,"Canal St",canal st,CANAL ST
- 53 st,-9,"53 St",53 st,53 ST
- kingston av,-4,"Kingston Av",kingston av,KINGSTON AVE
- prospect park,-4,"Prospect Park",prospect park,PROSPECT PARK
- fulton st,-4,"Fulton St",fulton st,FULTON ST
- nereid av,-4,"Nereid Av",nereid av,NEREID AVE
- beach 98 st,-9,"Beach 98 St",beach 98 st,BEACH 98 ST
- 45 st,-9,"45 St",45 st,45 ST
- e 149 st,-9,"E 149 St",e 149 st,E 149 ST
- 66 st lincoln,0,"66 St - Lincoln Center",66 st lincoln center,66 ST-LINCOLN
- 74 st broadway,-9,"74 St - Broadway",74 st broadway,74 ST-BROADWAY
- beach 36 st,-9,"Beach 36 St",beach 36 st,BEACH 36 ST
- 28 st,-9,"28 St",28 st,28 ST
- 14 st union sq,-9,"14 St - Union Sq",14 st union sq,14 ST-UNION SQ
- queens plaza,-4,"Queens Plaza",queens plaza,QUEENS PLAZA
- delancey st,-4,"Delancey St",delancey st,DELANCEY ST
- whitehall st,-4,"Whitehall St",whitehall st,WHITEHALL ST
- shepherd av,-4,"Shepherd Av",shepherd av,SHEPHERD AVE
- broad channel,-4,"Broad Channel",broad channel,BROAD CHANNEL
- alabama av,-4,"Alabama Av",alabama av,ALABAMA AVE
- wilson av,-4,"Wilson Av",wilson av,WILSON AVE
- city hall,-4,"City Hall",city hall,CITY HALL
- 51 st,-9,"51 St",51 st,51 ST
- 8 av,-9,"8 Av",8 av,8 AVE
- cypress av,-4,"Cypress Av",cypress av,CYPRESS AVE
- 116 st,-9,"116 St",116 st,116 ST
- e tremont av,0,"Tremont Av",tremont av,E TREMONT AVE
- castle hill av,-4,"Castle Hill Av",castle hill av,CASTLE HILL AVE
- 14 st,-9,"14 St",14 st,14 ST
- forest hills 71,-4,"Forest Hills - 71 Av",forest hills 71 av,FOREST HILLS-71
- brighton beach,-4,"Brighton Beach",brighton beach,BRIGHTON BEACH
- greenpoint av,-4,"Greenpoint Av",greenpoint av,GREENPOINT AVE
- essex st,-4,"Essex St",essex st,ESSEX ST
- mt eden av,-4,"Mt Eden Av",mt eden av,MT EDEN AVE
- beach 90 st,-9,"Beach 90 St",beach 90 st,BEACH 90 ST
- court sq,-4,"Court Sq",court sq,COURT SQ
- prospect av,-4,"Prospect Av",prospect av,PROSPECT AVE
- morgan av,-4,"Morgan Av",morgan av,MORGAN AVE
- beach 44 st,-9,"Beach 44 St",beach 44 st,BEACH 44 ST
- grand av newton,1,"Grand Av - Newtown",grand av newtown,GRAND AV-NEWTON
- 137 st city col,-3,"137 St - City College",137 st city college,137 ST-CITY COL
- woodhaven blvd,-4,"Woodhaven Blvd",woodhaven blvd,WOODHAVEN BLVD
- 25 st,-9,"25 St",25 st,25 ST
- burnside av,-4,"Burnside Av",burnside av,BURNSIDE AVE
- longwood av,-4,"Longwood Av",longwood av,LONGWOOD AVE
- e 180 st,-9,"E 180 St",e 180 st,E 180 ST
- 161 st yankee,1,"161 St - Yankee Stadium",161 st yankee stadium,161 ST-YANKEE
- carroll st,-4,"Carroll St",carroll st,CARROLL ST
- 34 st penn sta,-3,"34 St - Penn Station",34 st penn station,34 ST-PENN STA
- buhre av,-4,"Buhre Av",buhre av,BUHRE AVE
- bay 50 st,-9,"Bay 50 St",bay 50 st,BAY 50 ST
- av h,-4,"Avenue H",av h,AVE H
- 145 st,-9,"145 St",145 st,145 ST
- grand st,-4,"Grand St",grand st,GRAND ST
- 46 st,-9,"46 St",46 st,46 ST
- 103 st,-9,"103 St",103 st,103 ST
- 57 st 7 av,-9,"57 St - 7 Av",57 st 7 av,57 ST-7 AVE
- wakefield 241,-4,"Wakefield - 241 St",wakefield 241 st,WAKEFIELD-241
- broad st,-4,"Broad St",broad st,BROAD ST
- cortlandt st,-4,"Cortlandt St",cortlandt st,CORTLANDT ST
- rockaway blvd,-4,"Rockaway Blvd",rockaway blvd,ROCKAWAY BLVD
- myrtle av,-4,"Myrtle Av",myrtle av,MYRTLE AVE
- 190 st,-9,"190 St",190 st,190 ST
- newkirk av,-4,"Newkirk Av",newkirk av,NEWKIRK AVE
- 71 st,-9,"71 St",71 st,71 ST
- astor place,1,"Astor Pl",astor pl,ASTOR PLACE
- beach 105 st,-9,"Beach 105 St",beach 105 st,BEACH 105 ST
- rector st,-4,"Rector St",rector st,RECTOR ST
- 72 st,-9,"72 St",72 st,72 ST
- sutter av,-4,"Sutter Av",sutter av,SUTTER AVE
- liberty av,-4,"Liberty Av",liberty av,LIBERTY AVE
- ralph av,-4,"Ralph Av",ralph av,RALPH AVE
- nevins st,-4,"Nevins St",nevins st,NEVINS ST
- 170 st,-9,"170 St",170 st,170 ST
- bowery,-4,"Bowery",bowery,BOWERY
- 219 st,-9,"219 St",219 st,219 ST
- 135 st,-9,"135 St",135 st,135 ST
- 174 175 st,-6,"174-175 Sts",174 175 sts,174-175 ST
- 18 st,-9,"18 St",18 st,18 ST
- beach 25 st,-9,"Beach 25 St",beach 25 st,BEACH 25 ST
- euclid av,-4,"Euclid Av",euclid av,EUCLID AVE
- 167 st,-9,"167 St",167 st,167 ST
- cypress hills,-4,"Cypress Hills",cypress hills,CYPRESS HILLS
- av x,-4,"Avenue X",av x,AVE X
- 59 st columbus,0,"59 St - Columbus Circle",59 st columbus circle,59 ST-COLUMBUS
- av p,-4,"Avenue P",av p,AVE P
- av u,-4,"Avenue U",av u,AVE U
- boyd 88 st,-2,"88 St",88 st,BOYD-88 ST
- av i,-4,"Avenue I",av i,AVE I
- oxford 104 st,0,"104 St",104 st,OXFORD-104 ST
- av m,-4,"Avenue M",av m,AVE M
- av n,-4,"Avenue N",av n,AVE N
- norwood 205 st,-9,"Norwood - 205 St",norwood 205 st,NORWOOD-205 ST
- simpson st,-4,"Simpson St",simpson st,SIMPSON ST
- 34 st herald sq,-9,"34 St - Herald Sq",34 st herald sq,34 ST-HERALD SQ
- atlantic av,-4,"Atlantic Av",atlantic av,ATLANTIC AVE
- franklin av,-4,"Franklin Av",franklin av,FRANKLIN AVE
- ditmas av,-4,"Ditmas Av",ditmas av,DITMAS AVE
- clark st,-4,"Clark St",clark st,CLARK ST
- 25 av,-9,"25 Av",25 av,25 AVE
- hudson 80 st,3,"80 St",80 st,HUDSON-80 ST
+ 121 st,-9,121 St,121 st,121 ST
+ york st,-4,York St,york st,YORK ST
+ 96 st,-9,96 St,96 st,96 ST
+ bay ridge 95 st,-9,Bay Ridge - 95 St,bay ridge 95 st,BAY RIDGE-95 ST
+ 2 av,-9,2 Av,2 av,2 AVE
+ baychester av,-4,Baychester Av,baychester av,BAYCHESTER AVE
+ 42 st bryant pk,-9,42 St - Bryant Pk,42 st bryant pk,42 ST-BRYANT PK
+ houston st,-4,Houston St,houston st,HOUSTON ST
+ sutphin blvd,-4,Sutphin Blvd,sutphin blvd,SUTPHIN BLVD
+ knickerbocker,1,Knickerbocker Av,knickerbocker av,KNICKERBOCKER
+ w 8 st aquarium,-2,W 8 St - NY Aquarium,w 8 st ny aquarium,W 8 ST-AQUARIUM
+ crown hts utica,1,Crown Hts - Utica Av,crown hts utica av,CROWN HTS-UTICA
+ 9 av,-9,9 Av,9 av,9 AVE
+ 18 av,-9,18 Av,18 av,18 AVE
+ hoyt st,-4,Hoyt St,hoyt st,HOYT ST
+ high st,-4,High St,high st,HIGH ST
+ 90 st elmhurst,-4,90 St - Elmhurst Av,90 st elmhurst av,90 ST-ELMHURST
+ 111 st,-9,111 St,111 st,111 ST
+ utica av,-4,Utica Av,utica av,UTICA AVE
+ bowling green,-4,Bowling Green,bowling green,BOWLING GREEN
+ grand army plaz,-1,Grand Army Plaza,grand army plaza,GRAND ARMY PLAZ
+ 59 st,-9,59 St,59 st,59 ST
+ junction blvd,-4,Junction Blvd,junction blvd,JUNCTION BLVD
+ 9 st,-9,9 St,9 st,9 ST
+ bronx park east,-4,Bronx Park East,bronx park east,BRONX PARK EAST
+ borough hall ct,1,Borough Hall,borough hall,BOROUGH HALL/CT
+ saratoga av,-4,Saratoga Av,saratoga av,SARATOGA AVE
+ east broadway,-4,East Broadway,east broadway,EAST BROADWAY
+ 163 st amsterdm,-1,163 St - Amsterdam Av,163 st amsterdam av,163 ST-AMSTERDM
+ nostrand av,-4,Nostrand Av,nostrand av,NOSTRAND AVE
+ kosciuszko st,-4,Kosciuszko St,kosciuszko st,KOSCIUSZKO ST
+ 3 av,-9,3 Av,3 av,3 AVE
+ dekalb av,-4,DeKalb Av,dekalb av,DEKALB AVE
+ 110 st,-9,110 St,110 st,110 ST
+ sterling st,-4,Sterling St,sterling st,STERLING ST
+ union st,-4,Union St,union st,UNION ST
+ church av,-4,Church Av,church av,CHURCH AVE
+ st. george,1,St George,st george,ST. GEORGE
+ van siclen av,-4,Van Siclen Av,van siclen av,VAN SICLEN AVE
+ central av,-4,Central Av,central av,CENTRAL AVE
+ 181 st,-9,181 St,181 st,181 ST
+ bleecker st,-4,Bleecker St,bleecker st,BLEECKER ST
+ forest av,-4,Forest Av,forest av,FOREST AVE
+ 225 st,-9,225 St,225 st,225 ST
+ 23 st,-9,23 St,23 st,23 ST
+ 68st hunter col,0,68 St - Hunter College,68 st hunter college,68ST-HUNTER COL
+ allerton av,-4,Allerton Av,allerton av,ALLERTON AVE
+ metropolitan av,-4,Metropolitan Av,metropolitan av,METROPOLITAN AV
+ graham av,-4,Graham Av,graham av,GRAHAM AVE
+ marble hill 225,-4,Marble Hill - 225 St,marble hill 225 st,MARBLE HILL-225
+ jay st metrotec,-1,Jay St - MetroTech,jay st metrotech,JAY ST-METROTEC
+ bay ridge av,-4,Bay Ridge Av,bay ridge av,BAY RIDGE AVE
+ zerega av,-4,Zerega Av,zerega av,ZEREGA AVE
+ pelham bay park,-4,Pelham Bay Park,pelham bay park,PELHAM BAY PARK
+ park place,1,Park Pl,park pl,PARK PLACE
+ pennsylvania av,-4,Pennsylvania Av,pennsylvania av,PENNSYLVANIA AV
+ cleveland st,-4,Cleveland St,cleveland st,CLEVELAND ST
+ 20 av,-9,20 Av,20 av,20 AVE
+ inwood 207 st,-9,Inwood - 207 St,inwood 207 st,INWOOD-207 ST
+ flushing av,-4,Flushing Av,flushing av,FLUSHING AVE
+ 8 st b'way nyu,1,8 St - NYU,8 st nyu,8 ST-B'WAY NYU
+ st lawrence av,-4,St Lawrence Av,st lawrence av,ST LAWRENCE AVE
+ 21 st,-9,21 St,21 st,21 ST
+ 231 st,-9,231 St,231 st,231 ST
+ 86 st,-9,86 St,86 st,86 ST
+ 138 st 3 av,1,3 Av - 138 St,3 av 138 st,138 ST-3 AVE
+ 125 st,-9,125 St,125 st,125 ST
+ jamaica van wyc,-1,Jamaica - Van Wyck,jamaica van wyck,JAMAICA-VAN WYC
+ 191 st,-9,191 St,191 st,191 ST
+ 5 av 53 st,-9,5 Av/53 St,5 av 53 st,5 AVE-53 ST
+ broadway,-4,Broadway,broadway,BROADWAY
+ livonia av,-4,Livonia Av,livonia av,LIVONIA AVE
+ 63 dr rego park,-9,63 Dr - Rego Park,63 dr rego park,63 DR-REGO PARK
+ president st,-4,President St,president st,PRESIDENT ST
+ halsey st,-4,Halsey St,halsey st,HALSEY ST
+ 15 st prospect,-2,15 St - Prospect Park,15 st prospect park,15 ST-PROSPECT
+ dyckman st,-4,Dyckman St,dyckman st,DYCKMAN ST
+ 233 st,-9,233 St,233 st,233 ST
+ 33 st,-9,33 St,33 st,33 ST
+ beach 67 st,-9,Beach 67 St,beach 67 st,BEACH 67 ST
+ 4 av,-9,4 Av,4 av,4 AVE
+ lafayette av,-4,Lafayette Av,lafayette av,LAFAYETTE AVE
+ lorimer st,-4,Lorimer St,lorimer st,LORIMER ST
+ junius st,-4,Junius St,junius st,JUNIUS ST
+ norwood av,-4,Norwood Av,norwood av,NORWOOD AVE
+ east 105 st,-2,Beach 105 St,beach 105 st,EAST 105 ST
+ grand 30 av,-1,30 Av,30 av,GRAND-30 AVE
+ av j,-4,Avenue J,av j,AVE J
+ kingsbridge rd,-4,Kingsbridge Rd,kingsbridge rd,KINGSBRIDGE RD
+ burke av,-4,Burke Av,burke av,BURKE AVE
+ tompkinsville,-4,Tompkinsville,tompkinsville,TOMPKINSVILLE
+ bedford park bl,0,Bedford Park Blvd,bedford park blvd,BEDFORD PARK BL
+ grant av,-4,Grant Av,grant av,GRANT AVE
+ hunts point av,-4,Hunts Point Av,hunts point av,HUNTS POINT AVE
+ bedford av,-4,Bedford Av,bedford av,BEDFORD AVE
+ smith 9 st,-6,Smith - 9 Sts,smith 9 sts,SMITH-9 ST
+ 14th street,1,14 St,14 st,14TH STREET
+ tremont av,-4,Tremont Av,tremont av,TREMONT AVE
+ classon av,-4,Classon Av,classon av,CLASSON AVE
+ morris park,-4,Morris Park,morris park,MORRIS PARK
+ 57 st,-9,57 St,57 st,57 ST
+ beebe 39 av,-1,39 Av,39 av,BEEBE-39 AVE
+ 157 st,-9,157 St,157 st,157 ST
+ 215 st,-9,215 St,215 st,215 ST
+ jamaica 179 st,-9,Jamaica - 179 St,jamaica 179 st,JAMAICA-179 ST
+ 5 av 59 st,-9,5 Av/59 St,5 av 59 st,5 AVE-59 ST
+ 207 st,-9,207 St,207 st,207 ST
+ 110 st cpn,-3,110 St,110 st,110 ST-CPN
+ winthrop st,-4,Winthrop St,winthrop st,WINTHROP ST
+ whitlock av,-4,Whitlock Av,whitlock av,WHITLOCK AVE
+ 65 st,-9,65 St,65 st,65 ST
+ 36 st,-9,36 St,36 st,36 ST
+ 104 st,-9,104 St,104 st,104 ST
+ sheepshead bay,-4,Sheepshead Bay,sheepshead bay,SHEEPSHEAD BAY
+ 79 st,-9,79 St,79 st,79 ST
+ spring st,-4,Spring St,spring st,SPRING ST
+ 6 av,-9,6 Av,6 av,6 AVE
+ marcy av,-4,Marcy Av,marcy av,MARCY AVE
+ gates av,-4,Gates Av,gates av,GATES AVE
+ bergen st,-4,Bergen St,bergen st,BERGEN ST
+ brook av,-4,Brook Av,brook av,BROOK AVE
+ 155 st,-9,155 St,155 st,155 ST
+ neptune av,-4,Neptune Av,neptune av,NEPTUNE AVE
+ 82 st jackson h,-5,82 St - Jackson Hts,82 st jackson hts,82 ST-JACKSON H
+ parsons blvd,-4,Parsons Blvd,parsons blvd,PARSONS BLVD
+ 55 st,-9,55 St,55 st,55 ST
+ elmhurst av,-4,Elmhurst Av,elmhurst av,ELMHURST AVE
+ freeman st,-4,Freeman St,freeman st,FREEMAN ST
+ jackson av,-4,Jackson Av,jackson av,JACKSON AVE
+ new lots av,-4,New Lots Av,new lots av,NEW LOTS AVE
+ 182 183 st,-6,182-183 Sts,182 183 sts,182-183 ST
+ 175 st,-9,175 St,175 st,175 ST
+ new utrecht av,-4,New Utrecht Av,new utrecht av,NEW UTRECHT AVE
+ nassau av,-4,Nassau Av,nassau av,NASSAU AV
+ 75 av,-9,75 Av,75 av,75 AVE
+ montrose av,-4,Montrose Av,montrose av,MONTROSE AVE
+ rockaway av,-4,Rockaway Av,rockaway av,ROCKAWAY AVE
+ jefferson st,-4,Jefferson St,jefferson st,JEFFERSON ST
+ 7 av,-9,7 Av,7 av,7 AVE
+ crescent st,-4,Crescent St,crescent st,CRESCENT ST
+ wall st,-4,Wall St,wall st,WALL ST
+ 67 av,-9,67 Av,67 av,67 AVE
+ hewes st,-4,Hewes St,hewes st,HEWES ST
+ botanic garden,-4,Botanic Garden,botanic garden,BOTANIC GARDEN
+ chauncey st,-4,Chauncey St,chauncey st,CHAUNCEY ST
+ lexington 53 st,-2,Lexington Av/53 St,lexington av 53 st,LEXINGTON-53 ST
+ 77 st,-9,77 St,77 st,77 ST
+ franklin st,-4,Franklin St,franklin st,FRANKLIN ST
+ seneca av,-4,Seneca Av,seneca av,SENECA AVE
+ newkirk plaza,-4,Newkirk Plaza,newkirk plaza,NEWKIRK PLAZA
+ beach 60 st,-9,Beach 60 St,beach 60 st,BEACH 60 ST
+ 176 st,-9,176 St,176 st,176 ST
+ 1 av,-9,1 Av,1 av,1 AVE
+ 183 st,-9,183 St,183 st,183 ST
+ 174 st,-9,174 St,174 st,174 ST
+ 238 st,-9,238 St,238 st,238 ST
+ 50 st,-9,50 St,50 st,50 ST
+ northern blvd,-4,Northern Blvd,northern blvd,NORTHERN BLVD
+ steinway st,-4,Steinway St,steinway st,STEINWAY ST
+ 169 st,-9,169 St,169 st,169 ST
+ parkside av,-4,Parkside Av,parkside av,PARKSIDE AVE
+ elder av,-4,Elder Av,elder av,ELDER AVE
+ 103 st corona,-1,103 St - Corona Plaza,103 st corona plaza,103 ST-CORONA
+ chambers st,-4,Chambers St,chambers st,CHAMBERS ST
+ canal st,-4,Canal St,canal st,CANAL ST
+ 53 st,-9,53 St,53 st,53 ST
+ kingston av,-4,Kingston Av,kingston av,KINGSTON AVE
+ prospect park,-4,Prospect Park,prospect park,PROSPECT PARK
+ fulton st,-4,Fulton St,fulton st,FULTON ST
+ nereid av,-4,Nereid Av,nereid av,NEREID AVE
+ beach 98 st,-9,Beach 98 St,beach 98 st,BEACH 98 ST
+ 45 st,-9,45 St,45 st,45 ST
+ e 149 st,-9,E 149 St,e 149 st,E 149 ST
+ 66 st lincoln,0,66 St - Lincoln Center,66 st lincoln center,66 ST-LINCOLN
+ 74 st broadway,-9,74 St - Broadway,74 st broadway,74 ST-BROADWAY
+ beach 36 st,-9,Beach 36 St,beach 36 st,BEACH 36 ST
+ 28 st,-9,28 St,28 st,28 ST
+ 14 st union sq,-9,14 St - Union Sq,14 st union sq,14 ST-UNION SQ
+ queens plaza,-4,Queens Plaza,queens plaza,QUEENS PLAZA
+ delancey st,-4,Delancey St,delancey st,DELANCEY ST
+ whitehall st,-4,Whitehall St,whitehall st,WHITEHALL ST
+ shepherd av,-4,Shepherd Av,shepherd av,SHEPHERD AVE
+ broad channel,-4,Broad Channel,broad channel,BROAD CHANNEL
+ alabama av,-4,Alabama Av,alabama av,ALABAMA AVE
+ wilson av,-4,Wilson Av,wilson av,WILSON AVE
+ city hall,-4,City Hall,city hall,CITY HALL
+ 51 st,-9,51 St,51 st,51 ST
+ 8 av,-9,8 Av,8 av,8 AVE
+ cypress av,-4,Cypress Av,cypress av,CYPRESS AVE
+ 116 st,-9,116 St,116 st,116 ST
+ e tremont av,0,Tremont Av,tremont av,E TREMONT AVE
+ castle hill av,-4,Castle Hill Av,castle hill av,CASTLE HILL AVE
+ 14 st,-9,14 St,14 st,14 ST
+ forest hills 71,-4,Forest Hills - 71 Av,forest hills 71 av,FOREST HILLS-71
+ brighton beach,-4,Brighton Beach,brighton beach,BRIGHTON BEACH
+ greenpoint av,-4,Greenpoint Av,greenpoint av,GREENPOINT AVE
+ essex st,-4,Essex St,essex st,ESSEX ST
+ mt eden av,-4,Mt Eden Av,mt eden av,MT EDEN AVE
+ beach 90 st,-9,Beach 90 St,beach 90 st,BEACH 90 ST
+ court sq,-4,Court Sq,court sq,COURT SQ
+ prospect av,-4,Prospect Av,prospect av,PROSPECT AVE
+ morgan av,-4,Morgan Av,morgan av,MORGAN AVE
+ beach 44 st,-9,Beach 44 St,beach 44 st,BEACH 44 ST
+ grand av newton,1,Grand Av - Newtown,grand av newtown,GRAND AV-NEWTON
+ 137 st city col,-3,137 St - City College,137 st city college,137 ST-CITY COL
+ woodhaven blvd,-4,Woodhaven Blvd,woodhaven blvd,WOODHAVEN BLVD
+ 25 st,-9,25 St,25 st,25 ST
+ burnside av,-4,Burnside Av,burnside av,BURNSIDE AVE
+ longwood av,-4,Longwood Av,longwood av,LONGWOOD AVE
+ e 180 st,-9,E 180 St,e 180 st,E 180 ST
+ 161 st yankee,1,161 St - Yankee Stadium,161 st yankee stadium,161 ST-YANKEE
+ carroll st,-4,Carroll St,carroll st,CARROLL ST
+ 34 st penn sta,-3,34 St - Penn Station,34 st penn station,34 ST-PENN STA
+ buhre av,-4,Buhre Av,buhre av,BUHRE AVE
+ bay 50 st,-9,Bay 50 St,bay 50 st,BAY 50 ST
+ av h,-4,Avenue H,av h,AVE H
+ 145 st,-9,145 St,145 st,145 ST
+ grand st,-4,Grand St,grand st,GRAND ST
+ 46 st,-9,46 St,46 st,46 ST
+ 103 st,-9,103 St,103 st,103 ST
+ 57 st 7 av,-9,57 St - 7 Av,57 st 7 av,57 ST-7 AVE
+ wakefield 241,-4,Wakefield - 241 St,wakefield 241 st,WAKEFIELD-241
+ broad st,-4,Broad St,broad st,BROAD ST
+ cortlandt st,-4,Cortlandt St,cortlandt st,CORTLANDT ST
+ rockaway blvd,-4,Rockaway Blvd,rockaway blvd,ROCKAWAY BLVD
+ myrtle av,-4,Myrtle Av,myrtle av,MYRTLE AVE
+ 190 st,-9,190 St,190 st,190 ST
+ newkirk av,-4,Newkirk Av,newkirk av,NEWKIRK AVE
+ 71 st,-9,71 St,71 st,71 ST
+ astor place,1,Astor Pl,astor pl,ASTOR PLACE
+ beach 105 st,-9,Beach 105 St,beach 105 st,BEACH 105 ST
+ rector st,-4,Rector St,rector st,RECTOR ST
+ 72 st,-9,72 St,72 st,72 ST
+ sutter av,-4,Sutter Av,sutter av,SUTTER AVE
+ liberty av,-4,Liberty Av,liberty av,LIBERTY AVE
+ ralph av,-4,Ralph Av,ralph av,RALPH AVE
+ nevins st,-4,Nevins St,nevins st,NEVINS ST
+ 170 st,-9,170 St,170 st,170 ST
+ bowery,-4,Bowery,bowery,BOWERY
+ 219 st,-9,219 St,219 st,219 ST
+ 135 st,-9,135 St,135 st,135 ST
+ 174 175 st,-6,174-175 Sts,174 175 sts,174-175 ST
+ 18 st,-9,18 St,18 st,18 ST
+ beach 25 st,-9,Beach 25 St,beach 25 st,BEACH 25 ST
+ euclid av,-4,Euclid Av,euclid av,EUCLID AVE
+ 167 st,-9,167 St,167 st,167 ST
+ cypress hills,-4,Cypress Hills,cypress hills,CYPRESS HILLS
+ av x,-4,Avenue X,av x,AVE X
+ 59 st columbus,0,59 St - Columbus Circle,59 st columbus circle,59 ST-COLUMBUS
+ av p,-4,Avenue P,av p,AVE P
+ av u,-4,Avenue U,av u,AVE U
+ boyd 88 st,-2,88 St,88 st,BOYD-88 ST
+ av i,-4,Avenue I,av i,AVE I
+ oxford 104 st,0,104 St,104 st,OXFORD-104 ST
+ av m,-4,Avenue M,av m,AVE M
+ av n,-4,Avenue N,av n,AVE N
+ norwood 205 st,-9,Norwood - 205 St,norwood 205 st,NORWOOD-205 ST
+ simpson st,-4,Simpson St,simpson st,SIMPSON ST
+ 34 st herald sq,-9,34 St - Herald Sq,34 st herald sq,34 ST-HERALD SQ
+ atlantic av,-4,Atlantic Av,atlantic av,ATLANTIC AVE
+ franklin av,-4,Franklin Av,franklin av,FRANKLIN AVE
+ ditmas av,-4,Ditmas Av,ditmas av,DITMAS AVE
+ clark st,-4,Clark St,clark st,CLARK ST
+ 25 av,-9,25 Av,25 av,25 AVE
+ hudson 80 st,3,80 St,80 st,HUDSON-80 ST
  lackawanna , 0 , None , None , LACKAWANNA
  110 st cathedrl , 0 , Cathedral Pkwy (110 St) , Cathedral Pkwy (110 St) , 110 ST-CATHEDRL
- brooklyn bridge,8,"Brooklyn Bridge - City Hall",brooklyn bridge city hall,BROOKLYN BRIDGE
+ brooklyn bridge,8,Brooklyn Bridge - City Hall,brooklyn bridge city hall,BROOKLYN BRIDGE
  broadway eny , 0 , Broadway Jct , Broadway Jct , BROADWAY-ENY
  station , 0 , None , None , STATION
- 28 st broadway,5,"28 St",28 st,28 ST-BROADWAY
- 69 st fisk av,4,"69 St",69 st,69 ST-FISK AVE
+ 28 st broadway,5,28 St,28 st,28 ST-BROADWAY
+ 69 st fisk av,4,69 St,69 st,69 ST-FISK AVE
  bushwick av , 0 , Bushwick Av - Aberdeen St , Bushwick Av - Aberdeen St , BUSHWICK AVE
  jfk jamaica ct1 , 0 , Jamaica Center - Parsons/Archer , Jamaica Center - Parsons/Archer , JFK JAMAICA CT1
  42 st grd cntrl , 0 , Grand Central - 42 St , Grand Central - 42 St , 42 ST-GRD CNTRL
  jfk howard bch , 0 , Howard Beach - JFK Airport , Howard Beach - JFK Airport , JFK HOWARD BCH
- w 4 st wash sq,4,"W 4 St",w 4 st,W 4 ST-WASH SQ
- pelham parkway,3,"Pelham Pkwy",pelham pkwy,PELHAM PARKWAY
- 33 st rawson st,6,"33 St",33 st,33 ST/RAWSON ST
- kingston throop,2,"Kingston - Throop Avs",kingston throop avs,KINGSTON-THROOP
- 14 st 6 av,5,"14 St",14 st,14 ST-6 AVE
+ w 4 st wash sq,4,W 4 St,w 4 st,W 4 ST-WASH SQ
+ pelham parkway,3,Pelham Pkwy,pelham pkwy,PELHAM PARKWAY
+ 33 st rawson st,6,33 St,33 st,33 ST/RAWSON ST
+ kingston throop,2,Kingston - Throop Avs,kingston throop avs,KINGSTON-THROOP
+ 14 st 6 av,5,14 St,14 st,14 ST-6 AVE
  washington 36 a , 0 , 36 Av , 36 Av , WASHINGTON-36 A
- clinton wash av,7,"Clinton - Washington Avs",clinton washington avs,CLINTON-WASH AV
- 9th street,4,"9 St",9 st,9TH STREET
- kings highway,4,"Kings Hwy",kings hwy,KINGS HIGHWAY
+ clinton wash av,7,Clinton - Washington Avs,clinton washington avs,CLINTON-WASH AV
+ 9th street,4,9 St,9 st,9TH STREET
+ kings highway,4,Kings Hwy,kings hwy,KINGS HIGHWAY
  dyre av , 0 , Eastchester - Dyre Av , Eastchester - Dyre Av , DYRE AVE
- bedford nostran,3,"Bedford - Nostrand Avs",bedford nostrand avs,BEDFORD/NOSTRAN
- middletown road,2,"Middletown Rd",middletown rd,MIDDLETOWN ROAD
- beverly road,2,"Beverly Rd",beverly rd,BEVERLY ROAD
- 116 st columbia,4,"116 St - Columbia University",116 st columbia university,116 ST-COLUMBIA
+ bedford nostran,3,Bedford - Nostrand Avs,bedford nostrand avs,BEDFORD/NOSTRAN
+ middletown road,2,Middletown Rd,middletown rd,MIDDLETOWN ROAD
+ beverly road,2,Beverly Rd,beverly rd,BEVERLY ROAD
+ 116 st columbia,4,116 St - Columbia University,116 st columbia university,116 ST-COLUMBIA
  union tpk kew g , 0 , Kew Gardens - Union Tpke , Kew Gardens - Union Tpke , UNION TPK-KEW G
- 23 st 6 av,5,"23 St",23 st,23 ST-6 AVE
+ 23 st 6 av,5,23 St,23 st,23 ST-6 AVE
  morrison av , 0 , Morrison Av- Sound View , Morrison Av- Sound View , MORRISON AVE
- myrtle willough,4,"Myrtle - Willoughby Avs",myrtle willoughby avs,MYRTLE-WILLOUGH
+ myrtle willough,4,Myrtle - Willoughby Avs,myrtle willoughby avs,MYRTLE-WILLOUGH
  howard bch jfk , 0 , Howard Beach - JFK Airport , Howard Beach - JFK Airport , HOWARD BCH-JFK
  barclays center , 0 , Atlantic Av - Barclays Ctr , Atlantic Av - Barclays Ctr , BARCLAYS CENTER
  path wtc , 0 , None , None , PATH WTC
- bay pky 22 av,8,"Bay Ridge Av",bay ridge av,BAY PKY-22 AVE
+ bay pky 22 av,8,Bay Ridge Av,bay ridge av,BAY PKY-22 AVE
  e 143 st , 0 , E 143 St - St Mary's St , E 143 St - St Mary's St , E 143 ST
  greenwood 111 , 0 , 111 St , 111 St , GREENWOOD-111
- 148 st lenox,7,"Harlem - 148 St",harlem 148 st,148 ST-LENOX
- gun hill road,2,"Gun Hill Rd",gun hill rd,GUN HILL ROAD
+ 148 st lenox,7,Harlem - 148 St,harlem 148 st,148 ST-LENOX
+ gun hill road,2,Gun Hill Rd,gun hill rd,GUN HILL ROAD
  hoyt st astoria , 0 , Astoria Blvd , Astoria Blvd , HOYT ST-ASTORIA
  stillwell av , 0 , Coney Island - Stillwell Av , Coney Island - Stillwell Av , STILLWELL AVE
- bay parkway,3,"Bay Pkwy",bay pkwy,BAY PARKWAY
+ bay parkway,3,Bay Pkwy,bay pkwy,BAY PARKWAY
  5 av bryant pk , 0 , 42 St - Bryant Pk , 42 St - Bryant Pk , 5 AVE-BRYANT PK
- 52 st lincoln,4,"52 St",52 st,52 ST-LINCOLN
- 149 st gr conc,3,"149 St - Grand Concourse",149 st grand concourse,149 ST-GR CONC
+ 52 st lincoln,4,52 St,52 st,52 ST-LINCOLN
+ 149 st gr conc,3,149 St - Grand Concourse,149 st grand concourse,149 ST-GR CONC
  thirty st , 0 , None , None , THIRTY ST
- 40 st lowery st,6,"40 St",40 st,40 ST-LOWERY ST
+ 40 st lowery st,6,40 St,40 st,40 ST-LOWERY ST
  elderts lane , 0 , 75 St , 75 St , ELDERTS LANE
- ocean parkway,3,"Ocean Pkwy",ocean pkwy,OCEAN PARKWAY
- ft hamilton pky,3,"Fort Hamilton Pkwy",fort hamilton pkwy,FT HAMILTON PKY
- world trade ctr,3,"World Trade Center",world trade center,WORLD TRADE CTR
+ ocean parkway,3,Ocean Pkwy,ocean pkwy,OCEAN PARKWAY
+ ft hamilton pky,3,Fort Hamilton Pkwy,fort hamilton pkwy,FT HAMILTON PKY
+ world trade ctr,3,World Trade Center,world trade center,WORLD TRADE CTR
  e 177 st parkch , 0 , Parkchester , Parkchester , E 177 ST-PARKCH
- roosevelt is,2,"Roosevelt Island",roosevelt island,ROOSEVELT IS
+ roosevelt is,2,Roosevelt Island,roosevelt island,ROOSEVELT IS
  broadway 31 st , 0 , None , None , BROADWAY-31 ST
  orchard beach , 0 , Pelham Bay Park , Pelham Bay Park , ORCHARD BEACH
  eastern pkwy , 0 , Eastern Pkwy - Brooklyn Museum , Eastern Pkwy - Brooklyn Museum , EASTERN PKWY
- van alston 21st,10,"21 St",21 st,VAN ALSTON-21ST
- rockaway pk 116,6,"Rockaway Park - Beach 116 St",rockaway park beach 116 st,ROCKAWAY PK 116
- woodlawn road,3,"Woodlawn",woodlawn,WOODLAWN ROAD
- aqueduct track,4,"Aqueduct Racetrack",aqueduct racetrack,AQUEDUCT TRACK
+ van alston 21st,10,21 St,21 st,VAN ALSTON-21ST
+ rockaway pk 116,6,Rockaway Park - Beach 116 St,rockaway park beach 116 st,ROCKAWAY PK 116
+ woodlawn road,3,Woodlawn,woodlawn,WOODLAWN ROAD
+ aqueduct track,4,Aqueduct Racetrack,aqueduct racetrack,AQUEDUCT TRACK
  broadway lafay , 0 , Broadway-Lafayette St , Broadway-Lafayette St , BROADWAY/LAFAY
- hunters pt av,3,"Hunters Point Av",hunters point av,HUNTERS PT AVE
+ hunters pt av,3,Hunters Point Av,hunters point av,HUNTERS PT AVE
  jamaica center , 0 , Jamaica Center - Parsons/Archer , Jamaica Center - Parsons/Archer , JAMAICA CENTER
  rit roosevelt , 0 , Roosevelt Island , Roosevelt Island , RIT-ROOSEVELT
  forest parkway , 0 , 85 St - Forest Pkwy , 85 St - Forest Pkwy , FOREST PARKWAY
- dyckman 200 st,6,"Dyckman St",dyckman st,DYCKMAN-200 ST
- south ferry,3,"South Ferry Loop",south ferry loop,SOUTH FERRY
- intervale 163,5,"Intervale Av",intervale av,INTERVALE-163
- 7 av park slope,7,"7 Av",7 av,7 AV-PARK SLOPE
- cathedrl 110 st,3,"Cathedral Pkwy (110 St)",cathedral pkwy (110 st),CATHEDRL-110 ST
- 138 st gr conc,3,"138 St - Grand Concourse",138 st grand concourse,138 ST-GR CONC
+ dyckman 200 st,6,Dyckman St,dyckman st,DYCKMAN-200 ST
+ south ferry,3,South Ferry Loop,south ferry loop,SOUTH FERRY
+ intervale 163,5,Intervale Av,intervale av,INTERVALE-163
+ 7 av park slope,7,7 Av,7 av,7 AV-PARK SLOPE
+ cathedrl 110 st,3,Cathedral Pkwy (110 St),cathedral pkwy (110 st),CATHEDRL-110 ST
+ 138 st gr conc,3,138 St - Grand Concourse,138 st grand concourse,138 ST-GR CONC
  main st , 0 , Flushing - Main St , Flushing - Main St , MAIN ST
  flatbush av , 0 , Flatbush Av - Brooklyn College , Flatbush Av - Brooklyn College , FLATBUSH AVE
  court sq 23 st , 0 , Court Sq , Court Sq , COURT SQ-23 ST
- thirty third st,8,"Whitehall St",whitehall st,THIRTY THIRD ST
- fordham road,2,"Fordham Rd",fordham rd,FORDHAM ROAD
- neck road,2,"Neck Rd",neck rd,NECK ROAD
+ thirty third st,8,Whitehall St,whitehall st,THIRTY THIRD ST
+ fordham road,2,Fordham Rd,fordham rd,FORDHAM ROAD
+ neck road,2,Neck Rd,neck rd,NECK ROAD
  roosevelt av , 0 , 74 St - Broadway , 74 St - Broadway , ROOSEVELT AVE
- 47 50 st rock,7,"47-50 Sts - Rockefeller Ctr",47 50 sts rockefeller ctr,47-50 ST-ROCK
+ 47 50 st rock,7,47-50 Sts - Rockefeller Ctr,47 50 sts rockefeller ctr,47-50 ST-ROCK
  242 st , 0 , Van Cortlandt Park - 242 St , Van Cortlandt Park - 242 St , 242 ST
  westchester sq , 0 , Westchester Sq - E Tremont Av , Westchester Sq - E Tremont Av , WESTCHESTER SQ
- queensboro plz,2,"Queensboro Plaza",queensboro plaza,QUEENSBORO PLZ
+ queensboro plz,2,Queensboro Plaza,queensboro plaza,QUEENSBORO PLZ
  42 st times sq , 0 , Times Sq - 42 St , Times Sq - 42 St , 42 ST-TIMES SQ
  7 av 53 st , 0 , 7 Av , 7 Av , 7 AVE-53 ST
  path wtc 2 , 0 , None , None , PATH WTC 2
  ditmars bl 31 s , 0 , Astoria - Ditmars Blvd , Astoria - Ditmars Blvd , DITMARS BL-31 S
- mosholu parkway,3,"Mosholu Pkwy",mosholu pkwy,MOSHOLU PARKWAY
+ mosholu parkway,3,Mosholu Pkwy,mosholu pkwy,MOSHOLU PARKWAY
  42 st pa bus te , 0 , 42 St - Port Authority Bus Terminal , 42 St - Port Authority Bus Terminal , 42 ST-PA BUS TE
- prince st b'way,4,"Prince St",prince st,PRINCE ST-B'WAY
- twenty third st,8,"Winthrop St",winthrop st,TWENTY THIRD ST
- 23 st 5 av,5,"23 St",23 st,23 ST-5 AVE
- aqueduct n cndt,6,"Aqueduct - N Conduit Av",aqueduct n conduit av,AQUEDUCT-N CNDT
- 49 st 7 av,5,"49 St",49 st,49 ST-7 AVE
+ prince st b'way,4,Prince St,prince st,PRINCE ST-B'WAY
+ twenty third st,8,Winthrop St,winthrop st,TWENTY THIRD ST
+ 23 st 5 av,5,23 St,23 st,23 ST-5 AVE
+ aqueduct n cndt,6,Aqueduct - N Conduit Av,aqueduct n conduit av,AQUEDUCT-N CNDT
+ 49 st 7 av,5,49 St,49 st,49 ST-7 AVE
  van wyck blvd , 0 , Briarwood - Van Wyck Blvd , Briarwood - Van Wyck Blvd , VAN WYCK BLVD
- mets willets pt,3,"Mets - Willets Point",mets willets point,METS-WILLETS PT
+ mets willets pt,3,Mets - Willets Point,mets willets point,METS-WILLETS PT
  rockaway pky , 0 , Canarsie - Rockaway Pkwy , Canarsie - Rockaway Pkwy , ROCKAWAY PKY
- 149 st 3 av,3,"3 Av - 149 St",3 av 149 st,149 ST-3 AVE
- vernon jackson,8,"Vernon Blvd - Jackson Av",vernon blvd jackson av,VERNON/JACKSON
- 22 av bay pky,9,"Bay Pkwy",bay pkwy,22 AVE-BAY PKY
- 61 st woodside,5,"Woodside - 61 St",woodside 61 st,61 ST/WOODSIDE
+ 149 st 3 av,3,3 Av - 149 St,3 av 149 st,149 ST-3 AVE
+ vernon jackson,8,Vernon Blvd - Jackson Av,vernon blvd jackson av,VERNON/JACKSON
+ 22 av bay pky,9,Bay Pkwy,bay pkwy,22 AVE-BAY PKY
+ 61 st woodside,5,Woodside - 61 St,woodside 61 st,61 ST/WOODSIDE
  rit manhattan , 0 , None , None , RIT-MANHATTAN
- far rockaway,6,"Far Rockaway - Mott Av",far rockaway mott av,FAR ROCKAWAY
- 46 st bliss st,5,"46 St",46 st,46 ST-BLISS ST
- 168 st broadway,5,"168 St",168 st,168 ST-BROADWAY
- cortelyou road,2,"Cortelyou Rd",cortelyou rd,CORTELYOU ROAD
- hoyt schermer,6,"Hoyt - Schermerhorn Sts",hoyt schermerhorn sts,HOYT/SCHERMER
+ far rockaway,6,Far Rockaway - Mott Av,far rockaway mott av,FAR ROCKAWAY
+ 46 st bliss st,5,46 St,46 st,46 ST-BLISS ST
+ 168 st broadway,5,168 St,168 st,168 ST-BROADWAY
+ cortelyou road,2,Cortelyou Rd,cortelyou rd,CORTELYOU ROAD
+ hoyt schermer,6,Hoyt - Schermerhorn Sts,hoyt schermerhorn sts,HOYT/SCHERMER
  lexington av , 0 , Lexington Av/59 St , Lexington Av/59 St , LEXINGTON AVE
- beverley road,2,"Beverley Rd",beverley rd,BEVERLEY ROAD
+ beverley road,2,Beverley Rd,beverley rd,BEVERLEY ROAD
  81 st museum , 0 , 81 St - Museum of Natural History , 81 St - Museum of Natural History , 81 ST-MUSEUM
  lefferts blvd , 0 , Ozone Park - Lefferts Blvd , Ozone Park - Lefferts Blvd , LEFFERTS BLVD
- fresh pond road,2,"Fresh Pond Rd",fresh pond rd,FRESH POND ROAD
+ fresh pond road,2,Fresh Pond Rd,fresh pond rd,FRESH POND ROAD

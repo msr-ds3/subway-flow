@@ -1,1480 +1,1480 @@
-sto, "stop_name"
-101, "Van Cortlandt Park - 242 St"
-101, "Van Cortlandt Park - 242 St"
-101, "Van Cortlandt Park - 242 St"
-103, "238 St"
-103, "238 St"
-103, "238 St"
-104, "231 St"
-104, "231 St"
-104, "231 St"
-106, "Marble Hill - 225 St"
-106, "Marble Hill - 225 St"
-106, "Marble Hill - 225 St"
-107, "215 St"
-107, "215 St"
-107, "215 St"
-108, "207 St"
-108, "207 St"
-108, "207 St"
-109, "Dyckman St"
-109, "Dyckman St"
-109, "Dyckman St"
-110, "191 St"
-110, "191 St"
-110, "191 St"
-111, "181 St"
-111, "181 St"
-111, "181 St"
-112, "168 St - Washington Hts"
-112, "168 St - Washington Hts"
-112, "168 St - Washington Hts"
-113, "157 St"
-113, "157 St"
-113, "157 St"
-114, "145 St"
-114, "145 St"
-114, "145 St"
-115, "137 St - City College"
-115, "137 St - City College"
-115, "137 St - City College"
-116, "125 St"
-116, "125 St"
-116, "125 St"
-117, "116 St - Columbia University"
-117, "116 St - Columbia University"
-117, "116 St - Columbia University"
-118, "Cathedral Pkwy"
-118, "Cathedral Pkwy"
-118, "Cathedral Pkwy"
-119, "103 St"
-119, "103 St"
-119, "103 St"
-120, "96 St"
-120, "96 St"
-120, "96 St"
-121, "86 St"
-121, "86 St"
-121, "86 St"
-122, "79 St"
-122, "79 St"
-122, "79 St"
-123, "72 St"
-123, "72 St"
-123, "72 St"
-124, "66 St - Lincoln Center"
-124, "66 St - Lincoln Center"
-124, "66 St - Lincoln Center"
-125, "59 St - Columbus Circle"
-125, "59 St - Columbus Circle"
-125, "59 St - Columbus Circle"
-126, "50 St"
-126, "50 St"
-126, "50 St"
-127, "Times Sq - 42 St"
-127, "Times Sq - 42 St"
-127, "Times Sq - 42 St"
-128, "34 St - Penn Station"
-128, "34 St - Penn Station"
-128, "34 St - Penn Station"
-129, "28 St"
-129, "28 St"
-129, "28 St"
-130, "23 St"
-130, "23 St"
-130, "23 St"
-131, "18 St"
-131, "18 St"
-131, "18 St"
-132, "14 St"
-132, "14 St"
-132, "14 St"
-133, "Christopher St - Sheridan Sq"
-133, "Christopher St - Sheridan Sq"
-133, "Christopher St - Sheridan Sq"
-134, "Houston St"
-134, "Houston St"
-134, "Houston St"
-135, "Canal St"
-135, "Canal St"
-135, "Canal St"
-136, "Franklin St"
-136, "Franklin St"
-136, "Franklin St"
-137, "Chambers St"
-137, "Chambers St"
-137, "Chambers St"
-138, "Cortlandt St"
-138, "Cortlandt St"
-138, "Cortlandt St"
-139, "Rector St"
-139, "Rector St"
-139, "Rector St"
-140, "South Ferry Loop"
-140, "South Ferry Loop"
-140, "South Ferry Loop"
-201, "Wakefield - 241 St"
-201, "Wakefield - 241 St"
-201, "Wakefield - 241 St"
-204, "Nereid Av"
-204, "Nereid Av"
-204, "Nereid Av"
-205, "233 St"
-205, "233 St"
-205, "233 St"
-206, "225 St"
-206, "225 St"
-206, "225 St"
-207, "219 St"
-207, "219 St"
-207, "219 St"
-208, "Gun Hill Rd"
-208, "Gun Hill Rd"
-208, "Gun Hill Rd"
-209, "Burke Av"
-209, "Burke Av"
-209, "Burke Av"
-210, "Allerton Av"
-210, "Allerton Av"
-210, "Allerton Av"
-211, "Pelham Pkwy"
-211, "Pelham Pkwy"
-211, "Pelham Pkwy"
-212, "Bronx Park East"
-212, "Bronx Park East"
-212, "Bronx Park East"
-213, "E 180 St"
-213, "E 180 St"
-213, "E 180 St"
-214, "West Farms Sq - E Tremont Av"
-214, "West Farms Sq - E Tremont Av"
-214, "West Farms Sq - E Tremont Av"
-215, "174 St"
-215, "174 St"
-215, "174 St"
-216, "Freeman St"
-216, "Freeman St"
-216, "Freeman St"
-217, "Simpson St"
-217, "Simpson St"
-217, "Simpson St"
-218, "Intervale Av"
-218, "Intervale Av"
-218, "Intervale Av"
-219, "Prospect Av"
-219, "Prospect Av"
-219, "Prospect Av"
-220, "Jackson Av"
-220, "Jackson Av"
-220, "Jackson Av"
-221, "3 Av - 149 St"
-221, "3 Av - 149 St"
-221, "3 Av - 149 St"
-222, "149 St - Grand Concourse"
-222, "149 St - Grand Concourse"
-222, "149 St - Grand Concourse"
-224, "135 St"
-224, "135 St"
-224, "135 St"
-225, "125 St"
-225, "125 St"
-225, "125 St"
-226, "116 St"
-226, "116 St"
-226, "116 St"
-227, "Central Park North (110 St)"
-227, "Central Park North (110 St)"
-227, "Central Park North (110 St)"
-228, "Park Pl"
-228, "Park Pl"
-228, "Park Pl"
-229, "Fulton St"
-229, "Fulton St"
-229, "Fulton St"
-230, "Wall St"
-230, "Wall St"
-230, "Wall St"
-231, "Clark St"
-231, "Clark St"
-231, "Clark St"
-232, "Borough Hall"
-232, "Borough Hall"
-232, "Borough Hall"
-233, "Hoyt St"
-233, "Hoyt St"
-233, "Hoyt St"
-234, "Nevins St"
-234, "Nevins St"
-234, "Nevins St"
-235, "Atlantic Av - Barclays Ctr"
-235, "Atlantic Av - Barclays Ctr"
-235, "Atlantic Av - Barclays Ctr"
-236, "Bergen St"
-236, "Bergen St"
-236, "Bergen St"
-237, "Grand Army Plaza"
-237, "Grand Army Plaza"
-237, "Grand Army Plaza"
-238, "Eastern Pkwy - Brooklyn Museum"
-238, "Eastern Pkwy - Brooklyn Museum"
-238, "Eastern Pkwy - Brooklyn Museum"
-239, "Franklin Av"
-239, "Franklin Av"
-239, "Franklin Av"
-241, "President St"
-241, "President St"
-241, "President St"
-242, "Sterling St"
-242, "Sterling St"
-242, "Sterling St"
-243, "Winthrop St"
-243, "Winthrop St"
-243, "Winthrop St"
-244, "Church Av"
-244, "Church Av"
-244, "Church Av"
-245, "Beverly Rd"
-245, "Beverly Rd"
-245, "Beverly Rd"
-246, "Newkirk Av"
-246, "Newkirk Av"
-246, "Newkirk Av"
-247, "Flatbush Av - Brooklyn College"
-247, "Flatbush Av - Brooklyn College"
-247, "Flatbush Av - Brooklyn College"
-248, "Nostrand Av"
-248, "Nostrand Av"
-248, "Nostrand Av"
-249, "Kingston Av"
-249, "Kingston Av"
-249, "Kingston Av"
-250, "Crown Hts - Utica Av"
-250, "Crown Hts - Utica Av"
-250, "Crown Hts - Utica Av"
-251, "Sutter Av - Rutland Rd"
-251, "Sutter Av - Rutland Rd"
-251, "Sutter Av - Rutland Rd"
-252, "Saratoga Av"
-252, "Saratoga Av"
-252, "Saratoga Av"
-253, "Rockaway Av"
-253, "Rockaway Av"
-253, "Rockaway Av"
-254, "Junius St"
-254, "Junius St"
-254, "Junius St"
-255, "Pennsylvania Av"
-255, "Pennsylvania Av"
-255, "Pennsylvania Av"
-256, "Van Siclen Av"
-256, "Van Siclen Av"
-256, "Van Siclen Av"
-257, "New Lots Av"
-257, "New Lots Av"
-257, "New Lots Av"
-301, "Harlem - 148 St"
-301, "Harlem - 148 St"
-301, "Harlem - 148 St"
-302, "145 St"
-302, "145 St"
-302, "145 St"
-401, "Woodlawn"
-401, "Woodlawn"
-401, "Woodlawn"
-402, "Mosholu Pkwy"
-402, "Mosholu Pkwy"
-402, "Mosholu Pkwy"
-405, "Bedford Park Blvd - Lehman College"
-405, "Bedford Park Blvd - Lehman College"
-405, "Bedford Park Blvd - Lehman College"
-406, "Kingsbridge Rd"
-406, "Kingsbridge Rd"
-406, "Kingsbridge Rd"
-407, "Fordham Rd"
-407, "Fordham Rd"
-407, "Fordham Rd"
-408, "183 St"
-408, "183 St"
-408, "183 St"
-409, "Burnside Av"
-409, "Burnside Av"
-409, "Burnside Av"
-410, "176 St"
-410, "176 St"
-410, "176 St"
-411, "Mt Eden Av"
-411, "Mt Eden Av"
-411, "Mt Eden Av"
-412, "170 St"
-412, "170 St"
-412, "170 St"
-413, "167 St"
-413, "167 St"
-413, "167 St"
-414, "161 St - Yankee Stadium"
-414, "161 St - Yankee Stadium"
-414, "161 St - Yankee Stadium"
-415, "149 St - Grand Concourse"
-415, "149 St - Grand Concourse"
-415, "149 St - Grand Concourse"
-416, "138 St - Grand Concourse"
-416, "138 St - Grand Concourse"
-416, "138 St - Grand Concourse"
-418, "Fulton St"
-418, "Fulton St"
-418, "Fulton St"
-419, "Wall St"
-419, "Wall St"
-419, "Wall St"
-420, "Bowling Green"
-420, "Bowling Green"
-420, "Bowling Green"
-423, "Borough Hall"
-423, "Borough Hall"
-423, "Borough Hall"
-501, "Eastchester - Dyre Av"
-501, "Eastchester - Dyre Av"
-501, "Eastchester - Dyre Av"
-502, "Baychester Av"
-502, "Baychester Av"
-502, "Baychester Av"
-503, "Gun Hill Rd"
-503, "Gun Hill Rd"
-503, "Gun Hill Rd"
-504, "Pelham Pkwy"
-504, "Pelham Pkwy"
-504, "Pelham Pkwy"
-505, "Morris Park"
-505, "Morris Park"
-505, "Morris Park"
-601, "Pelham Bay Park"
-601, "Pelham Bay Park"
-601, "Pelham Bay Park"
-602, "Buhre Av"
-602, "Buhre Av"
-602, "Buhre Av"
-603, "Middletown Rd"
-603, "Middletown Rd"
-603, "Middletown Rd"
-604, "Westchester Sq - E Tremont Av"
-604, "Westchester Sq - E Tremont Av"
-604, "Westchester Sq - E Tremont Av"
-606, "Zerega Av"
-606, "Zerega Av"
-606, "Zerega Av"
-607, "Castle Hill Av"
-607, "Castle Hill Av"
-607, "Castle Hill Av"
-608, "Parkchester"
-608, "Parkchester"
-608, "Parkchester"
-609, "St Lawrence Av"
-609, "St Lawrence Av"
-609, "St Lawrence Av"
-610, "Morrison Av- Sound View"
-610, "Morrison Av- Sound View"
-610, "Morrison Av- Sound View"
-611, "Elder Av"
-611, "Elder Av"
-611, "Elder Av"
-612, "Whitlock Av"
-612, "Whitlock Av"
-612, "Whitlock Av"
-613, "Hunts Point Av"
-613, "Hunts Point Av"
-613, "Hunts Point Av"
-614, "Longwood Av"
-614, "Longwood Av"
-614, "Longwood Av"
-615, "E 149 St"
-615, "E 149 St"
-615, "E 149 St"
-616, "E 143 St - St Mary's St"
-616, "E 143 St - St Mary's St"
-616, "E 143 St - St Mary's St"
-617, "Cypress Av"
-617, "Cypress Av"
-617, "Cypress Av"
-618, "Brook Av"
-618, "Brook Av"
-618, "Brook Av"
-619, "3 Av - 138 St"
-619, "3 Av - 138 St"
-619, "3 Av - 138 St"
-621, "125 St"
-621, "125 St"
-621, "125 St"
-622, "116 St"
-622, "116 St"
-622, "116 St"
-623, "110 St"
-623, "110 St"
-623, "110 St"
-624, "103 St"
-624, "103 St"
-624, "103 St"
-625, "96 St"
-625, "96 St"
-625, "96 St"
-626, "86 St"
-626, "86 St"
-626, "86 St"
-627, "77 St"
-627, "77 St"
-627, "77 St"
-628, "68 St - Hunter College"
-628, "68 St - Hunter College"
-628, "68 St - Hunter College"
-629, "59 St"
-629, "59 St"
-629, "59 St"
-630, "51 St"
-630, "51 St"
-630, "51 St"
-631, "Grand Central - 42 St"
-631, "Grand Central - 42 St"
-631, "Grand Central - 42 St"
-632, "33 St"
-632, "33 St"
-632, "33 St"
-633, "28 St"
-633, "28 St"
-633, "28 St"
-634, "23 St"
-634, "23 St"
-634, "23 St"
-635, "14 St - Union Sq"
-635, "14 St - Union Sq"
-635, "14 St - Union Sq"
-636, "Astor Pl"
-636, "Astor Pl"
-636, "Astor Pl"
-637, "Bleecker St"
-637, "Bleecker St"
-637, "Bleecker St"
-638, "Spring St"
-638, "Spring St"
-638, "Spring St"
-639, "Canal St"
-639, "Canal St"
-639, "Canal St"
-640, "Brooklyn Bridge - City Hall"
-640, "Brooklyn Bridge - City Hall"
-640, "Brooklyn Bridge - City Hall"
-701, "Flushing - Main St"
-701, "Flushing - Main St"
-701, "Flushing - Main St"
-702, "Mets - Willets Point"
-702, "Mets - Willets Point"
-702, "Mets - Willets Point"
-705, "111 St"
-705, "111 St"
-705, "111 St"
-706, "103 St - Corona Plaza"
-706, "103 St - Corona Plaza"
-706, "103 St - Corona Plaza"
-707, "Junction Blvd"
-707, "Junction Blvd"
-707, "Junction Blvd"
-708, "90 St - Elmhurst Av"
-708, "90 St - Elmhurst Av"
-708, "90 St - Elmhurst Av"
-709, "82 St - Jackson Hts"
-709, "82 St - Jackson Hts"
-709, "82 St - Jackson Hts"
-710, "74 St - Broadway"
-710, "74 St - Broadway"
-710, "74 St - Broadway"
-711, "69 St"
-711, "69 St"
-711, "69 St"
-712, "Woodside - 61 St"
-712, "Woodside - 61 St"
-712, "Woodside - 61 St"
-713, "52 St"
-713, "52 St"
-713, "52 St"
-714, "46 St"
-714, "46 St"
-714, "46 St"
-715, "40 St"
-715, "40 St"
-715, "40 St"
-716, "33 St"
-716, "33 St"
-716, "33 St"
-718, "Queensboro Plaza"
-718, "Queensboro Plaza"
-718, "Queensboro Plaza"
-719, "Court Sq"
-719, "Court Sq"
-719, "Court Sq"
-720, "Hunters Point Av"
-720, "Hunters Point Av"
-720, "Hunters Point Av"
-721, "Vernon Blvd - Jackson Av"
-721, "Vernon Blvd - Jackson Av"
-721, "Vernon Blvd - Jackson Av"
-723, "Grand Central - 42 St"
-723, "Grand Central - 42 St"
-723, "Grand Central - 42 St"
-724, "5 Av"
-724, "5 Av"
-724, "5 Av"
-725, "Times Sq - 42 St"
-725, "Times Sq - 42 St"
-725, "Times Sq - 42 St"
-901, "Grand Central - 42 St"
-901, "Grand Central - 42 St"
-901, "Grand Central - 42 St"
-902, "Times Sq - 42 St"
-902, "Times Sq - 42 St"
-902, "Times Sq - 42 St"
-A02, "Inwood - 207 St"
-A02, "Inwood - 207 St"
-A02, "Inwood - 207 St"
-A03, "Dyckman St"
-A03, "Dyckman St"
-A03, "Dyckman St"
-A05, "190 St"
-A05, "190 St"
-A05, "190 St"
-A06, "181 St"
-A06, "181 St"
-A06, "181 St"
-A07, "175 St"
-A07, "175 St"
-A07, "175 St"
-A09, "168 St"
-A09, "168 St"
-A09, "168 St"
-A10, "163 St - Amsterdam Av"
-A10, "163 St - Amsterdam Av"
-A10, "163 St - Amsterdam Av"
-A11, "155 St"
-A11, "155 St"
-A11, "155 St"
-A12, "145 St"
-A12, "145 St"
-A12, "145 St"
-A14, "135 St"
-A14, "135 St"
-A14, "135 St"
-A15, "125 St"
-A15, "125 St"
-A15, "125 St"
-A16, "116 St"
-A16, "116 St"
-A16, "116 St"
-A17, "Cathedral Pkwy (110 St)"
-A17, "Cathedral Pkwy (110 St)"
-A17, "Cathedral Pkwy (110 St)"
-A18, "103 St"
-A18, "103 St"
-A18, "103 St"
-A19, "96 St"
-A19, "96 St"
-A19, "96 St"
-A20, "86 St"
-A20, "86 St"
-A20, "86 St"
-A21, "81 St - Museum of Natural History"
-A21, "81 St - Museum of Natural History"
-A21, "81 St - Museum of Natural History"
-A22, "72 St"
-A22, "72 St"
-A22, "72 St"
-A24, "59 St - Columbus Circle"
-A24, "59 St - Columbus Circle"
-A24, "59 St - Columbus Circle"
-A25, "50 St"
-A25, "50 St"
-A25, "50 St"
-A27, "42 St - Port Authority Bus Terminal"
-A27, "42 St - Port Authority Bus Terminal"
-A27, "42 St - Port Authority Bus Terminal"
-A28, "34 St - Penn Station"
-A28, "34 St - Penn Station"
-A28, "34 St - Penn Station"
-A30, "23 St"
-A30, "23 St"
-A30, "23 St"
-A31, "14 St"
-A31, "14 St"
-A31, "14 St"
-A32, "W 4 St"
-A32, "W 4 St"
-A32, "W 4 St"
-A33, "Spring St"
-A33, "Spring St"
-A33, "Spring St"
-A34, "Canal St"
-A34, "Canal St"
-A34, "Canal St"
-A36, "Chambers St"
-A36, "Chambers St"
-A36, "Chambers St"
-A38, "Fulton St"
-A38, "Fulton St"
-A38, "Fulton St"
-A40, "High St"
-A40, "High St"
-A40, "High St"
-A41, "Jay St - MetroTech"
-A41, "Jay St - MetroTech"
-A41, "Jay St - MetroTech"
-A42, "Hoyt - Schermerhorn Sts"
-A42, "Hoyt - Schermerhorn Sts"
-A42, "Hoyt - Schermerhorn Sts"
-A43, "Lafayette Av"
-A43, "Lafayette Av"
-A43, "Lafayette Av"
-A44, "Clinton - Washington Avs"
-A44, "Clinton - Washington Avs"
-A44, "Clinton - Washington Avs"
-A45, "Franklin Av"
-A45, "Franklin Av"
-A45, "Franklin Av"
-A46, "Nostrand Av"
-A46, "Nostrand Av"
-A46, "Nostrand Av"
-A47, "Kingston - Throop Avs"
-A47, "Kingston - Throop Avs"
-A47, "Kingston - Throop Avs"
-A48, "Utica Av"
-A48, "Utica Av"
-A48, "Utica Av"
-A49, "Ralph Av"
-A49, "Ralph Av"
-A49, "Ralph Av"
-A50, "Rockaway Av"
-A50, "Rockaway Av"
-A50, "Rockaway Av"
-A51, "Broadway Jct"
-A51, "Broadway Jct"
-A51, "Broadway Jct"
-A52, "Liberty Av"
-A52, "Liberty Av"
-A52, "Liberty Av"
-A53, "Van Siclen Av"
-A53, "Van Siclen Av"
-A53, "Van Siclen Av"
-A54, "Shepherd Av"
-A54, "Shepherd Av"
-A54, "Shepherd Av"
-A55, "Euclid Av"
-A55, "Euclid Av"
-A55, "Euclid Av"
-A57, "Grant Av"
-A57, "Grant Av"
-A57, "Grant Av"
-A59, "80 St"
-A59, "80 St"
-A59, "80 St"
-A60, "88 St"
-A60, "88 St"
-A60, "88 St"
-A61, "Rockaway Blvd"
-A61, "Rockaway Blvd"
-A61, "Rockaway Blvd"
-A63, "104 St"
-A63, "104 St"
-A63, "104 St"
-A64, "111 St"
-A64, "111 St"
-A64, "111 St"
-A65, "Ozone Park - Lefferts Blvd"
-A65, "Ozone Park - Lefferts Blvd"
-A65, "Ozone Park - Lefferts Blvd"
-B04, "21 St - Queensbridge"
-B04, "21 St - Queensbridge"
-B04, "21 St - Queensbridge"
-B06, "Roosevelt Island"
-B06, "Roosevelt Island"
-B06, "Roosevelt Island"
-B08, "Lexington Av/63 St"
-B08, "Lexington Av/63 St"
-B08, "Lexington Av/63 St"
-B10, "57 St"
-B10, "57 St"
-B10, "57 St"
-B12, "9 Av"
-B12, "9 Av"
-B12, "9 Av"
-B13, "Fort Hamilton Pkwy"
-B13, "Fort Hamilton Pkwy"
-B13, "Fort Hamilton Pkwy"
-B14, "50 St"
-B14, "50 St"
-B14, "50 St"
-B15, "55 St"
-B15, "55 St"
-B15, "55 St"
-B16, "62 St"
-B16, "62 St"
-B16, "62 St"
-B17, "71 St"
-B17, "71 St"
-B17, "71 St"
-B18, "79 St"
-B18, "79 St"
-B18, "79 St"
-B19, "18 Av"
-B19, "18 Av"
-B19, "18 Av"
-B20, "20 Av"
-B20, "20 Av"
-B20, "20 Av"
-B21, "Bay Pkwy"
-B21, "Bay Pkwy"
-B21, "Bay Pkwy"
-B22, "25 Av"
-B22, "25 Av"
-B22, "25 Av"
-B23, "Bay 50 St"
-B23, "Bay 50 St"
-B23, "Bay 50 St"
-D01, "Norwood - 205 St"
-D01, "Norwood - 205 St"
-D01, "Norwood - 205 St"
-D03, "Bedford Park Blvd"
-D03, "Bedford Park Blvd"
-D03, "Bedford Park Blvd"
-D04, "Kingsbridge Rd"
-D04, "Kingsbridge Rd"
-D04, "Kingsbridge Rd"
-D05, "Fordham Rd"
-D05, "Fordham Rd"
-D05, "Fordham Rd"
-D06, "182-183 Sts"
-D06, "182-183 Sts"
-D06, "182-183 Sts"
-D07, "Tremont Av"
-D07, "Tremont Av"
-D07, "Tremont Av"
-D08, "174-175 Sts"
-D08, "174-175 Sts"
-D08, "174-175 Sts"
-D09, "170 St"
-D09, "170 St"
-D09, "170 St"
-D10, "167 St"
-D10, "167 St"
-D10, "167 St"
-D11, "161 St - Yankee Stadium"
-D11, "161 St - Yankee Stadium"
-D11, "161 St - Yankee Stadium"
-D12, "155 St"
-D12, "155 St"
-D12, "155 St"
-D13, "145 St"
-D13, "145 St"
-D13, "145 St"
-D14, "7 Av"
-D14, "7 Av"
-D14, "7 Av"
-D15, "47-50 Sts - Rockefeller Ctr"
-D15, "47-50 Sts - Rockefeller Ctr"
-D15, "47-50 Sts - Rockefeller Ctr"
-D16, "42 St - Bryant Pk"
-D16, "42 St - Bryant Pk"
-D16, "42 St - Bryant Pk"
-D17, "34 St - Herald Sq"
-D17, "34 St - Herald Sq"
-D17, "34 St - Herald Sq"
-D18, "23 St"
-D18, "23 St"
-D18, "23 St"
-D19, "14 St"
-D19, "14 St"
-D19, "14 St"
-D20, "W 4 St"
-D20, "W 4 St"
-D20, "W 4 St"
-D21, "Broadway-Lafayette St"
-D21, "Broadway-Lafayette St"
-D21, "Broadway-Lafayette St"
-D22, "Grand St"
-D22, "Grand St"
-D22, "Grand St"
-D24, "Atlantic Av - Barclays Ctr"
-D24, "Atlantic Av - Barclays Ctr"
-D24, "Atlantic Av - Barclays Ctr"
-D25, "7 Av"
-D25, "7 Av"
-D25, "7 Av"
-D26, "Prospect Park"
-D26, "Prospect Park"
-D26, "Prospect Park"
-D27, "Parkside Av"
-D27, "Parkside Av"
-D27, "Parkside Av"
-D28, "Church Av"
-D28, "Church Av"
-D28, "Church Av"
-D29, "Beverley Rd"
-D29, "Beverley Rd"
-D29, "Beverley Rd"
-D30, "Cortelyou Rd"
-D30, "Cortelyou Rd"
-D30, "Cortelyou Rd"
-D31, "Newkirk Plaza"
-D31, "Newkirk Plaza"
-D31, "Newkirk Plaza"
-D32, "Avenue H"
-D32, "Avenue H"
-D32, "Avenue H"
-D33, "Avenue J"
-D33, "Avenue J"
-D33, "Avenue J"
-D34, "Avenue M"
-D34, "Avenue M"
-D34, "Avenue M"
-D35, "Kings Hwy"
-D35, "Kings Hwy"
-D35, "Kings Hwy"
-D37, "Avenue U"
-D37, "Avenue U"
-D37, "Avenue U"
-D38, "Neck Rd"
-D38, "Neck Rd"
-D38, "Neck Rd"
-D39, "Sheepshead Bay"
-D39, "Sheepshead Bay"
-D39, "Sheepshead Bay"
-D40, "Brighton Beach"
-D40, "Brighton Beach"
-D40, "Brighton Beach"
-D41, "Ocean Pkwy"
-D41, "Ocean Pkwy"
-D41, "Ocean Pkwy"
-D42, "W 8 St - NY Aquarium"
-D42, "W 8 St - NY Aquarium"
-D42, "W 8 St - NY Aquarium"
-D43, "Coney Island - Stillwell Av"
-D43, "Coney Island - Stillwell Av"
-D43, "Coney Island - Stillwell Av"
-E01, "World Trade Center"
-E01, "World Trade Center"
-E01, "World Trade Center"
-F01, "Jamaica - 179 St"
-F01, "Jamaica - 179 St"
-F01, "Jamaica - 179 St"
-F02, "169 St"
-F02, "169 St"
-F02, "169 St"
-F03, "Parsons Blvd"
-F03, "Parsons Blvd"
-F03, "Parsons Blvd"
-F04, "Sutphin Blvd"
-F04, "Sutphin Blvd"
-F04, "Sutphin Blvd"
-F05, "Briarwood - Van Wyck Blvd"
-F05, "Briarwood - Van Wyck Blvd"
-F05, "Briarwood - Van Wyck Blvd"
-F06, "Kew Gardens - Union Tpke"
-F06, "Kew Gardens - Union Tpke"
-F06, "Kew Gardens - Union Tpke"
-F07, "75 Av"
-F07, "75 Av"
-F07, "75 Av"
-F09, "Court Sq"
-F09, "Court Sq"
-F09, "Court Sq"
-F11, "Lexington Av/53 St"
-F11, "Lexington Av/53 St"
-F11, "Lexington Av/53 St"
-F12, "5 Av/53 St"
-F12, "5 Av/53 St"
-F12, "5 Av/53 St"
-F14, "2 Av"
-F14, "2 Av"
-F14, "2 Av"
-F15, "Delancey St"
-F15, "Delancey St"
-F15, "Delancey St"
-F16, "East Broadway"
-F16, "East Broadway"
-F16, "East Broadway"
-F18, "York St"
-F18, "York St"
-F18, "York St"
-F20, "Bergen St"
-F20, "Bergen St"
-F20, "Bergen St"
-F21, "Carroll St"
-F21, "Carroll St"
-F21, "Carroll St"
-F22, "Smith - 9 Sts"
-F22, "Smith - 9 Sts"
-F22, "Smith - 9 Sts"
-F23, "4 Av"
-F23, "4 Av"
-F23, "4 Av"
-F24, "7 Av"
-F24, "7 Av"
-F24, "7 Av"
-F25, "15 St - Prospect Park"
-F25, "15 St - Prospect Park"
-F25, "15 St - Prospect Park"
-F26, "Fort Hamilton Pkwy"
-F26, "Fort Hamilton Pkwy"
-F26, "Fort Hamilton Pkwy"
-F27, "Church Av"
-F27, "Church Av"
-F27, "Church Av"
-F29, "Ditmas Av"
-F29, "Ditmas Av"
-F29, "Ditmas Av"
-F30, "18 Av"
-F30, "18 Av"
-F30, "18 Av"
-F31, "Avenue I"
-F31, "Avenue I"
-F31, "Avenue I"
-F32, "Bay Pkwy"
-F32, "Bay Pkwy"
-F32, "Bay Pkwy"
-F33, "Avenue N"
-F33, "Avenue N"
-F33, "Avenue N"
-F34, "Avenue P"
-F34, "Avenue P"
-F34, "Avenue P"
-F35, "Kings Hwy"
-F35, "Kings Hwy"
-F35, "Kings Hwy"
-F36, "Avenue U"
-F36, "Avenue U"
-F36, "Avenue U"
-F38, "Avenue X"
-F38, "Avenue X"
-F38, "Avenue X"
-F39, "Neptune Av"
-F39, "Neptune Av"
-F39, "Neptune Av"
-G05, "Jamaica Center - Parsons/Archer"
-G05, "Jamaica Center - Parsons/Archer"
-G05, "Jamaica Center - Parsons/Archer"
-G06, "Sutphin Blvd - Archer Av - JFK Airport"
-G06, "Sutphin Blvd - Archer Av - JFK Airport"
-G06, "Sutphin Blvd - Archer Av - JFK Airport"
-G07, "Jamaica - Van Wyck"
-G07, "Jamaica - Van Wyck"
-G07, "Jamaica - Van Wyck"
-G08, "Forest Hills - 71 Av"
-G08, "Forest Hills - 71 Av"
-G08, "Forest Hills - 71 Av"
-G09, "67 Av"
-G09, "67 Av"
-G09, "67 Av"
-G10, "63 Dr - Rego Park"
-G10, "63 Dr - Rego Park"
-G10, "63 Dr - Rego Park"
-G11, "Woodhaven Blvd"
-G11, "Woodhaven Blvd"
-G11, "Woodhaven Blvd"
-G12, "Grand Av - Newtown"
-G12, "Grand Av - Newtown"
-G12, "Grand Av - Newtown"
-G13, "Elmhurst Av"
-G13, "Elmhurst Av"
-G13, "Elmhurst Av"
-G14, "Jackson Hts - Roosevelt Av"
-G14, "Jackson Hts - Roosevelt Av"
-G14, "Jackson Hts - Roosevelt Av"
-G15, "65 St"
-G15, "65 St"
-G15, "65 St"
-G16, "Northern Blvd"
-G16, "Northern Blvd"
-G16, "Northern Blvd"
-G18, "46 St"
-G18, "46 St"
-G18, "46 St"
-G19, "Steinway St"
-G19, "Steinway St"
-G19, "Steinway St"
-G20, "36 St"
-G20, "36 St"
-G20, "36 St"
-G21, "Queens Plaza"
-G21, "Queens Plaza"
-G21, "Queens Plaza"
-G22, "Court Sq"
-G22, "Court Sq"
-G22, "Court Sq"
-G24, "21 St"
-G24, "21 St"
-G24, "21 St"
-G26, "Greenpoint Av"
-G26, "Greenpoint Av"
-G26, "Greenpoint Av"
-G28, "Nassau Av"
-G28, "Nassau Av"
-G28, "Nassau Av"
-G29, "Metropolitan Av"
-G29, "Metropolitan Av"
-G29, "Metropolitan Av"
-G30, "Broadway"
-G30, "Broadway"
-G30, "Broadway"
-G31, "Flushing Av"
-G31, "Flushing Av"
-G31, "Flushing Av"
-G32, "Myrtle - Willoughby Avs"
-G32, "Myrtle - Willoughby Avs"
-G32, "Myrtle - Willoughby Avs"
-G33, "Bedford - Nostrand Avs"
-G33, "Bedford - Nostrand Avs"
-G33, "Bedford - Nostrand Avs"
-G34, "Classon Av"
-G34, "Classon Av"
-G34, "Classon Av"
-G35, "Clinton - Washington Avs"
-G35, "Clinton - Washington Avs"
-G35, "Clinton - Washington Avs"
-G36, "Fulton St"
-G36, "Fulton St"
-G36, "Fulton St"
-H01, "Aqueduct Racetrack"
-H01, "Aqueduct Racetrack"
-H01, "Aqueduct Racetrack"
-H02, "Aqueduct - N Conduit Av"
-H02, "Aqueduct - N Conduit Av"
-H02, "Aqueduct - N Conduit Av"
-H03, "Howard Beach - JFK Airport"
-H03, "Howard Beach - JFK Airport"
-H03, "Howard Beach - JFK Airport"
-H04, "Broad Channel"
-H04, "Broad Channel"
-H04, "Broad Channel"
-H06, "Beach 67 St"
-H06, "Beach 67 St"
-H06, "Beach 67 St"
-H07, "Beach 60 St"
-H07, "Beach 60 St"
-H07, "Beach 60 St"
-H08, "Beach 44 St"
-H08, "Beach 44 St"
-H08, "Beach 44 St"
-H09, "Beach 36 St"
-H09, "Beach 36 St"
-H09, "Beach 36 St"
-H10, "Beach 25 St"
-H10, "Beach 25 St"
-H10, "Beach 25 St"
-H11, "Far Rockaway - Mott Av"
-H11, "Far Rockaway - Mott Av"
-H11, "Far Rockaway - Mott Av"
-H12, "Beach 90 St"
-H12, "Beach 90 St"
-H12, "Beach 90 St"
-H13, "Beach 98 St"
-H13, "Beach 98 St"
-H13, "Beach 98 St"
-H14, "Beach 105 St"
-H14, "Beach 105 St"
-H14, "Beach 105 St"
-H15, "Rockaway Park - Beach 116 St"
-H15, "Rockaway Park - Beach 116 St"
-H15, "Rockaway Park - Beach 116 St"
-J12, "121 St"
-J12, "121 St"
-J12, "121 St"
-J13, "111 St"
-J13, "111 St"
-J13, "111 St"
-J14, "104 St"
-J14, "104 St"
-J14, "104 St"
-J15, "Woodhaven Blvd"
-J15, "Woodhaven Blvd"
-J15, "Woodhaven Blvd"
-J16, "85 St - Forest Pkwy"
-J16, "85 St - Forest Pkwy"
-J16, "85 St - Forest Pkwy"
-J17, "75 St"
-J17, "75 St"
-J17, "75 St"
-J19, "Cypress Hills"
-J19, "Cypress Hills"
-J19, "Cypress Hills"
-J20, "Crescent St"
-J20, "Crescent St"
-J20, "Crescent St"
-J21, "Norwood Av"
-J21, "Norwood Av"
-J21, "Norwood Av"
-J22, "Cleveland St"
-J22, "Cleveland St"
-J22, "Cleveland St"
-J23, "Van Siclen Av"
-J23, "Van Siclen Av"
-J23, "Van Siclen Av"
-J24, "Alabama Av"
-J24, "Alabama Av"
-J24, "Alabama Av"
-J27, "Broadway Jct"
-J27, "Broadway Jct"
-J27, "Broadway Jct"
-J28, "Chauncey St"
-J28, "Chauncey St"
-J28, "Chauncey St"
-J29, "Halsey St"
-J29, "Halsey St"
-J29, "Halsey St"
-J30, "Gates Av"
-J30, "Gates Av"
-J30, "Gates Av"
-J31, "Kosciuszko St"
-J31, "Kosciuszko St"
-J31, "Kosciuszko St"
-L01, "8 Av"
-L01, "8 Av"
-L01, "8 Av"
-L02, "6 Av"
-L02, "6 Av"
-L02, "6 Av"
-L03, "Union Sq - 14 St"
-L03, "Union Sq - 14 St"
-L03, "Union Sq - 14 St"
-L05, "3 Av"
-L05, "3 Av"
-L05, "3 Av"
-L06, "1 Av"
-L06, "1 Av"
-L06, "1 Av"
-L08, "Bedford Av"
-L08, "Bedford Av"
-L08, "Bedford Av"
-L10, "Lorimer St"
-L10, "Lorimer St"
-L10, "Lorimer St"
-L11, "Graham Av"
-L11, "Graham Av"
-L11, "Graham Av"
-L12, "Grand St"
-L12, "Grand St"
-L12, "Grand St"
-L13, "Montrose Av"
-L13, "Montrose Av"
-L13, "Montrose Av"
-L14, "Morgan Av"
-L14, "Morgan Av"
-L14, "Morgan Av"
-L15, "Jefferson St"
-L15, "Jefferson St"
-L15, "Jefferson St"
-L16, "DeKalb Av"
-L16, "DeKalb Av"
-L16, "DeKalb Av"
-L17, "Myrtle - Wyckoff Avs"
-L17, "Myrtle - Wyckoff Avs"
-L17, "Myrtle - Wyckoff Avs"
-L19, "Halsey St"
-L19, "Halsey St"
-L19, "Halsey St"
-L20, "Wilson Av"
-L20, "Wilson Av"
-L20, "Wilson Av"
-L21, "Bushwick Av - Aberdeen St"
-L21, "Bushwick Av - Aberdeen St"
-L21, "Bushwick Av - Aberdeen St"
-L22, "Broadway Jct"
-L22, "Broadway Jct"
-L22, "Broadway Jct"
-L24, "Atlantic Av"
-L24, "Atlantic Av"
-L24, "Atlantic Av"
-L25, "Sutter Av"
-L25, "Sutter Av"
-L25, "Sutter Av"
-L26, "Livonia Av"
-L26, "Livonia Av"
-L26, "Livonia Av"
-L27, "New Lots Av"
-L27, "New Lots Av"
-L27, "New Lots Av"
-L28, "E 105 St"
-L28, "E 105 St"
-L28, "E 105 St"
-L29, "Canarsie - Rockaway Pkwy"
-L29, "Canarsie - Rockaway Pkwy"
-L29, "Canarsie - Rockaway Pkwy"
-M01, "Middle Village - Metropolitan Av"
-M01, "Middle Village - Metropolitan Av"
-M01, "Middle Village - Metropolitan Av"
-M04, "Fresh Pond Rd"
-M04, "Fresh Pond Rd"
-M04, "Fresh Pond Rd"
-M05, "Forest Av"
-M05, "Forest Av"
-M05, "Forest Av"
-M06, "Seneca Av"
-M06, "Seneca Av"
-M06, "Seneca Av"
-M08, "Myrtle - Wyckoff Avs"
-M08, "Myrtle - Wyckoff Avs"
-M08, "Myrtle - Wyckoff Avs"
-M09, "Knickerbocker Av"
-M09, "Knickerbocker Av"
-M09, "Knickerbocker Av"
-M10, "Central Av"
-M10, "Central Av"
-M10, "Central Av"
-M11, "Myrtle Av"
-M11, "Myrtle Av"
-M11, "Myrtle Av"
-M12, "Flushing Av"
-M12, "Flushing Av"
-M12, "Flushing Av"
-M13, "Lorimer St"
-M13, "Lorimer St"
-M13, "Lorimer St"
-M14, "Hewes St"
-M14, "Hewes St"
-M14, "Hewes St"
-M16, "Marcy Av"
-M16, "Marcy Av"
-M16, "Marcy Av"
-M18, "Essex St"
-M18, "Essex St"
-M18, "Essex St"
-M19, "Bowery"
-M19, "Bowery"
-M19, "Bowery"
-M20, "Canal St"
-M20, "Canal St"
-M20, "Canal St"
-M21, "Chambers St"
-M21, "Chambers St"
-M21, "Chambers St"
-M22, "Fulton St"
-M22, "Fulton St"
-M22, "Fulton St"
-M23, "Broad St"
-M23, "Broad St"
-M23, "Broad St"
-N02, "8 Av"
-N02, "8 Av"
-N02, "8 Av"
-N03, "Fort Hamilton Pkwy"
-N03, "Fort Hamilton Pkwy"
-N03, "Fort Hamilton Pkwy"
-N04, "New Utrecht Av"
-N04, "New Utrecht Av"
-N04, "New Utrecht Av"
-N05, "18 Av"
-N05, "18 Av"
-N05, "18 Av"
-N06, "20 Av"
-N06, "20 Av"
-N06, "20 Av"
-N07, "Bay Pkwy"
-N07, "Bay Pkwy"
-N07, "Bay Pkwy"
-N08, "Kings Hwy"
-N08, "Kings Hwy"
-N08, "Kings Hwy"
-N09, "Avenue U"
-N09, "Avenue U"
-N09, "Avenue U"
-N10, "86 St"
-N10, "86 St"
-N10, "86 St"
-Q01, "Canal St"
-Q01, "Canal St"
-Q01, "Canal St"
-R01, "Astoria - Ditmars Blvd"
-R01, "Astoria - Ditmars Blvd"
-R01, "Astoria - Ditmars Blvd"
-R03, "Astoria Blvd"
-R03, "Astoria Blvd"
-R03, "Astoria Blvd"
-R04, "30 Av"
-R04, "30 Av"
-R04, "30 Av"
-R05, "Broadway"
-R05, "Broadway"
-R05, "Broadway"
-R06, "36 Av"
-R06, "36 Av"
-R06, "36 Av"
-R08, "39 Av"
-R08, "39 Av"
-R08, "39 Av"
-R09, "Queensboro Plaza"
-R09, "Queensboro Plaza"
-R09, "Queensboro Plaza"
-R11, "Lexington Av/59 St"
-R11, "Lexington Av/59 St"
-R11, "Lexington Av/59 St"
-R13, "5 Av/59 St"
-R13, "5 Av/59 St"
-R13, "5 Av/59 St"
-R14, "57 St - 7 Av"
-R14, "57 St - 7 Av"
-R14, "57 St - 7 Av"
-R15, "49 St"
-R15, "49 St"
-R15, "49 St"
-R16, "Times Sq - 42 St"
-R16, "Times Sq - 42 St"
-R16, "Times Sq - 42 St"
-R17, "34 St - Herald Sq"
-R17, "34 St - Herald Sq"
-R17, "34 St - Herald Sq"
-R18, "28 St"
-R18, "28 St"
-R18, "28 St"
-R19, "23 St"
-R19, "23 St"
-R19, "23 St"
-R20, "14 St - Union Sq"
-R20, "14 St - Union Sq"
-R20, "14 St - Union Sq"
-R21, "8 St - NYU"
-R21, "8 St - NYU"
-R21, "8 St - NYU"
-R22, "Prince St"
-R22, "Prince St"
-R22, "Prince St"
-R23, "Canal St"
-R23, "Canal St"
-R23, "Canal St"
-R24, "City Hall"
-R24, "City Hall"
-R24, "City Hall"
-R25, "Cortlandt St"
-R25, "Cortlandt St"
-R25, "Cortlandt St"
-R26, "Rector St"
-R26, "Rector St"
-R26, "Rector St"
-R27, "Whitehall St"
-R27, "Whitehall St"
-R27, "Whitehall St"
-R28, "Court St"
-R28, "Court St"
-R28, "Court St"
-R29, "Jay St - MetroTech"
-R29, "Jay St - MetroTech"
-R29, "Jay St - MetroTech"
-R30, "DeKalb Av"
-R30, "DeKalb Av"
-R30, "DeKalb Av"
-R31, "Atlantic Av - Barclays Ctr"
-R31, "Atlantic Av - Barclays Ctr"
-R31, "Atlantic Av - Barclays Ctr"
-R32, "Union St"
-R32, "Union St"
-R32, "Union St"
-R33, "9 St"
-R33, "9 St"
-R33, "9 St"
-R34, "Prospect Av"
-R34, "Prospect Av"
-R34, "Prospect Av"
-R35, "25 St"
-R35, "25 St"
-R35, "25 St"
-R36, "36 St"
-R36, "36 St"
-R36, "36 St"
-R39, "45 St"
-R39, "45 St"
-R39, "45 St"
-R40, "53 St"
-R40, "53 St"
-R40, "53 St"
-R41, "59 St"
-R41, "59 St"
-R41, "59 St"
-R42, "Bay Ridge Av"
-R42, "Bay Ridge Av"
-R42, "Bay Ridge Av"
-R43, "77 St"
-R43, "77 St"
-R43, "77 St"
-R44, "86 St"
-R44, "86 St"
-R44, "86 St"
-R45, "Bay Ridge - 95 St"
-R45, "Bay Ridge - 95 St"
-R45, "Bay Ridge - 95 St"
-S01, "Franklin Av"
-S01, "Franklin Av"
-S01, "Franklin Av"
-S03, "Park Pl"
-S03, "Park Pl"
-S03, "Park Pl"
-S04, "Botanic Garden"
-S04, "Botanic Garden"
-S04, "Botanic Garden"
-S09, "Tottenville"
-S09, "Tottenville"
-S09, "Tottenville"
-S10, "Atlantic"
-S10, "Atlantic"
-S10, "Atlantic"
-S12, "Nassau"
-S12, "Nassau"
-S12, "Nassau"
-S13, "Richmond Valley"
-S13, "Richmond Valley"
-S13, "Richmond Valley"
-S14, "Pleasant Plains"
-S14, "Pleasant Plains"
-S14, "Pleasant Plains"
-S15, "Prince's Bay"
-S15, "Prince's Bay"
-S15, "Prince's Bay"
-S16, "Huguenot"
-S16, "Huguenot"
-S16, "Huguenot"
-S17, "Annadale"
-S17, "Annadale"
-S17, "Annadale"
-S18, "Eltingville"
-S18, "Eltingville"
-S18, "Eltingville"
-S19, "Great Kills"
-S19, "Great Kills"
-S19, "Great Kills"
-S20, "Bay Terrace"
-S20, "Bay Terrace"
-S20, "Bay Terrace"
-S21, "Oakwood Heights"
-S21, "Oakwood Heights"
-S21, "Oakwood Heights"
-S22, "New Dorp"
-S22, "New Dorp"
-S22, "New Dorp"
-S23, "Grant City"
-S23, "Grant City"
-S23, "Grant City"
-S24, "Jefferson Av"
-S24, "Jefferson Av"
-S24, "Jefferson Av"
-S25, "Dongan Hills"
-S25, "Dongan Hills"
-S25, "Dongan Hills"
-S26, "Old Town"
-S26, "Old Town"
-S26, "Old Town"
-S27, "Grasmere"
-S27, "Grasmere"
-S27, "Grasmere"
-S28, "Clifton"
-S28, "Clifton"
-S28, "Clifton"
-S29, "Stapleton"
-S29, "Stapleton"
-S29, "Stapleton"
-S30, "Tompkinsville"
-S30, "Tompkinsville"
-S30, "Tompkinsville"
-S31, "St George"
-S31, "St George"
-S31, "St George"
+sto,stop_name,stop_lat,stop_lon
+101,Van Cortlandt Park - 242 St,40.889248,-73.898583
+101,Van Cortlandt Park - 242 St,40.889248,-73.898583
+101,Van Cortlandt Park - 242 St,40.889248,-73.898583
+103,238 St,40.884667,-73.90087
+103,238 St,40.884667,-73.90087
+103,238 St,40.884667,-73.90087
+104,231 St,40.878856,-73.904834
+104,231 St,40.878856,-73.904834
+104,231 St,40.878856,-73.904834
+106,Marble Hill - 225 St,40.874561,-73.909831
+106,Marble Hill - 225 St,40.874561,-73.909831
+106,Marble Hill - 225 St,40.874561,-73.909831
+107,215 St,40.869444,-73.915279
+107,215 St,40.869444,-73.915279
+107,215 St,40.869444,-73.915279
+108,207 St,40.864621,-73.918822
+108,207 St,40.864621,-73.918822
+108,207 St,40.864621,-73.918822
+109,Dyckman St,40.860531,-73.925536
+109,Dyckman St,40.860531,-73.925536
+109,Dyckman St,40.860531,-73.925536
+110,191 St,40.855225,-73.929412
+110,191 St,40.855225,-73.929412
+110,191 St,40.855225,-73.929412
+111,181 St,40.849505,-73.933596
+111,181 St,40.849505,-73.933596
+111,181 St,40.849505,-73.933596
+112,168 St - Washington Hts,40.840556,-73.940133
+112,168 St - Washington Hts,40.840556,-73.940133
+112,168 St - Washington Hts,40.840556,-73.940133
+113,157 St,40.834041,-73.94489
+113,157 St,40.834041,-73.94489
+113,157 St,40.834041,-73.94489
+114,145 St,40.826551,-73.95036
+114,145 St,40.826551,-73.95036
+114,145 St,40.826551,-73.95036
+115,137 St - City College,40.822008,-73.953676
+115,137 St - City College,40.822008,-73.953676
+115,137 St - City College,40.822008,-73.953676
+116,125 St,40.815581,-73.958372
+116,125 St,40.815581,-73.958372
+116,125 St,40.815581,-73.958372
+117,116 St - Columbia University,40.807722,-73.96411
+117,116 St - Columbia University,40.807722,-73.96411
+117,116 St - Columbia University,40.807722,-73.96411
+118,Cathedral Pkwy,40.803967,-73.966847
+118,Cathedral Pkwy,40.803967,-73.966847
+118,Cathedral Pkwy,40.803967,-73.966847
+119,103 St,40.799446,-73.968379
+119,103 St,40.799446,-73.968379
+119,103 St,40.799446,-73.968379
+120,96 St,40.793919,-73.972323
+120,96 St,40.793919,-73.972323
+120,96 St,40.793919,-73.972323
+121,86 St,40.788644,-73.976218
+121,86 St,40.788644,-73.976218
+121,86 St,40.788644,-73.976218
+122,79 St,40.783934,-73.979917
+122,79 St,40.783934,-73.979917
+122,79 St,40.783934,-73.979917
+123,72 St,40.778453,-73.98197
+123,72 St,40.778453,-73.98197
+123,72 St,40.778453,-73.98197
+124,66 St - Lincoln Center,40.77344,-73.982209
+124,66 St - Lincoln Center,40.77344,-73.982209
+124,66 St - Lincoln Center,40.77344,-73.982209
+125,59 St - Columbus Circle,40.768247,-73.981929
+125,59 St - Columbus Circle,40.768247,-73.981929
+125,59 St - Columbus Circle,40.768247,-73.981929
+126,50 St,40.761728,-73.983849
+126,50 St,40.761728,-73.983849
+126,50 St,40.761728,-73.983849
+127,Times Sq - 42 St,40.75529,-73.987495
+127,Times Sq - 42 St,40.75529,-73.987495
+127,Times Sq - 42 St,40.75529,-73.987495
+128,34 St - Penn Station,40.750373,-73.991057
+128,34 St - Penn Station,40.750373,-73.991057
+128,34 St - Penn Station,40.750373,-73.991057
+129,28 St,40.747215,-73.993365
+129,28 St,40.747215,-73.993365
+129,28 St,40.747215,-73.993365
+130,23 St,40.744081,-73.995657
+130,23 St,40.744081,-73.995657
+130,23 St,40.744081,-73.995657
+131,18 St,40.74104,-73.997871
+131,18 St,40.74104,-73.997871
+131,18 St,40.74104,-73.997871
+132,14 St,40.737826,-74.000201
+132,14 St,40.737826,-74.000201
+132,14 St,40.737826,-74.000201
+133,Christopher St - Sheridan Sq,40.733422,-74.002906
+133,Christopher St - Sheridan Sq,40.733422,-74.002906
+133,Christopher St - Sheridan Sq,40.733422,-74.002906
+134,Houston St,40.728251,-74.005367
+134,Houston St,40.728251,-74.005367
+134,Houston St,40.728251,-74.005367
+135,Canal St,40.722854,-74.006277
+135,Canal St,40.722854,-74.006277
+135,Canal St,40.722854,-74.006277
+136,Franklin St,40.719318,-74.006886
+136,Franklin St,40.719318,-74.006886
+136,Franklin St,40.719318,-74.006886
+137,Chambers St,40.715478,-74.009266
+137,Chambers St,40.715478,-74.009266
+137,Chambers St,40.715478,-74.009266
+138,Cortlandt St,40.711835,-74.012188
+138,Cortlandt St,40.711835,-74.012188
+138,Cortlandt St,40.711835,-74.012188
+139,Rector St,40.707513,-74.013783
+139,Rector St,40.707513,-74.013783
+139,Rector St,40.707513,-74.013783
+140,South Ferry Loop,40.701411,-74.013205
+140,South Ferry Loop,40.701411,-74.013205
+140,South Ferry Loop,40.701411,-74.013205
+201,Wakefield - 241 St,40.903125,-73.85062
+201,Wakefield - 241 St,40.903125,-73.85062
+201,Wakefield - 241 St,40.903125,-73.85062
+204,Nereid Av,40.898379,-73.854376
+204,Nereid Av,40.898379,-73.854376
+204,Nereid Av,40.898379,-73.854376
+205,233 St,40.893193,-73.857473
+205,233 St,40.893193,-73.857473
+205,233 St,40.893193,-73.857473
+206,225 St,40.888022,-73.860341
+206,225 St,40.888022,-73.860341
+206,225 St,40.888022,-73.860341
+207,219 St,40.883895,-73.862633
+207,219 St,40.883895,-73.862633
+207,219 St,40.883895,-73.862633
+208,Gun Hill Rd,40.87785,-73.866256
+208,Gun Hill Rd,40.87785,-73.866256
+208,Gun Hill Rd,40.87785,-73.866256
+209,Burke Av,40.871356,-73.867164
+209,Burke Av,40.871356,-73.867164
+209,Burke Av,40.871356,-73.867164
+210,Allerton Av,40.865462,-73.867352
+210,Allerton Av,40.865462,-73.867352
+210,Allerton Av,40.865462,-73.867352
+211,Pelham Pkwy,40.857192,-73.867615
+211,Pelham Pkwy,40.857192,-73.867615
+211,Pelham Pkwy,40.857192,-73.867615
+212,Bronx Park East,40.848828,-73.868457
+212,Bronx Park East,40.848828,-73.868457
+212,Bronx Park East,40.848828,-73.868457
+213,E 180 St,40.841894,-73.873488
+213,E 180 St,40.841894,-73.873488
+213,E 180 St,40.841894,-73.873488
+214,West Farms Sq - E Tremont Av,40.840295,-73.880049
+214,West Farms Sq - E Tremont Av,40.840295,-73.880049
+214,West Farms Sq - E Tremont Av,40.840295,-73.880049
+215,174 St,40.837288,-73.887734
+215,174 St,40.837288,-73.887734
+215,174 St,40.837288,-73.887734
+216,Freeman St,40.829993,-73.891865
+216,Freeman St,40.829993,-73.891865
+216,Freeman St,40.829993,-73.891865
+217,Simpson St,40.824073,-73.893064
+217,Simpson St,40.824073,-73.893064
+217,Simpson St,40.824073,-73.893064
+218,Intervale Av,40.822181,-73.896736
+218,Intervale Av,40.822181,-73.896736
+218,Intervale Av,40.822181,-73.896736
+219,Prospect Av,40.819585,-73.90177
+219,Prospect Av,40.819585,-73.90177
+219,Prospect Av,40.819585,-73.90177
+220,Jackson Av,40.81649,-73.907807
+220,Jackson Av,40.81649,-73.907807
+220,Jackson Av,40.81649,-73.907807
+221,3 Av - 149 St,40.816109,-73.917757
+221,3 Av - 149 St,40.816109,-73.917757
+221,3 Av - 149 St,40.816109,-73.917757
+222,149 St - Grand Concourse,40.81841,-73.926718
+222,149 St - Grand Concourse,40.81841,-73.926718
+222,149 St - Grand Concourse,40.81841,-73.926718
+224,135 St,40.814229,-73.94077
+224,135 St,40.814229,-73.94077
+224,135 St,40.814229,-73.94077
+225,125 St,40.807754,-73.945495
+225,125 St,40.807754,-73.945495
+225,125 St,40.807754,-73.945495
+226,116 St,40.802098,-73.949625
+226,116 St,40.802098,-73.949625
+226,116 St,40.802098,-73.949625
+227,Central Park North (110 St),40.799075,-73.951822
+227,Central Park North (110 St),40.799075,-73.951822
+227,Central Park North (110 St),40.799075,-73.951822
+228,Park Pl,40.713051,-74.008811
+228,Park Pl,40.713051,-74.008811
+228,Park Pl,40.713051,-74.008811
+229,Fulton St,40.709416,-74.006571
+229,Fulton St,40.709416,-74.006571
+229,Fulton St,40.709416,-74.006571
+230,Wall St,40.706821,-74.0091
+230,Wall St,40.706821,-74.0091
+230,Wall St,40.706821,-74.0091
+231,Clark St,40.697466,-73.993086
+231,Clark St,40.697466,-73.993086
+231,Clark St,40.697466,-73.993086
+232,Borough Hall,40.693219,-73.989998
+232,Borough Hall,40.693219,-73.989998
+232,Borough Hall,40.693219,-73.989998
+233,Hoyt St,40.690545,-73.985065
+233,Hoyt St,40.690545,-73.985065
+233,Hoyt St,40.690545,-73.985065
+234,Nevins St,40.688246,-73.980492
+234,Nevins St,40.688246,-73.980492
+234,Nevins St,40.688246,-73.980492
+235,Atlantic Av - Barclays Ctr,40.684359,-73.977666
+235,Atlantic Av - Barclays Ctr,40.684359,-73.977666
+235,Atlantic Av - Barclays Ctr,40.684359,-73.977666
+236,Bergen St,40.680829,-73.975098
+236,Bergen St,40.680829,-73.975098
+236,Bergen St,40.680829,-73.975098
+237,Grand Army Plaza,40.675235,-73.971046
+237,Grand Army Plaza,40.675235,-73.971046
+237,Grand Army Plaza,40.675235,-73.971046
+238,Eastern Pkwy - Brooklyn Museum,40.671987,-73.964375
+238,Eastern Pkwy - Brooklyn Museum,40.671987,-73.964375
+238,Eastern Pkwy - Brooklyn Museum,40.671987,-73.964375
+239,Franklin Av,40.670682,-73.958131
+239,Franklin Av,40.670682,-73.958131
+239,Franklin Av,40.670682,-73.958131
+241,President St,40.667883,-73.950683
+241,President St,40.667883,-73.950683
+241,President St,40.667883,-73.950683
+242,Sterling St,40.662742,-73.95085
+242,Sterling St,40.662742,-73.95085
+242,Sterling St,40.662742,-73.95085
+243,Winthrop St,40.656652,-73.9502
+243,Winthrop St,40.656652,-73.9502
+243,Winthrop St,40.656652,-73.9502
+244,Church Av,40.650843,-73.949575
+244,Church Av,40.650843,-73.949575
+244,Church Av,40.650843,-73.949575
+245,Beverly Rd,40.645098,-73.948959
+245,Beverly Rd,40.645098,-73.948959
+245,Beverly Rd,40.645098,-73.948959
+246,Newkirk Av,40.639967,-73.948411
+246,Newkirk Av,40.639967,-73.948411
+246,Newkirk Av,40.639967,-73.948411
+247,Flatbush Av - Brooklyn College,40.632836,-73.947642
+247,Flatbush Av - Brooklyn College,40.632836,-73.947642
+247,Flatbush Av - Brooklyn College,40.632836,-73.947642
+248,Nostrand Av,40.669847,-73.950466
+248,Nostrand Av,40.669847,-73.950466
+248,Nostrand Av,40.669847,-73.950466
+249,Kingston Av,40.669399,-73.942161
+249,Kingston Av,40.669399,-73.942161
+249,Kingston Av,40.669399,-73.942161
+250,Crown Hts - Utica Av,40.668897,-73.932942
+250,Crown Hts - Utica Av,40.668897,-73.932942
+250,Crown Hts - Utica Av,40.668897,-73.932942
+251,Sutter Av - Rutland Rd,40.664717,-73.92261
+251,Sutter Av - Rutland Rd,40.664717,-73.92261
+251,Sutter Av - Rutland Rd,40.664717,-73.92261
+252,Saratoga Av,40.661453,-73.916327
+252,Saratoga Av,40.661453,-73.916327
+252,Saratoga Av,40.661453,-73.916327
+253,Rockaway Av,40.662549,-73.908946
+253,Rockaway Av,40.662549,-73.908946
+253,Rockaway Av,40.662549,-73.908946
+254,Junius St,40.663515,-73.902447
+254,Junius St,40.663515,-73.902447
+254,Junius St,40.663515,-73.902447
+255,Pennsylvania Av,40.664635,-73.894895
+255,Pennsylvania Av,40.664635,-73.894895
+255,Pennsylvania Av,40.664635,-73.894895
+256,Van Siclen Av,40.665449,-73.889395
+256,Van Siclen Av,40.665449,-73.889395
+256,Van Siclen Av,40.665449,-73.889395
+257,New Lots Av,40.666235,-73.884079
+257,New Lots Av,40.666235,-73.884079
+257,New Lots Av,40.666235,-73.884079
+301,Harlem - 148 St,40.82388,-73.93647
+301,Harlem - 148 St,40.82388,-73.93647
+301,Harlem - 148 St,40.82388,-73.93647
+302,145 St,40.820421,-73.936245
+302,145 St,40.820421,-73.936245
+302,145 St,40.820421,-73.936245
+401,Woodlawn,40.886037,-73.878751
+401,Woodlawn,40.886037,-73.878751
+401,Woodlawn,40.886037,-73.878751
+402,Mosholu Pkwy,40.87975,-73.884655
+402,Mosholu Pkwy,40.87975,-73.884655
+402,Mosholu Pkwy,40.87975,-73.884655
+405,Bedford Park Blvd - Lehman College,40.873412,-73.890064
+405,Bedford Park Blvd - Lehman College,40.873412,-73.890064
+405,Bedford Park Blvd - Lehman College,40.873412,-73.890064
+406,Kingsbridge Rd,40.86776,-73.897174
+406,Kingsbridge Rd,40.86776,-73.897174
+406,Kingsbridge Rd,40.86776,-73.897174
+407,Fordham Rd,40.862803,-73.901034
+407,Fordham Rd,40.862803,-73.901034
+407,Fordham Rd,40.862803,-73.901034
+408,183 St,40.858407,-73.903879
+408,183 St,40.858407,-73.903879
+408,183 St,40.858407,-73.903879
+409,Burnside Av,40.853453,-73.907684
+409,Burnside Av,40.853453,-73.907684
+409,Burnside Av,40.853453,-73.907684
+410,176 St,40.84848,-73.911794
+410,176 St,40.84848,-73.911794
+410,176 St,40.84848,-73.911794
+411,Mt Eden Av,40.844434,-73.914685
+411,Mt Eden Av,40.844434,-73.914685
+411,Mt Eden Av,40.844434,-73.914685
+412,170 St,40.840075,-73.917791
+412,170 St,40.840075,-73.917791
+412,170 St,40.840075,-73.917791
+413,167 St,40.835537,-73.9214
+413,167 St,40.835537,-73.9214
+413,167 St,40.835537,-73.9214
+414,161 St - Yankee Stadium,40.827994,-73.925831
+414,161 St - Yankee Stadium,40.827994,-73.925831
+414,161 St - Yankee Stadium,40.827994,-73.925831
+415,149 St - Grand Concourse,40.818375,-73.927351
+415,149 St - Grand Concourse,40.818375,-73.927351
+415,149 St - Grand Concourse,40.818375,-73.927351
+416,138 St - Grand Concourse,40.813224,-73.929849
+416,138 St - Grand Concourse,40.813224,-73.929849
+416,138 St - Grand Concourse,40.813224,-73.929849
+418,Fulton St,40.710368,-74.009509
+418,Fulton St,40.710368,-74.009509
+418,Fulton St,40.710368,-74.009509
+419,Wall St,40.707557,-74.011862
+419,Wall St,40.707557,-74.011862
+419,Wall St,40.707557,-74.011862
+420,Bowling Green,40.704817,-74.014065
+420,Bowling Green,40.704817,-74.014065
+420,Bowling Green,40.704817,-74.014065
+423,Borough Hall,40.692404,-73.990151
+423,Borough Hall,40.692404,-73.990151
+423,Borough Hall,40.692404,-73.990151
+501,Eastchester - Dyre Av,40.8883,-73.830834
+501,Eastchester - Dyre Av,40.8883,-73.830834
+501,Eastchester - Dyre Av,40.8883,-73.830834
+502,Baychester Av,40.878663,-73.838591
+502,Baychester Av,40.878663,-73.838591
+502,Baychester Av,40.878663,-73.838591
+503,Gun Hill Rd,40.869526,-73.846384
+503,Gun Hill Rd,40.869526,-73.846384
+503,Gun Hill Rd,40.869526,-73.846384
+504,Pelham Pkwy,40.858985,-73.855359
+504,Pelham Pkwy,40.858985,-73.855359
+504,Pelham Pkwy,40.858985,-73.855359
+505,Morris Park,40.854364,-73.860495
+505,Morris Park,40.854364,-73.860495
+505,Morris Park,40.854364,-73.860495
+601,Pelham Bay Park,40.852462,-73.828121
+601,Pelham Bay Park,40.852462,-73.828121
+601,Pelham Bay Park,40.852462,-73.828121
+602,Buhre Av,40.84681,-73.832569
+602,Buhre Av,40.84681,-73.832569
+602,Buhre Av,40.84681,-73.832569
+603,Middletown Rd,40.843863,-73.836322
+603,Middletown Rd,40.843863,-73.836322
+603,Middletown Rd,40.843863,-73.836322
+604,Westchester Sq - E Tremont Av,40.839892,-73.842952
+604,Westchester Sq - E Tremont Av,40.839892,-73.842952
+604,Westchester Sq - E Tremont Av,40.839892,-73.842952
+606,Zerega Av,40.836488,-73.847036
+606,Zerega Av,40.836488,-73.847036
+606,Zerega Av,40.836488,-73.847036
+607,Castle Hill Av,40.834255,-73.851222
+607,Castle Hill Av,40.834255,-73.851222
+607,Castle Hill Av,40.834255,-73.851222
+608,Parkchester,40.833226,-73.860816
+608,Parkchester,40.833226,-73.860816
+608,Parkchester,40.833226,-73.860816
+609,St Lawrence Av,40.831509,-73.867618
+609,St Lawrence Av,40.831509,-73.867618
+609,St Lawrence Av,40.831509,-73.867618
+610,Morrison Av- Sound View,40.829521,-73.874516
+610,Morrison Av- Sound View,40.829521,-73.874516
+610,Morrison Av- Sound View,40.829521,-73.874516
+611,Elder Av,40.828584,-73.879159
+611,Elder Av,40.828584,-73.879159
+611,Elder Av,40.828584,-73.879159
+612,Whitlock Av,40.826525,-73.886283
+612,Whitlock Av,40.826525,-73.886283
+612,Whitlock Av,40.826525,-73.886283
+613,Hunts Point Av,40.820948,-73.890549
+613,Hunts Point Av,40.820948,-73.890549
+613,Hunts Point Av,40.820948,-73.890549
+614,Longwood Av,40.816104,-73.896435
+614,Longwood Av,40.816104,-73.896435
+614,Longwood Av,40.816104,-73.896435
+615,E 149 St,40.812118,-73.904098
+615,E 149 St,40.812118,-73.904098
+615,E 149 St,40.812118,-73.904098
+616,E 143 St - St Mary's St,40.808719,-73.907657
+616,E 143 St - St Mary's St,40.808719,-73.907657
+616,E 143 St - St Mary's St,40.808719,-73.907657
+617,Cypress Av,40.805368,-73.914042
+617,Cypress Av,40.805368,-73.914042
+617,Cypress Av,40.805368,-73.914042
+618,Brook Av,40.807566,-73.91924
+618,Brook Av,40.807566,-73.91924
+618,Brook Av,40.807566,-73.91924
+619,3 Av - 138 St,40.810476,-73.926138
+619,3 Av - 138 St,40.810476,-73.926138
+619,3 Av - 138 St,40.810476,-73.926138
+621,125 St,40.804138,-73.937594
+621,125 St,40.804138,-73.937594
+621,125 St,40.804138,-73.937594
+622,116 St,40.798629,-73.941617
+622,116 St,40.798629,-73.941617
+622,116 St,40.798629,-73.941617
+623,110 St,40.79502,-73.94425
+623,110 St,40.79502,-73.94425
+623,110 St,40.79502,-73.94425
+624,103 St,40.7906,-73.947478
+624,103 St,40.7906,-73.947478
+624,103 St,40.7906,-73.947478
+625,96 St,40.785672,-73.95107
+625,96 St,40.785672,-73.95107
+625,96 St,40.785672,-73.95107
+626,86 St,40.779492,-73.955589
+626,86 St,40.779492,-73.955589
+626,86 St,40.779492,-73.955589
+627,77 St,40.77362,-73.959874
+627,77 St,40.77362,-73.959874
+627,77 St,40.77362,-73.959874
+628,68 St - Hunter College,40.768141,-73.96387
+628,68 St - Hunter College,40.768141,-73.96387
+628,68 St - Hunter College,40.768141,-73.96387
+629,59 St,40.762526,-73.967967
+629,59 St,40.762526,-73.967967
+629,59 St,40.762526,-73.967967
+630,51 St,40.757107,-73.97192
+630,51 St,40.757107,-73.97192
+630,51 St,40.757107,-73.97192
+631,Grand Central - 42 St,40.751776,-73.976848
+631,Grand Central - 42 St,40.751776,-73.976848
+631,Grand Central - 42 St,40.751776,-73.976848
+632,33 St,40.746081,-73.982076
+632,33 St,40.746081,-73.982076
+632,33 St,40.746081,-73.982076
+633,28 St,40.74307,-73.984264
+633,28 St,40.74307,-73.984264
+633,28 St,40.74307,-73.984264
+634,23 St,40.739864,-73.986599
+634,23 St,40.739864,-73.986599
+634,23 St,40.739864,-73.986599
+635,14 St - Union Sq,40.734673,-73.989951
+635,14 St - Union Sq,40.734673,-73.989951
+635,14 St - Union Sq,40.734673,-73.989951
+636,Astor Pl,40.730054,-73.99107
+636,Astor Pl,40.730054,-73.99107
+636,Astor Pl,40.730054,-73.99107
+637,Bleecker St,40.725915,-73.994659
+637,Bleecker St,40.725915,-73.994659
+637,Bleecker St,40.725915,-73.994659
+638,Spring St,40.722301,-73.997141
+638,Spring St,40.722301,-73.997141
+638,Spring St,40.722301,-73.997141
+639,Canal St,40.718803,-74.000193
+639,Canal St,40.718803,-74.000193
+639,Canal St,40.718803,-74.000193
+640,Brooklyn Bridge - City Hall,40.713065,-74.004131
+640,Brooklyn Bridge - City Hall,40.713065,-74.004131
+640,Brooklyn Bridge - City Hall,40.713065,-74.004131
+701,Flushing - Main St,40.7596,-73.83003
+701,Flushing - Main St,40.7596,-73.83003
+701,Flushing - Main St,40.7596,-73.83003
+702,Mets - Willets Point,40.754622,-73.845625
+702,Mets - Willets Point,40.754622,-73.845625
+702,Mets - Willets Point,40.754622,-73.845625
+705,111 St,40.75173,-73.855334
+705,111 St,40.75173,-73.855334
+705,111 St,40.75173,-73.855334
+706,103 St - Corona Plaza,40.749865,-73.8627
+706,103 St - Corona Plaza,40.749865,-73.8627
+706,103 St - Corona Plaza,40.749865,-73.8627
+707,Junction Blvd,40.749145,-73.869527
+707,Junction Blvd,40.749145,-73.869527
+707,Junction Blvd,40.749145,-73.869527
+708,90 St - Elmhurst Av,40.748408,-73.876613
+708,90 St - Elmhurst Av,40.748408,-73.876613
+708,90 St - Elmhurst Av,40.748408,-73.876613
+709,82 St - Jackson Hts,40.747659,-73.883697
+709,82 St - Jackson Hts,40.747659,-73.883697
+709,82 St - Jackson Hts,40.747659,-73.883697
+710,74 St - Broadway,40.746848,-73.891394
+710,74 St - Broadway,40.746848,-73.891394
+710,74 St - Broadway,40.746848,-73.891394
+711,69 St,40.746325,-73.896403
+711,69 St,40.746325,-73.896403
+711,69 St,40.746325,-73.896403
+712,Woodside - 61 St,40.74563,-73.902984
+712,Woodside - 61 St,40.74563,-73.902984
+712,Woodside - 61 St,40.74563,-73.902984
+713,52 St,40.744149,-73.912549
+713,52 St,40.744149,-73.912549
+713,52 St,40.744149,-73.912549
+714,46 St,40.743132,-73.918435
+714,46 St,40.743132,-73.918435
+714,46 St,40.743132,-73.918435
+715,40 St,40.743781,-73.924016
+715,40 St,40.743781,-73.924016
+715,40 St,40.743781,-73.924016
+716,33 St,40.744587,-73.930997
+716,33 St,40.744587,-73.930997
+716,33 St,40.744587,-73.930997
+718,Queensboro Plaza,40.750582,-73.940202
+718,Queensboro Plaza,40.750582,-73.940202
+718,Queensboro Plaza,40.750582,-73.940202
+719,Court Sq,40.747023,-73.945264
+719,Court Sq,40.747023,-73.945264
+719,Court Sq,40.747023,-73.945264
+720,Hunters Point Av,40.742216,-73.948916
+720,Hunters Point Av,40.742216,-73.948916
+720,Hunters Point Av,40.742216,-73.948916
+721,Vernon Blvd - Jackson Av,40.742626,-73.953581
+721,Vernon Blvd - Jackson Av,40.742626,-73.953581
+721,Vernon Blvd - Jackson Av,40.742626,-73.953581
+723,Grand Central - 42 St,40.751431,-73.976041
+723,Grand Central - 42 St,40.751431,-73.976041
+723,Grand Central - 42 St,40.751431,-73.976041
+724,5 Av,40.753821,-73.981963
+724,5 Av,40.753821,-73.981963
+724,5 Av,40.753821,-73.981963
+725,Times Sq - 42 St,40.755477,-73.987691
+725,Times Sq - 42 St,40.755477,-73.987691
+725,Times Sq - 42 St,40.755477,-73.987691
+901,Grand Central - 42 St,40.752769,-73.979189
+901,Grand Central - 42 St,40.752769,-73.979189
+901,Grand Central - 42 St,40.752769,-73.979189
+902,Times Sq - 42 St,40.755983,-73.986229
+902,Times Sq - 42 St,40.755983,-73.986229
+902,Times Sq - 42 St,40.755983,-73.986229
+A02,Inwood - 207 St,40.868072,-73.919899
+A02,Inwood - 207 St,40.868072,-73.919899
+A02,Inwood - 207 St,40.868072,-73.919899
+A03,Dyckman St,40.865491,-73.927271
+A03,Dyckman St,40.865491,-73.927271
+A03,Dyckman St,40.865491,-73.927271
+A05,190 St,40.859022,-73.93418
+A05,190 St,40.859022,-73.93418
+A05,190 St,40.859022,-73.93418
+A06,181 St,40.851695,-73.937969
+A06,181 St,40.851695,-73.937969
+A06,181 St,40.851695,-73.937969
+A07,175 St,40.847391,-73.939704
+A07,175 St,40.847391,-73.939704
+A07,175 St,40.847391,-73.939704
+A09,168 St,40.840719,-73.939561
+A09,168 St,40.840719,-73.939561
+A09,168 St,40.840719,-73.939561
+A10,163 St - Amsterdam Av,40.836013,-73.939892
+A10,163 St - Amsterdam Av,40.836013,-73.939892
+A10,163 St - Amsterdam Av,40.836013,-73.939892
+A11,155 St,40.830518,-73.941514
+A11,155 St,40.830518,-73.941514
+A11,155 St,40.830518,-73.941514
+A12,145 St,40.824783,-73.944216
+A12,145 St,40.824783,-73.944216
+A12,145 St,40.824783,-73.944216
+A14,135 St,40.817894,-73.947649
+A14,135 St,40.817894,-73.947649
+A14,135 St,40.817894,-73.947649
+A15,125 St,40.811109,-73.952343
+A15,125 St,40.811109,-73.952343
+A15,125 St,40.811109,-73.952343
+A16,116 St,40.805085,-73.954882
+A16,116 St,40.805085,-73.954882
+A16,116 St,40.805085,-73.954882
+A17,Cathedral Pkwy (110 St),40.800603,-73.958161
+A17,Cathedral Pkwy (110 St),40.800603,-73.958161
+A17,Cathedral Pkwy (110 St),40.800603,-73.958161
+A18,103 St,40.796092,-73.961454
+A18,103 St,40.796092,-73.961454
+A18,103 St,40.796092,-73.961454
+A19,96 St,40.791642,-73.964696
+A19,96 St,40.791642,-73.964696
+A19,96 St,40.791642,-73.964696
+A20,86 St,40.785868,-73.968916
+A20,86 St,40.785868,-73.968916
+A20,86 St,40.785868,-73.968916
+A21,81 St - Museum of Natural History,40.781433,-73.972143
+A21,81 St - Museum of Natural History,40.781433,-73.972143
+A21,81 St - Museum of Natural History,40.781433,-73.972143
+A22,72 St,40.775594,-73.97641
+A22,72 St,40.775594,-73.97641
+A22,72 St,40.775594,-73.97641
+A24,59 St - Columbus Circle,40.768296,-73.981736
+A24,59 St - Columbus Circle,40.768296,-73.981736
+A24,59 St - Columbus Circle,40.768296,-73.981736
+A25,50 St,40.762456,-73.985984
+A25,50 St,40.762456,-73.985984
+A25,50 St,40.762456,-73.985984
+A27,42 St - Port Authority Bus Terminal,40.757308,-73.989735
+A27,42 St - Port Authority Bus Terminal,40.757308,-73.989735
+A27,42 St - Port Authority Bus Terminal,40.757308,-73.989735
+A28,34 St - Penn Station,40.752287,-73.993391
+A28,34 St - Penn Station,40.752287,-73.993391
+A28,34 St - Penn Station,40.752287,-73.993391
+A30,23 St,40.745906,-73.998041
+A30,23 St,40.745906,-73.998041
+A30,23 St,40.745906,-73.998041
+A31,14 St,40.740893,-74.00169
+A31,14 St,40.740893,-74.00169
+A31,14 St,40.740893,-74.00169
+A32,W 4 St,40.732338,-74.000495
+A32,W 4 St,40.732338,-74.000495
+A32,W 4 St,40.732338,-74.000495
+A33,Spring St,40.726227,-74.003739
+A33,Spring St,40.726227,-74.003739
+A33,Spring St,40.726227,-74.003739
+A34,Canal St,40.720824,-74.005229
+A34,Canal St,40.720824,-74.005229
+A34,Canal St,40.720824,-74.005229
+A36,Chambers St,40.714111,-74.008585
+A36,Chambers St,40.714111,-74.008585
+A36,Chambers St,40.714111,-74.008585
+A38,Fulton St,40.710197,-74.007691
+A38,Fulton St,40.710197,-74.007691
+A38,Fulton St,40.710197,-74.007691
+A40,High St,40.699337,-73.990531
+A40,High St,40.699337,-73.990531
+A40,High St,40.699337,-73.990531
+A41,Jay St - MetroTech,40.692338,-73.987342
+A41,Jay St - MetroTech,40.692338,-73.987342
+A41,Jay St - MetroTech,40.692338,-73.987342
+A42,Hoyt - Schermerhorn Sts,40.688484,-73.985001
+A42,Hoyt - Schermerhorn Sts,40.688484,-73.985001
+A42,Hoyt - Schermerhorn Sts,40.688484,-73.985001
+A43,Lafayette Av,40.686113,-73.973946
+A43,Lafayette Av,40.686113,-73.973946
+A43,Lafayette Av,40.686113,-73.973946
+A44,Clinton - Washington Avs,40.683263,-73.965838
+A44,Clinton - Washington Avs,40.683263,-73.965838
+A44,Clinton - Washington Avs,40.683263,-73.965838
+A45,Franklin Av,40.68138,-73.956848
+A45,Franklin Av,40.68138,-73.956848
+A45,Franklin Av,40.68138,-73.956848
+A46,Nostrand Av,40.680438,-73.950426
+A46,Nostrand Av,40.680438,-73.950426
+A46,Nostrand Av,40.680438,-73.950426
+A47,Kingston - Throop Avs,40.679921,-73.940858
+A47,Kingston - Throop Avs,40.679921,-73.940858
+A47,Kingston - Throop Avs,40.679921,-73.940858
+A48,Utica Av,40.679364,-73.930729
+A48,Utica Av,40.679364,-73.930729
+A48,Utica Av,40.679364,-73.930729
+A49,Ralph Av,40.678822,-73.920786
+A49,Ralph Av,40.678822,-73.920786
+A49,Ralph Av,40.678822,-73.920786
+A50,Rockaway Av,40.67834,-73.911946
+A50,Rockaway Av,40.67834,-73.911946
+A50,Rockaway Av,40.67834,-73.911946
+A51,Broadway Jct,40.678334,-73.905316
+A51,Broadway Jct,40.678334,-73.905316
+A51,Broadway Jct,40.678334,-73.905316
+A52,Liberty Av,40.674542,-73.896548
+A52,Liberty Av,40.674542,-73.896548
+A52,Liberty Av,40.674542,-73.896548
+A53,Van Siclen Av,40.67271,-73.890358
+A53,Van Siclen Av,40.67271,-73.890358
+A53,Van Siclen Av,40.67271,-73.890358
+A54,Shepherd Av,40.67413,-73.88075
+A54,Shepherd Av,40.67413,-73.88075
+A54,Shepherd Av,40.67413,-73.88075
+A55,Euclid Av,40.675377,-73.872106
+A55,Euclid Av,40.675377,-73.872106
+A55,Euclid Av,40.675377,-73.872106
+A57,Grant Av,40.677044,-73.86505
+A57,Grant Av,40.677044,-73.86505
+A57,Grant Av,40.677044,-73.86505
+A59,80 St,40.679371,-73.858992
+A59,80 St,40.679371,-73.858992
+A59,80 St,40.679371,-73.858992
+A60,88 St,40.679843,-73.85147
+A60,88 St,40.679843,-73.85147
+A60,88 St,40.679843,-73.85147
+A61,Rockaway Blvd,40.680429,-73.843853
+A61,Rockaway Blvd,40.680429,-73.843853
+A61,Rockaway Blvd,40.680429,-73.843853
+A63,104 St,40.681711,-73.837683
+A63,104 St,40.681711,-73.837683
+A63,104 St,40.681711,-73.837683
+A64,111 St,40.684331,-73.832163
+A64,111 St,40.684331,-73.832163
+A64,111 St,40.684331,-73.832163
+A65,Ozone Park - Lefferts Blvd,40.685951,-73.825798
+A65,Ozone Park - Lefferts Blvd,40.685951,-73.825798
+A65,Ozone Park - Lefferts Blvd,40.685951,-73.825798
+B04,21 St - Queensbridge,40.754203,-73.942836
+B04,21 St - Queensbridge,40.754203,-73.942836
+B04,21 St - Queensbridge,40.754203,-73.942836
+B06,Roosevelt Island,40.759145,-73.95326
+B06,Roosevelt Island,40.759145,-73.95326
+B06,Roosevelt Island,40.759145,-73.95326
+B08,Lexington Av/63 St,40.764629,-73.966113
+B08,Lexington Av/63 St,40.764629,-73.966113
+B08,Lexington Av/63 St,40.764629,-73.966113
+B10,57 St,40.763972,-73.97745
+B10,57 St,40.763972,-73.97745
+B10,57 St,40.763972,-73.97745
+B12,9 Av,40.646292,-73.994324
+B12,9 Av,40.646292,-73.994324
+B12,9 Av,40.646292,-73.994324
+B13,Fort Hamilton Pkwy,40.640914,-73.994304
+B13,Fort Hamilton Pkwy,40.640914,-73.994304
+B13,Fort Hamilton Pkwy,40.640914,-73.994304
+B14,50 St,40.63626,-73.994791
+B14,50 St,40.63626,-73.994791
+B14,50 St,40.63626,-73.994791
+B15,55 St,40.631435,-73.995476
+B15,55 St,40.631435,-73.995476
+B15,55 St,40.631435,-73.995476
+B16,62 St,40.626472,-73.996895
+B16,62 St,40.626472,-73.996895
+B16,62 St,40.626472,-73.996895
+B17,71 St,40.619589,-73.998864
+B17,71 St,40.619589,-73.998864
+B17,71 St,40.619589,-73.998864
+B18,79 St,40.613501,-74.00061
+B18,79 St,40.613501,-74.00061
+B18,79 St,40.613501,-74.00061
+B19,18 Av,40.607954,-74.001736
+B19,18 Av,40.607954,-74.001736
+B19,18 Av,40.607954,-74.001736
+B20,20 Av,40.604556,-73.998168
+B20,20 Av,40.604556,-73.998168
+B20,20 Av,40.604556,-73.998168
+B21,Bay Pkwy,40.601875,-73.993728
+B21,Bay Pkwy,40.601875,-73.993728
+B21,Bay Pkwy,40.601875,-73.993728
+B22,25 Av,40.597704,-73.986829
+B22,25 Av,40.597704,-73.986829
+B22,25 Av,40.597704,-73.986829
+B23,Bay 50 St,40.588841,-73.983765
+B23,Bay 50 St,40.588841,-73.983765
+B23,Bay 50 St,40.588841,-73.983765
+D01,Norwood - 205 St,40.874811,-73.878855
+D01,Norwood - 205 St,40.874811,-73.878855
+D01,Norwood - 205 St,40.874811,-73.878855
+D03,Bedford Park Blvd,40.873244,-73.887138
+D03,Bedford Park Blvd,40.873244,-73.887138
+D03,Bedford Park Blvd,40.873244,-73.887138
+D04,Kingsbridge Rd,40.866978,-73.893509
+D04,Kingsbridge Rd,40.866978,-73.893509
+D04,Kingsbridge Rd,40.866978,-73.893509
+D05,Fordham Rd,40.861296,-73.897749
+D05,Fordham Rd,40.861296,-73.897749
+D05,Fordham Rd,40.861296,-73.897749
+D06,182-183 Sts,40.856093,-73.900741
+D06,182-183 Sts,40.856093,-73.900741
+D06,182-183 Sts,40.856093,-73.900741
+D07,Tremont Av,40.85041,-73.905227
+D07,Tremont Av,40.85041,-73.905227
+D07,Tremont Av,40.85041,-73.905227
+D08,174-175 Sts,40.8459,-73.910136
+D08,174-175 Sts,40.8459,-73.910136
+D08,174-175 Sts,40.8459,-73.910136
+D09,170 St,40.839306,-73.9134
+D09,170 St,40.839306,-73.9134
+D09,170 St,40.839306,-73.9134
+D10,167 St,40.833771,-73.91844
+D10,167 St,40.833771,-73.91844
+D10,167 St,40.833771,-73.91844
+D11,161 St - Yankee Stadium,40.827905,-73.925651
+D11,161 St - Yankee Stadium,40.827905,-73.925651
+D11,161 St - Yankee Stadium,40.827905,-73.925651
+D12,155 St,40.830135,-73.938209
+D12,155 St,40.830135,-73.938209
+D12,155 St,40.830135,-73.938209
+D13,145 St,40.824783,-73.944216
+D13,145 St,40.824783,-73.944216
+D13,145 St,40.824783,-73.944216
+D14,7 Av,40.762862,-73.981637
+D14,7 Av,40.762862,-73.981637
+D14,7 Av,40.762862,-73.981637
+D15,47-50 Sts - Rockefeller Ctr,40.758663,-73.981329
+D15,47-50 Sts - Rockefeller Ctr,40.758663,-73.981329
+D15,47-50 Sts - Rockefeller Ctr,40.758663,-73.981329
+D16,42 St - Bryant Pk,40.754222,-73.984569
+D16,42 St - Bryant Pk,40.754222,-73.984569
+D16,42 St - Bryant Pk,40.754222,-73.984569
+D17,34 St - Herald Sq,40.749719,-73.987823
+D17,34 St - Herald Sq,40.749719,-73.987823
+D17,34 St - Herald Sq,40.749719,-73.987823
+D18,23 St,40.742878,-73.992821
+D18,23 St,40.742878,-73.992821
+D18,23 St,40.742878,-73.992821
+D19,14 St,40.738228,-73.996209
+D19,14 St,40.738228,-73.996209
+D19,14 St,40.738228,-73.996209
+D20,W 4 St,40.732338,-74.000495
+D20,W 4 St,40.732338,-74.000495
+D20,W 4 St,40.732338,-74.000495
+D21,Broadway-Lafayette St,40.725297,-73.996204
+D21,Broadway-Lafayette St,40.725297,-73.996204
+D21,Broadway-Lafayette St,40.725297,-73.996204
+D22,Grand St,40.718267,-73.993753
+D22,Grand St,40.718267,-73.993753
+D22,Grand St,40.718267,-73.993753
+D24,Atlantic Av - Barclays Ctr,40.68446,-73.97689
+D24,Atlantic Av - Barclays Ctr,40.68446,-73.97689
+D24,Atlantic Av - Barclays Ctr,40.68446,-73.97689
+D25,7 Av,40.67705,-73.972367
+D25,7 Av,40.67705,-73.972367
+D25,7 Av,40.67705,-73.972367
+D26,Prospect Park,40.661614,-73.962246
+D26,Prospect Park,40.661614,-73.962246
+D26,Prospect Park,40.661614,-73.962246
+D27,Parkside Av,40.655292,-73.961495
+D27,Parkside Av,40.655292,-73.961495
+D27,Parkside Av,40.655292,-73.961495
+D28,Church Av,40.650527,-73.962982
+D28,Church Av,40.650527,-73.962982
+D28,Church Av,40.650527,-73.962982
+D29,Beverley Rd,40.644031,-73.964492
+D29,Beverley Rd,40.644031,-73.964492
+D29,Beverley Rd,40.644031,-73.964492
+D30,Cortelyou Rd,40.640927,-73.963891
+D30,Cortelyou Rd,40.640927,-73.963891
+D30,Cortelyou Rd,40.640927,-73.963891
+D31,Newkirk Plaza,40.635082,-73.962793
+D31,Newkirk Plaza,40.635082,-73.962793
+D31,Newkirk Plaza,40.635082,-73.962793
+D32,Avenue H,40.62927,-73.961639
+D32,Avenue H,40.62927,-73.961639
+D32,Avenue H,40.62927,-73.961639
+D33,Avenue J,40.625039,-73.960803
+D33,Avenue J,40.625039,-73.960803
+D33,Avenue J,40.625039,-73.960803
+D34,Avenue M,40.617618,-73.959399
+D34,Avenue M,40.617618,-73.959399
+D34,Avenue M,40.617618,-73.959399
+D35,Kings Hwy,40.60867,-73.957734
+D35,Kings Hwy,40.60867,-73.957734
+D35,Kings Hwy,40.60867,-73.957734
+D37,Avenue U,40.5993,-73.955929
+D37,Avenue U,40.5993,-73.955929
+D37,Avenue U,40.5993,-73.955929
+D38,Neck Rd,40.595246,-73.955161
+D38,Neck Rd,40.595246,-73.955161
+D38,Neck Rd,40.595246,-73.955161
+D39,Sheepshead Bay,40.586896,-73.954155
+D39,Sheepshead Bay,40.586896,-73.954155
+D39,Sheepshead Bay,40.586896,-73.954155
+D40,Brighton Beach,40.577621,-73.961376
+D40,Brighton Beach,40.577621,-73.961376
+D40,Brighton Beach,40.577621,-73.961376
+D41,Ocean Pkwy,40.576312,-73.968501
+D41,Ocean Pkwy,40.576312,-73.968501
+D41,Ocean Pkwy,40.576312,-73.968501
+D42,W 8 St - NY Aquarium,40.576127,-73.975939
+D42,W 8 St - NY Aquarium,40.576127,-73.975939
+D42,W 8 St - NY Aquarium,40.576127,-73.975939
+D43,Coney Island - Stillwell Av,40.577422,-73.981233
+D43,Coney Island - Stillwell Av,40.577422,-73.981233
+D43,Coney Island - Stillwell Av,40.577422,-73.981233
+E01,World Trade Center,40.712582,-74.009781
+E01,World Trade Center,40.712582,-74.009781
+E01,World Trade Center,40.712582,-74.009781
+F01,Jamaica - 179 St,40.712646,-73.783817
+F01,Jamaica - 179 St,40.712646,-73.783817
+F01,Jamaica - 179 St,40.712646,-73.783817
+F02,169 St,40.71047,-73.793604
+F02,169 St,40.71047,-73.793604
+F02,169 St,40.71047,-73.793604
+F03,Parsons Blvd,40.707564,-73.803326
+F03,Parsons Blvd,40.707564,-73.803326
+F03,Parsons Blvd,40.707564,-73.803326
+F04,Sutphin Blvd,40.70546,-73.810708
+F04,Sutphin Blvd,40.70546,-73.810708
+F04,Sutphin Blvd,40.70546,-73.810708
+F05,Briarwood - Van Wyck Blvd,40.709179,-73.820574
+F05,Briarwood - Van Wyck Blvd,40.709179,-73.820574
+F05,Briarwood - Van Wyck Blvd,40.709179,-73.820574
+F06,Kew Gardens - Union Tpke,40.714441,-73.831008
+F06,Kew Gardens - Union Tpke,40.714441,-73.831008
+F06,Kew Gardens - Union Tpke,40.714441,-73.831008
+F07,75 Av,40.718331,-73.837324
+F07,75 Av,40.718331,-73.837324
+F07,75 Av,40.718331,-73.837324
+F09,Court Sq,40.747846,-73.946
+F09,Court Sq,40.747846,-73.946
+F09,Court Sq,40.747846,-73.946
+F11,Lexington Av/53 St,40.757552,-73.969055
+F11,Lexington Av/53 St,40.757552,-73.969055
+F11,Lexington Av/53 St,40.757552,-73.969055
+F12,5 Av/53 St,40.760167,-73.975224
+F12,5 Av/53 St,40.760167,-73.975224
+F12,5 Av/53 St,40.760167,-73.975224
+F14,2 Av,40.723402,-73.989938
+F14,2 Av,40.723402,-73.989938
+F14,2 Av,40.723402,-73.989938
+F15,Delancey St,40.718611,-73.988114
+F15,Delancey St,40.718611,-73.988114
+F15,Delancey St,40.718611,-73.988114
+F16,East Broadway,40.713715,-73.990173
+F16,East Broadway,40.713715,-73.990173
+F16,East Broadway,40.713715,-73.990173
+F18,York St,40.701397,-73.986751
+F18,York St,40.701397,-73.986751
+F18,York St,40.701397,-73.986751
+F20,Bergen St,40.686145,-73.990862
+F20,Bergen St,40.686145,-73.990862
+F20,Bergen St,40.686145,-73.990862
+F21,Carroll St,40.680303,-73.995048
+F21,Carroll St,40.680303,-73.995048
+F21,Carroll St,40.680303,-73.995048
+F22,Smith - 9 Sts,40.67358,-73.995959
+F22,Smith - 9 Sts,40.67358,-73.995959
+F22,Smith - 9 Sts,40.67358,-73.995959
+F23,4 Av,40.670272,-73.989779
+F23,4 Av,40.670272,-73.989779
+F23,4 Av,40.670272,-73.989779
+F24,7 Av,40.666271,-73.980305
+F24,7 Av,40.666271,-73.980305
+F24,7 Av,40.666271,-73.980305
+F25,15 St - Prospect Park,40.660365,-73.979493
+F25,15 St - Prospect Park,40.660365,-73.979493
+F25,15 St - Prospect Park,40.660365,-73.979493
+F26,Fort Hamilton Pkwy,40.650782,-73.975776
+F26,Fort Hamilton Pkwy,40.650782,-73.975776
+F26,Fort Hamilton Pkwy,40.650782,-73.975776
+F27,Church Av,40.644041,-73.979678
+F27,Church Av,40.644041,-73.979678
+F27,Church Av,40.644041,-73.979678
+F29,Ditmas Av,40.636119,-73.978172
+F29,Ditmas Av,40.636119,-73.978172
+F29,Ditmas Av,40.636119,-73.978172
+F30,18 Av,40.629755,-73.976971
+F30,18 Av,40.629755,-73.976971
+F30,18 Av,40.629755,-73.976971
+F31,Avenue I,40.625322,-73.976127
+F31,Avenue I,40.625322,-73.976127
+F31,Avenue I,40.625322,-73.976127
+F32,Bay Pkwy,40.620769,-73.975264
+F32,Bay Pkwy,40.620769,-73.975264
+F32,Bay Pkwy,40.620769,-73.975264
+F33,Avenue N,40.61514,-73.974197
+F33,Avenue N,40.61514,-73.974197
+F33,Avenue N,40.61514,-73.974197
+F34,Avenue P,40.608944,-73.973022
+F34,Avenue P,40.608944,-73.973022
+F34,Avenue P,40.608944,-73.973022
+F35,Kings Hwy,40.603217,-73.972361
+F35,Kings Hwy,40.603217,-73.972361
+F35,Kings Hwy,40.603217,-73.972361
+F36,Avenue U,40.596063,-73.973357
+F36,Avenue U,40.596063,-73.973357
+F36,Avenue U,40.596063,-73.973357
+F38,Avenue X,40.58962,-73.97425
+F38,Avenue X,40.58962,-73.97425
+F38,Avenue X,40.58962,-73.97425
+F39,Neptune Av,40.581011,-73.974574
+F39,Neptune Av,40.581011,-73.974574
+F39,Neptune Av,40.581011,-73.974574
+G05,Jamaica Center - Parsons/Archer,40.702147,-73.801109
+G05,Jamaica Center - Parsons/Archer,40.702147,-73.801109
+G05,Jamaica Center - Parsons/Archer,40.702147,-73.801109
+G06,Sutphin Blvd - Archer Av - JFK Airport,40.700486,-73.807969
+G06,Sutphin Blvd - Archer Av - JFK Airport,40.700486,-73.807969
+G06,Sutphin Blvd - Archer Av - JFK Airport,40.700486,-73.807969
+G07,Jamaica - Van Wyck,40.702566,-73.816859
+G07,Jamaica - Van Wyck,40.702566,-73.816859
+G07,Jamaica - Van Wyck,40.702566,-73.816859
+G08,Forest Hills - 71 Av,40.721691,-73.844521
+G08,Forest Hills - 71 Av,40.721691,-73.844521
+G08,Forest Hills - 71 Av,40.721691,-73.844521
+G09,67 Av,40.726523,-73.852719
+G09,67 Av,40.726523,-73.852719
+G09,67 Av,40.726523,-73.852719
+G10,63 Dr - Rego Park,40.729846,-73.861604
+G10,63 Dr - Rego Park,40.729846,-73.861604
+G10,63 Dr - Rego Park,40.729846,-73.861604
+G11,Woodhaven Blvd,40.733106,-73.869229
+G11,Woodhaven Blvd,40.733106,-73.869229
+G11,Woodhaven Blvd,40.733106,-73.869229
+G12,Grand Av - Newtown,40.737015,-73.877223
+G12,Grand Av - Newtown,40.737015,-73.877223
+G12,Grand Av - Newtown,40.737015,-73.877223
+G13,Elmhurst Av,40.742454,-73.882017
+G13,Elmhurst Av,40.742454,-73.882017
+G13,Elmhurst Av,40.742454,-73.882017
+G14,Jackson Hts - Roosevelt Av,40.746644,-73.891338
+G14,Jackson Hts - Roosevelt Av,40.746644,-73.891338
+G14,Jackson Hts - Roosevelt Av,40.746644,-73.891338
+G15,65 St,40.749669,-73.898453
+G15,65 St,40.749669,-73.898453
+G15,65 St,40.749669,-73.898453
+G16,Northern Blvd,40.752885,-73.906006
+G16,Northern Blvd,40.752885,-73.906006
+G16,Northern Blvd,40.752885,-73.906006
+G18,46 St,40.756312,-73.913333
+G18,46 St,40.756312,-73.913333
+G18,46 St,40.756312,-73.913333
+G19,Steinway St,40.756879,-73.92074
+G19,Steinway St,40.756879,-73.92074
+G19,Steinway St,40.756879,-73.92074
+G20,36 St,40.752039,-73.928781
+G20,36 St,40.752039,-73.928781
+G20,36 St,40.752039,-73.928781
+G21,Queens Plaza,40.748973,-73.937243
+G21,Queens Plaza,40.748973,-73.937243
+G21,Queens Plaza,40.748973,-73.937243
+G22,Court Sq,40.746554,-73.943832
+G22,Court Sq,40.746554,-73.943832
+G22,Court Sq,40.746554,-73.943832
+G24,21 St,40.744065,-73.949724
+G24,21 St,40.744065,-73.949724
+G24,21 St,40.744065,-73.949724
+G26,Greenpoint Av,40.731352,-73.954449
+G26,Greenpoint Av,40.731352,-73.954449
+G26,Greenpoint Av,40.731352,-73.954449
+G28,Nassau Av,40.724635,-73.951277
+G28,Nassau Av,40.724635,-73.951277
+G28,Nassau Av,40.724635,-73.951277
+G29,Metropolitan Av,40.712792,-73.951418
+G29,Metropolitan Av,40.712792,-73.951418
+G29,Metropolitan Av,40.712792,-73.951418
+G30,Broadway,40.706092,-73.950308
+G30,Broadway,40.706092,-73.950308
+G30,Broadway,40.706092,-73.950308
+G31,Flushing Av,40.700377,-73.950234
+G31,Flushing Av,40.700377,-73.950234
+G31,Flushing Av,40.700377,-73.950234
+G32,Myrtle - Willoughby Avs,40.694568,-73.949046
+G32,Myrtle - Willoughby Avs,40.694568,-73.949046
+G32,Myrtle - Willoughby Avs,40.694568,-73.949046
+G33,Bedford - Nostrand Avs,40.689627,-73.953522
+G33,Bedford - Nostrand Avs,40.689627,-73.953522
+G33,Bedford - Nostrand Avs,40.689627,-73.953522
+G34,Classon Av,40.688873,-73.96007
+G34,Classon Av,40.688873,-73.96007
+G34,Classon Av,40.688873,-73.96007
+G35,Clinton - Washington Avs,40.688089,-73.966839
+G35,Clinton - Washington Avs,40.688089,-73.966839
+G35,Clinton - Washington Avs,40.688089,-73.966839
+G36,Fulton St,40.687119,-73.975375
+G36,Fulton St,40.687119,-73.975375
+G36,Fulton St,40.687119,-73.975375
+H01,Aqueduct Racetrack,40.668234,-73.834058
+H01,Aqueduct Racetrack,40.668234,-73.834058
+H01,Aqueduct Racetrack,40.668234,-73.834058
+H02,Aqueduct - N Conduit Av,40.668234,-73.834058
+H02,Aqueduct - N Conduit Av,40.668234,-73.834058
+H02,Aqueduct - N Conduit Av,40.668234,-73.834058
+H03,Howard Beach - JFK Airport,40.660476,-73.830301
+H03,Howard Beach - JFK Airport,40.660476,-73.830301
+H03,Howard Beach - JFK Airport,40.660476,-73.830301
+H04,Broad Channel,40.608382,-73.815925
+H04,Broad Channel,40.608382,-73.815925
+H04,Broad Channel,40.608382,-73.815925
+H06,Beach 67 St,40.590927,-73.796924
+H06,Beach 67 St,40.590927,-73.796924
+H06,Beach 67 St,40.590927,-73.796924
+H07,Beach 60 St,40.592374,-73.788522
+H07,Beach 60 St,40.592374,-73.788522
+H07,Beach 60 St,40.592374,-73.788522
+H08,Beach 44 St,40.592943,-73.776013
+H08,Beach 44 St,40.592943,-73.776013
+H08,Beach 44 St,40.592943,-73.776013
+H09,Beach 36 St,40.595398,-73.768175
+H09,Beach 36 St,40.595398,-73.768175
+H09,Beach 36 St,40.595398,-73.768175
+H10,Beach 25 St,40.600066,-73.761353
+H10,Beach 25 St,40.600066,-73.761353
+H10,Beach 25 St,40.600066,-73.761353
+H11,Far Rockaway - Mott Av,40.603995,-73.755405
+H11,Far Rockaway - Mott Av,40.603995,-73.755405
+H11,Far Rockaway - Mott Av,40.603995,-73.755405
+H12,Beach 90 St,40.588034,-73.813641
+H12,Beach 90 St,40.588034,-73.813641
+H12,Beach 90 St,40.588034,-73.813641
+H13,Beach 98 St,40.585307,-73.820558
+H13,Beach 98 St,40.585307,-73.820558
+H13,Beach 98 St,40.585307,-73.820558
+H14,Beach 105 St,40.583209,-73.827559
+H14,Beach 105 St,40.583209,-73.827559
+H14,Beach 105 St,40.583209,-73.827559
+H15,Rockaway Park - Beach 116 St,40.580903,-73.835592
+H15,Rockaway Park - Beach 116 St,40.580903,-73.835592
+H15,Rockaway Park - Beach 116 St,40.580903,-73.835592
+J12,121 St,40.700492,-73.828294
+J12,121 St,40.700492,-73.828294
+J12,121 St,40.700492,-73.828294
+J13,111 St,40.697418,-73.836345
+J13,111 St,40.697418,-73.836345
+J13,111 St,40.697418,-73.836345
+J14,104 St,40.695178,-73.84433
+J14,104 St,40.695178,-73.84433
+J14,104 St,40.695178,-73.84433
+J15,Woodhaven Blvd,40.693879,-73.851576
+J15,Woodhaven Blvd,40.693879,-73.851576
+J15,Woodhaven Blvd,40.693879,-73.851576
+J16,85 St - Forest Pkwy,40.692435,-73.86001
+J16,85 St - Forest Pkwy,40.692435,-73.86001
+J16,85 St - Forest Pkwy,40.692435,-73.86001
+J17,75 St,40.691324,-73.867139
+J17,75 St,40.691324,-73.867139
+J17,75 St,40.691324,-73.867139
+J19,Cypress Hills,40.689941,-73.87255
+J19,Cypress Hills,40.689941,-73.87255
+J19,Cypress Hills,40.689941,-73.87255
+J20,Crescent St,40.683194,-73.873785
+J20,Crescent St,40.683194,-73.873785
+J20,Crescent St,40.683194,-73.873785
+J21,Norwood Av,40.68141,-73.880039
+J21,Norwood Av,40.68141,-73.880039
+J21,Norwood Av,40.68141,-73.880039
+J22,Cleveland St,40.679947,-73.884639
+J22,Cleveland St,40.679947,-73.884639
+J22,Cleveland St,40.679947,-73.884639
+J23,Van Siclen Av,40.678024,-73.891688
+J23,Van Siclen Av,40.678024,-73.891688
+J23,Van Siclen Av,40.678024,-73.891688
+J24,Alabama Av,40.676992,-73.898654
+J24,Alabama Av,40.676992,-73.898654
+J24,Alabama Av,40.676992,-73.898654
+J27,Broadway Jct,40.679498,-73.904512
+J27,Broadway Jct,40.679498,-73.904512
+J27,Broadway Jct,40.679498,-73.904512
+J28,Chauncey St,40.682893,-73.910456
+J28,Chauncey St,40.682893,-73.910456
+J28,Chauncey St,40.682893,-73.910456
+J29,Halsey St,40.68637,-73.916559
+J29,Halsey St,40.68637,-73.916559
+J29,Halsey St,40.68637,-73.916559
+J30,Gates Av,40.68963,-73.92227
+J30,Gates Av,40.68963,-73.92227
+J30,Gates Av,40.68963,-73.92227
+J31,Kosciuszko St,40.693342,-73.928814
+J31,Kosciuszko St,40.693342,-73.928814
+J31,Kosciuszko St,40.693342,-73.928814
+L01,8 Av,40.739777,-74.002578
+L01,8 Av,40.739777,-74.002578
+L01,8 Av,40.739777,-74.002578
+L02,6 Av,40.737335,-73.996786
+L02,6 Av,40.737335,-73.996786
+L02,6 Av,40.737335,-73.996786
+L03,Union Sq - 14 St,40.734789,-73.99073
+L03,Union Sq - 14 St,40.734789,-73.99073
+L03,Union Sq - 14 St,40.734789,-73.99073
+L05,3 Av,40.732849,-73.986122
+L05,3 Av,40.732849,-73.986122
+L05,3 Av,40.732849,-73.986122
+L06,1 Av,40.730953,-73.981628
+L06,1 Av,40.730953,-73.981628
+L06,1 Av,40.730953,-73.981628
+L08,Bedford Av,40.717304,-73.956872
+L08,Bedford Av,40.717304,-73.956872
+L08,Bedford Av,40.717304,-73.956872
+L10,Lorimer St,40.714063,-73.950275
+L10,Lorimer St,40.714063,-73.950275
+L10,Lorimer St,40.714063,-73.950275
+L11,Graham Av,40.714565,-73.944053
+L11,Graham Av,40.714565,-73.944053
+L11,Graham Av,40.714565,-73.944053
+L12,Grand St,40.711926,-73.94067
+L12,Grand St,40.711926,-73.94067
+L12,Grand St,40.711926,-73.94067
+L13,Montrose Av,40.707739,-73.93985
+L13,Montrose Av,40.707739,-73.93985
+L13,Montrose Av,40.707739,-73.93985
+L14,Morgan Av,40.706152,-73.933147
+L14,Morgan Av,40.706152,-73.933147
+L14,Morgan Av,40.706152,-73.933147
+L15,Jefferson St,40.706607,-73.922913
+L15,Jefferson St,40.706607,-73.922913
+L15,Jefferson St,40.706607,-73.922913
+L16,DeKalb Av,40.703811,-73.918425
+L16,DeKalb Av,40.703811,-73.918425
+L16,DeKalb Av,40.703811,-73.918425
+L17,Myrtle - Wyckoff Avs,40.699814,-73.911586
+L17,Myrtle - Wyckoff Avs,40.699814,-73.911586
+L17,Myrtle - Wyckoff Avs,40.699814,-73.911586
+L19,Halsey St,40.695602,-73.904084
+L19,Halsey St,40.695602,-73.904084
+L19,Halsey St,40.695602,-73.904084
+L20,Wilson Av,40.688764,-73.904046
+L20,Wilson Av,40.688764,-73.904046
+L20,Wilson Av,40.688764,-73.904046
+L21,Bushwick Av - Aberdeen St,40.682829,-73.905249
+L21,Bushwick Av - Aberdeen St,40.682829,-73.905249
+L21,Bushwick Av - Aberdeen St,40.682829,-73.905249
+L22,Broadway Jct,40.678856,-73.90324
+L22,Broadway Jct,40.678856,-73.90324
+L22,Broadway Jct,40.678856,-73.90324
+L24,Atlantic Av,40.675345,-73.903097
+L24,Atlantic Av,40.675345,-73.903097
+L24,Atlantic Av,40.675345,-73.903097
+L25,Sutter Av,40.669367,-73.901975
+L25,Sutter Av,40.669367,-73.901975
+L25,Sutter Av,40.669367,-73.901975
+L26,Livonia Av,40.664038,-73.900571
+L26,Livonia Av,40.664038,-73.900571
+L26,Livonia Av,40.664038,-73.900571
+L27,New Lots Av,40.658733,-73.899232
+L27,New Lots Av,40.658733,-73.899232
+L27,New Lots Av,40.658733,-73.899232
+L28,E 105 St,40.650573,-73.899485
+L28,E 105 St,40.650573,-73.899485
+L28,E 105 St,40.650573,-73.899485
+L29,Canarsie - Rockaway Pkwy,40.646654,-73.90185
+L29,Canarsie - Rockaway Pkwy,40.646654,-73.90185
+L29,Canarsie - Rockaway Pkwy,40.646654,-73.90185
+M01,Middle Village - Metropolitan Av,40.711396,-73.889601
+M01,Middle Village - Metropolitan Av,40.711396,-73.889601
+M01,Middle Village - Metropolitan Av,40.711396,-73.889601
+M04,Fresh Pond Rd,40.706186,-73.895877
+M04,Fresh Pond Rd,40.706186,-73.895877
+M04,Fresh Pond Rd,40.706186,-73.895877
+M05,Forest Av,40.704423,-73.903077
+M05,Forest Av,40.704423,-73.903077
+M05,Forest Av,40.704423,-73.903077
+M06,Seneca Av,40.702762,-73.90774
+M06,Seneca Av,40.702762,-73.90774
+M06,Seneca Av,40.702762,-73.90774
+M08,Myrtle - Wyckoff Avs,40.69943,-73.912385
+M08,Myrtle - Wyckoff Avs,40.69943,-73.912385
+M08,Myrtle - Wyckoff Avs,40.69943,-73.912385
+M09,Knickerbocker Av,40.698664,-73.919711
+M09,Knickerbocker Av,40.698664,-73.919711
+M09,Knickerbocker Av,40.698664,-73.919711
+M10,Central Av,40.697857,-73.927397
+M10,Central Av,40.697857,-73.927397
+M10,Central Av,40.697857,-73.927397
+M11,Myrtle Av,40.697207,-73.935657
+M11,Myrtle Av,40.697207,-73.935657
+M11,Myrtle Av,40.697207,-73.935657
+M12,Flushing Av,40.70026,-73.941126
+M12,Flushing Av,40.70026,-73.941126
+M12,Flushing Av,40.70026,-73.941126
+M13,Lorimer St,40.703869,-73.947408
+M13,Lorimer St,40.703869,-73.947408
+M13,Lorimer St,40.703869,-73.947408
+M14,Hewes St,40.70687,-73.953431
+M14,Hewes St,40.70687,-73.953431
+M14,Hewes St,40.70687,-73.953431
+M16,Marcy Av,40.708359,-73.957757
+M16,Marcy Av,40.708359,-73.957757
+M16,Marcy Av,40.708359,-73.957757
+M18,Essex St,40.718315,-73.987437
+M18,Essex St,40.718315,-73.987437
+M18,Essex St,40.718315,-73.987437
+M19,Bowery,40.72028,-73.993915
+M19,Bowery,40.72028,-73.993915
+M19,Bowery,40.72028,-73.993915
+M20,Canal St,40.718092,-73.999892
+M20,Canal St,40.718092,-73.999892
+M20,Canal St,40.718092,-73.999892
+M21,Chambers St,40.713243,-74.003401
+M21,Chambers St,40.713243,-74.003401
+M21,Chambers St,40.713243,-74.003401
+M22,Fulton St,40.710374,-74.007582
+M22,Fulton St,40.710374,-74.007582
+M22,Fulton St,40.710374,-74.007582
+M23,Broad St,40.706476,-74.011056
+M23,Broad St,40.706476,-74.011056
+M23,Broad St,40.706476,-74.011056
+N02,8 Av,40.635064,-74.011719
+N02,8 Av,40.635064,-74.011719
+N02,8 Av,40.635064,-74.011719
+N03,Fort Hamilton Pkwy,40.631386,-74.005351
+N03,Fort Hamilton Pkwy,40.631386,-74.005351
+N03,Fort Hamilton Pkwy,40.631386,-74.005351
+N04,New Utrecht Av,40.624842,-73.996353
+N04,New Utrecht Av,40.624842,-73.996353
+N04,New Utrecht Av,40.624842,-73.996353
+N05,18 Av,40.620671,-73.990414
+N05,18 Av,40.620671,-73.990414
+N05,18 Av,40.620671,-73.990414
+N06,20 Av,40.61741,-73.985026
+N06,20 Av,40.61741,-73.985026
+N06,20 Av,40.61741,-73.985026
+N07,Bay Pkwy,40.611815,-73.981848
+N07,Bay Pkwy,40.611815,-73.981848
+N07,Bay Pkwy,40.611815,-73.981848
+N08,Kings Hwy,40.603923,-73.980353
+N08,Kings Hwy,40.603923,-73.980353
+N08,Kings Hwy,40.603923,-73.980353
+N09,Avenue U,40.597473,-73.979137
+N09,Avenue U,40.597473,-73.979137
+N09,Avenue U,40.597473,-73.979137
+N10,86 St,40.592721,-73.97823
+N10,86 St,40.592721,-73.97823
+N10,86 St,40.592721,-73.97823
+Q01,Canal St,40.718383,-74.00046
+Q01,Canal St,40.718383,-74.00046
+Q01,Canal St,40.718383,-74.00046
+R01,Astoria - Ditmars Blvd,40.775036,-73.912034
+R01,Astoria - Ditmars Blvd,40.775036,-73.912034
+R01,Astoria - Ditmars Blvd,40.775036,-73.912034
+R03,Astoria Blvd,40.770258,-73.917843
+R03,Astoria Blvd,40.770258,-73.917843
+R03,Astoria Blvd,40.770258,-73.917843
+R04,30 Av,40.766779,-73.921479
+R04,30 Av,40.766779,-73.921479
+R04,30 Av,40.766779,-73.921479
+R05,Broadway,40.76182,-73.925508
+R05,Broadway,40.76182,-73.925508
+R05,Broadway,40.76182,-73.925508
+R06,36 Av,40.756804,-73.929575
+R06,36 Av,40.756804,-73.929575
+R06,36 Av,40.756804,-73.929575
+R08,39 Av,40.752882,-73.932755
+R08,39 Av,40.752882,-73.932755
+R08,39 Av,40.752882,-73.932755
+R09,Queensboro Plaza,40.750582,-73.940202
+R09,Queensboro Plaza,40.750582,-73.940202
+R09,Queensboro Plaza,40.750582,-73.940202
+R11,Lexington Av/59 St,40.76266,-73.967258
+R11,Lexington Av/59 St,40.76266,-73.967258
+R11,Lexington Av/59 St,40.76266,-73.967258
+R13,5 Av/59 St,40.764811,-73.973347
+R13,5 Av/59 St,40.764811,-73.973347
+R13,5 Av/59 St,40.764811,-73.973347
+R14,57 St - 7 Av,40.764664,-73.980658
+R14,57 St - 7 Av,40.764664,-73.980658
+R14,57 St - 7 Av,40.764664,-73.980658
+R15,49 St,40.759901,-73.984139
+R15,49 St,40.759901,-73.984139
+R15,49 St,40.759901,-73.984139
+R16,Times Sq - 42 St,40.754672,-73.986754
+R16,Times Sq - 42 St,40.754672,-73.986754
+R16,Times Sq - 42 St,40.754672,-73.986754
+R17,34 St - Herald Sq,40.749567,-73.98795
+R17,34 St - Herald Sq,40.749567,-73.98795
+R17,34 St - Herald Sq,40.749567,-73.98795
+R18,28 St,40.745494,-73.988691
+R18,28 St,40.745494,-73.988691
+R18,28 St,40.745494,-73.988691
+R19,23 St,40.741303,-73.989344
+R19,23 St,40.741303,-73.989344
+R19,23 St,40.741303,-73.989344
+R20,14 St - Union Sq,40.735736,-73.990568
+R20,14 St - Union Sq,40.735736,-73.990568
+R20,14 St - Union Sq,40.735736,-73.990568
+R21,8 St - NYU,40.730328,-73.992629
+R21,8 St - NYU,40.730328,-73.992629
+R21,8 St - NYU,40.730328,-73.992629
+R22,Prince St,40.724329,-73.997702
+R22,Prince St,40.724329,-73.997702
+R22,Prince St,40.724329,-73.997702
+R23,Canal St,40.719527,-74.001775
+R23,Canal St,40.719527,-74.001775
+R23,Canal St,40.719527,-74.001775
+R24,City Hall,40.713282,-74.006978
+R24,City Hall,40.713282,-74.006978
+R24,City Hall,40.713282,-74.006978
+R25,Cortlandt St,40.710668,-74.011029
+R25,Cortlandt St,40.710668,-74.011029
+R25,Cortlandt St,40.710668,-74.011029
+R26,Rector St,40.70722,-74.013342
+R26,Rector St,40.70722,-74.013342
+R26,Rector St,40.70722,-74.013342
+R27,Whitehall St,40.703087,-74.012994
+R27,Whitehall St,40.703087,-74.012994
+R27,Whitehall St,40.703087,-74.012994
+R28,Court St,40.6941,-73.991777
+R28,Court St,40.6941,-73.991777
+R28,Court St,40.6941,-73.991777
+R29,Jay St - MetroTech,40.69218,-73.985942
+R29,Jay St - MetroTech,40.69218,-73.985942
+R29,Jay St - MetroTech,40.69218,-73.985942
+R30,DeKalb Av,40.690635,-73.981824
+R30,DeKalb Av,40.690635,-73.981824
+R30,DeKalb Av,40.690635,-73.981824
+R31,Atlantic Av - Barclays Ctr,40.683666,-73.97881
+R31,Atlantic Av - Barclays Ctr,40.683666,-73.97881
+R31,Atlantic Av - Barclays Ctr,40.683666,-73.97881
+R32,Union St,40.677316,-73.98311
+R32,Union St,40.677316,-73.98311
+R32,Union St,40.677316,-73.98311
+R33,9 St,40.670847,-73.988302
+R33,9 St,40.670847,-73.988302
+R33,9 St,40.670847,-73.988302
+R34,Prospect Av,40.665414,-73.992872
+R34,Prospect Av,40.665414,-73.992872
+R34,Prospect Av,40.665414,-73.992872
+R35,25 St,40.660397,-73.998091
+R35,25 St,40.660397,-73.998091
+R35,25 St,40.660397,-73.998091
+R36,36 St,40.655144,-74.003549
+R36,36 St,40.655144,-74.003549
+R36,36 St,40.655144,-74.003549
+R39,45 St,40.648939,-74.010006
+R39,45 St,40.648939,-74.010006
+R39,45 St,40.648939,-74.010006
+R40,53 St,40.645069,-74.014034
+R40,53 St,40.645069,-74.014034
+R40,53 St,40.645069,-74.014034
+R41,59 St,40.641362,-74.017881
+R41,59 St,40.641362,-74.017881
+R41,59 St,40.641362,-74.017881
+R42,Bay Ridge Av,40.634967,-74.023377
+R42,Bay Ridge Av,40.634967,-74.023377
+R42,Bay Ridge Av,40.634967,-74.023377
+R43,77 St,40.629742,-74.02551
+R43,77 St,40.629742,-74.02551
+R43,77 St,40.629742,-74.02551
+R44,86 St,40.622687,-74.028398
+R44,86 St,40.622687,-74.028398
+R44,86 St,40.622687,-74.028398
+R45,Bay Ridge - 95 St,40.616622,-74.030876
+R45,Bay Ridge - 95 St,40.616622,-74.030876
+R45,Bay Ridge - 95 St,40.616622,-74.030876
+S01,Franklin Av,40.680596,-73.955827
+S01,Franklin Av,40.680596,-73.955827
+S01,Franklin Av,40.680596,-73.955827
+S03,Park Pl,40.674772,-73.957624
+S03,Park Pl,40.674772,-73.957624
+S03,Park Pl,40.674772,-73.957624
+S04,Botanic Garden,40.670343,-73.959245
+S04,Botanic Garden,40.670343,-73.959245
+S04,Botanic Garden,40.670343,-73.959245
+S09,Tottenville,40.512764,-74.251961
+S09,Tottenville,40.512764,-74.251961
+S09,Tottenville,40.512764,-74.251961
+S10,Atlantic,40.515401,-74.245689
+S10,Atlantic,40.515401,-74.245689
+S10,Atlantic,40.515401,-74.245689
+S12,Nassau,40.517812,-74.238373
+S12,Nassau,40.517812,-74.238373
+S12,Nassau,40.517812,-74.238373
+S13,Richmond Valley,40.519631,-74.229141
+S13,Richmond Valley,40.519631,-74.229141
+S13,Richmond Valley,40.519631,-74.229141
+S14,Pleasant Plains,40.52241,-74.217847
+S14,Pleasant Plains,40.52241,-74.217847
+S14,Pleasant Plains,40.52241,-74.217847
+S15,Prince's Bay,40.525507,-74.200064
+S15,Prince's Bay,40.525507,-74.200064
+S15,Prince's Bay,40.525507,-74.200064
+S16,Huguenot,40.533674,-74.191794
+S16,Huguenot,40.533674,-74.191794
+S16,Huguenot,40.533674,-74.191794
+S17,Annadale,40.54046,-74.178217
+S17,Annadale,40.54046,-74.178217
+S17,Annadale,40.54046,-74.178217
+S18,Eltingville,40.544601,-74.16457
+S18,Eltingville,40.544601,-74.16457
+S18,Eltingville,40.544601,-74.16457
+S19,Great Kills,40.551231,-74.151399
+S19,Great Kills,40.551231,-74.151399
+S19,Great Kills,40.551231,-74.151399
+S20,Bay Terrace,40.5564,-74.136907
+S20,Bay Terrace,40.5564,-74.136907
+S20,Bay Terrace,40.5564,-74.136907
+S21,Oakwood Heights,40.56511,-74.12632
+S21,Oakwood Heights,40.56511,-74.12632
+S21,Oakwood Heights,40.56511,-74.12632
+S22,New Dorp,40.57348,-74.11721
+S22,New Dorp,40.57348,-74.11721
+S22,New Dorp,40.57348,-74.11721
+S23,Grant City,40.578965,-74.109704
+S23,Grant City,40.578965,-74.109704
+S23,Grant City,40.578965,-74.109704
+S24,Jefferson Av,40.583591,-74.103338
+S24,Jefferson Av,40.583591,-74.103338
+S24,Jefferson Av,40.583591,-74.103338
+S25,Dongan Hills,40.588849,-74.09609
+S25,Dongan Hills,40.588849,-74.09609
+S25,Dongan Hills,40.588849,-74.09609
+S26,Old Town,40.596612,-74.087368
+S26,Old Town,40.596612,-74.087368
+S26,Old Town,40.596612,-74.087368
+S27,Grasmere,40.603117,-74.084087
+S27,Grasmere,40.603117,-74.084087
+S27,Grasmere,40.603117,-74.084087
+S28,Clifton,40.621319,-74.071402
+S28,Clifton,40.621319,-74.071402
+S28,Clifton,40.621319,-74.071402
+S29,Stapleton,40.627915,-74.075162
+S29,Stapleton,40.627915,-74.075162
+S29,Stapleton,40.627915,-74.075162
+S30,Tompkinsville,40.636949,-74.074835
+S30,Tompkinsville,40.636949,-74.074835
+S30,Tompkinsville,40.636949,-74.074835
+S31,St George,40.643748,-74.073643
+S31,St George,40.643748,-74.073643
+S31,St George,40.643748,-74.073643
