@@ -1,27 +1,34 @@
 library(dplyr)
+setwd("~/subway-flow")
 n_names = read.table("./MergingData/readyformerge.txt",header=FALSE, sep=",", # current turnstyle dataframe
-                       quote = "", row.names = NULL, 
+                       quote = "", row.names = NULL, strip.white = TRUE, 
                        stringsAsFactors = FALSE) 
 
 names(n_names)[0:5] <- c("Transformed Turnstile Name", "Distance", "stop_name", "Transformed Google Name", "STATION")
 
-View(n_names)
+n_names <- data.frame(n_names[,c(3,5)])
 
-stops = read.table("./MergingData/stops_no_direction.txt",header=TRUE, sep=",", # current turnstyle dataframe
-                     quote = "", row.names = NULL, 
+l_lines = read.table("./MergingData/s_gtfs_names.csv",header=TRUE, sep=",", #Stop_ids
+                     fill=TRUE,quote = "", row.names = NULL, strip.white = TRUE,
                      stringsAsFactors = FALSE) 
-View(stops)
-names_stops <- left_join(n_names, stops, by = c("stop_name"))
-View(names_stops)
+all_lines <- as.data.frame(sapply(l_lines, function(x) gsub("\"", "", x)))
 
-names_stops <- names_stops[!duplicated(names_stops),]
+all_lines <- data.frame(all_lines[,c(2,3,4)])
+names(all_lines) <- c("station_id", "line_name", "stop_name")
 
-ts_data = read.table("./MergingData/turnstile_150711.txt",header=TRUE, sep=",", # current turnstyle dataframe
-                       fill=TRUE,quote = "", row.names = NULL, 
-                       stringsAsFactors = FALSE) 
-View(ts_data)
-station_names <- left_join(ts_data, names_stops)
+names_lines <- left_join(n_names, all_lines)
+names_lines <- data.frame(names_lines[,c(2,3,4)])
+
+
+data_dir <- "./MergingData/new_ts/"
+txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', data_dir))
+ts_data <- data.frame()
+for (txt in txts) {
+  tmp <- read.table(txt, header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
+  ts_data <- rbind(ts_data, tmp)
+}
+
+station_names <- right_join(ts_data, names_lines, by = c("STATION", "AEILMN" = "line_name"))
 View(station_names)
 
-#inshort <- station_names %>% group_by(STATION, `Original Google Name`,`Transformed Google Name`) %>% summarize()
-#View(inshort)
+
