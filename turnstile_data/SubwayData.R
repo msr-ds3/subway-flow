@@ -99,7 +99,7 @@ ggplot(data=sterling_station, aes(x=day_of_week, y=total, fill=exit_or_entry)) +
            size=.3) +                        # Thinner lines
   scale_fill_hue(name="Entry or Exit") +      # Set legend title
   xlab("Day of week") + ylab("Count") + # Set axis labels
-  ggtitle("Entries vs Exits") +     # Set title
+  ggtitle("Sterling St") +     # Set title
   theme_bw()
 
 
@@ -155,7 +155,7 @@ ggplot(data=station, aes(x=day_of_week, y=total/length(unique(data$date)), fill=
            size=.3) +                        # Thinner lines
   scale_fill_hue(name="Entry or Exit") +      # Set legend title
   xlab("Day of week") + ylab("Count") + # Set axis labels
-  ggtitle("Entries vs Exits") +     # Set title
+  ggtitle("Entire System") +     # Set title
   theme_bw()
 
 
