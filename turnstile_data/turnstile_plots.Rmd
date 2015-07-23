@@ -1,0 +1,221 @@
+---
+Authors: Shannon Evans and Steven Vazquez
+Date: 7/22/2015
+Description: Script to plot all individual stations entries and exits vs. time, 
+             as well as total entries and exits vs. time
+output: 
+  html_document:
+    keep_md: true
+---
+```{r}
+########################################################################################################
+# Plots
+# *Note: facet wrapping dataframe is only used where facet wrapping or filling occurs
+########################################################################################################
+library(ggplot2)
+library(reshape)
+library(scales)
+library(plotrix)
+
+#########################################
+# create new dataframe for facet graphing
+#########################################
+# entries dataframe
+entries <- subwaydata_fil %>%
+  select(station, linename,date.time, time, day_of_week,entries.delta, entries_per_timediff) %>%
+  mutate(type = "entry")
+entries <- dplyr::rename(entries, entries_exits_rate = entries_per_timediff)
+entries <- dplyr::rename(entries, entries_exits = entries.delta)
+
+# exits dataframee
+exits <- subwaydata_fil %>%
+  select(station, linename,date.time, time, day_of_week, exits.delta, exits_per_timediff) %>%
+  mutate(type = "exit")
+exits <- dplyr::rename(exits, entries_exits_rate = exits_per_timediff) 
+exits <- dplyr::rename(exits, entries_exits = exits.delta)
+
+# bind dataframes
+subway_facet <- data.frame()
+subway_facet <- rbind(entries,exits)
+subway_facet <- as.data.frame(subway_facet)
+###################################################################################
+
+##############################
+# total exits vs. total time
+##############################
+subwaydata_total <- subwaydata_fil
+
+entries <- data.frame()
+entries <- subwaydata_total %>%
+  select(station, linename,date.time, time, day_of_week,entries.delta, entries_per_timediff) %>%
+  mutate(type = "entry")
+entries <- dplyr::rename(entries, entries_exits_rate = entries_per_timediff)
+entries <- dplyr::rename(entries, entries_exits = entries.delta)
+
+# exits dataframee
+exits <- data.frame()
+exits <- subwaydata_total %>%
+  select(station, linename,date.time, time, day_of_week, exits.delta, exits_per_timediff) %>%
+  mutate(type = "exit")
+exits <- dplyr::rename(exits, entries_exits_rate = exits_per_timediff) 
+exits <- dplyr::rename(exits, entries_exits = exits.delta)
+
+# bind dataframes
+subwaydata_total <- data.frame()
+subwaydata_total <- rbind(entries,exits)
+subwaydata_total <- as.data.frame(subwaydata_total)
+
+subwaydata_t <- subset(subwaydata_fil, entries.delta < 0 & exits.delta < 0)
+
+a <- subset(subwaydata_fil, entries.delta > 6000 & exits.delta > 6000)
+
+# plot it 
+ggplot(data=subwaydata_t, aes(x=time,
+                               y=entries_exits_rate,
+                               group=type,
+                               colour=type)) +
+  ggtitle("Total Entries and Exits vs. Time of Day") +
+  xlab("Time of Day") +
+  ylab("No. Entries & Exits per HR")+
+  geom_smooth() +
+  facet_wrap(~ day_of_week) 
+
+#############################################
+# plot graphs for each individual station
+#############################################
+# Make list of variable names to loop over.
+unique_stations <- as.character(unique(subway_facet$station))
+
+# Make plots.
+plot_list = list()
+for (i in unique_stations) {
+    unique_subwaydata <- subset(subway_facet, date.time == "")
+    p <- ggplot(data=unique_subwaydata, aes(x=time,
+                               y=entries_exits_rate,
+                               group=type,
+                               colour=type)) +
+          ggtitle(i) +
+          xlab("Time of Day") +
+          ylab("No. Entries & Exits per HR")+
+          geom_smooth() +
+          facet_wrap(~ day_of_week)
+    plot_list[[i]] = p
+}
+
+# create pdf where each page is a separate plot.
+pdf("plots1.pdf")
+for (i in unique_stations) {
+    print(plot_list[[i]])
+}
+dev.off()
+
+#######################################################################
+# Shannons plots
+#######################################################################
+
+lexave_station<- filter(subwaydata_facet, station == "LEXINGTON AVE")
+lexave_station<- select(lexave_station,day_of_week, exits.delta, entries.delta) %>% 
+  group_by(day_of_week) %>%
+  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
+
+
+lexave_station<- gather(lexave_station, type, total, total_entries:total_exits)
+
+
+
+##PLot
+
+ggplot(data=lexave_station, aes(x=day_of_week, y=total, fill=exit_or_entry)) + 
+  geom_bar(colour="black", stat="identity",
+           position=position_dodge(),
+           size=.3) +                        # Thinner lines
+  scale_fill_hue(name="Entry or Exit") +      # Set legend title
+  xlab("Day of week") + ylab("Count") + # Set axis labels
+  ggtitle("Entries vs Exits") +     # Set title
+  theme_bw()
+
+
+
+#trying another station
+
+sterling_station<- filter(data, station == "STERLING ST", entries.delta > 0 , exits.delta > 0)
+sterling_station<- select(sterling_station,day_of_week, exits.delta, entries.delta) %>% 
+  group_by(day_of_week) %>%
+  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
+
+sterling_station<- gather(sterling_station, exit_or_entry, total, total_entries:total_exits)
+
+
+
+##PLot
+
+ggplot(data=sterling_station, aes(x=day_of_week, y=total, fill=exit_or_entry)) + 
+  geom_bar(colour="black", stat="identity",
+           position=position_dodge(),
+           size=.3) +                        # Thinner lines
+  scale_fill_hue(name="Entry or Exit") +      # Set legend title
+  xlab("Day of week") + ylab("Count") + # Set axis labels
+  ggtitle("Entries vs Exits") +     # Set title
+  theme_bw()
+
+
+
+#trying whole network
+
+station<- filter(data, entries.delta > 0 & entries.delta <6000 , exits.delta > 0 & exits.delta <6000)
+station<- select(station,day_of_week, exits.delta, entries.delta) %>% 
+  group_by(day_of_week) %>%
+  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
+
+#sort by day of week here
+
+#lexave_station<-arrange(lexave_station,day_of_week)
+
+station<- gather(station, exit_or_entry, total, total_entries:total_exits)
+
+
+
+##PLot
+
+ggplot(data=station, aes(x=day_of_week, y=total/length(unique(data$date)), fill=exit_or_entry)) + 
+  geom_bar(colour="black", stat="identity",
+           position=position_dodge(),
+           size=.3) +                        # Thinner lines
+  scale_fill_hue(name="Entry or Exit") +      # Set legend title
+  xlab("Day of week") + ylab("Count") + # Set axis labels
+  ggtitle("Lexington Station") +     # Set title
+  theme_bw() 
+
+
+
+#trying whole network
+
+station<- filter(data, entries.delta > 0 & entries.delta <6000 , exits.delta > 0 & exits.delta <6000)
+station<- select(station,day_of_week, exits.delta, entries.delta) %>% 
+  group_by(day_of_week) %>%
+  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
+
+#sort by day of week here
+
+#lexave_station<-arrange(lexave_station,day_of_week)
+
+station<- gather(station, exit_or_entry, total, total_entries:total_exits)
+
+
+
+##PLot
+
+ggplot(data=station, aes(x=day_of_week, y=total/length(unique(data$date)), fill=exit_or_entry)) + 
+  geom_bar(colour="black", stat="identity",
+           position=position_dodge(),
+           size=.3) +                        # Thinner lines
+  scale_fill_hue(name="Entry or Exit") +      # Set legend title
+  xlab("Day of week") + ylab("Count") + # Set axis labels
+  ggtitle("Entries vs Exits") +     # Set title
+  theme_bw()
+
+
+
+
+
+```
