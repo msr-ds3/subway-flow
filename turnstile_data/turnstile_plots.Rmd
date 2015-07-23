@@ -44,6 +44,7 @@ subway_facet <- as.data.frame(subway_facet)
 # total exits vs. total time
 ##############################
 subwaydata_total <- subwaydata_fil
+subwaydata <- subset()
 
 entries <- data.frame()
 entries <- subwaydata_total %>%
@@ -69,9 +70,9 @@ subwaydata_t <- subset(subwaydata_fil, entries.delta < 0 & exits.delta < 0)
 
 a <- subset(subwaydata_fil, entries.delta > 6000 & exits.delta > 6000)
 
+                               y=entries_exits_rate,
 # plot it 
 ggplot(data=subwaydata_t, aes(x=time,
-                               y=entries_exits_rate,
                                group=type,
                                colour=type)) +
   ggtitle("Total Entries and Exits vs. Time of Day") +
@@ -113,17 +114,13 @@ dev.off()
 # Shannons plots
 #######################################################################
 
+# lexington ave bar plot
 lexave_station<- filter(subwaydata_facet, station == "LEXINGTON AVE")
 lexave_station<- select(lexave_station,day_of_week, exits.delta, entries.delta) %>% 
   group_by(day_of_week) %>%
   summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
 
-
 lexave_station<- gather(lexave_station, type, total, total_entries:total_exits)
-
-
-
-##PLot
 
 ggplot(data=lexave_station, aes(x=day_of_week, y=total, fill=exit_or_entry)) + 
   geom_bar(colour="black", stat="identity",

@@ -6,18 +6,6 @@ library(dplyr)
 library(timeDate) # to get day of week function
 library(reshape)
 
-
-
-namespace dplyr {
-  data.attr( "vars") = vars ;
-  data.attr( "drop" ) = true ;
-} else {
-  -                data.attr( "class" ) = classes_grouped()  ;
-  +                data.attr( "class" ) = classes_not_grouped()  ;
-  data.attr( "drop" ) = true ;
-}
-}
-
 # get data
 # note is sorted by SCP (individual turnstyles)
 # when dealing with more weeks, should be sorted by SCP
@@ -56,12 +44,12 @@ subwaydata_fil <- subwaydata_fil %>%
   filter(exits.delta > -1) %>%
   filter(entries.delta > -1)
 
-
 # removing path trains from data
 subwaydata_fil<-subwaydata_fil[!subwaydata_fil$division == "PTH", ]
 
-# new column morning night, group by morning and night and look at morning vs. night, look at aggregates (shannons)
+################################################################################################
 # add station type
+################################################################################################
 stations_type <- data.frame()
 stations_type <- mutate(subwaydata_fil,is_morning = 0)
 stations_type <- stations_type %>%
@@ -103,12 +91,17 @@ stations_type <- stations_stats %>%
                                 ifelse(mean_day_entries < 2*mean_day_exits & mean_night_exits < 2 * mean_night_entries, "commercial", "commuter")))
 
 # percent of rows kept - 99.3%
-length(subwaydata_fil$station) / length(subwaydata$station) 
+length(subwaydata_fil$station) / length(subwaydata$station)
+
+#####################################################################################################
+# plot 
+#####################################################################################################
 stations_type$morning_entry_ratio <- stations_type$mean_day_entries/stations_type$mean_day_exits
-stations_type <- statio
 
 par(mar=c(2,2,2,2))
+png(filename="hist_morning_entry_ratio.png")
 hist(stations_type$morning_entry_ratio, breaks=50)
+dev.off()
 
 write.csv(subwaydata_fil, file = "turnstyle_df.csv")
 write.csv(stations_type, file = "station_classifications.csv")
