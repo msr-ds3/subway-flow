@@ -11,7 +11,7 @@ for t in turnstilefiles:
 
 for week in arr0:
     file1 = open("../turnstile_data/" + week)
-    file2 = open("./new_ts/" + week, "w")
+
     turnstile = file1.readlines() 
     
     numbers = re.compile('([0-9])')
@@ -19,6 +19,7 @@ for week in arr0:
     brokenfile = re.compile('(141206)')
 
     if len(brokenfile.findall(week)) <= 0:
+        file2 = open("./new_ts/" + week, "w")
         for x in turnstile:
             fields = x.split(',')
             station = fields[4]
@@ -29,5 +30,5 @@ for week in arr0:
         
             file2.write(fields[0] + "," + fields[1]+ "," + fields[2] + "," + fields[3] + "," + allnums + alllets + "," + fields[5] + "," + fields[6] + "," + fields[7] + "," + fields[8] + "," + fields[9] + "," + fields[10])
   
-    file2.close()
+        file2.close()
 file1.close()
