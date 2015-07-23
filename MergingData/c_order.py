@@ -27,7 +27,7 @@ for week in arr0:
             allnums = ''.join(sorted(arr1))
             alllets = ''.join(sorted(arr2))
         
-            file2.write(fields[0] + "," + fields[1]+ "," + fields[2] + "," + fields[3] + "," + allnums + alllets + "," + fields[5] + "," + fields[6] + "," + fields[7] + "," + fields[8] + "," + fields[9] + "," + fields[10] + "," + "\n")
+            file2.write(fields[0] + "," + fields[1]+ "," + fields[2] + "," + fields[3] + "," + allnums + alllets + "," + fields[5] + "," + fields[6] + "," + fields[7] + "," + fields[8] + "," + fields[9] + "," + fields[10])
   
     file2.close()
 file1.close()
