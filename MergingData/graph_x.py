@@ -106,7 +106,7 @@ B = nx.DiGraph()
 for t in turns:
     a = t.strip()
     if a not in path:
-        temp1 = one_ave(a.lower().replace('/"', '').strip(), pattern, "av")
+        temp1 = one_ave(a.lower().replace('\"', '').strip(), pattern, "av")
         turn_terms.append(temp1)
         orig_turn.append(a)
         B.add_node(temp1, demand = 1)
@@ -114,11 +114,12 @@ for t in turns:
 f1.close()
 
 for g in google:
-    temp1 = one_ave(g.lower().replace('"', '').strip(), pattern, "av")
+    temp1 = one_ave(g.lower().replace('\"', '').strip(), pattern, "av")
     google_terms.append(temp1)
     orig_google.append(g)
     B.add_node(temp1, demand = -1)
 
+#Add dummy nodes
 B.add_node("Dummy1", demand = 1)
 B.add_node("Dummy2", demand = 1)
 
@@ -130,7 +131,6 @@ f2.close()
 bestmatches = {}
 sawts = {}
 
-#Add dummy nodes
 
 for t in turn_terms:		
     for g in google_terms:      
@@ -141,10 +141,21 @@ for t in turn_terms:
         B.add_edge(g, t, weight = distance)
         #if distance < 3:
         #    print "google = ", g, "turn = ", t, "distance = ",  distance
+#print B.number_of_edges()
+
+p_match = []
+c = list(B.edges()) #(< probably don't need)
+for (n1, n2) in c:
+    if B.edge[n1][n2]['weight'] <= 0:
+        B.remove_edge(n1, n2)
+        p_match.append((n1,n2))
+    #otherwise print out top five matches
+
+#Get edges as a static list, loop over. Remove things from the graph.
+
+    #if Edgeweight <= 0, record pair, remove the two nodes from the graph. 
 
 
-
-print B.number_of_nodes()
 #Min cost flow
 
 #flow = nx.min_cost_flow(B)
