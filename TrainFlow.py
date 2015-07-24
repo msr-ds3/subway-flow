@@ -9,7 +9,7 @@ graph1 = raw_input("Which train are you taking?      ")
 graph2 = raw_input("Which other train are you taking?	")
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("/home/ewahmed/subway-flow/TrainTravel_Modified.csv")
+openingfile = open("/home/ewahmed/subway-flow/TrainTravel.csv")
 traindata = openingfile.readlines()
 openingfile.close()
 
@@ -26,8 +26,8 @@ for line in traindata:
 	traintravel = line.rstrip('\n').split(',')
 	trains.append(traintravel[1])
 	fromstation.append(traintravel[2])
-	tostation.append(traintravel[3])
-	traveltime.append(traintravel[4])
+	tostation.append(traintravel[4])
+	traveltime.append(traintravel[6])
 
 #length of our lists - to use in loops
 length=range(0,len(trains))
@@ -141,18 +141,21 @@ for transfer in transfertrains:
 		endtransfer+=1
 
 #Connecting stations with one another on the graph from train data
-#length= range(1,846)
-length= range(starttrain,endtrain+1)
+length= range(1,846)
+#length= range(starttrain,endtrain+1)
 for i in length:
 	G.add_cycle([fromstation[i],tostation[i]],weight=traveltime[i])
 
-nx.draw_spring(G, with_labels=True, node_color='g', node_size=300, font_size=10)
+# nx.draw_spring(G, with_labels=True, node_color='g', node_size=300, font_size=10)
 
 #Connecting transfers with one another on graph with transfer data
-#length = range(1,317)
-length = range(starttransfer,endtransfer)
-for i in length:
-	G.add_cycle([transferfrom[i],transferto[i]],weight=transfertime[i])
+length = range(1,317)
+#length = range(starttransfer,endtransfer)
+#for i in length:
+	#G.add_cycle([transferfrom[i],transferto[i]],weight=transfertime[i])
 
 nx.draw_spring(G, with_labels=True, node_color='w', node_size=300, font_size=10)
+
+#print nodes(G)
+
 plt.show()
