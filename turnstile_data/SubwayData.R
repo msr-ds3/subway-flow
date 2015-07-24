@@ -35,7 +35,7 @@ for (txt in txts) {
 
 
 #Creating dataframe with num_entries and num_exits
-data <- read.delim('turnstile_150704.txt', header=TRUE, sep=',')
+#data <- read.delim('turnstile_150704.txt', header=TRUE, sep=',')
 names(data) <- tolower(names(data))
 data$date.time <- with(data, paste(date, time, sep=' '))
 data$date.time <- with(data, strptime(date.time, "%m/%d/%Y %H:%M:%S"))
@@ -50,6 +50,9 @@ data <- mutate(data,
 )
 ##removing path trains from data
 data<-data[!data$division == "PTH", ]
+
+
+#Lexave Station
 
 lexave_station<- filter(data, station == "LEXINGTON AVE", entries.delta > 0 , exits.delta > 0)
 lexave_station<- select(lexave_station,day_of_week, exits.delta, entries.delta) %>% 
@@ -141,7 +144,6 @@ station<- select(station,day_of_week, exits.delta, entries.delta) %>%
 
 #sort by day of week here
 
-#lexave_station<-arrange(lexave_station,day_of_week)
 
 station<- gather(station, exit_or_entry, total, total_entries:total_exits)
 
@@ -160,3 +162,55 @@ ggplot(data=station, aes(x=day_of_week, y=total/length(unique(data$date)), fill=
 
 
 
+#42nd street
+
+station_42<- filter(data,station == "42 ST-PA BUS TE", entries.delta > 0 & entries.delta <6000 , exits.delta > 0 & exits.delta <6000)
+station_42<- select(station_42,day_of_week, exits.delta, entries.delta) %>% 
+  group_by(day_of_week) %>%
+  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
+
+#sort by day of week here
+
+
+
+station_42<- gather(station_42, exit_or_entry, total, total_entries:total_exits)
+
+
+
+##PLot
+
+ggplot(data=station_42, aes(x=day_of_week, y=total/length(unique(data$date)), fill=exit_or_entry)) + 
+  geom_bar(colour="black", stat="identity",
+           position=position_dodge(),
+           size=.3) +                        # Thinner lines
+  scale_fill_hue(name="Entry or Exit") +      # Set legend title
+  xlab("Day of week") + ylab("Count") + # Set axis labels
+  ggtitle("42 ST-PA BUS TE") +     # Set title
+  theme_bw()
+
+#tramway
+
+
+
+trams<- filter(data, c.a == "TRAM1" & c.a == "TRAM2", entries.delta > 0 , exits.delta > 0)
+trams<- select(trams,day_of_week, exits.delta, entries.delta) %>% 
+  group_by(day_of_week) %>%
+  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
+
+#sort by day of week here
+
+
+trams<- gather(trams, exit_or_entry, total, total_entries:total_exits)
+
+
+
+##PLot
+
+ggplot(data=trams, aes(x=day_of_week, y=total, fill=exit_or_entry)) + 
+  geom_bar(colour="black", stat="identity",
+           position=position_dodge(),
+           size=.3) +                        # Thinner lines
+  scale_fill_hue(name="Entry or Exit") +      # Set legend title
+  xlab("Day of week") + ylab("Count") + # Set axis labels
+  ggtitle("trams") +     # Set title
+  theme_bw()
