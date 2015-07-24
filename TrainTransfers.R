@@ -78,7 +78,7 @@ transfers$StationName <- paste(transfers$StationName,transfers$TransferID, sep="
 
 #Putting train and transferfrom station info into the transfers dataframe, reformatting, renaming
 transfers<- inner_join(unique_train_stops,transfers)
-transfers <- data.frame(transfers[,c(1,2,3,4,9,8)])
-names(transfers) <- c('Train','TrainStop','Station','TravelTime','TransferStation','TransferTime')
-write.csv(transfers, "/home/ewahmed/subway-flow/TransferTrains.csv")
+transfers <- data.frame(transfers[,c(1,2,5,3,4,7,9,8)])
+names(transfers) <- c('Train','TrainStop','StopID','Station','TravelTime','TransferID','TransferStation','TransferTime')
+write.csv(transfers, "/home/ewahmed/subway-flow/UniqueTransfers.csv")
 ##########################################################3
