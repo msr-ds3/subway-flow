@@ -4,15 +4,14 @@ import fileinput
 import networkx as nx
 import matplotlib.pyplot as plt
 
-################################################################################################################################
-#########################                      FOR A SPECIFIC TRAIN'S FLOW RUN THE FOLLOWING          ###########################
-#################################################################################################################################
 
-graphme = raw_input("Which train are you taking?      ") 
+graph1 = raw_input("Which train are you taking?      ") 
+graph2 = raw_input("Which other train are you taking?	")
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("/home/ewahmed/subway-flow/TrainTravel.csv")
+openingfile = open("/home/ewahmed/subway-flow/TrainTravel_Modified.csv")
 traindata = openingfile.readlines()
+openingfile.close()
 
 #initializing the lists(features) we are going to need to graph with
 #You can also use a dictionary to store in the following format - {"TrainName",[FromStation,ToStation,TravelTime]}
@@ -26,9 +25,9 @@ traveltime=[]
 for line in traindata:
 	traintravel = line.rstrip('\n').split(',')
 	trains.append(traintravel[1])
-	fromstation.append(traintravel[4])
-	tostation.append(traintravel[5])
-	traveltime.append(traintravel[6])
+	fromstation.append(traintravel[2])
+	tostation.append(traintravel[3])
+	traveltime.append(traintravel[4])
 
 #length of our lists - to use in loops
 length=range(0,len(trains))
@@ -38,70 +37,122 @@ for i in length:
 	trains[i] = trains[i].replace('"', '').strip()
 	fromstation[i] = fromstation[i].replace('"','').strip()
 	tostation[i] = tostation[i].replace('"','').strip()
-	traveltime[i] = traveltime[i].replace('"','').strip()
+	traveltime[i]= traveltime[i].replace('"','').strip()
+
+#change this directory to where you located the Transfers file
+openingfile= open("/home/ewahmed/subway-flow/UniqueTransfers.csv")
+transfers = openingfile.readlines()
+openingfile.close()
+
+#initializing seperate lists for graphing with the transfer data
+transfertrains=[]
+transferfrom=[]
+transferto=[]
+transfertime=[]
+
+#Parsing data into lists
+for transfer in transfers:
+	stoptransfers = transfer.rstrip('\n').split(',')
+	transfertrains.append(stoptransfers[1])
+	transferfrom.append(stoptransfers[4])
+	transferto.append(stoptransfers[7])	
+	transfertime.append(stoptransfers[8])
+
+#length of our lists - to use in loops (same process being repeated)
+length=range(0,len(transfertrains))
+
+#Getting rid of the extra quotations, making all the data look nice 
+for i in length:
+	transfertrains[i] = transfertrains[i].replace('"', '').strip()
+	transferfrom[i] = transferfrom[i].replace('"','').strip()
+	transferto[i] = transferto[i].replace('"','').strip()
+	transfertime[i]= transfertime[i].replace('"','').strip()
 
 #initializing a graph to represent the connections on 
 G= nx.DiGraph()
+#G= nx.MultiGraph()
 
 #Looking where the train's data begins and ends (index)
-startindex=0
+starttrain=-1
 
 for train in trains:
-	startindex+=1
-	if(train==graphme):
+	starttrain+=1
+	if(train==graph1):
 		break
 
-endindex=startindex
+endtrain=starttrain
 for train in trains:
-	if(train==graphme):
-		endindex+=1
+	if(train==graph1):
+		endtrain+=1
 
-endindex=endindex-1
+endtrain=endtrain-1
 
-#Extracting only the data of that Train 
-Gfromstation = fromstation[startindex:endindex]
-Gtostation = tostation[startindex:endindex]
-Gtraveltime = traveltime[startindex:endindex]
+#Looking where transfer data begins and ends for given train
+starttransfer=-1
 
-#Connecting stations with one another on the graph
-length= range(0,len(Gfromstation))
+for transfer in transfertrains:
+	starttransfer+=1
+	if(transfer==graph1):
+		break
 
+endtransfer=starttransfer
+for transfer in transfertrains:
+	if(transfer==graph1):
+		endtransfer+=1
+
+#Connecting stations with one another on the graph from train data
+#length= range(1,846)
+length= range(starttrain,endtrain+1)
 for i in length:
-	G.add_cycle([Gfromstation[i],Gtostation[i]],weight=Gtraveltime[i])
+	G.add_cycle([fromstation[i],tostation[i]],weight=traveltime[i])
 
-def print_flow(flow):
-     for edge in G.edges():
-         n1, n2 = edge
-         print edge, flow[n1][n2]
+#Connecting transfers with one another on graph with transfer data
+#length = range(1,317)
+length = range(starttransfer,endtransfer)
+for i in length:
+	G.add_cycle([transferfrom[i],transferto[i]],weight=transfertime[i])
 
-##################################################################################################################################
-################################ 			FOR GRAPH WITHOUT WEIGHTS 				##############################################
-##################################################################################################################################
+	#Looking where the train's data begins and ends (index)
+starttrain=-1
 
-# fromhere = raw_input("Which train station are you departuring from?            ")
-# tothere = raw_input("Which train station are you trying to go to               ") 
+for train in trains:
+	starttrain+=1
+	if(train==graph2):
+		break
 
-# print "You will arrive at your desination in ",len(nx.shortest_path(G, fromhere, tothere))-1, " stops" 
-# print "The train will travel in the following format:     ", nx.shortest_path(G, fromhere, tothere)
+endtrain=starttrain
+for train in trains:
+	if(train==graph2):
+		endtrain+=1
 
-# nx.draw(G, with_labels=True, node_color='w', node_size=500)
-# plt.show()
+endtrain=endtrain-1
 
-####################################################################################################################################
-####################################        FOR GRAPH WITH WEIGHTS                ##################################################
-####################################################################################################################################
+#Looking where transfer data begins and ends for given train
+starttransfer=-1
 
-elarge=[(u,v) for (u,v,d) in G.edges(data=True) if d['weight'] >120] #takes more than 2 minutes
-esmall=[(u,v) for (u,v,d) in G.edges(data=True) if d['weight'] <=120] #takes less than 2 minutes 
+for transfer in transfertrains:
+	starttransfer+=1
+	if(transfer==graph2):
+		break
 
-pos=nx.spring_layout(G) # positions for all nodes
+endtransfer=starttransfer
+for transfer in transfertrains:
+	if(transfer==graph2):
+		endtransfer+=1
 
-nx.draw_networkx_nodes(G,pos,node_size=300) #nodes
-nx.draw_networkx_edges(G,pos,edgelist=elarge, width=2) #edges
-nx.draw_networkx_edges(G,pos,edgelist=esmall, width=2,alpha=0.5,edge_color='b',style='dashed') #edges
-nx.draw_networkx_labels(G,pos,font_size=10,font_family='sans-serif') #labels
+#Connecting stations with one another on the graph from train data
+#length= range(1,846)
+length= range(starttrain,endtrain+1)
+for i in length:
+	G.add_cycle([fromstation[i],tostation[i]],weight=traveltime[i])
 
-plt.axis('off') #turning off grid
-plt.show() #showing graph
+nx.draw_spring(G, with_labels=True, node_color='g', node_size=300, font_size=10)
 
-openingfile.close()
+#Connecting transfers with one another on graph with transfer data
+#length = range(1,317)
+length = range(starttransfer,endtransfer)
+for i in length:
+	G.add_cycle([transferfrom[i],transferto[i]],weight=transfertime[i])
+
+nx.draw_spring(G, with_labels=True, node_color='w', node_size=300, font_size=10)
+plt.show()
