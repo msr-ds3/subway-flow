@@ -139,7 +139,7 @@
 "138","A","A020","A41","""Jay St - MetroTech""A41",90,"""Jay St - MetroTech""","ACF"
 "139","C","C026","A41","""Jay St - MetroTech""A41",120,"""Jay St - MetroTech""","ACF"
 "140","F","F021","A41","""Jay St - MetroTech""A41",150,"""Jay St - MetroTech""","ACF"
-"141","A","A010","H01","""Aqueduct Racetrack""H01",60,"""Aqueduct Racetrack""",NA
+"141","A","A010","H01","""Aqueduct Racetrack""H01",60,"""Aqueduct Racetrack""","A"
 "142","A","A07","H04","""Broad Channel""H04",240,"""Broad Channel""","AH"
 "143","H","H05","H04","""Broad Channel""H04",360,"""Broad Channel""","AH"
 "144","7","707","718","""Queensboro Plaza""718",90,"""Queensboro Plaza""","77X"
@@ -156,8 +156,8 @@
 "155","6X","6X023","630","""51 St""630",120,"""51 St""","66X"
 "156","6","604","637","""Bleecker St""637",60,"""Bleecker St""","66X6X"
 "157","6X","6X030","637","""Bleecker St""637",90,"""Bleecker St""","66X6X"
-"158","5","5033","504","""Pelham Pkwy""504",60,"""Pelham Pkwy""",NA
-"159","5","5032","505","""Morris Park""505",210,"""Morris Park""",NA
+"158","5","5033","504","""Pelham Pkwy""504",60,"""Pelham Pkwy""","5"
+"159","5","5032","505","""Morris Park""505",210,"""Morris Park""","5"
 "160","4","4024","423","""Borough Hall""423",330,"""Borough Hall""","45"
 "161","5","505","423","""Borough Hall""423",120,"""Borough Hall""","45"
 "162","4","4018","631","""Grand Central - 42 St""631",180,"""Grand Central - 42 St""","4566X"
