@@ -16,12 +16,12 @@ for week in arr0:
     
     numbers = re.compile('([0-9])')
     letters = re.compile('([A-WYZ])')
-    brokenfile = re.compile('(141206)')
 
-    if len(brokenfile.findall(week)) <= 0:
-        file2 = open("./new_ts/" + week, "w")
-        for x in turnstile:
-            fields = x.split(',')
+
+    file2 = open("./new_ts/" + week, "w")
+    for x in turnstile:
+        fields = x.split(',')
+        if len(fields) is 11:
             station = fields[4]
             arr1 = set(numbers.findall(station))
             arr2 = set(letters.findall(station))
@@ -30,5 +30,5 @@ for week in arr0:
         
             file2.write(fields[0] + "," + fields[1]+ "," + fields[2] + "," + fields[3] + "," + allnums + alllets + "," + fields[5] + "," + fields[6] + "," + fields[7] + "," + fields[8] + "," + fields[9] + "," + fields[10])
   
-        file2.close()
+    file2.close()
 file1.close()
