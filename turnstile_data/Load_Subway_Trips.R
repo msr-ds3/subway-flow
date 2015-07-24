@@ -36,15 +36,15 @@ names_lines <- left_join(n_names, all_lines)
 names_lines <- data.frame(names_lines[,c(2,3,4)])
 # 
 setwd("~/Desktop/subway-flow/MergingData/new_ts")
-# data_dir <- "./MergingData/new_ts/"
-txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', "~/Desktop/subway-flow/MergingData/new_ts"))
+txts <-c()
+#txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', "~/Desktop/subway-flow/MergingData/new_ts"))
 subwaydata <- data.frame()
 for (txt in txts) {
    tmp <- read.table(txt, header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
    subwaydata <- rbind(subwaydata, tmp)
 }
 setwd("~/Desktop/subway-flow/MergingData/new_ts")
-#subwaydata = read.table("turnstile_150704.txt",header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE) 
+subwaydata = read.table("turnstile_150704.txt",header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE) 
 subwaydata <- right_join(subwaydata, names_lines, by = c("STATION", "AEILMN" = "line_name"))
 
 # creating dataframe with num_entries, num_exits, and time difference
@@ -103,6 +103,17 @@ subway_time_ratios <- subwaydata_fil %>%
 a <- filter(subwaydata_fil, entry_exits_period == "20:0") 
 missing_stations <- anti_join(subwaydata_fil, a, by="station")
 unique(missing_stations$station)
+
+# get entries/exits per day ratios for all stations, used for network flow
+subway_time_ratios <- subwaydata_fil %>%
+  group_by(is_weekday,station_id, station) %>% 
+  filter(is_weekday == 1) %>%
+  summarize(entries_per_hr=mean(entries_per_timediff), exits_per_hr=mean(exits_per_timediff),
+            entries_exits_ratio=entries_per_hr/exits_per_hr) %>%
+  select(station,station_id,entries_per_hr,exits_per_hr)
+
+temp <- as.data.frame(subway_time_ratios) %>% select(station, station_id, entries_per_hr, exits_per_hr)
+write.csv(subwaydata_fil, file = "hourly_entries_exits.csv")
   
 ################################################################################################
 # add station type
@@ -164,4 +175,3 @@ dev.off()
 write.csv(subwaydata_fil, file = "turnstyle_df.csv")
 write.csv(stations_type, file = "station_classifications.csv")
 write.csv(subwaydata, file="master_subwaydata_dataframe.csv")
-write.csv(subwa)
