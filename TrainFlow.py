@@ -9,7 +9,7 @@ graph1 = raw_input("Which train are you taking?      ")
 graph2 = raw_input("Which other train are you taking?	")
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("/home/ewahmed/subway-flow/TrainTravel.csv")
+openingfile = open("./TrainTravel.csv")
 traindata = openingfile.readlines()
 openingfile.close()
 
@@ -40,7 +40,7 @@ for i in length:
 	traveltime[i]= traveltime[i].replace('"','').strip()
 
 #change this directory to where you located the Transfers file
-openingfile= open("/home/ewahmed/subway-flow/UniqueTransfers.csv")
+openingfile= open("./UniqueTransfers.csv")
 transfers = openingfile.readlines()
 openingfile.close()
 
@@ -69,7 +69,7 @@ for i in length:
 	transfertime[i]= transfertime[i].replace('"','').strip()
 
 #initializing a graph to represent the connections on 
-G= nx.DiGraph()
+G= nx.Graph()
 #G= nx.MultiGraph()
 
 #Looking where the train's data begins and ends (index)
@@ -151,11 +151,11 @@ for i in length:
 #Connecting transfers with one another on graph with transfer data
 length = range(1,317)
 #length = range(starttransfer,endtransfer)
-#for i in length:
-	#G.add_cycle([transferfrom[i],transferto[i]],weight=transfertime[i])
+for i in length:
+	G.add_cycle([transferfrom[i],transferto[i]],weight=transfertime[i])
 
 nx.draw_spring(G, with_labels=True, node_color='w', node_size=300, font_size=10)
 
-#print nodes(G)
+print nx.is_connected(G)
 
 plt.show()
