@@ -66,13 +66,14 @@ subwaydata_total <- data.frame()
 subwaydata_total <- rbind(entries,exits)
 subwaydata_total <- as.data.frame(subwaydata_total)
 
-subwaydata_t <- subset(subwaydata_fil, entries.delta < 0 & exits.delta < 0)
+subwaydata_t <- subset(subwaydata_fil, entries.delta > 6000 & exits.delta > 60000)
 
 a <- subset(subwaydata_fil, entries.delta > 6000 & exits.delta > 6000)
 
                                y=entries_exits_rate,
 # plot it 
-ggplot(data=subwaydata_t, aes(x=time,
+ggplot(data=subwaydata_total, aes(x=time,
+                               y=
                                group=type,
                                colour=type)) +
   ggtitle("Total Entries and Exits vs. Time of Day") +
