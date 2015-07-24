@@ -1,754 +1,1029 @@
-"","Train","From_Station","To_Station","Travel_Time"
-"2","1","""Van Cortlandt Park - 242 St""101","""238 St""103",90
-"3","1","""238 St""103","""231 St""104",90
-"4","1","""231 St""104","""Marble Hill - 225 St""106",90
-"5","1","""Marble Hill - 225 St""106","""215 St""107",90
-"6","1","""215 St""107","""207 St""108",60
-"7","1","""207 St""108","""Dyckman St""109",90
-"8","1","""Dyckman St""109","""191 St""110",90
-"9","1","""191 St""110","""181 St""111",90
-"10","1","""181 St""111","""168 St - Washington Hts""112",120
-"11","1","""168 St - Washington Hts""112","""157 St""113",90
-"12","1","""157 St""113","""145 St""114",120
-"13","1","""145 St""114","""137 St - City College""115",90
-"14","1","""137 St - City College""115","""125 St""116",90
-"15","1","""125 St""116","""116 St - Columbia University""117",150
-"16","1","""116 St - Columbia University""117","""Cathedral Pkwy""118",60
-"17","1","""Cathedral Pkwy""118","""103 St""119",60
-"18","1","""103 St""119","""96 St""120",120
-"19","1","""96 St""120","""86 St""121",120
-"20","1","""86 St""121","""79 St""122",60
-"21","1","""79 St""122","""72 St""123",90
-"22","1","""72 St""123","""66 St - Lincoln Center""124",90
-"23","1","""66 St - Lincoln Center""124","""59 St - Columbus Circle""125",90
-"24","1","""59 St - Columbus Circle""125","""50 St""126",120
-"25","1","""50 St""126","""Times Sq - 42 St""127",90
-"26","1","""Times Sq - 42 St""127","""34 St - Penn Station""128",90
-"27","1","""34 St - Penn Station""128","""28 St""129",90
-"28","1","""28 St""129","""23 St""130",60
-"29","1","""23 St""130","""18 St""131",60
-"30","1","""18 St""131","""14 St""132",60
-"31","1","""14 St""132","""Christopher St - Sheridan Sq""133",90
-"32","1","""Christopher St - Sheridan Sq""133","""Houston St""134",90
-"33","1","""Houston St""134","""Canal St""135",90
-"34","1","""Canal St""135","""Franklin St""136",60
-"35","1","""Franklin St""136","""Chambers St""137",210
-"36","1","""Chambers St""137","""Cortlandt St""138",210
-"37","1","""Cortlandt St""138","""Rector St""139",150
-"38","1","""Rector St""139","""South Ferry Loop""140",210
-"40","2","""Wakefield - 241 St""201","""Nereid Av""204",90
-"41","2","""Nereid Av""204","""233 St""205",90
-"42","2","""233 St""205","""225 St""206",90
-"43","2","""225 St""206","""219 St""207",60
-"44","2","""219 St""207","""Gun Hill Rd""208",90
-"45","2","""Gun Hill Rd""208","""Burke Av""209",90
-"46","2","""Burke Av""209","""Allerton Av""210",90
-"47","2","""Allerton Av""210","""Pelham Pkwy""211",120
-"48","2","""Pelham Pkwy""211","""Bronx Park East""212",120
-"49","2","""Bronx Park East""212","""E 180 St""213",120
-"50","2","""E 180 St""213","""West Farms Sq - E Tremont Av""214",90
-"51","2","""West Farms Sq - E Tremont Av""214","""174 St""215",120
-"52","2","""174 St""215","""Freeman St""216",150
-"53","2","""Freeman St""216","""Simpson St""217",90
-"54","2","""Simpson St""217","""Intervale Av""218",60
-"55","2","""Intervale Av""218","""Prospect Av""219",90
-"56","2","""Prospect Av""219","""Jackson Av""220",90
-"57","2","""Jackson Av""220","""3 Av - 149 St""221",150
-"58","2","""3 Av - 149 St""221","""149 St - Grand Concourse""222",120
-"59","2","""149 St - Grand Concourse""222","""135 St""224",210
-"60","2","""135 St""224","""125 St""225",120
-"61","2","""125 St""225","""116 St""226",90
-"62","2","""116 St""226","""Central Park North (110 St)""227",60
-"63","2","""Central Park North (110 St)""227","""96 St""120",270
-"64","2","""96 St""120","""72 St""123",180
-"65","2","""72 St""123","""Times Sq - 42 St""127",270
-"66","2","""Times Sq - 42 St""127","""34 St - Penn Station""128",60
-"67","2","""34 St - Penn Station""128","""14 St""132",210
-"68","2","""14 St""132","""Chambers St""137",300
-"69","2","""Chambers St""137","""Park Pl""228",90
-"70","2","""Park Pl""228","""Fulton St""229",120
-"71","2","""Fulton St""229","""Wall St""230",90
-"72","2","""Wall St""230","""Clark St""231",270
-"73","2","""Clark St""231","""Borough Hall""232",90
-"74","2","""Borough Hall""232","""Hoyt St""233",90
-"75","2","""Hoyt St""233","""Nevins St""234",60
-"76","2","""Nevins St""234","""Atlantic Av - Barclays Ctr""235",90
-"77","2","""Atlantic Av - Barclays Ctr""235","""Bergen St""236",60
-"78","2","""Bergen St""236","""Grand Army Plaza""237",120
-"79","2","""Grand Army Plaza""237","""Eastern Pkwy - Brooklyn Museum""238",120
-"80","2","""Eastern Pkwy - Brooklyn Museum""238","""Franklin Av""239",90
-"81","2","""Franklin Av""239","""Nostrand Av""248",150
-"82","2","""Nostrand Av""248","""Kingston Av""249",90
-"83","2","""Kingston Av""249","""Crown Hts - Utica Av""250",120
-"84","2","""Crown Hts - Utica Av""250","""Sutter Av - Rutland Rd""251",180
-"85","2","""Sutter Av - Rutland Rd""251","""Saratoga Av""252",90
-"86","2","""Saratoga Av""252","""Rockaway Av""253",120
-"87","2","""Rockaway Av""253","""Junius St""254",60
-"88","2","""Junius St""254","""Pennsylvania Av""255",120
-"89","2","""Pennsylvania Av""255","""Van Siclen Av""256",60
-"90","2","""Van Siclen Av""256","""New Lots Av""257",90
-"92","3","""Harlem - 148 St""301","""145 St""302",120
-"93","3","""145 St""302","""135 St""224",120
-"94","3","""135 St""224","""125 St""225",120
-"95","3","""125 St""225","""116 St""226",90
-"96","3","""116 St""226","""Central Park North (110 St)""227",60
-"97","3","""Central Park North (110 St)""227","""96 St""120",270
-"98","3","""96 St""120","""72 St""123",180
-"99","3","""72 St""123","""Times Sq - 42 St""127",270
-"100","3","""Times Sq - 42 St""127","""34 St - Penn Station""128",60
-"101","3","""34 St - Penn Station""128","""14 St""132",180
-"102","3","""14 St""132","""Chambers St""137",270
-"103","3","""Chambers St""137","""Park Pl""228",90
-"104","3","""Park Pl""228","""Fulton St""229",120
-"105","3","""Fulton St""229","""Wall St""230",90
-"106","3","""Wall St""230","""Clark St""231",270
-"107","3","""Clark St""231","""Borough Hall""232",90
-"108","3","""Borough Hall""232","""Hoyt St""233",90
-"109","3","""Hoyt St""233","""Nevins St""234",60
-"110","3","""Nevins St""234","""Atlantic Av - Barclays Ctr""235",90
-"111","3","""Atlantic Av - Barclays Ctr""235","""Bergen St""236",60
-"112","3","""Bergen St""236","""Grand Army Plaza""237",120
-"113","3","""Grand Army Plaza""237","""Eastern Pkwy - Brooklyn Museum""238",120
-"114","3","""Eastern Pkwy - Brooklyn Museum""238","""Franklin Av""239",150
-"115","3","""Franklin Av""239","""Nostrand Av""248",150
-"116","3","""Nostrand Av""248","""Kingston Av""249",90
-"117","3","""Kingston Av""249","""Crown Hts - Utica Av""250",330
-"118","3","""Crown Hts - Utica Av""250","""Sutter Av - Rutland Rd""251",390
-"119","3","""Sutter Av - Rutland Rd""251","""Saratoga Av""252",90
-"120","3","""Saratoga Av""252","""Rockaway Av""253",120
-"121","3","""Rockaway Av""253","""Junius St""254",60
-"122","3","""Junius St""254","""Pennsylvania Av""255",120
-"123","3","""Pennsylvania Av""255","""Van Siclen Av""256",60
-"124","3","""Van Siclen Av""256","""New Lots Av""257",90
-"126","4","""Woodlawn""401","""Mosholu Pkwy""402",120
-"127","4","""Mosholu Pkwy""402","""Bedford Park Blvd - Lehman College""405",120
-"128","4","""Bedford Park Blvd - Lehman College""405","""Kingsbridge Rd""406",120
-"129","4","""Kingsbridge Rd""406","""Fordham Rd""407",90
-"130","4","""Fordham Rd""407","""183 St""408",60
-"131","4","""183 St""408","""Burnside Av""409",90
-"132","4","""Burnside Av""409","""176 St""410",90
-"133","4","""176 St""410","""Mt Eden Av""411",90
-"134","4","""Mt Eden Av""411","""170 St""412",90
-"135","4","""170 St""412","""167 St""413",90
-"136","4","""167 St""413","""161 St - Yankee Stadium""414",150
-"137","4","""161 St - Yankee Stadium""414","""149 St - Grand Concourse""415",180
-"138","4","""149 St - Grand Concourse""415","""138 St - Grand Concourse""416",120
-"139","4","""138 St - Grand Concourse""416","""125 St""621",180
-"140","4","""125 St""621","""86 St""626",270
-"141","4","""86 St""626","""59 St""629",240
-"142","4","""59 St""629","""Grand Central - 42 St""631",180
-"143","4","""Grand Central - 42 St""631","""14 St - Union Sq""635",270
-"144","4","""14 St - Union Sq""635","""Brooklyn Bridge - City Hall""640",330
-"145","4","""Brooklyn Bridge - City Hall""640","""Fulton St""418",120
-"146","4","""Fulton St""418","""Wall St""419",60
-"147","4","""Wall St""419","""Bowling Green""420",90
-"148","4","""Bowling Green""420","""Borough Hall""423",330
-"149","4","""Borough Hall""423","""Nevins St""234",120
-"150","4","""Nevins St""234","""Atlantic Av - Barclays Ctr""235",90
-"151","4","""Atlantic Av - Barclays Ctr""235","""Franklin Av""239",240
-"152","4","""Franklin Av""239","""Crown Hts - Utica Av""250",210
-"153","4","""Crown Hts - Utica Av""250","""Sutter Av - Rutland Rd""251",180
-"154","4","""Sutter Av - Rutland Rd""251","""Saratoga Av""252",90
-"155","4","""Saratoga Av""252","""Rockaway Av""253",120
-"156","4","""Rockaway Av""253","""Junius St""254",60
-"157","4","""Junius St""254","""Pennsylvania Av""255",120
-"158","4","""Pennsylvania Av""255","""Van Siclen Av""256",60
-"159","4","""Van Siclen Av""256","""New Lots Av""257",90
-"161","5","""Crown Hts - Utica Av""250","""Franklin Av""239",210
-"162","5","""Franklin Av""239","""Atlantic Av - Barclays Ctr""235",300
-"163","5","""Atlantic Av - Barclays Ctr""235","""Nevins St""234",90
-"164","5","""Nevins St""234","""Borough Hall""423",120
-"165","5","""Borough Hall""423","""Bowling Green""420",360
-"166","5","""Bowling Green""420","""Wall St""419",90
-"167","5","""Wall St""419","""Fulton St""418",90
-"168","5","""Fulton St""418","""Brooklyn Bridge - City Hall""640",120
-"169","5","""Brooklyn Bridge - City Hall""640","""14 St - Union Sq""635",330
-"170","5","""14 St - Union Sq""635","""Grand Central - 42 St""631",270
-"171","5","""Grand Central - 42 St""631","""59 St""629",150
-"172","5","""59 St""629","""86 St""626",210
-"173","5","""86 St""626","""125 St""621",330
-"174","5","""125 St""621","""138 St - Grand Concourse""416",150
-"175","5","""138 St - Grand Concourse""416","""149 St - Grand Concourse""222",150
-"176","5","""149 St - Grand Concourse""222","""3 Av - 149 St""221",90
-"177","5","""3 Av - 149 St""221","""E 180 St""213",630
-"178","5","""E 180 St""213","""174 St""215",120
-"179","5","""174 St""215","""West Farms Sq - E Tremont Av""214",120
-"180","5","""West Farms Sq - E Tremont Av""214","""E 180 St""213",90
-"181","5","""E 180 St""213","""Morris Park""505",210
-"182","5","""Morris Park""505","""Pelham Pkwy""504",60
-"183","5","""Pelham Pkwy""504","""Gun Hill Rd""503",180
-"184","5","""Gun Hill Rd""503","""Baychester Av""502",120
-"185","5","""Baychester Av""502","""Eastchester - Dyre Av""501",150
-"187","6","""Brooklyn Bridge - City Hall""640","""Canal St""639",120
-"188","6","""Canal St""639","""Spring St""638",90
-"189","6","""Spring St""638","""Bleecker St""637",60
-"190","6","""Bleecker St""637","""Astor Pl""636",90
-"191","6","""Astor Pl""636","""14 St - Union Sq""635",90
-"192","6","""14 St - Union Sq""635","""23 St""634",120
-"193","6","""23 St""634","""28 St""633",60
-"194","6","""28 St""633","""33 St""632",60
-"195","6","""33 St""632","""Grand Central - 42 St""631",120
-"196","6","""Grand Central - 42 St""631","""51 St""630",120
-"197","6","""51 St""630","""59 St""629",90
-"198","6","""59 St""629","""68 St - Hunter College""628",90
-"199","6","""68 St - Hunter College""628","""77 St""627",120
-"200","6","""77 St""627","""86 St""626",90
-"201","6","""86 St""626","""96 St""625",120
-"202","6","""96 St""625","""103 St""624",90
-"203","6","""103 St""624","""110 St""623",60
-"204","6","""110 St""623","""116 St""622",90
-"205","6","""116 St""622","""125 St""621",90
-"206","6","""125 St""621","""3 Av - 138 St""619",180
-"207","6","""3 Av - 138 St""619","""Brook Av""618",90
-"208","6","""Brook Av""618","""Cypress Av""617",60
-"209","6","""Cypress Av""617","""E 143 St - St Mary's St""616",120
-"210","6","""E 143 St - St Mary's St""616","""E 149 St""615",90
-"211","6","""E 149 St""615","""Longwood Av""614",90
-"212","6","""Longwood Av""614","""Hunts Point Av""613",120
-"213","6","""Hunts Point Av""613","""Whitlock Av""612",120
-"214","6","""Whitlock Av""612","""Elder Av""611",90
-"215","6","""Elder Av""611","""Morrison Av- Sound View""610",60
-"216","6","""Morrison Av- Sound View""610","""St Lawrence Av""609",90
-"217","6","""St Lawrence Av""609","""Parkchester""608",90
-"218","6","""Parkchester""608","""Castle Hill Av""607",90
-"219","6","""Castle Hill Av""607","""Zerega Av""606",60
-"220","6","""Zerega Av""606","""Westchester Sq - E Tremont Av""604",60
-"221","6","""Westchester Sq - E Tremont Av""604","""Middletown Rd""603",90
-"222","6","""Middletown Rd""603","""Buhre Av""602",90
-"223","6","""Buhre Av""602","""Pelham Bay Park""601",150
-"225","6X","""Pelham Bay Park""601","""Buhre Av""602",150
-"226","6X","""Buhre Av""602","""Middletown Rd""603",90
-"227","6X","""Middletown Rd""603","""Westchester Sq - E Tremont Av""604",90
-"228","6X","""Westchester Sq - E Tremont Av""604","""Zerega Av""606",90
-"229","6X","""Zerega Av""606","""Castle Hill Av""607",60
-"230","6X","""Castle Hill Av""607","""Parkchester""608",120
-"231","6X","""Parkchester""608","""St Lawrence Av""609",90
-"232","6X","""St Lawrence Av""609","""Morrison Av- Sound View""610",90
-"233","6X","""Morrison Av- Sound View""610","""Elder Av""611",60
-"234","6X","""Elder Av""611","""Whitlock Av""612",120
-"235","6X","""Whitlock Av""612","""Hunts Point Av""613",120
-"236","6X","""Hunts Point Av""613","""3 Av - 138 St""619",420
-"237","6X","""3 Av - 138 St""619","""125 St""621",180
-"238","6X","""125 St""621","""116 St""622",90
-"239","6X","""116 St""622","""110 St""623",90
-"240","6X","""110 St""623","""103 St""624",60
-"241","6X","""103 St""624","""96 St""625",90
-"242","6X","""96 St""625","""86 St""626",120
-"243","6X","""86 St""626","""77 St""627",120
-"244","6X","""77 St""627","""68 St - Hunter College""628",120
-"245","6X","""68 St - Hunter College""628","""59 St""629",90
-"246","6X","""59 St""629","""51 St""630",120
-"247","6X","""51 St""630","""Grand Central - 42 St""631",120
-"248","6X","""Grand Central - 42 St""631","""33 St""632",120
-"249","6X","""33 St""632","""28 St""633",60
-"250","6X","""28 St""633","""23 St""634",60
-"251","6X","""23 St""634","""14 St - Union Sq""635",120
-"252","6X","""14 St - Union Sq""635","""Astor Pl""636",60
-"253","6X","""Astor Pl""636","""Bleecker St""637",90
-"254","6X","""Bleecker St""637","""Spring St""638",60
-"255","6X","""Spring St""638","""Canal St""639",90
-"256","6X","""Canal St""639","""Brooklyn Bridge - City Hall""640",120
-"258","7","""Times Sq - 42 St""725","""5 Av""724",90
-"259","7","""5 Av""724","""Grand Central - 42 St""723",90
-"260","7","""Grand Central - 42 St""723","""Vernon Blvd - Jackson Av""721",270
-"261","7","""Vernon Blvd - Jackson Av""721","""Hunters Point Av""720",60
-"262","7","""Hunters Point Av""720","""Court Sq""719",120
-"263","7","""Court Sq""719","""Queensboro Plaza""718",90
-"264","7","""Queensboro Plaza""718","""33 St""716",150
-"265","7","""33 St""716","""40 St""715",60
-"266","7","""40 St""715","""46 St""714",60
-"267","7","""46 St""714","""52 St""713",60
-"268","7","""52 St""713","""Woodside - 61 St""712",120
-"269","7","""Woodside - 61 St""712","""69 St""711",120
-"270","7","""69 St""711","""74 St - Broadway""710",90
-"271","7","""74 St - Broadway""710","""82 St - Jackson Hts""709",60
-"272","7","""82 St - Jackson Hts""709","""90 St - Elmhurst Av""708",60
-"273","7","""90 St - Elmhurst Av""708","""Junction Blvd""707",90
-"274","7","""Junction Blvd""707","""103 St - Corona Plaza""706",60
-"275","7","""103 St - Corona Plaza""706","""111 St""705",60
-"276","7","""111 St""705","""Mets - Willets Point""702",150
-"277","7","""Mets - Willets Point""702","""Flushing - Main St""701",210
-"279","7X","""Times Sq - 42 St""725","""5 Av""724",90
-"280","7X","""5 Av""724","""Grand Central - 42 St""723",90
-"281","7X","""Grand Central - 42 St""723","""Vernon Blvd - Jackson Av""721",300
-"282","7X","""Vernon Blvd - Jackson Av""721","""Hunters Point Av""720",60
-"283","7X","""Hunters Point Av""720","""Court Sq""719",120
-"284","7X","""Court Sq""719","""Queensboro Plaza""718",90
-"285","7X","""Queensboro Plaza""718","""Woodside - 61 St""712",330
-"286","7X","""Woodside - 61 St""712","""Junction Blvd""707",240
-"287","7X","""Junction Blvd""707","""Mets - Willets Point""702",300
-"288","7X","""Mets - Willets Point""702","""Flushing - Main St""701",300
-"290","A","""Far Rockaway - Mott Av""H11","""Beach 25 St""H10",90
-"291","A","""Beach 25 St""H10","""Beach 36 St""H09",120
-"292","A","""Beach 36 St""H09","""Beach 44 St""H08",90
-"293","A","""Beach 44 St""H08","""Beach 60 St""H07",120
-"294","A","""Beach 60 St""H07","""Beach 67 St""H06",90
-"295","A","""Beach 67 St""H06","""Broad Channel""H04",240
-"296","A","""Broad Channel""H04","""Howard Beach - JFK Airport""H03",390
-"297","A","""Howard Beach - JFK Airport""H03","""Aqueduct - N Conduit Av""H02",120
-"298","A","""Aqueduct - N Conduit Av""H02","""Aqueduct Racetrack""H01",60
-"299","A","""Aqueduct Racetrack""H01","""Rockaway Blvd""A61",180
-"300","A","""Rockaway Blvd""A61","""88 St""A60",90
-"301","A","""88 St""A60","""80 St""A59",90
-"302","A","""80 St""A59","""Grant Av""A57",90
-"303","A","""Grant Av""A57","""Euclid Av""A55",90
-"304","A","""Euclid Av""A55","""Broadway Jct""A51",240
-"305","A","""Broadway Jct""A51","""Utica Av""A48",210
-"306","A","""Utica Av""A48","""Nostrand Av""A46",180
-"307","A","""Nostrand Av""A46","""Hoyt - Schermerhorn Sts""A42",300
-"308","A","""Hoyt - Schermerhorn Sts""A42","""Jay St - MetroTech""A41",90
-"309","A","""Jay St - MetroTech""A41","""High St""A40",120
-"310","A","""High St""A40","""Fulton St""A38",180
-"311","A","""Fulton St""A38","""Chambers St""A36",120
-"312","A","""Chambers St""A36","""Canal St""A34",90
-"313","A","""Canal St""A34","""W 4 St""A32",150
-"314","A","""W 4 St""A32","""14 St""A31",150
-"315","A","""14 St""A31","""34 St - Penn Station""A28",180
-"316","A","""34 St - Penn Station""A28","""42 St - Port Authority Bus Terminal""A27",150
-"317","A","""42 St - Port Authority Bus Terminal""A27","""59 St - Columbus Circle""A24",240
-"318","A","""59 St - Columbus Circle""A24","""125 St""A15",480
-"319","A","""125 St""A15","""145 St""A12",180
-"320","A","""145 St""A12","""168 St""A09",390
-"321","A","""168 St""A09","""175 St""A07",330
-"322","A","""175 St""A07","""181 St""A06",60
-"323","A","""181 St""A06","""190 St""A05",120
-"324","A","""190 St""A05","""Dyckman St""A03",360
-"325","A","""Dyckman St""A03","""Inwood - 207 St""A02",330
-"327","B","""Bedford Park Blvd""D03","""Kingsbridge Rd""D04",120
-"328","B","""Kingsbridge Rd""D04","""Fordham Rd""D05",120
-"329","B","""Fordham Rd""D05","""182-183 Sts""D06",90
-"330","B","""182-183 Sts""D06","""Tremont Av""D07",90
-"331","B","""Tremont Av""D07","""174-175 Sts""D08",90
-"332","B","""174-175 Sts""D08","""170 St""D09",150
-"333","B","""170 St""D09","""167 St""D10",120
-"334","B","""167 St""D10","""161 St - Yankee Stadium""D11",150
-"335","B","""161 St - Yankee Stadium""D11","""155 St""D12",90
-"336","B","""155 St""D12","""145 St""D13",90
-"337","B","""145 St""D13","""135 St""A14",120
-"338","B","""135 St""A14","""125 St""A15",180
-"339","B","""125 St""A15","""116 St""A16",180
-"340","B","""116 St""A16","""Cathedral Pkwy (110 St)""A17",90
-"341","B","""Cathedral Pkwy (110 St)""A17","""103 St""A18",60
-"342","B","""103 St""A18","""96 St""A19",90
-"343","B","""96 St""A19","""86 St""A20",90
-"344","B","""86 St""A20","""81 St - Museum of Natural History""A21",90
-"345","B","""81 St - Museum of Natural History""A21","""72 St""A22",90
-"346","B","""72 St""A22","""59 St - Columbus Circle""A24",90
-"347","B","""59 St - Columbus Circle""A24","""7 Av""D14",120
-"348","B","""7 Av""D14","""47-50 Sts - Rockefeller Ctr""D15",120
-"349","B","""47-50 Sts - Rockefeller Ctr""D15","""42 St - Bryant Pk""D16",90
-"350","B","""42 St - Bryant Pk""D16","""34 St - Herald Sq""D17",120
-"351","B","""34 St - Herald Sq""D17","""W 4 St""D20",180
-"352","B","""W 4 St""D20","""Broadway-Lafayette St""D21",120
-"353","B","""Broadway-Lafayette St""D21","""Grand St""D22",120
-"354","B","""Grand St""D22","""DeKalb Av""R30",510
-"355","B","""DeKalb Av""R30","""Atlantic Av - Barclays Ctr""D24",120
-"356","B","""Atlantic Av - Barclays Ctr""D24","""7 Av""D25",120
-"357","B","""7 Av""D25","""Prospect Park""D26",270
-"358","B","""Prospect Park""D26","""Church Av""D28",120
-"359","B","""Church Av""D28","""Newkirk Plaza""D31",150
-"360","B","""Newkirk Plaza""D31","""Kings Hwy""D35",270
-"361","B","""Kings Hwy""D35","""Sheepshead Bay""D39",300
-"362","B","""Sheepshead Bay""D39","""Brighton Beach""D40",120
-"364","C","""168 St""A09","""163 St - Amsterdam Av""A10",60
-"365","C","""163 St - Amsterdam Av""A10","""155 St""A11",90
-"366","C","""155 St""A11","""145 St""A12",90
-"367","C","""145 St""A12","""135 St""A14",120
-"368","C","""135 St""A14","""125 St""A15",90
-"369","C","""125 St""A15","""116 St""A16",90
-"370","C","""116 St""A16","""Cathedral Pkwy (110 St)""A17",90
-"371","C","""Cathedral Pkwy (110 St)""A17","""103 St""A18",60
-"372","C","""103 St""A18","""96 St""A19",90
-"373","C","""96 St""A19","""86 St""A20",90
-"374","C","""86 St""A20","""81 St - Museum of Natural History""A21",90
-"375","C","""81 St - Museum of Natural History""A21","""72 St""A22",90
-"376","C","""72 St""A22","""59 St - Columbus Circle""A24",90
-"377","C","""59 St - Columbus Circle""A24","""50 St""A25",90
-"378","C","""50 St""A25","""42 St - Port Authority Bus Terminal""A27",120
-"379","C","""42 St - Port Authority Bus Terminal""A27","""34 St - Penn Station""A28",90
-"380","C","""34 St - Penn Station""A28","""23 St""A30",120
-"381","C","""23 St""A30","""14 St""A31",90
-"382","C","""14 St""A31","""W 4 St""A32",150
-"383","C","""W 4 St""A32","""Spring St""A33",90
-"384","C","""Spring St""A33","""Canal St""A34",90
-"385","C","""Canal St""A34","""Chambers St""A36",120
-"386","C","""Chambers St""A36","""Fulton St""A38",120
-"387","C","""Fulton St""A38","""High St""A40",180
-"388","C","""High St""A40","""Jay St - MetroTech""A41",120
-"389","C","""Jay St - MetroTech""A41","""Hoyt - Schermerhorn Sts""A42",90
-"390","C","""Hoyt - Schermerhorn Sts""A42","""Lafayette Av""A43",120
-"391","C","""Lafayette Av""A43","""Clinton - Washington Avs""A44",120
-"392","C","""Clinton - Washington Avs""A44","""Franklin Av""A45",90
-"393","C","""Franklin Av""A45","""Nostrand Av""A46",90
-"394","C","""Nostrand Av""A46","""Kingston - Throop Avs""A47",90
-"395","C","""Kingston - Throop Avs""A47","""Utica Av""A48",120
-"396","C","""Utica Av""A48","""Ralph Av""A49",120
-"397","C","""Ralph Av""A49","""Rockaway Av""A50",90
-"398","C","""Rockaway Av""A50","""Broadway Jct""A51",90
-"399","C","""Broadway Jct""A51","""Liberty Av""A52",120
-"400","C","""Liberty Av""A52","""Van Siclen Av""A53",90
-"401","C","""Van Siclen Av""A53","""Shepherd Av""A54",90
-"402","C","""Shepherd Av""A54","""Euclid Av""A55",90
-"404","D","""Coney Island - Stillwell Av""D43","""Bay 50 St""B23",240
-"405","D","""Bay 50 St""B23","""25 Av""B22",150
-"406","D","""25 Av""B22","""Bay Pkwy""B21",90
-"407","D","""Bay Pkwy""B21","""20 Av""B20",60
-"408","D","""20 Av""B20","""18 Av""B19",90
-"409","D","""18 Av""B19","""79 St""B18",90
-"410","D","""79 St""B18","""71 St""B17",90
-"411","D","""71 St""B17","""62 St""B16",120
-"412","D","""62 St""B16","""55 St""B15",120
-"413","D","""55 St""B15","""50 St""B14",90
-"414","D","""50 St""B14","""Fort Hamilton Pkwy""B13",90
-"415","D","""Fort Hamilton Pkwy""B13","""9 Av""B12",150
-"416","D","""9 Av""B12","""36 St""R36",240
-"417","D","""36 St""R36","""Atlantic Av - Barclays Ctr""R31",330
-"418","D","""Atlantic Av - Barclays Ctr""R31","""Grand St""D22",630
-"419","D","""Grand St""D22","""Broadway-Lafayette St""D21",120
-"420","D","""Broadway-Lafayette St""D21","""W 4 St""D20",120
-"421","D","""W 4 St""D20","""34 St - Herald Sq""D17",180
-"422","D","""34 St - Herald Sq""D17","""42 St - Bryant Pk""D16",90
-"423","D","""42 St - Bryant Pk""D16","""47-50 Sts - Rockefeller Ctr""D15",90
-"424","D","""47-50 Sts - Rockefeller Ctr""D15","""7 Av""D14",90
-"425","D","""7 Av""D14","""59 St - Columbus Circle""A24",120
-"426","D","""59 St - Columbus Circle""A24","""125 St""A15",480
-"427","D","""125 St""A15","""145 St""D13",270
-"428","D","""145 St""D13","""155 St""D12",150
-"429","D","""155 St""D12","""161 St - Yankee Stadium""D11",90
-"430","D","""161 St - Yankee Stadium""D11","""167 St""D10",150
-"431","D","""167 St""D10","""170 St""D09",120
-"432","D","""170 St""D09","""174-175 Sts""D08",120
-"433","D","""174-175 Sts""D08","""Tremont Av""D07",210
-"434","D","""Tremont Av""D07","""182-183 Sts""D06",210
-"435","D","""182-183 Sts""D06","""Fordham Rd""D05",90
-"436","D","""Fordham Rd""D05","""Kingsbridge Rd""D04",90
-"437","D","""Kingsbridge Rd""D04","""Bedford Park Blvd""D03",120
-"438","D","""Bedford Park Blvd""D03","""Norwood - 205 St""D01",150
-"440","E","""World Trade Center""E01","""Canal St""A34",120
-"441","E","""Canal St""A34","""Spring St""A33",90
-"442","E","""Spring St""A33","""W 4 St""A32",120
-"443","E","""W 4 St""A32","""14 St""A31",150
-"444","E","""14 St""A31","""23 St""A30",90
-"445","E","""23 St""A30","""34 St - Penn Station""A28",120
-"446","E","""34 St - Penn Station""A28","""42 St - Port Authority Bus Terminal""A27",90
-"447","E","""42 St - Port Authority Bus Terminal""A27","""50 St""A25",120
-"448","E","""50 St""A25","""7 Av""D14",90
-"449","E","""7 Av""D14","""5 Av/53 St""F12",90
-"450","E","""5 Av/53 St""F12","""Lexington Av/53 St""F11",90
-"451","E","""Lexington Av/53 St""F11","""Court Sq""F09",210
-"452","E","""Court Sq""F09","""Queens Plaza""G21",90
-"453","E","""Queens Plaza""G21","""Jackson Hts - Roosevelt Av""G14",330
-"454","E","""Jackson Hts - Roosevelt Av""G14","""Forest Hills - 71 Av""G08",420
-"455","E","""Forest Hills - 71 Av""G08","""Kew Gardens - Union Tpke""F06",150
-"456","E","""Kew Gardens - Union Tpke""F06","""Jamaica - Van Wyck""G07",180
-"457","E","""Jamaica - Van Wyck""G07","""Sutphin Blvd - Archer Av - JFK Airport""G06",150
-"458","E","""Sutphin Blvd - Archer Av - JFK Airport""G06","""Jamaica Center - Parsons/Archer""G05",120
-"460","F","""Coney Island - Stillwell Av""D43","""W 8 St - NY Aquarium""D42",90
-"461","F","""W 8 St - NY Aquarium""D42","""Neptune Av""F39",90
-"462","F","""Neptune Av""F39","""Avenue X""F38",120
-"463","F","""Avenue X""F38","""Avenue U""F36",120
-"464","F","""Avenue U""F36","""Kings Hwy""F35",120
-"465","F","""Kings Hwy""F35","""Avenue P""F34",90
-"466","F","""Avenue P""F34","""Avenue N""F33",90
-"467","F","""Avenue N""F33","""Bay Pkwy""F32",90
-"468","F","""Bay Pkwy""F32","""Avenue I""F31",60
-"469","F","""Avenue I""F31","""18 Av""F30",90
-"470","F","""18 Av""F30","""Ditmas Av""F29",90
-"471","F","""Ditmas Av""F29","""Church Av""F27",120
-"472","F","""Church Av""F27","""Fort Hamilton Pkwy""F26",90
-"473","F","""Fort Hamilton Pkwy""F26","""15 St - Prospect Park""F25",150
-"474","F","""15 St - Prospect Park""F25","""7 Av""F24",90
-"475","F","""7 Av""F24","""4 Av""F23",120
-"476","F","""4 Av""F23","""Smith - 9 Sts""F22",90
-"477","F","""Smith - 9 Sts""F22","""Carroll St""F21",120
-"478","F","""Carroll St""F21","""Bergen St""F20",90
-"479","F","""Bergen St""F20","""Jay St - MetroTech""A41",150
-"480","F","""Jay St - MetroTech""A41","""York St""F18",90
-"481","F","""York St""F18","""East Broadway""F16",180
-"482","F","""East Broadway""F16","""Delancey St""F15",90
-"483","F","""Delancey St""F15","""2 Av""F14",90
-"484","F","""2 Av""F14","""Broadway-Lafayette St""D21",90
-"485","F","""Broadway-Lafayette St""D21","""W 4 St""D20",150
-"486","F","""W 4 St""D20","""14 St""D19",90
-"487","F","""14 St""D19","""23 St""D18",90
-"488","F","""23 St""D18","""34 St - Herald Sq""D17",90
-"489","F","""34 St - Herald Sq""D17","""42 St - Bryant Pk""D16",90
-"490","F","""42 St - Bryant Pk""D16","""47-50 Sts - Rockefeller Ctr""D15",90
-"491","F","""47-50 Sts - Rockefeller Ctr""D15","""57 St""B10",90
-"492","F","""57 St""B10","""Lexington Av/63 St""B08",150
-"493","F","""Lexington Av/63 St""B08","""Roosevelt Island""B06",150
-"494","F","""Roosevelt Island""B06","""21 St - Queensbridge""B04",120
-"495","F","""21 St - Queensbridge""B04","""Jackson Hts - Roosevelt Av""G14",360
-"496","F","""Jackson Hts - Roosevelt Av""G14","""Forest Hills - 71 Av""G08",420
-"497","F","""Forest Hills - 71 Av""G08","""75 Av""F07",120
-"498","F","""75 Av""F07","""Kew Gardens - Union Tpke""F06",90
-"499","F","""Kew Gardens - Union Tpke""F06","""Briarwood - Van Wyck Blvd""F05",120
-"500","F","""Briarwood - Van Wyck Blvd""F05","""Sutphin Blvd""F04",90
-"501","F","""Sutphin Blvd""F04","""Parsons Blvd""F03",210
-"502","F","""Parsons Blvd""F03","""169 St""F02",390
-"503","F","""169 St""F02","""Jamaica - 179 St""F01",300
-"505","FS","""Prospect Park""D26","""Botanic Garden""S04",180
-"506","FS","""Botanic Garden""S04","""Park Pl""S03",120
-"507","FS","""Park Pl""S03","""Franklin Av""S01",120
-"509","GS","""Grand Central - 42 St""901","""Times Sq - 42 St""902",90
-"511","G","""Court Sq""G22","""21 St""G24",60
-"512","G","""21 St""G24","""Greenpoint Av""G26",150
-"513","G","""Greenpoint Av""G26","""Nassau Av""G28",90
-"514","G","""Nassau Av""G28","""Metropolitan Av""G29",180
-"515","G","""Metropolitan Av""G29","""Broadway""G30",90
-"516","G","""Broadway""G30","""Flushing Av""G31",60
-"517","G","""Flushing Av""G31","""Myrtle - Willoughby Avs""G32",90
-"518","G","""Myrtle - Willoughby Avs""G32","""Bedford - Nostrand Avs""G33",90
-"519","G","""Bedford - Nostrand Avs""G33","""Classon Av""G34",60
-"520","G","""Classon Av""G34","""Clinton - Washington Avs""G35",90
-"521","G","""Clinton - Washington Avs""G35","""Fulton St""G36",90
-"522","G","""Fulton St""G36","""Hoyt - Schermerhorn Sts""A42",90
-"523","G","""Hoyt - Schermerhorn Sts""A42","""Bergen St""F20",90
-"524","G","""Bergen St""F20","""Carroll St""F21",90
-"525","G","""Carroll St""F21","""Smith - 9 Sts""F22",90
-"526","G","""Smith - 9 Sts""F22","""4 Av""F23",90
-"527","G","""4 Av""F23","""7 Av""F24",90
-"528","G","""7 Av""F24","""15 St - Prospect Park""F25",90
-"529","G","""15 St - Prospect Park""F25","""Fort Hamilton Pkwy""F26",150
-"530","G","""Fort Hamilton Pkwy""F26","""Church Av""F27",90
-"532","H","""Rockaway Park - Beach 116 St""H15","""Beach 105 St""H14",120
-"533","H","""Beach 105 St""H14","""Beach 98 St""H13",120
-"534","H","""Beach 98 St""H13","""Beach 90 St""H12",90
-"535","H","""Beach 90 St""H12","""Broad Channel""H04",360
-"537","J","""Broad St""M23","""Fulton St""M22",90
-"538","J","""Fulton St""M22","""Chambers St""M21",90
-"539","J","""Chambers St""M21","""Canal St""M20",120
-"540","J","""Canal St""M20","""Bowery""M19",120
-"541","J","""Bowery""M19","""Essex St""M18",120
-"542","J","""Essex St""M18","""Marcy Av""M16",450
-"543","J","""Marcy Av""M16","""Hewes St""M14",60
-"544","J","""Hewes St""M14","""Lorimer St""M13",90
-"545","J","""Lorimer St""M13","""Flushing Av""M12",90
-"546","J","""Flushing Av""M12","""Myrtle Av""M11",60
-"547","J","""Myrtle Av""M11","""Kosciuszko St""J31",90
-"548","J","""Kosciuszko St""J31","""Gates Av""J30",90
-"549","J","""Gates Av""J30","""Halsey St""J29",90
-"550","J","""Halsey St""J29","""Chauncey St""J28",90
-"551","J","""Chauncey St""J28","""Broadway Jct""J27",90
-"552","J","""Broadway Jct""J27","""Alabama Av""J24",120
-"553","J","""Alabama Av""J24","""Van Siclen Av""J23",90
-"554","J","""Van Siclen Av""J23","""Cleveland St""J22",90
-"555","J","""Cleveland St""J22","""Norwood Av""J21",60
-"556","J","""Norwood Av""J21","""Crescent St""J20",120
-"557","J","""Crescent St""J20","""Cypress Hills""J19",120
-"558","J","""Cypress Hills""J19","""75 St""J17",60
-"559","J","""75 St""J17","""85 St - Forest Pkwy""J16",90
-"560","J","""85 St - Forest Pkwy""J16","""Woodhaven Blvd""J15",120
-"561","J","""Woodhaven Blvd""J15","""104 St""J14",90
-"562","J","""104 St""J14","""111 St""J13",120
-"563","J","""111 St""J13","""121 St""J12",90
-"564","J","""121 St""J12","""Sutphin Blvd - Archer Av - JFK Airport""G06",240
-"565","J","""Sutphin Blvd - Archer Av - JFK Airport""G06","""Jamaica Center - Parsons/Archer""G05",60
-"567","L","""Canarsie - Rockaway Pkwy""L29","""E 105 St""L28",120
-"568","L","""E 105 St""L28","""New Lots Av""L27",120
-"569","L","""New Lots Av""L27","""Livonia Av""L26",90
-"570","L","""Livonia Av""L26","""Sutter Av""L25",90
-"571","L","""Sutter Av""L25","""Atlantic Av""L24",90
-"572","L","""Atlantic Av""L24","""Broadway Jct""L22",90
-"573","L","""Broadway Jct""L22","""Bushwick Av - Aberdeen St""L21",60
-"574","L","""Bushwick Av - Aberdeen St""L21","""Wilson Av""L20",90
-"575","L","""Wilson Av""L20","""Halsey St""L19",150
-"576","L","""Halsey St""L19","""Myrtle - Wyckoff Avs""L17",90
-"577","L","""Myrtle - Wyckoff Avs""L17","""DeKalb Av""L16",120
-"578","L","""DeKalb Av""L16","""Jefferson St""L15",60
-"579","L","""Jefferson St""L15","""Morgan Av""L14",150
-"580","L","""Morgan Av""L14","""Montrose Av""L13",120
-"581","L","""Montrose Av""L13","""Grand St""L12",60
-"582","L","""Grand St""L12","""Graham Av""L11",60
-"583","L","""Graham Av""L11","""Lorimer St""L10",90
-"584","L","""Lorimer St""L10","""Bedford Av""L08",120
-"585","L","""Bedford Av""L08","""1 Av""L06",240
-"586","L","""1 Av""L06","""3 Av""L05",60
-"587","L","""3 Av""L05","""Union Sq - 14 St""L03",90
-"588","L","""Union Sq - 14 St""L03","""6 Av""L02",90
-"589","L","""6 Av""L02","""8 Av""L01",60
-"590","L","""8 Av""L01","""6 Av""L02",90
-"591","L","""6 Av""L02","""8 Av""L01",60
-"593","L","""8 Av""L01","""6 Av""L02",90
-"594","L","""6 Av""L02","""Union Sq - 14 St""L03",120
-"595","L","""Union Sq - 14 St""L03","""3 Av""L05",60
-"596","L","""3 Av""L05","""1 Av""L06",60
-"597","L","""1 Av""L06","""Bedford Av""L08",240
-"598","M","""Bedford Av""L08","""Central Av""M10",240
-"599","M","""Central Av""M10","""Knickerbocker Av""M09",90
-"600","M","""Knickerbocker Av""M09","""Myrtle - Wyckoff Avs""M08",120
-"601","M","""Myrtle - Wyckoff Avs""M08","""Seneca Av""M06",90
-"602","M","""Seneca Av""M06","""Forest Av""M05",60
-"603","M","""Forest Av""M05","""Fresh Pond Rd""M04",90
-"604","M","""Fresh Pond Rd""M04","""Middle Village - Metropolitan Av""M01",120
-"605","M","""Middle Village - Metropolitan Av""M01","""14 St""D19",90
-"606","M","""14 St""D19","""23 St""D18",90
-"607","M","""23 St""D18","""34 St - Herald Sq""D17",120
-"608","M","""34 St - Herald Sq""D17","""42 St - Bryant Pk""D16",90
-"609","M","""42 St - Bryant Pk""D16","""47-50 Sts - Rockefeller Ctr""D15",120
-"610","M","""47-50 Sts - Rockefeller Ctr""D15","""5 Av/53 St""F12",120
-"611","M","""5 Av/53 St""F12","""Lexington Av/53 St""F11",120
-"612","M","""Lexington Av/53 St""F11","""Court Sq""F09",210
-"613","M","""Court Sq""F09","""Queens Plaza""G21",90
-"614","M","""Queens Plaza""G21","""36 St""G20",120
-"615","M","""36 St""G20","""Steinway St""G19",120
-"616","M","""Steinway St""G19","""46 St""G18",90
-"617","M","""46 St""G18","""Northern Blvd""G16",90
-"618","M","""Northern Blvd""G16","""65 St""G15",60
-"619","M","""65 St""G15","""Jackson Hts - Roosevelt Av""G14",90
-"620","M","""Jackson Hts - Roosevelt Av""G14","""Elmhurst Av""G13",90
-"621","M","""Elmhurst Av""G13","""Grand Av - Newtown""G12",90
-"622","M","""Grand Av - Newtown""G12","""Woodhaven Blvd""G11",120
-"623","M","""Woodhaven Blvd""G11","""63 Dr - Rego Park""G10",60
-"624","M","""63 Dr - Rego Park""G10","""67 Av""G09",120
-"625","M","""67 Av""G09","""Forest Hills - 71 Av""G08",90
-"627","N","""Astoria - Ditmars Blvd""R01","""Astoria Blvd""R03",90
-"628","N","""Astoria Blvd""R03","""30 Av""R04",60
-"629","N","""30 Av""R04","""Broadway""R05",90
-"630","N","""Broadway""R05","""36 Av""R06",120
-"631","N","""36 Av""R06","""39 Av""R08",60
-"632","N","""39 Av""R08","""Queensboro Plaza""R09",150
-"633","N","""Queensboro Plaza""R09","""Lexington Av/59 St""R11",300
-"634","N","""Lexington Av/59 St""R11","""5 Av/59 St""R13",90
-"635","N","""5 Av/59 St""R13","""57 St - 7 Av""R14",150
-"636","N","""57 St - 7 Av""R14","""49 St""R15",90
-"637","N","""49 St""R15","""Times Sq - 42 St""R16",90
-"638","N","""Times Sq - 42 St""R16","""34 St - Herald Sq""R17",90
-"639","N","""34 St - Herald Sq""R17","""28 St""R18",60
-"640","N","""28 St""R18","""23 St""R19",90
-"641","N","""23 St""R19","""14 St - Union Sq""R20",90
-"642","N","""14 St - Union Sq""R20","""8 St - NYU""R21",120
-"643","N","""8 St - NYU""R21","""Prince St""R22",120
-"644","N","""Prince St""R22","""Canal St""Q01",120
-"645","N","""Canal St""Q01","""Atlantic Av - Barclays Ctr""R31",750
-"646","N","""Atlantic Av - Barclays Ctr""R31","""36 St""R36",330
-"647","N","""36 St""R36","""59 St""R41",210
-"648","N","""59 St""R41","""8 Av""N02",180
-"649","N","""8 Av""N02","""Fort Hamilton Pkwy""N03",90
-"650","N","""Fort Hamilton Pkwy""N03","""New Utrecht Av""N04",120
-"651","N","""New Utrecht Av""N04","""18 Av""N05",90
-"652","N","""18 Av""N05","""20 Av""N06",90
-"653","N","""20 Av""N06","""Bay Pkwy""N07",90
-"654","N","""Bay Pkwy""N07","""Kings Hwy""N08",120
-"655","N","""Kings Hwy""N08","""Avenue U""N09",120
-"656","N","""Avenue U""N09","""86 St""N10",240
-"657","N","""86 St""N10","""Coney Island - Stillwell Av""D43",420
-"659","Q","""Astoria - Ditmars Blvd""R01","""Astoria Blvd""R03",90
-"660","Q","""Astoria Blvd""R03","""30 Av""R04",60
-"661","Q","""30 Av""R04","""Broadway""R05",90
-"662","Q","""Broadway""R05","""36 Av""R06",120
-"663","Q","""36 Av""R06","""39 Av""R08",60
-"664","Q","""39 Av""R08","""Queensboro Plaza""R09",210
-"665","Q","""Queensboro Plaza""R09","""Lexington Av/59 St""R11",360
-"666","Q","""Lexington Av/59 St""R11","""5 Av/59 St""R13",90
-"667","Q","""5 Av/59 St""R13","""57 St - 7 Av""R14",150
-"668","Q","""57 St - 7 Av""R14","""49 St""R15",90
-"669","Q","""49 St""R15","""Times Sq - 42 St""R16",90
-"670","Q","""Times Sq - 42 St""R16","""34 St - Herald Sq""R17",210
-"671","Q","""34 St - Herald Sq""R17","""14 St - Union Sq""R20",300
-"672","Q","""14 St - Union Sq""R20","""Canal St""Q01",240
-"673","Q","""Canal St""Q01","""DeKalb Av""R30",480
-"674","Q","""DeKalb Av""R30","""Atlantic Av - Barclays Ctr""D24",90
-"675","Q","""Atlantic Av - Barclays Ctr""D24","""7 Av""D25",150
-"676","Q","""7 Av""D25","""Prospect Park""D26",240
-"677","Q","""Prospect Park""D26","""Parkside Av""D27",90
-"678","Q","""Parkside Av""D27","""Church Av""D28",90
-"679","Q","""Church Av""D28","""Beverley Rd""D29",90
-"680","Q","""Beverley Rd""D29","""Cortelyou Rd""D30",60
-"681","Q","""Cortelyou Rd""D30","""Newkirk Plaza""D31",90
-"682","Q","""Newkirk Plaza""D31","""Avenue H""D32",60
-"683","Q","""Avenue H""D32","""Avenue J""D33",90
-"684","Q","""Avenue J""D33","""Avenue M""D34",90
-"685","Q","""Avenue M""D34","""Kings Hwy""D35",150
-"686","Q","""Kings Hwy""D35","""Avenue U""D37",150
-"687","Q","""Avenue U""D37","""Neck Rd""D38",60
-"688","Q","""Neck Rd""D38","""Sheepshead Bay""D39",150
-"689","Q","""Sheepshead Bay""D39","""Brighton Beach""D40",120
-"690","Q","""Brighton Beach""D40","""Ocean Pkwy""D41",120
-"691","Q","""Ocean Pkwy""D41","""W 8 St - NY Aquarium""D42",120
-"692","Q","""W 8 St - NY Aquarium""D42","""Coney Island - Stillwell Av""D43",90
-"694","R","""Forest Hills - 71 Av""G08","""67 Av""G09",90
-"695","R","""67 Av""G09","""63 Dr - Rego Park""G10",120
-"696","R","""63 Dr - Rego Park""G10","""Woodhaven Blvd""G11",60
-"697","R","""Woodhaven Blvd""G11","""Grand Av - Newtown""G12",120
-"698","R","""Grand Av - Newtown""G12","""Elmhurst Av""G13",90
-"699","R","""Elmhurst Av""G13","""Jackson Hts - Roosevelt Av""G14",90
-"700","R","""Jackson Hts - Roosevelt Av""G14","""65 St""G15",90
-"701","R","""65 St""G15","""Northern Blvd""G16",90
-"702","R","""Northern Blvd""G16","""46 St""G18",90
-"703","R","""46 St""G18","""Steinway St""G19",90
-"704","R","""Steinway St""G19","""36 St""G20",120
-"705","R","""36 St""G20","""Queens Plaza""G21",120
-"706","R","""Queens Plaza""G21","""Lexington Av/59 St""R11",330
-"707","R","""Lexington Av/59 St""R11","""5 Av/59 St""R13",90
-"708","R","""5 Av/59 St""R13","""57 St - 7 Av""R14",150
-"709","R","""57 St - 7 Av""R14","""49 St""R15",90
-"710","R","""49 St""R15","""Times Sq - 42 St""R16",90
-"711","R","""Times Sq - 42 St""R16","""34 St - Herald Sq""R17",90
-"712","R","""34 St - Herald Sq""R17","""28 St""R18",60
-"713","R","""28 St""R18","""23 St""R19",90
-"714","R","""23 St""R19","""14 St - Union Sq""R20",90
-"715","R","""14 St - Union Sq""R20","""8 St - NYU""R21",90
-"716","R","""8 St - NYU""R21","""Prince St""R22",150
-"717","R","""Prince St""R22","""Canal St""R23",90
-"718","R","""Canal St""R23","""City Hall""R24",150
-"719","R","""City Hall""R24","""Cortlandt St""R25",120
-"720","R","""Cortlandt St""R25","""Rector St""R26",90
-"721","R","""Rector St""R26","""Whitehall St""R27",120
-"722","R","""Whitehall St""R27","""Court St""R28",210
-"723","R","""Court St""R28","""Jay St - MetroTech""R29",120
-"724","R","""Jay St - MetroTech""R29","""DeKalb Av""R30",180
-"725","R","""DeKalb Av""R30","""Atlantic Av - Barclays Ctr""R31",240
-"726","R","""Atlantic Av - Barclays Ctr""R31","""Union St""R32",120
-"727","R","""Union St""R32","""9 St""R33",90
-"728","R","""9 St""R33","""Prospect Av""R34",120
-"729","R","""Prospect Av""R34","""25 St""R35",90
-"730","R","""25 St""R35","""36 St""R36",90
-"731","R","""36 St""R36","""45 St""R39",120
-"732","R","""45 St""R39","""53 St""R40",90
-"733","R","""53 St""R40","""59 St""R41",90
-"734","R","""59 St""R41","""Bay Ridge Av""R42",120
-"735","R","""Bay Ridge Av""R42","""77 St""R43",90
-"736","R","""77 St""R43","""86 St""R44",120
-"737","R","""86 St""R44","""Bay Ridge - 95 St""R45",120
-"739","SI","""Tottenville""S09","""Atlantic""S10",120
-"740","SI","""Atlantic""S10","""Nassau""S12",60
-"741","SI","""Nassau""S12","""Richmond Valley""S13",120
-"742","SI","""Richmond Valley""S13","""Pleasant Plains""S14",120
-"743","SI","""Pleasant Plains""S14","""Prince's Bay""S15",120
-"744","SI","""Prince's Bay""S15","""Huguenot""S16",120
-"745","SI","""Huguenot""S16","""Annadale""S17",120
-"746","SI","""Annadale""S17","""Eltingville""S18",120
-"747","SI","""Eltingville""S18","""Great Kills""S19",120
-"748","SI","""Great Kills""S19","""Bay Terrace""S20",120
-"749","SI","""Bay Terrace""S20","""Oakwood Heights""S21",120
-"750","SI","""Oakwood Heights""S21","""New Dorp""S22",120
-"751","SI","""New Dorp""S22","""Grant City""S23",120
-"752","SI","""Grant City""S23","""Jefferson Av""S24",60
-"753","SI","""Jefferson Av""S24","""Dongan Hills""S25",120
-"754","SI","""Dongan Hills""S25","""Old Town""S26",120
-"755","SI","""Old Town""S26","""Grasmere""S27",120
-"756","SI","""Grasmere""S27","""Clifton""S28",180
-"757","SI","""Clifton""S28","""Stapleton""S29",120
-"758","SI","""Stapleton""S29","""Tompkinsville""S30",120
-"759","SI","""Tompkinsville""S30","""St George""S31",180
-"761","Z","""Broad St""M23","""Fulton St""M22",120
-"762","Z","""Fulton St""M22","""Chambers St""M21",120
-"763","Z","""Chambers St""M21","""Canal St""M20",120
-"764","Z","""Canal St""M20","""Bowery""M19",150
-"765","Z","""Bowery""M19","""Essex St""M18",120
-"766","Z","""Essex St""M18","""Marcy Av""M16",450
-"767","Z","""Marcy Av""M16","""Myrtle Av""M11",240
-"768","Z","""Myrtle Av""M11","""Gates Av""J30",180
-"769","Z","""Gates Av""J30","""Chauncey St""J28",150
-"770","Z","""Chauncey St""J28","""Broadway Jct""J27",60
-"771","Z","""Broadway Jct""J27","""Alabama Av""J24",90
-"772","Z","""Alabama Av""J24","""Van Siclen Av""J23",60
-"773","Z","""Van Siclen Av""J23","""Norwood Av""J21",150
-"774","Z","""Norwood Av""J21","""Crescent St""J20",90
-"775","Z","""Crescent St""J20","""75 St""J17",150
-"776","Z","""75 St""J17","""Woodhaven Blvd""J15",180
-"777","Z","""Woodhaven Blvd""J15","""104 St""J14",90
-"778","Z","""104 St""J14","""121 St""J12",180
-"779","Z","""121 St""J12","""Sutphin Blvd - Archer Av - JFK Airport""G06",240
-"780","Z","""Sutphin Blvd - Archer Av - JFK Airport""G06","""Jamaica Center - Parsons/Archer""G05",60
+"","Train","FromStation","FromStationID","ToStation","ToStationID","TravelTime"
+"2","1","""Van Cortlandt Park - 242 St""101","101","""238 St""103","103",90
+"3","1","""238 St""103","103","""231 St""104","104",90
+"4","1","""231 St""104","104","""Marble Hill - 225 St""106","106",90
+"5","1","""Marble Hill - 225 St""106","106","""215 St""107","107",90
+"6","1","""215 St""107","107","""207 St""108","108",60
+"7","1","""207 St""108","108","""Dyckman St""109","109",90
+"8","1","""Dyckman St""109","109","""191 St""110","110",90
+"9","1","""191 St""110","110","""181 St""111","111",90
+"10","1","""181 St""111","111","""168 St - Washington Hts""112","112",120
+"11","1","""168 St - Washington Hts""112","112","""157 St""113","113",90
+"12","1","""157 St""113","113","""145 St""114","114",120
+"13","1","""145 St""114","114","""137 St - City College""115","115",90
+"14","1","""137 St - City College""115","115","""125 St""116","116",90
+"15","1","""125 St""116","116","""116 St - Columbia University""117","117",150
+"16","1","""116 St - Columbia University""117","117","""Cathedral Pkwy""118","118",60
+"17","1","""Cathedral Pkwy""118","118","""103 St""119","119",60
+"18","1","""103 St""119","119","""96 St""120","120",120
+"19","1","""96 St""120","120","""86 St""121","121",120
+"20","1","""86 St""121","121","""79 St""122","122",60
+"21","1","""79 St""122","122","""72 St""123","123",90
+"22","1","""72 St""123","123","""66 St - Lincoln Center""124","124",90
+"23","1","""66 St - Lincoln Center""124","124","""59 St - Columbus Circle""125","125",90
+"24","1","""59 St - Columbus Circle""125","125","""50 St""126","126",120
+"25","1","""50 St""126","126","""Times Sq - 42 St""127","127",90
+"26","1","""Times Sq - 42 St""127","127","""34 St - Penn Station""128","128",90
+"27","1","""34 St - Penn Station""128","128","""28 St""129","129",90
+"28","1","""28 St""129","129","""23 St""130","130",60
+"29","1","""23 St""130","130","""18 St""131","131",60
+"30","1","""18 St""131","131","""14 St""132","132",60
+"31","1","""14 St""132","132","""Christopher St - Sheridan Sq""133","133",90
+"32","1","""Christopher St - Sheridan Sq""133","133","""Houston St""134","134",90
+"33","1","""Houston St""134","134","""Canal St""135","135",90
+"34","1","""Canal St""135","135","""Franklin St""136","136",60
+"35","1","""Franklin St""136","136","""Chambers St""137","137",210
+"36","1","""Chambers St""137","137","""Cortlandt St""138","138",210
+"37","1","""Cortlandt St""138","138","""Rector St""139","139",150
+"38","1","""Rector St""139","139","""South Ferry Loop""140","140",210
+"40","2","""Wakefield - 241 St""201","201","""Nereid Av""204","204",90
+"41","2","""Nereid Av""204","204","""233 St""205","205",90
+"42","2","""233 St""205","205","""225 St""206","206",90
+"43","2","""225 St""206","206","""219 St""207","207",60
+"44","2","""219 St""207","207","""Gun Hill Rd""208","208",90
+"45","2","""Gun Hill Rd""208","208","""Burke Av""209","209",90
+"46","2","""Burke Av""209","209","""Allerton Av""210","210",90
+"47","2","""Allerton Av""210","210","""Pelham Pkwy""211","211",120
+"48","2","""Pelham Pkwy""211","211","""Bronx Park East""212","212",120
+"49","2","""Bronx Park East""212","212","""E 180 St""213","213",120
+"50","2","""E 180 St""213","213","""West Farms Sq - E Tremont Av""214","214",90
+"51","2","""West Farms Sq - E Tremont Av""214","214","""174 St""215","215",120
+"52","2","""174 St""215","215","""Freeman St""216","216",150
+"53","2","""Freeman St""216","216","""Simpson St""217","217",90
+"54","2","""Simpson St""217","217","""Intervale Av""218","218",60
+"55","2","""Intervale Av""218","218","""Prospect Av""219","219",90
+"56","2","""Prospect Av""219","219","""Jackson Av""220","220",90
+"57","2","""Jackson Av""220","220","""3 Av - 149 St""221","221",150
+"58","2","""3 Av - 149 St""221","221","""149 St - Grand Concourse""222","222",120
+"59","2","""149 St - Grand Concourse""222","222","""135 St""224","224",210
+"60","2","""135 St""224","224","""125 St""225","225",120
+"61","2","""125 St""225","225","""116 St""226","226",90
+"62","2","""116 St""226","226","""Central Park North (110 St)""227","227",60
+"63","2","""Central Park North (110 St)""227","227","""96 St""120","120",270
+"64","2","""96 St""120","120","""72 St""123","123",180
+"65","2","""72 St""123","123","""Times Sq - 42 St""127","127",270
+"66","2","""Times Sq - 42 St""127","127","""34 St - Penn Station""128","128",60
+"67","2","""34 St - Penn Station""128","128","""14 St""132","132",210
+"68","2","""14 St""132","132","""Chambers St""137","137",300
+"69","2","""Chambers St""137","137","""Park Pl""228","228",90
+"70","2","""Park Pl""228","228","""Fulton St""229","229",120
+"71","2","""Fulton St""229","229","""Wall St""230","230",90
+"72","2","""Wall St""230","230","""Clark St""231","231",270
+"73","2","""Clark St""231","231","""Borough Hall""232","232",90
+"74","2","""Borough Hall""232","232","""Hoyt St""233","233",90
+"75","2","""Hoyt St""233","233","""Nevins St""234","234",60
+"76","2","""Nevins St""234","234","""Atlantic Av - Barclays Ctr""235","235",90
+"77","2","""Atlantic Av - Barclays Ctr""235","235","""Bergen St""236","236",60
+"78","2","""Bergen St""236","236","""Grand Army Plaza""237","237",120
+"79","2","""Grand Army Plaza""237","237","""Eastern Pkwy - Brooklyn Museum""238","238",120
+"80","2","""Eastern Pkwy - Brooklyn Museum""238","238","""Franklin Av""239","239",90
+"81","2","""Franklin Av""239","239","""Nostrand Av""248","248",150
+"82","2","""Nostrand Av""248","248","""Kingston Av""249","249",90
+"83","2","""Kingston Av""249","249","""Crown Hts - Utica Av""250","250",120
+"84","2","""Crown Hts - Utica Av""250","250","""Sutter Av - Rutland Rd""251","251",180
+"85","2","""Sutter Av - Rutland Rd""251","251","""Saratoga Av""252","252",90
+"86","2","""Saratoga Av""252","252","""Rockaway Av""253","253",120
+"87","2","""Rockaway Av""253","253","""Junius St""254","254",60
+"88","2","""Junius St""254","254","""Pennsylvania Av""255","255",120
+"89","2","""Pennsylvania Av""255","255","""Van Siclen Av""256","256",60
+"90","2","""Van Siclen Av""256","256","""New Lots Av""257","257",90
+"92","3","""Harlem - 148 St""301","301","""145 St""302","302",120
+"93","3","""145 St""302","302","""135 St""224","224",120
+"94","3","""135 St""224","224","""125 St""225","225",120
+"95","3","""125 St""225","225","""116 St""226","226",90
+"96","3","""116 St""226","226","""Central Park North (110 St)""227","227",60
+"97","3","""Central Park North (110 St)""227","227","""96 St""120","120",270
+"98","3","""96 St""120","120","""72 St""123","123",180
+"99","3","""72 St""123","123","""Times Sq - 42 St""127","127",270
+"100","3","""Times Sq - 42 St""127","127","""34 St - Penn Station""128","128",60
+"101","3","""34 St - Penn Station""128","128","""14 St""132","132",180
+"102","3","""14 St""132","132","""Chambers St""137","137",270
+"103","3","""Chambers St""137","137","""Park Pl""228","228",90
+"104","3","""Park Pl""228","228","""Fulton St""229","229",120
+"105","3","""Fulton St""229","229","""Wall St""230","230",90
+"106","3","""Wall St""230","230","""Clark St""231","231",270
+"107","3","""Clark St""231","231","""Borough Hall""232","232",90
+"108","3","""Borough Hall""232","232","""Hoyt St""233","233",90
+"109","3","""Hoyt St""233","233","""Nevins St""234","234",60
+"110","3","""Nevins St""234","234","""Atlantic Av - Barclays Ctr""235","235",90
+"111","3","""Atlantic Av - Barclays Ctr""235","235","""Bergen St""236","236",60
+"112","3","""Bergen St""236","236","""Grand Army Plaza""237","237",120
+"113","3","""Grand Army Plaza""237","237","""Eastern Pkwy - Brooklyn Museum""238","238",120
+"114","3","""Eastern Pkwy - Brooklyn Museum""238","238","""Franklin Av""239","239",150
+"115","3","""Franklin Av""239","239","""Nostrand Av""248","248",150
+"116","3","""Nostrand Av""248","248","""Kingston Av""249","249",90
+"117","3","""Kingston Av""249","249","""Crown Hts - Utica Av""250","250",330
+"118","3","""Crown Hts - Utica Av""250","250","""Sutter Av - Rutland Rd""251","251",390
+"119","3","""Sutter Av - Rutland Rd""251","251","""Saratoga Av""252","252",90
+"120","3","""Saratoga Av""252","252","""Rockaway Av""253","253",120
+"121","3","""Rockaway Av""253","253","""Junius St""254","254",60
+"122","3","""Junius St""254","254","""Pennsylvania Av""255","255",120
+"123","3","""Pennsylvania Av""255","255","""Van Siclen Av""256","256",60
+"124","3","""Van Siclen Av""256","256","""New Lots Av""257","257",90
+"126","4","""Woodlawn""401","401","""Mosholu Pkwy""402","402",120
+"127","4","""Mosholu Pkwy""402","402","""Bedford Park Blvd - Lehman College""405","405",120
+"128","4","""Bedford Park Blvd - Lehman College""405","405","""Kingsbridge Rd""406","406",120
+"129","4","""Kingsbridge Rd""406","406","""Fordham Rd""407","407",90
+"130","4","""Fordham Rd""407","407","""183 St""408","408",60
+"131","4","""183 St""408","408","""Burnside Av""409","409",90
+"132","4","""Burnside Av""409","409","""176 St""410","410",90
+"133","4","""176 St""410","410","""Mt Eden Av""411","411",90
+"134","4","""Mt Eden Av""411","411","""170 St""412","412",90
+"135","4","""170 St""412","412","""167 St""413","413",90
+"136","4","""167 St""413","413","""161 St - Yankee Stadium""414","414",150
+"137","4","""161 St - Yankee Stadium""414","414","""149 St - Grand Concourse""415","415",180
+"138","4","""149 St - Grand Concourse""415","415","""138 St - Grand Concourse""416","416",120
+"139","4","""138 St - Grand Concourse""416","416","""125 St""621","621",180
+"140","4","""125 St""621","621","""86 St""626","626",270
+"141","4","""86 St""626","626","""59 St""629","629",240
+"142","4","""59 St""629","629","""Grand Central - 42 St""631","631",180
+"143","4","""Grand Central - 42 St""631","631","""14 St - Union Sq""635","635",270
+"144","4","""14 St - Union Sq""635","635","""Brooklyn Bridge - City Hall""640","640",330
+"145","4","""Brooklyn Bridge - City Hall""640","640","""Fulton St""418","418",120
+"146","4","""Fulton St""418","418","""Wall St""419","419",60
+"147","4","""Wall St""419","419","""Bowling Green""420","420",90
+"148","4","""Bowling Green""420","420","""Borough Hall""423","423",330
+"149","4","""Borough Hall""423","423","""Nevins St""234","234",120
+"150","4","""Nevins St""234","234","""Atlantic Av - Barclays Ctr""235","235",90
+"151","4","""Atlantic Av - Barclays Ctr""235","235","""Franklin Av""239","239",240
+"152","4","""Franklin Av""239","239","""Crown Hts - Utica Av""250","250",210
+"153","4","""Crown Hts - Utica Av""250","250","""Sutter Av - Rutland Rd""251","251",180
+"154","4","""Sutter Av - Rutland Rd""251","251","""Saratoga Av""252","252",90
+"155","4","""Saratoga Av""252","252","""Rockaway Av""253","253",120
+"156","4","""Rockaway Av""253","253","""Junius St""254","254",60
+"157","4","""Junius St""254","254","""Pennsylvania Av""255","255",120
+"158","4","""Pennsylvania Av""255","255","""Van Siclen Av""256","256",60
+"159","4","""Van Siclen Av""256","256","""New Lots Av""257","257",90
+"161","5","""Crown Hts - Utica Av""250","250","""Franklin Av""239","239",210
+"162","5","""Franklin Av""239","239","""Atlantic Av - Barclays Ctr""235","235",300
+"163","5","""Atlantic Av - Barclays Ctr""235","235","""Nevins St""234","234",90
+"164","5","""Nevins St""234","234","""Borough Hall""423","423",120
+"165","5","""Borough Hall""423","423","""Bowling Green""420","420",360
+"166","5","""Bowling Green""420","420","""Wall St""419","419",90
+"167","5","""Wall St""419","419","""Fulton St""418","418",90
+"168","5","""Fulton St""418","418","""Brooklyn Bridge - City Hall""640","640",120
+"169","5","""Brooklyn Bridge - City Hall""640","640","""14 St - Union Sq""635","635",330
+"170","5","""14 St - Union Sq""635","635","""Grand Central - 42 St""631","631",270
+"171","5","""Grand Central - 42 St""631","631","""59 St""629","629",150
+"172","5","""59 St""629","629","""86 St""626","626",210
+"173","5","""86 St""626","626","""125 St""621","621",330
+"174","5","""125 St""621","621","""138 St - Grand Concourse""416","416",150
+"175","5","""138 St - Grand Concourse""416","416","""149 St - Grand Concourse""222","222",150
+"176","5","""149 St - Grand Concourse""222","222","""3 Av - 149 St""221","221",90
+"177","5","""3 Av - 149 St""221","221","""E 180 St""213","213",630
+"178","5","""E 180 St""213","213","""174 St""215","215",120
+"179","5","""174 St""215","215","""West Farms Sq - E Tremont Av""214","214",120
+"180","5","""West Farms Sq - E Tremont Av""214","214","""E 180 St""213","213",90
+"181","5","""E 180 St""213","213","""Morris Park""505","505",210
+"182","5","""Morris Park""505","505","""Pelham Pkwy""504","504",60
+"183","5","""Pelham Pkwy""504","504","""Gun Hill Rd""503","503",180
+"184","5","""Gun Hill Rd""503","503","""Baychester Av""502","502",120
+"185","5","""Baychester Av""502","502","""Eastchester - Dyre Av""501","501",150
+"187","6","""Brooklyn Bridge - City Hall""640","640","""Canal St""639","639",120
+"188","6","""Canal St""639","639","""Spring St""638","638",90
+"189","6","""Spring St""638","638","""Bleecker St""637","637",60
+"190","6","""Bleecker St""637","637","""Astor Pl""636","636",90
+"191","6","""Astor Pl""636","636","""14 St - Union Sq""635","635",90
+"192","6","""14 St - Union Sq""635","635","""23 St""634","634",120
+"193","6","""23 St""634","634","""28 St""633","633",60
+"194","6","""28 St""633","633","""33 St""632","632",60
+"195","6","""33 St""632","632","""Grand Central - 42 St""631","631",120
+"196","6","""Grand Central - 42 St""631","631","""51 St""630","630",120
+"197","6","""51 St""630","630","""59 St""629","629",90
+"198","6","""59 St""629","629","""68 St - Hunter College""628","628",90
+"199","6","""68 St - Hunter College""628","628","""77 St""627","627",120
+"200","6","""77 St""627","627","""86 St""626","626",90
+"201","6","""86 St""626","626","""96 St""625","625",120
+"202","6","""96 St""625","625","""103 St""624","624",90
+"203","6","""103 St""624","624","""110 St""623","623",60
+"204","6","""110 St""623","623","""116 St""622","622",90
+"205","6","""116 St""622","622","""125 St""621","621",90
+"206","6","""125 St""621","621","""3 Av - 138 St""619","619",180
+"207","6","""3 Av - 138 St""619","619","""Brook Av""618","618",90
+"208","6","""Brook Av""618","618","""Cypress Av""617","617",60
+"209","6","""Cypress Av""617","617","""E 143 St - St Mary's St""616","616",120
+"210","6","""E 143 St - St Mary's St""616","616","""E 149 St""615","615",90
+"211","6","""E 149 St""615","615","""Longwood Av""614","614",90
+"212","6","""Longwood Av""614","614","""Hunts Point Av""613","613",120
+"213","6","""Hunts Point Av""613","613","""Whitlock Av""612","612",120
+"214","6","""Whitlock Av""612","612","""Elder Av""611","611",90
+"215","6","""Elder Av""611","611","""Morrison Av- Sound View""610","610",60
+"216","6","""Morrison Av- Sound View""610","610","""St Lawrence Av""609","609",90
+"217","6","""St Lawrence Av""609","609","""Parkchester""608","608",90
+"218","6","""Parkchester""608","608","""Castle Hill Av""607","607",90
+"219","6","""Castle Hill Av""607","607","""Zerega Av""606","606",60
+"220","6","""Zerega Av""606","606","""Westchester Sq - E Tremont Av""604","604",60
+"221","6","""Westchester Sq - E Tremont Av""604","604","""Middletown Rd""603","603",90
+"222","6","""Middletown Rd""603","603","""Buhre Av""602","602",90
+"223","6","""Buhre Av""602","602","""Pelham Bay Park""601","601",150
+"225","6X","""Pelham Bay Park""601","601","""Buhre Av""602","602",150
+"226","6X","""Buhre Av""602","602","""Middletown Rd""603","603",90
+"227","6X","""Middletown Rd""603","603","""Westchester Sq - E Tremont Av""604","604",90
+"228","6X","""Westchester Sq - E Tremont Av""604","604","""Zerega Av""606","606",90
+"229","6X","""Zerega Av""606","606","""Castle Hill Av""607","607",60
+"230","6X","""Castle Hill Av""607","607","""Parkchester""608","608",120
+"231","6X","""Parkchester""608","608","""St Lawrence Av""609","609",90
+"232","6X","""St Lawrence Av""609","609","""Morrison Av- Sound View""610","610",90
+"233","6X","""Morrison Av- Sound View""610","610","""Elder Av""611","611",60
+"234","6X","""Elder Av""611","611","""Whitlock Av""612","612",120
+"235","6X","""Whitlock Av""612","612","""Hunts Point Av""613","613",120
+"236","6X","""Hunts Point Av""613","613","""3 Av - 138 St""619","619",420
+"237","6X","""3 Av - 138 St""619","619","""125 St""621","621",180
+"238","6X","""125 St""621","621","""116 St""622","622",90
+"239","6X","""116 St""622","622","""110 St""623","623",90
+"240","6X","""110 St""623","623","""103 St""624","624",60
+"241","6X","""103 St""624","624","""96 St""625","625",90
+"242","6X","""96 St""625","625","""86 St""626","626",120
+"243","6X","""86 St""626","626","""77 St""627","627",120
+"244","6X","""77 St""627","627","""68 St - Hunter College""628","628",120
+"245","6X","""68 St - Hunter College""628","628","""59 St""629","629",90
+"246","6X","""59 St""629","629","""51 St""630","630",120
+"247","6X","""51 St""630","630","""Grand Central - 42 St""631","631",120
+"248","6X","""Grand Central - 42 St""631","631","""33 St""632","632",120
+"249","6X","""33 St""632","632","""28 St""633","633",60
+"250","6X","""28 St""633","633","""23 St""634","634",60
+"251","6X","""23 St""634","634","""14 St - Union Sq""635","635",120
+"252","6X","""14 St - Union Sq""635","635","""Astor Pl""636","636",60
+"253","6X","""Astor Pl""636","636","""Bleecker St""637","637",90
+"254","6X","""Bleecker St""637","637","""Spring St""638","638",60
+"255","6X","""Spring St""638","638","""Canal St""639","639",90
+"256","6X","""Canal St""639","639","""Brooklyn Bridge - City Hall""640","640",120
+"258","7","""Times Sq - 42 St""725","725","""5 Av""724","724",90
+"259","7","""5 Av""724","724","""Grand Central - 42 St""723","723",90
+"260","7","""Grand Central - 42 St""723","723","""Vernon Blvd - Jackson Av""721","721",270
+"261","7","""Vernon Blvd - Jackson Av""721","721","""Hunters Point Av""720","720",60
+"262","7","""Hunters Point Av""720","720","""Court Sq""719","719",120
+"263","7","""Court Sq""719","719","""Queensboro Plaza""718","718",90
+"264","7","""Queensboro Plaza""718","718","""33 St""716","716",150
+"265","7","""33 St""716","716","""40 St""715","715",60
+"266","7","""40 St""715","715","""46 St""714","714",60
+"267","7","""46 St""714","714","""52 St""713","713",60
+"268","7","""52 St""713","713","""Woodside - 61 St""712","712",120
+"269","7","""Woodside - 61 St""712","712","""69 St""711","711",120
+"270","7","""69 St""711","711","""74 St - Broadway""710","710",90
+"271","7","""74 St - Broadway""710","710","""82 St - Jackson Hts""709","709",60
+"272","7","""82 St - Jackson Hts""709","709","""90 St - Elmhurst Av""708","708",60
+"273","7","""90 St - Elmhurst Av""708","708","""Junction Blvd""707","707",90
+"274","7","""Junction Blvd""707","707","""103 St - Corona Plaza""706","706",60
+"275","7","""103 St - Corona Plaza""706","706","""111 St""705","705",60
+"276","7","""111 St""705","705","""Mets - Willets Point""702","702",150
+"277","7","""Mets - Willets Point""702","702","""Flushing - Main St""701","701",210
+"279","7X","""Times Sq - 42 St""725","725","""5 Av""724","724",90
+"280","7X","""5 Av""724","724","""Grand Central - 42 St""723","723",90
+"281","7X","""Grand Central - 42 St""723","723","""Vernon Blvd - Jackson Av""721","721",300
+"282","7X","""Vernon Blvd - Jackson Av""721","721","""Hunters Point Av""720","720",60
+"283","7X","""Hunters Point Av""720","720","""Court Sq""719","719",120
+"284","7X","""Court Sq""719","719","""Queensboro Plaza""718","718",90
+"285","7X","""Queensboro Plaza""718","718","""Woodside - 61 St""712","712",330
+"286","7X","""Woodside - 61 St""712","712","""Junction Blvd""707","707",240
+"287","7X","""Junction Blvd""707","707","""Mets - Willets Point""702","702",300
+"288","7X","""Mets - Willets Point""702","702","""Flushing - Main St""701","701",300
+"290","A","""Far Rockaway - Mott Av""H11","H11","""Beach 25 St""H10","H10",90
+"291","A","""Beach 25 St""H10","H10","""Beach 36 St""H09","H09",120
+"292","A","""Beach 36 St""H09","H09","""Beach 44 St""H08","H08",90
+"293","A","""Beach 44 St""H08","H08","""Beach 60 St""H07","H07",120
+"294","A","""Beach 60 St""H07","H07","""Beach 67 St""H06","H06",90
+"295","A","""Beach 67 St""H06","H06","""Broad Channel""H04","H04",240
+"296","A","""Broad Channel""H04","H04","""Howard Beach - JFK Airport""H03","H03",390
+"297","A","""Howard Beach - JFK Airport""H03","H03","""Aqueduct - N Conduit Av""H02","H02",120
+"298","A","""Aqueduct - N Conduit Av""H02","H02","""Aqueduct Racetrack""H01","H01",60
+"299","A","""Aqueduct Racetrack""H01","H01","""Rockaway Blvd""A61","A61",180
+"300","A","""Rockaway Blvd""A61","A61","""88 St""A60","A60",90
+"301","A","""88 St""A60","A60","""80 St""A59","A59",90
+"302","A","""80 St""A59","A59","""Grant Av""A57","A57",90
+"303","A","""Grant Av""A57","A57","""Euclid Av""A55","A55",90
+"304","A","""Euclid Av""A55","A55","""Broadway Jct""A51","A51",240
+"305","A","""Broadway Jct""A51","A51","""Utica Av""A48","A48",210
+"306","A","""Utica Av""A48","A48","""Nostrand Av""A46","A46",180
+"307","A","""Nostrand Av""A46","A46","""Hoyt - Schermerhorn Sts""A42","A42",300
+"308","A","""Hoyt - Schermerhorn Sts""A42","A42","""Jay St - MetroTech""A41","A41",90
+"309","A","""Jay St - MetroTech""A41","A41","""High St""A40","A40",120
+"310","A","""High St""A40","A40","""Fulton St""A38","A38",180
+"311","A","""Fulton St""A38","A38","""Chambers St""A36","A36",120
+"312","A","""Chambers St""A36","A36","""Canal St""A34","A34",90
+"313","A","""Canal St""A34","A34","""W 4 St""A32","A32",150
+"314","A","""W 4 St""A32","A32","""14 St""A31","A31",150
+"315","A","""14 St""A31","A31","""34 St - Penn Station""A28","A28",180
+"316","A","""34 St - Penn Station""A28","A28","""42 St - Port Authority Bus Terminal""A27","A27",150
+"317","A","""42 St - Port Authority Bus Terminal""A27","A27","""59 St - Columbus Circle""A24","A24",240
+"318","A","""59 St - Columbus Circle""A24","A24","""125 St""A15","A15",480
+"319","A","""125 St""A15","A15","""145 St""A12","A12",180
+"320","A","""145 St""A12","A12","""168 St""A09","A09",390
+"321","A","""168 St""A09","A09","""175 St""A07","A07",330
+"322","A","""175 St""A07","A07","""181 St""A06","A06",60
+"323","A","""181 St""A06","A06","""190 St""A05","A05",120
+"324","A","""190 St""A05","A05","""Dyckman St""A03","A03",360
+"325","A","""Dyckman St""A03","A03","""Inwood - 207 St""A02","A02",330
+"327","B","""Bedford Park Blvd""D03","D03","""Kingsbridge Rd""D04","D04",120
+"328","B","""Kingsbridge Rd""D04","D04","""Fordham Rd""D05","D05",120
+"329","B","""Fordham Rd""D05","D05","""182-183 Sts""D06","D06",90
+"330","B","""182-183 Sts""D06","D06","""Tremont Av""D07","D07",90
+"331","B","""Tremont Av""D07","D07","""174-175 Sts""D08","D08",90
+"332","B","""174-175 Sts""D08","D08","""170 St""D09","D09",150
+"333","B","""170 St""D09","D09","""167 St""D10","D10",120
+"334","B","""167 St""D10","D10","""161 St - Yankee Stadium""D11","D11",150
+"335","B","""161 St - Yankee Stadium""D11","D11","""155 St""D12","D12",90
+"336","B","""155 St""D12","D12","""145 St""D13","D13",90
+"337","B","""145 St""D13","D13","""135 St""A14","A14",120
+"338","B","""135 St""A14","A14","""125 St""A15","A15",180
+"339","B","""125 St""A15","A15","""116 St""A16","A16",180
+"340","B","""116 St""A16","A16","""Cathedral Pkwy (110 St)""A17","A17",90
+"341","B","""Cathedral Pkwy (110 St)""A17","A17","""103 St""A18","A18",60
+"342","B","""103 St""A18","A18","""96 St""A19","A19",90
+"343","B","""96 St""A19","A19","""86 St""A20","A20",90
+"344","B","""86 St""A20","A20","""81 St - Museum of Natural History""A21","A21",90
+"345","B","""81 St - Museum of Natural History""A21","A21","""72 St""A22","A22",90
+"346","B","""72 St""A22","A22","""59 St - Columbus Circle""A24","A24",90
+"347","B","""59 St - Columbus Circle""A24","A24","""7 Av""D14","D14",120
+"348","B","""7 Av""D14","D14","""47-50 Sts - Rockefeller Ctr""D15","D15",120
+"349","B","""47-50 Sts - Rockefeller Ctr""D15","D15","""42 St - Bryant Pk""D16","D16",90
+"350","B","""42 St - Bryant Pk""D16","D16","""34 St - Herald Sq""D17","D17",120
+"351","B","""34 St - Herald Sq""D17","D17","""W 4 St""D20","D20",180
+"352","B","""W 4 St""D20","D20","""Broadway-Lafayette St""D21","D21",120
+"353","B","""Broadway-Lafayette St""D21","D21","""Grand St""D22","D22",120
+"354","B","""Grand St""D22","D22","""DeKalb Av""R30","R30",510
+"355","B","""DeKalb Av""R30","R30","""Atlantic Av - Barclays Ctr""D24","D24",120
+"356","B","""Atlantic Av - Barclays Ctr""D24","D24","""7 Av""D25","D25",120
+"357","B","""7 Av""D25","D25","""Prospect Park""D26","D26",270
+"358","B","""Prospect Park""D26","D26","""Church Av""D28","D28",120
+"359","B","""Church Av""D28","D28","""Newkirk Plaza""D31","D31",150
+"360","B","""Newkirk Plaza""D31","D31","""Kings Hwy""D35","D35",270
+"361","B","""Kings Hwy""D35","D35","""Sheepshead Bay""D39","D39",300
+"362","B","""Sheepshead Bay""D39","D39","""Brighton Beach""D40","D40",120
+"364","C","""168 St""A09","A09","""163 St - Amsterdam Av""A10","A10",60
+"365","C","""163 St - Amsterdam Av""A10","A10","""155 St""A11","A11",90
+"366","C","""155 St""A11","A11","""145 St""A12","A12",90
+"367","C","""145 St""A12","A12","""135 St""A14","A14",120
+"368","C","""135 St""A14","A14","""125 St""A15","A15",90
+"369","C","""125 St""A15","A15","""116 St""A16","A16",90
+"370","C","""116 St""A16","A16","""Cathedral Pkwy (110 St)""A17","A17",90
+"371","C","""Cathedral Pkwy (110 St)""A17","A17","""103 St""A18","A18",60
+"372","C","""103 St""A18","A18","""96 St""A19","A19",90
+"373","C","""96 St""A19","A19","""86 St""A20","A20",90
+"374","C","""86 St""A20","A20","""81 St - Museum of Natural History""A21","A21",90
+"375","C","""81 St - Museum of Natural History""A21","A21","""72 St""A22","A22",90
+"376","C","""72 St""A22","A22","""59 St - Columbus Circle""A24","A24",90
+"377","C","""59 St - Columbus Circle""A24","A24","""50 St""A25","A25",90
+"378","C","""50 St""A25","A25","""42 St - Port Authority Bus Terminal""A27","A27",120
+"379","C","""42 St - Port Authority Bus Terminal""A27","A27","""34 St - Penn Station""A28","A28",90
+"380","C","""34 St - Penn Station""A28","A28","""23 St""A30","A30",120
+"381","C","""23 St""A30","A30","""14 St""A31","A31",90
+"382","C","""14 St""A31","A31","""W 4 St""A32","A32",150
+"383","C","""W 4 St""A32","A32","""Spring St""A33","A33",90
+"384","C","""Spring St""A33","A33","""Canal St""A34","A34",90
+"385","C","""Canal St""A34","A34","""Chambers St""A36","A36",120
+"386","C","""Chambers St""A36","A36","""Fulton St""A38","A38",120
+"387","C","""Fulton St""A38","A38","""High St""A40","A40",180
+"388","C","""High St""A40","A40","""Jay St - MetroTech""A41","A41",120
+"389","C","""Jay St - MetroTech""A41","A41","""Hoyt - Schermerhorn Sts""A42","A42",90
+"390","C","""Hoyt - Schermerhorn Sts""A42","A42","""Lafayette Av""A43","A43",120
+"391","C","""Lafayette Av""A43","A43","""Clinton - Washington Avs""A44","A44",120
+"392","C","""Clinton - Washington Avs""A44","A44","""Franklin Av""A45","A45",90
+"393","C","""Franklin Av""A45","A45","""Nostrand Av""A46","A46",90
+"394","C","""Nostrand Av""A46","A46","""Kingston - Throop Avs""A47","A47",90
+"395","C","""Kingston - Throop Avs""A47","A47","""Utica Av""A48","A48",120
+"396","C","""Utica Av""A48","A48","""Ralph Av""A49","A49",120
+"397","C","""Ralph Av""A49","A49","""Rockaway Av""A50","A50",90
+"398","C","""Rockaway Av""A50","A50","""Broadway Jct""A51","A51",90
+"399","C","""Broadway Jct""A51","A51","""Liberty Av""A52","A52",120
+"400","C","""Liberty Av""A52","A52","""Van Siclen Av""A53","A53",90
+"401","C","""Van Siclen Av""A53","A53","""Shepherd Av""A54","A54",90
+"402","C","""Shepherd Av""A54","A54","""Euclid Av""A55","A55",90
+"404","D","""Coney Island - Stillwell Av""D43","D43","""Bay 50 St""B23","B23",240
+"405","D","""Bay 50 St""B23","B23","""25 Av""B22","B22",150
+"406","D","""25 Av""B22","B22","""Bay Pkwy""B21","B21",90
+"407","D","""Bay Pkwy""B21","B21","""20 Av""B20","B20",60
+"408","D","""20 Av""B20","B20","""18 Av""B19","B19",90
+"409","D","""18 Av""B19","B19","""79 St""B18","B18",90
+"410","D","""79 St""B18","B18","""71 St""B17","B17",90
+"411","D","""71 St""B17","B17","""62 St""B16","B16",120
+"412","D","""62 St""B16","B16","""55 St""B15","B15",120
+"413","D","""55 St""B15","B15","""50 St""B14","B14",90
+"414","D","""50 St""B14","B14","""Fort Hamilton Pkwy""B13","B13",90
+"415","D","""Fort Hamilton Pkwy""B13","B13","""9 Av""B12","B12",150
+"416","D","""9 Av""B12","B12","""36 St""R36","R36",240
+"417","D","""36 St""R36","R36","""Atlantic Av - Barclays Ctr""R31","R31",330
+"418","D","""Atlantic Av - Barclays Ctr""R31","R31","""Grand St""D22","D22",630
+"419","D","""Grand St""D22","D22","""Broadway-Lafayette St""D21","D21",120
+"420","D","""Broadway-Lafayette St""D21","D21","""W 4 St""D20","D20",120
+"421","D","""W 4 St""D20","D20","""34 St - Herald Sq""D17","D17",180
+"422","D","""34 St - Herald Sq""D17","D17","""42 St - Bryant Pk""D16","D16",90
+"423","D","""42 St - Bryant Pk""D16","D16","""47-50 Sts - Rockefeller Ctr""D15","D15",90
+"424","D","""47-50 Sts - Rockefeller Ctr""D15","D15","""7 Av""D14","D14",90
+"425","D","""7 Av""D14","D14","""59 St - Columbus Circle""A24","A24",120
+"426","D","""59 St - Columbus Circle""A24","A24","""125 St""A15","A15",480
+"427","D","""125 St""A15","A15","""145 St""D13","D13",270
+"428","D","""145 St""D13","D13","""155 St""D12","D12",150
+"429","D","""155 St""D12","D12","""161 St - Yankee Stadium""D11","D11",90
+"430","D","""161 St - Yankee Stadium""D11","D11","""167 St""D10","D10",150
+"431","D","""167 St""D10","D10","""170 St""D09","D09",120
+"432","D","""170 St""D09","D09","""174-175 Sts""D08","D08",120
+"433","D","""174-175 Sts""D08","D08","""Tremont Av""D07","D07",210
+"434","D","""Tremont Av""D07","D07","""182-183 Sts""D06","D06",210
+"435","D","""182-183 Sts""D06","D06","""Fordham Rd""D05","D05",90
+"436","D","""Fordham Rd""D05","D05","""Kingsbridge Rd""D04","D04",90
+"437","D","""Kingsbridge Rd""D04","D04","""Bedford Park Blvd""D03","D03",120
+"438","D","""Bedford Park Blvd""D03","D03","""Norwood - 205 St""D01","D01",150
+"440","E","""World Trade Center""E01","E01","""Canal St""A34","A34",120
+"441","E","""Canal St""A34","A34","""Spring St""A33","A33",90
+"442","E","""Spring St""A33","A33","""W 4 St""A32","A32",120
+"443","E","""W 4 St""A32","A32","""14 St""A31","A31",150
+"444","E","""14 St""A31","A31","""23 St""A30","A30",90
+"445","E","""23 St""A30","A30","""34 St - Penn Station""A28","A28",120
+"446","E","""34 St - Penn Station""A28","A28","""42 St - Port Authority Bus Terminal""A27","A27",90
+"447","E","""42 St - Port Authority Bus Terminal""A27","A27","""50 St""A25","A25",120
+"448","E","""50 St""A25","A25","""7 Av""D14","D14",90
+"449","E","""7 Av""D14","D14","""5 Av/53 St""F12","F12",90
+"450","E","""5 Av/53 St""F12","F12","""Lexington Av/53 St""F11","F11",90
+"451","E","""Lexington Av/53 St""F11","F11","""Court Sq""F09","F09",210
+"452","E","""Court Sq""F09","F09","""Queens Plaza""G21","G21",90
+"453","E","""Queens Plaza""G21","G21","""Jackson Hts - Roosevelt Av""G14","G14",330
+"454","E","""Jackson Hts - Roosevelt Av""G14","G14","""Forest Hills - 71 Av""G08","G08",420
+"455","E","""Forest Hills - 71 Av""G08","G08","""Kew Gardens - Union Tpke""F06","F06",150
+"456","E","""Kew Gardens - Union Tpke""F06","F06","""Jamaica - Van Wyck""G07","G07",180
+"457","E","""Jamaica - Van Wyck""G07","G07","""Sutphin Blvd - Archer Av - JFK Airport""G06","G06",150
+"458","E","""Sutphin Blvd - Archer Av - JFK Airport""G06","G06","""Jamaica Center - Parsons/Archer""G05","G05",120
+"460","F","""Coney Island - Stillwell Av""D43","D43","""W 8 St - NY Aquarium""D42","D42",90
+"461","F","""W 8 St - NY Aquarium""D42","D42","""Neptune Av""F39","F39",90
+"462","F","""Neptune Av""F39","F39","""Avenue X""F38","F38",120
+"463","F","""Avenue X""F38","F38","""Avenue U""F36","F36",120
+"464","F","""Avenue U""F36","F36","""Kings Hwy""F35","F35",120
+"465","F","""Kings Hwy""F35","F35","""Avenue P""F34","F34",90
+"466","F","""Avenue P""F34","F34","""Avenue N""F33","F33",90
+"467","F","""Avenue N""F33","F33","""Bay Pkwy""F32","F32",90
+"468","F","""Bay Pkwy""F32","F32","""Avenue I""F31","F31",60
+"469","F","""Avenue I""F31","F31","""18 Av""F30","F30",90
+"470","F","""18 Av""F30","F30","""Ditmas Av""F29","F29",90
+"471","F","""Ditmas Av""F29","F29","""Church Av""F27","F27",120
+"472","F","""Church Av""F27","F27","""Fort Hamilton Pkwy""F26","F26",90
+"473","F","""Fort Hamilton Pkwy""F26","F26","""15 St - Prospect Park""F25","F25",150
+"474","F","""15 St - Prospect Park""F25","F25","""7 Av""F24","F24",90
+"475","F","""7 Av""F24","F24","""4 Av""F23","F23",120
+"476","F","""4 Av""F23","F23","""Smith - 9 Sts""F22","F22",90
+"477","F","""Smith - 9 Sts""F22","F22","""Carroll St""F21","F21",120
+"478","F","""Carroll St""F21","F21","""Bergen St""F20","F20",90
+"479","F","""Bergen St""F20","F20","""Jay St - MetroTech""A41","A41",150
+"480","F","""Jay St - MetroTech""A41","A41","""York St""F18","F18",90
+"481","F","""York St""F18","F18","""East Broadway""F16","F16",180
+"482","F","""East Broadway""F16","F16","""Delancey St""F15","F15",90
+"483","F","""Delancey St""F15","F15","""2 Av""F14","F14",90
+"484","F","""2 Av""F14","F14","""Broadway-Lafayette St""D21","D21",90
+"485","F","""Broadway-Lafayette St""D21","D21","""W 4 St""D20","D20",150
+"486","F","""W 4 St""D20","D20","""14 St""D19","D19",90
+"487","F","""14 St""D19","D19","""23 St""D18","D18",90
+"488","F","""23 St""D18","D18","""34 St - Herald Sq""D17","D17",90
+"489","F","""34 St - Herald Sq""D17","D17","""42 St - Bryant Pk""D16","D16",90
+"490","F","""42 St - Bryant Pk""D16","D16","""47-50 Sts - Rockefeller Ctr""D15","D15",90
+"491","F","""47-50 Sts - Rockefeller Ctr""D15","D15","""57 St""B10","B10",90
+"492","F","""57 St""B10","B10","""Lexington Av/63 St""B08","B08",150
+"493","F","""Lexington Av/63 St""B08","B08","""Roosevelt Island""B06","B06",150
+"494","F","""Roosevelt Island""B06","B06","""21 St - Queensbridge""B04","B04",120
+"495","F","""21 St - Queensbridge""B04","B04","""Jackson Hts - Roosevelt Av""G14","G14",360
+"496","F","""Jackson Hts - Roosevelt Av""G14","G14","""Forest Hills - 71 Av""G08","G08",420
+"497","F","""Forest Hills - 71 Av""G08","G08","""75 Av""F07","F07",120
+"498","F","""75 Av""F07","F07","""Kew Gardens - Union Tpke""F06","F06",90
+"499","F","""Kew Gardens - Union Tpke""F06","F06","""Briarwood - Van Wyck Blvd""F05","F05",120
+"500","F","""Briarwood - Van Wyck Blvd""F05","F05","""Sutphin Blvd""F04","F04",90
+"501","F","""Sutphin Blvd""F04","F04","""Parsons Blvd""F03","F03",210
+"502","F","""Parsons Blvd""F03","F03","""169 St""F02","F02",390
+"503","F","""169 St""F02","F02","""Jamaica - 179 St""F01","F01",300
+"505","FS","""Prospect Park""D26","D26","""Botanic Garden""S04","S04",180
+"506","FS","""Botanic Garden""S04","S04","""Park Pl""S03","S03",120
+"507","FS","""Park Pl""S03","S03","""Franklin Av""S01","S01",120
+"509","GS","""Grand Central - 42 St""901","901","""Times Sq - 42 St""902","902",90
+"511","6X","""Pelham Bay Park""601","601","""Buhre Av""602","602",150
+"512","6X","""Buhre Av""602","602","""Middletown Rd""603","603",90
+"513","6X","""Middletown Rd""603","603","""Westchester Sq - E Tremont Av""604","604",90
+"514","6X","""Westchester Sq - E Tremont Av""604","604","""Zerega Av""606","606",90
+"515","6X","""Zerega Av""606","606","""Castle Hill Av""607","607",60
+"516","6X","""Castle Hill Av""607","607","""Parkchester""608","608",120
+"517","6X","""Parkchester""608","608","""St Lawrence Av""609","609",90
+"518","6X","""St Lawrence Av""609","609","""Morrison Av- Sound View""610","610",90
+"519","6X","""Morrison Av- Sound View""610","610","""Elder Av""611","611",60
+"520","6X","""Elder Av""611","611","""Whitlock Av""612","612",120
+"521","6X","""Whitlock Av""612","612","""Hunts Point Av""613","613",120
+"522","6X","""Hunts Point Av""613","613","""3 Av - 138 St""619","619",420
+"523","6X","""3 Av - 138 St""619","619","""125 St""621","621",180
+"524","6X","""125 St""621","621","""116 St""622","622",90
+"525","6X","""116 St""622","622","""110 St""623","623",90
+"526","6X","""110 St""623","623","""103 St""624","624",60
+"527","6X","""103 St""624","624","""96 St""625","625",90
+"528","6X","""96 St""625","625","""86 St""626","626",120
+"529","6X","""86 St""626","626","""77 St""627","627",120
+"530","6X","""77 St""627","627","""68 St - Hunter College""628","628",120
+"531","6X","""68 St - Hunter College""628","628","""59 St""629","629",90
+"532","6X","""59 St""629","629","""51 St""630","630",120
+"533","6X","""51 St""630","630","""Grand Central - 42 St""631","631",120
+"534","6X","""Grand Central - 42 St""631","631","""33 St""632","632",120
+"535","6X","""33 St""632","632","""28 St""633","633",60
+"536","6X","""28 St""633","633","""23 St""634","634",60
+"537","6X","""23 St""634","634","""14 St - Union Sq""635","635",120
+"538","6X","""14 St - Union Sq""635","635","""Astor Pl""636","636",60
+"539","6X","""Astor Pl""636","636","""Bleecker St""637","637",90
+"540","6X","""Bleecker St""637","637","""Spring St""638","638",60
+"541","6X","""Spring St""638","638","""Canal St""639","639",90
+"542","6X","""Canal St""639","639","""Brooklyn Bridge - City Hall""640","640",120
+"544","7","""Times Sq - 42 St""725","725","""5 Av""724","724",90
+"545","7","""5 Av""724","724","""Grand Central - 42 St""723","723",90
+"546","7","""Grand Central - 42 St""723","723","""Vernon Blvd - Jackson Av""721","721",270
+"547","7","""Vernon Blvd - Jackson Av""721","721","""Hunters Point Av""720","720",60
+"548","7","""Hunters Point Av""720","720","""Court Sq""719","719",120
+"549","7","""Court Sq""719","719","""Queensboro Plaza""718","718",90
+"550","7","""Queensboro Plaza""718","718","""33 St""716","716",150
+"551","7","""33 St""716","716","""40 St""715","715",60
+"552","7","""40 St""715","715","""46 St""714","714",60
+"553","7","""46 St""714","714","""52 St""713","713",60
+"554","7","""52 St""713","713","""Woodside - 61 St""712","712",120
+"555","7","""Woodside - 61 St""712","712","""69 St""711","711",120
+"556","7","""69 St""711","711","""74 St - Broadway""710","710",90
+"557","7","""74 St - Broadway""710","710","""82 St - Jackson Hts""709","709",60
+"558","7","""82 St - Jackson Hts""709","709","""90 St - Elmhurst Av""708","708",60
+"559","7","""90 St - Elmhurst Av""708","708","""Junction Blvd""707","707",90
+"560","7","""Junction Blvd""707","707","""103 St - Corona Plaza""706","706",60
+"561","7","""103 St - Corona Plaza""706","706","""111 St""705","705",60
+"562","7","""111 St""705","705","""Mets - Willets Point""702","702",150
+"563","7","""Mets - Willets Point""702","702","""Flushing - Main St""701","701",210
+"565","7X","""Times Sq - 42 St""725","725","""5 Av""724","724",90
+"566","7X","""5 Av""724","724","""Grand Central - 42 St""723","723",90
+"567","7X","""Grand Central - 42 St""723","723","""Vernon Blvd - Jackson Av""721","721",300
+"568","7X","""Vernon Blvd - Jackson Av""721","721","""Hunters Point Av""720","720",60
+"569","7X","""Hunters Point Av""720","720","""Court Sq""719","719",120
+"570","7X","""Court Sq""719","719","""Queensboro Plaza""718","718",90
+"571","7X","""Queensboro Plaza""718","718","""Woodside - 61 St""712","712",330
+"572","7X","""Woodside - 61 St""712","712","""Junction Blvd""707","707",240
+"573","7X","""Junction Blvd""707","707","""Mets - Willets Point""702","702",300
+"574","7X","""Mets - Willets Point""702","702","""Flushing - Main St""701","701",300
+"576","A","""Far Rockaway - Mott Av""H11","H11","""Beach 25 St""H10","H10",90
+"577","A","""Beach 25 St""H10","H10","""Beach 36 St""H09","H09",120
+"578","A","""Beach 36 St""H09","H09","""Beach 44 St""H08","H08",90
+"579","A","""Beach 44 St""H08","H08","""Beach 60 St""H07","H07",120
+"580","A","""Beach 60 St""H07","H07","""Beach 67 St""H06","H06",90
+"581","A","""Beach 67 St""H06","H06","""Broad Channel""H04","H04",240
+"582","A","""Broad Channel""H04","H04","""Howard Beach - JFK Airport""H03","H03",390
+"583","A","""Howard Beach - JFK Airport""H03","H03","""Aqueduct - N Conduit Av""H02","H02",120
+"584","A","""Aqueduct - N Conduit Av""H02","H02","""Aqueduct Racetrack""H01","H01",60
+"585","A","""Aqueduct Racetrack""H01","H01","""Rockaway Blvd""A61","A61",180
+"586","A","""Rockaway Blvd""A61","A61","""88 St""A60","A60",90
+"587","A","""88 St""A60","A60","""80 St""A59","A59",90
+"588","A","""80 St""A59","A59","""Grant Av""A57","A57",90
+"589","A","""Grant Av""A57","A57","""Euclid Av""A55","A55",90
+"590","A","""Euclid Av""A55","A55","""Broadway Jct""A51","A51",240
+"591","A","""Broadway Jct""A51","A51","""Utica Av""A48","A48",210
+"592","A","""Utica Av""A48","A48","""Nostrand Av""A46","A46",180
+"593","A","""Nostrand Av""A46","A46","""Hoyt - Schermerhorn Sts""A42","A42",300
+"594","A","""Hoyt - Schermerhorn Sts""A42","A42","""Jay St - MetroTech""A41","A41",90
+"595","A","""Jay St - MetroTech""A41","A41","""High St""A40","A40",120
+"596","A","""High St""A40","A40","""Fulton St""A38","A38",180
+"597","A","""Fulton St""A38","A38","""Chambers St""A36","A36",120
+"598","A","""Chambers St""A36","A36","""Canal St""A34","A34",90
+"599","A","""Canal St""A34","A34","""W 4 St""A32","A32",150
+"600","A","""W 4 St""A32","A32","""14 St""A31","A31",150
+"601","A","""14 St""A31","A31","""34 St - Penn Station""A28","A28",180
+"602","A","""34 St - Penn Station""A28","A28","""42 St - Port Authority Bus Terminal""A27","A27",150
+"603","A","""42 St - Port Authority Bus Terminal""A27","A27","""59 St - Columbus Circle""A24","A24",240
+"604","A","""59 St - Columbus Circle""A24","A24","""125 St""A15","A15",480
+"605","A","""125 St""A15","A15","""145 St""A12","A12",180
+"606","A","""145 St""A12","A12","""168 St""A09","A09",390
+"607","A","""168 St""A09","A09","""175 St""A07","A07",330
+"608","A","""175 St""A07","A07","""181 St""A06","A06",60
+"609","A","""181 St""A06","A06","""190 St""A05","A05",120
+"610","A","""190 St""A05","A05","""Dyckman St""A03","A03",360
+"611","A","""Dyckman St""A03","A03","""Inwood - 207 St""A02","A02",330
+"613","B","""Bedford Park Blvd""D03","D03","""Kingsbridge Rd""D04","D04",120
+"614","B","""Kingsbridge Rd""D04","D04","""Fordham Rd""D05","D05",120
+"615","B","""Fordham Rd""D05","D05","""182-183 Sts""D06","D06",90
+"616","B","""182-183 Sts""D06","D06","""Tremont Av""D07","D07",90
+"617","B","""Tremont Av""D07","D07","""174-175 Sts""D08","D08",90
+"618","B","""174-175 Sts""D08","D08","""170 St""D09","D09",150
+"619","B","""170 St""D09","D09","""167 St""D10","D10",120
+"620","B","""167 St""D10","D10","""161 St - Yankee Stadium""D11","D11",150
+"621","B","""161 St - Yankee Stadium""D11","D11","""155 St""D12","D12",90
+"622","B","""155 St""D12","D12","""145 St""D13","D13",90
+"623","B","""145 St""D13","D13","""135 St""A14","A14",120
+"624","B","""135 St""A14","A14","""125 St""A15","A15",180
+"625","B","""125 St""A15","A15","""116 St""A16","A16",180
+"626","B","""116 St""A16","A16","""Cathedral Pkwy (110 St)""A17","A17",90
+"627","B","""Cathedral Pkwy (110 St)""A17","A17","""103 St""A18","A18",60
+"628","B","""103 St""A18","A18","""96 St""A19","A19",90
+"629","B","""96 St""A19","A19","""86 St""A20","A20",90
+"630","B","""86 St""A20","A20","""81 St - Museum of Natural History""A21","A21",90
+"631","B","""81 St - Museum of Natural History""A21","A21","""72 St""A22","A22",90
+"632","B","""72 St""A22","A22","""59 St - Columbus Circle""A24","A24",90
+"633","B","""59 St - Columbus Circle""A24","A24","""7 Av""D14","D14",120
+"634","B","""7 Av""D14","D14","""47-50 Sts - Rockefeller Ctr""D15","D15",120
+"635","B","""47-50 Sts - Rockefeller Ctr""D15","D15","""42 St - Bryant Pk""D16","D16",90
+"636","B","""42 St - Bryant Pk""D16","D16","""34 St - Herald Sq""D17","D17",120
+"637","B","""34 St - Herald Sq""D17","D17","""W 4 St""D20","D20",180
+"638","B","""W 4 St""D20","D20","""Broadway-Lafayette St""D21","D21",120
+"639","B","""Broadway-Lafayette St""D21","D21","""Grand St""D22","D22",120
+"640","B","""Grand St""D22","D22","""DeKalb Av""R30","R30",510
+"641","B","""DeKalb Av""R30","R30","""Atlantic Av - Barclays Ctr""D24","D24",120
+"642","B","""Atlantic Av - Barclays Ctr""D24","D24","""7 Av""D25","D25",120
+"643","B","""7 Av""D25","D25","""Prospect Park""D26","D26",270
+"644","B","""Prospect Park""D26","D26","""Church Av""D28","D28",120
+"645","B","""Church Av""D28","D28","""Newkirk Plaza""D31","D31",150
+"646","B","""Newkirk Plaza""D31","D31","""Kings Hwy""D35","D35",270
+"647","B","""Kings Hwy""D35","D35","""Sheepshead Bay""D39","D39",300
+"648","B","""Sheepshead Bay""D39","D39","""Brighton Beach""D40","D40",120
+"650","C","""168 St""A09","A09","""163 St - Amsterdam Av""A10","A10",60
+"651","C","""163 St - Amsterdam Av""A10","A10","""155 St""A11","A11",90
+"652","C","""155 St""A11","A11","""145 St""A12","A12",90
+"653","C","""145 St""A12","A12","""135 St""A14","A14",120
+"654","C","""135 St""A14","A14","""125 St""A15","A15",90
+"655","C","""125 St""A15","A15","""116 St""A16","A16",90
+"656","C","""116 St""A16","A16","""Cathedral Pkwy (110 St)""A17","A17",90
+"657","C","""Cathedral Pkwy (110 St)""A17","A17","""103 St""A18","A18",60
+"658","C","""103 St""A18","A18","""96 St""A19","A19",90
+"659","C","""96 St""A19","A19","""86 St""A20","A20",90
+"660","C","""86 St""A20","A20","""81 St - Museum of Natural History""A21","A21",90
+"661","C","""81 St - Museum of Natural History""A21","A21","""72 St""A22","A22",90
+"662","C","""72 St""A22","A22","""59 St - Columbus Circle""A24","A24",90
+"663","C","""59 St - Columbus Circle""A24","A24","""50 St""A25","A25",90
+"664","C","""50 St""A25","A25","""42 St - Port Authority Bus Terminal""A27","A27",120
+"665","C","""42 St - Port Authority Bus Terminal""A27","A27","""34 St - Penn Station""A28","A28",90
+"666","C","""34 St - Penn Station""A28","A28","""23 St""A30","A30",120
+"667","C","""23 St""A30","A30","""14 St""A31","A31",90
+"668","C","""14 St""A31","A31","""W 4 St""A32","A32",150
+"669","C","""W 4 St""A32","A32","""Spring St""A33","A33",90
+"670","C","""Spring St""A33","A33","""Canal St""A34","A34",90
+"671","C","""Canal St""A34","A34","""Chambers St""A36","A36",120
+"672","C","""Chambers St""A36","A36","""Fulton St""A38","A38",120
+"673","C","""Fulton St""A38","A38","""High St""A40","A40",180
+"674","C","""High St""A40","A40","""Jay St - MetroTech""A41","A41",120
+"675","C","""Jay St - MetroTech""A41","A41","""Hoyt - Schermerhorn Sts""A42","A42",90
+"676","C","""Hoyt - Schermerhorn Sts""A42","A42","""Lafayette Av""A43","A43",120
+"677","C","""Lafayette Av""A43","A43","""Clinton - Washington Avs""A44","A44",120
+"678","C","""Clinton - Washington Avs""A44","A44","""Franklin Av""A45","A45",90
+"679","C","""Franklin Av""A45","A45","""Nostrand Av""A46","A46",90
+"680","C","""Nostrand Av""A46","A46","""Kingston - Throop Avs""A47","A47",90
+"681","C","""Kingston - Throop Avs""A47","A47","""Utica Av""A48","A48",120
+"682","C","""Utica Av""A48","A48","""Ralph Av""A49","A49",120
+"683","C","""Ralph Av""A49","A49","""Rockaway Av""A50","A50",90
+"684","C","""Rockaway Av""A50","A50","""Broadway Jct""A51","A51",90
+"685","C","""Broadway Jct""A51","A51","""Liberty Av""A52","A52",120
+"686","C","""Liberty Av""A52","A52","""Van Siclen Av""A53","A53",90
+"687","C","""Van Siclen Av""A53","A53","""Shepherd Av""A54","A54",90
+"688","C","""Shepherd Av""A54","A54","""Euclid Av""A55","A55",90
+"690","D","""Coney Island - Stillwell Av""D43","D43","""Bay 50 St""B23","B23",240
+"691","D","""Bay 50 St""B23","B23","""25 Av""B22","B22",150
+"692","D","""25 Av""B22","B22","""Bay Pkwy""B21","B21",90
+"693","D","""Bay Pkwy""B21","B21","""20 Av""B20","B20",60
+"694","D","""20 Av""B20","B20","""18 Av""B19","B19",90
+"695","D","""18 Av""B19","B19","""79 St""B18","B18",90
+"696","D","""79 St""B18","B18","""71 St""B17","B17",90
+"697","D","""71 St""B17","B17","""62 St""B16","B16",120
+"698","D","""62 St""B16","B16","""55 St""B15","B15",120
+"699","D","""55 St""B15","B15","""50 St""B14","B14",90
+"700","D","""50 St""B14","B14","""Fort Hamilton Pkwy""B13","B13",90
+"701","D","""Fort Hamilton Pkwy""B13","B13","""9 Av""B12","B12",150
+"702","D","""9 Av""B12","B12","""36 St""R36","R36",240
+"703","D","""36 St""R36","R36","""Atlantic Av - Barclays Ctr""R31","R31",330
+"704","D","""Atlantic Av - Barclays Ctr""R31","R31","""Grand St""D22","D22",630
+"705","D","""Grand St""D22","D22","""Broadway-Lafayette St""D21","D21",120
+"706","D","""Broadway-Lafayette St""D21","D21","""W 4 St""D20","D20",120
+"707","D","""W 4 St""D20","D20","""34 St - Herald Sq""D17","D17",180
+"708","D","""34 St - Herald Sq""D17","D17","""42 St - Bryant Pk""D16","D16",90
+"709","D","""42 St - Bryant Pk""D16","D16","""47-50 Sts - Rockefeller Ctr""D15","D15",90
+"710","D","""47-50 Sts - Rockefeller Ctr""D15","D15","""7 Av""D14","D14",90
+"711","D","""7 Av""D14","D14","""59 St - Columbus Circle""A24","A24",120
+"712","D","""59 St - Columbus Circle""A24","A24","""125 St""A15","A15",480
+"713","D","""125 St""A15","A15","""145 St""D13","D13",270
+"714","D","""145 St""D13","D13","""155 St""D12","D12",150
+"715","D","""155 St""D12","D12","""161 St - Yankee Stadium""D11","D11",90
+"716","D","""161 St - Yankee Stadium""D11","D11","""167 St""D10","D10",150
+"717","D","""167 St""D10","D10","""170 St""D09","D09",120
+"718","D","""170 St""D09","D09","""174-175 Sts""D08","D08",120
+"719","D","""174-175 Sts""D08","D08","""Tremont Av""D07","D07",210
+"720","D","""Tremont Av""D07","D07","""182-183 Sts""D06","D06",210
+"721","D","""182-183 Sts""D06","D06","""Fordham Rd""D05","D05",90
+"722","D","""Fordham Rd""D05","D05","""Kingsbridge Rd""D04","D04",90
+"723","D","""Kingsbridge Rd""D04","D04","""Bedford Park Blvd""D03","D03",120
+"724","D","""Bedford Park Blvd""D03","D03","""Norwood - 205 St""D01","D01",150
+"726","E","""World Trade Center""E01","E01","""Canal St""A34","A34",120
+"727","E","""Canal St""A34","A34","""Spring St""A33","A33",90
+"728","E","""Spring St""A33","A33","""W 4 St""A32","A32",120
+"729","E","""W 4 St""A32","A32","""14 St""A31","A31",150
+"730","E","""14 St""A31","A31","""23 St""A30","A30",90
+"731","E","""23 St""A30","A30","""34 St - Penn Station""A28","A28",120
+"732","E","""34 St - Penn Station""A28","A28","""42 St - Port Authority Bus Terminal""A27","A27",90
+"733","E","""42 St - Port Authority Bus Terminal""A27","A27","""50 St""A25","A25",120
+"734","E","""50 St""A25","A25","""7 Av""D14","D14",90
+"735","E","""7 Av""D14","D14","""5 Av/53 St""F12","F12",90
+"736","E","""5 Av/53 St""F12","F12","""Lexington Av/53 St""F11","F11",90
+"737","E","""Lexington Av/53 St""F11","F11","""Court Sq""F09","F09",210
+"738","E","""Court Sq""F09","F09","""Queens Plaza""G21","G21",90
+"739","E","""Queens Plaza""G21","G21","""Jackson Hts - Roosevelt Av""G14","G14",330
+"740","E","""Jackson Hts - Roosevelt Av""G14","G14","""Forest Hills - 71 Av""G08","G08",420
+"741","E","""Forest Hills - 71 Av""G08","G08","""Kew Gardens - Union Tpke""F06","F06",150
+"742","E","""Kew Gardens - Union Tpke""F06","F06","""Jamaica - Van Wyck""G07","G07",180
+"743","E","""Jamaica - Van Wyck""G07","G07","""Sutphin Blvd - Archer Av - JFK Airport""G06","G06",150
+"744","E","""Sutphin Blvd - Archer Av - JFK Airport""G06","G06","""Jamaica Center - Parsons/Archer""G05","G05",120
+"746","F","""Coney Island - Stillwell Av""D43","D43","""W 8 St - NY Aquarium""D42","D42",90
+"747","F","""W 8 St - NY Aquarium""D42","D42","""Neptune Av""F39","F39",90
+"748","F","""Neptune Av""F39","F39","""Avenue X""F38","F38",120
+"749","F","""Avenue X""F38","F38","""Avenue U""F36","F36",120
+"750","F","""Avenue U""F36","F36","""Kings Hwy""F35","F35",120
+"751","F","""Kings Hwy""F35","F35","""Avenue P""F34","F34",90
+"752","F","""Avenue P""F34","F34","""Avenue N""F33","F33",90
+"753","F","""Avenue N""F33","F33","""Bay Pkwy""F32","F32",90
+"754","F","""Bay Pkwy""F32","F32","""Avenue I""F31","F31",60
+"755","F","""Avenue I""F31","F31","""18 Av""F30","F30",90
+"756","F","""18 Av""F30","F30","""Ditmas Av""F29","F29",90
+"757","F","""Ditmas Av""F29","F29","""Church Av""F27","F27",120
+"758","F","""Church Av""F27","F27","""Fort Hamilton Pkwy""F26","F26",90
+"759","F","""Fort Hamilton Pkwy""F26","F26","""15 St - Prospect Park""F25","F25",150
+"760","F","""15 St - Prospect Park""F25","F25","""7 Av""F24","F24",90
+"761","F","""7 Av""F24","F24","""4 Av""F23","F23",120
+"762","F","""4 Av""F23","F23","""Smith - 9 Sts""F22","F22",90
+"763","F","""Smith - 9 Sts""F22","F22","""Carroll St""F21","F21",120
+"764","F","""Carroll St""F21","F21","""Bergen St""F20","F20",90
+"765","F","""Bergen St""F20","F20","""Jay St - MetroTech""A41","A41",150
+"766","F","""Jay St - MetroTech""A41","A41","""York St""F18","F18",90
+"767","F","""York St""F18","F18","""East Broadway""F16","F16",180
+"768","F","""East Broadway""F16","F16","""Delancey St""F15","F15",90
+"769","F","""Delancey St""F15","F15","""2 Av""F14","F14",90
+"770","F","""2 Av""F14","F14","""Broadway-Lafayette St""D21","D21",90
+"771","F","""Broadway-Lafayette St""D21","D21","""W 4 St""D20","D20",150
+"772","F","""W 4 St""D20","D20","""14 St""D19","D19",90
+"773","F","""14 St""D19","D19","""23 St""D18","D18",90
+"774","F","""23 St""D18","D18","""34 St - Herald Sq""D17","D17",90
+"775","F","""34 St - Herald Sq""D17","D17","""42 St - Bryant Pk""D16","D16",90
+"776","F","""42 St - Bryant Pk""D16","D16","""47-50 Sts - Rockefeller Ctr""D15","D15",90
+"777","F","""47-50 Sts - Rockefeller Ctr""D15","D15","""57 St""B10","B10",90
+"778","F","""57 St""B10","B10","""Lexington Av/63 St""B08","B08",150
+"779","F","""Lexington Av/63 St""B08","B08","""Roosevelt Island""B06","B06",150
+"780","F","""Roosevelt Island""B06","B06","""21 St - Queensbridge""B04","B04",120
+"781","F","""21 St - Queensbridge""B04","B04","""Jackson Hts - Roosevelt Av""G14","G14",360
+"782","F","""Jackson Hts - Roosevelt Av""G14","G14","""Forest Hills - 71 Av""G08","G08",420
+"783","F","""Forest Hills - 71 Av""G08","G08","""75 Av""F07","F07",120
+"784","F","""75 Av""F07","F07","""Kew Gardens - Union Tpke""F06","F06",90
+"785","F","""Kew Gardens - Union Tpke""F06","F06","""Briarwood - Van Wyck Blvd""F05","F05",120
+"786","F","""Briarwood - Van Wyck Blvd""F05","F05","""Sutphin Blvd""F04","F04",90
+"787","F","""Sutphin Blvd""F04","F04","""Parsons Blvd""F03","F03",210
+"788","F","""Parsons Blvd""F03","F03","""169 St""F02","F02",390
+"789","F","""169 St""F02","F02","""Jamaica - 179 St""F01","F01",300
+"791","FS","""Prospect Park""D26","D26","""Botanic Garden""S04","S04",180
+"792","FS","""Botanic Garden""S04","S04","""Park Pl""S03","S03",120
+"793","FS","""Park Pl""S03","S03","""Franklin Av""S01","S01",120
+"795","GS","""Grand Central - 42 St""901","901","""Times Sq - 42 St""902","902",90
+"797","G","""Court Sq""G22","G22","""21 St""G24","G24",60
+"798","G","""21 St""G24","G24","""Greenpoint Av""G26","G26",150
+"799","G","""Greenpoint Av""G26","G26","""Nassau Av""G28","G28",90
+"800","G","""Nassau Av""G28","G28","""Metropolitan Av""G29","G29",180
+"801","G","""Metropolitan Av""G29","G29","""Broadway""G30","G30",90
+"802","G","""Broadway""G30","G30","""Flushing Av""G31","G31",60
+"803","G","""Flushing Av""G31","G31","""Myrtle - Willoughby Avs""G32","G32",90
+"804","G","""Myrtle - Willoughby Avs""G32","G32","""Bedford - Nostrand Avs""G33","G33",90
+"805","G","""Bedford - Nostrand Avs""G33","G33","""Classon Av""G34","G34",60
+"806","G","""Classon Av""G34","G34","""Clinton - Washington Avs""G35","G35",90
+"807","G","""Clinton - Washington Avs""G35","G35","""Fulton St""G36","G36",90
+"808","G","""Fulton St""G36","G36","""Hoyt - Schermerhorn Sts""A42","A42",90
+"809","G","""Hoyt - Schermerhorn Sts""A42","A42","""Bergen St""F20","F20",90
+"810","G","""Bergen St""F20","F20","""Carroll St""F21","F21",90
+"811","G","""Carroll St""F21","F21","""Smith - 9 Sts""F22","F22",90
+"812","G","""Smith - 9 Sts""F22","F22","""4 Av""F23","F23",90
+"813","G","""4 Av""F23","F23","""7 Av""F24","F24",90
+"814","G","""7 Av""F24","F24","""15 St - Prospect Park""F25","F25",90
+"815","G","""15 St - Prospect Park""F25","F25","""Fort Hamilton Pkwy""F26","F26",150
+"816","G","""Fort Hamilton Pkwy""F26","F26","""Church Av""F27","F27",90
+"818","H","""Rockaway Park - Beach 116 St""H15","H15","""Beach 105 St""H14","H14",120
+"819","H","""Beach 105 St""H14","H14","""Beach 98 St""H13","H13",120
+"820","H","""Beach 98 St""H13","H13","""Beach 90 St""H12","H12",90
+"821","H","""Beach 90 St""H12","H12","""Broad Channel""H04","H04",360
+"823","J","""Broad St""M23","M23","""Fulton St""M22","M22",90
+"824","J","""Fulton St""M22","M22","""Chambers St""M21","M21",90
+"825","J","""Chambers St""M21","M21","""Canal St""M20","M20",120
+"826","J","""Canal St""M20","M20","""Bowery""M19","M19",120
+"827","J","""Bowery""M19","M19","""Essex St""M18","M18",120
+"828","J","""Essex St""M18","M18","""Marcy Av""M16","M16",450
+"829","J","""Marcy Av""M16","M16","""Hewes St""M14","M14",60
+"830","J","""Hewes St""M14","M14","""Lorimer St""M13","M13",90
+"831","J","""Lorimer St""M13","M13","""Flushing Av""M12","M12",90
+"832","J","""Flushing Av""M12","M12","""Myrtle Av""M11","M11",60
+"833","J","""Myrtle Av""M11","M11","""Kosciuszko St""J31","J31",90
+"834","J","""Kosciuszko St""J31","J31","""Gates Av""J30","J30",90
+"835","J","""Gates Av""J30","J30","""Halsey St""J29","J29",90
+"836","J","""Halsey St""J29","J29","""Chauncey St""J28","J28",90
+"837","J","""Chauncey St""J28","J28","""Broadway Jct""J27","J27",90
+"838","J","""Broadway Jct""J27","J27","""Alabama Av""J24","J24",120
+"839","J","""Alabama Av""J24","J24","""Van Siclen Av""J23","J23",90
+"840","J","""Van Siclen Av""J23","J23","""Cleveland St""J22","J22",90
+"841","J","""Cleveland St""J22","J22","""Norwood Av""J21","J21",60
+"842","J","""Norwood Av""J21","J21","""Crescent St""J20","J20",120
+"843","J","""Crescent St""J20","J20","""Cypress Hills""J19","J19",120
+"844","J","""Cypress Hills""J19","J19","""75 St""J17","J17",60
+"845","J","""75 St""J17","J17","""85 St - Forest Pkwy""J16","J16",90
+"846","J","""85 St - Forest Pkwy""J16","J16","""Woodhaven Blvd""J15","J15",120
+"847","J","""Woodhaven Blvd""J15","J15","""104 St""J14","J14",90
+"848","J","""104 St""J14","J14","""111 St""J13","J13",120
+"849","J","""111 St""J13","J13","""121 St""J12","J12",90
+"850","J","""121 St""J12","J12","""Sutphin Blvd - Archer Av - JFK Airport""G06","G06",240
+"851","J","""Sutphin Blvd - Archer Av - JFK Airport""G06","G06","""Jamaica Center - Parsons/Archer""G05","G05",60
+"853","L","""Canarsie - Rockaway Pkwy""L29","L29","""E 105 St""L28","L28",120
+"854","L","""E 105 St""L28","L28","""New Lots Av""L27","L27",120
+"855","L","""New Lots Av""L27","L27","""Livonia Av""L26","L26",90
+"856","L","""Livonia Av""L26","L26","""Sutter Av""L25","L25",90
+"857","L","""Sutter Av""L25","L25","""Atlantic Av""L24","L24",90
+"858","L","""Atlantic Av""L24","L24","""Broadway Jct""L22","L22",90
+"859","L","""Broadway Jct""L22","L22","""Bushwick Av - Aberdeen St""L21","L21",60
+"860","L","""Bushwick Av - Aberdeen St""L21","L21","""Wilson Av""L20","L20",90
+"861","L","""Wilson Av""L20","L20","""Halsey St""L19","L19",150
+"862","L","""Halsey St""L19","L19","""Myrtle - Wyckoff Avs""L17","L17",90
+"863","L","""Myrtle - Wyckoff Avs""L17","L17","""DeKalb Av""L16","L16",120
+"864","L","""DeKalb Av""L16","L16","""Jefferson St""L15","L15",60
+"865","L","""Jefferson St""L15","L15","""Morgan Av""L14","L14",150
+"866","L","""Morgan Av""L14","L14","""Montrose Av""L13","L13",120
+"867","L","""Montrose Av""L13","L13","""Grand St""L12","L12",60
+"868","L","""Grand St""L12","L12","""Graham Av""L11","L11",60
+"869","L","""Graham Av""L11","L11","""Lorimer St""L10","L10",90
+"870","L","""Lorimer St""L10","L10","""Bedford Av""L08","L08",120
+"871","L","""Bedford Av""L08","L08","""1 Av""L06","L06",240
+"872","L","""1 Av""L06","L06","""3 Av""L05","L05",60
+"873","L","""3 Av""L05","L05","""Union Sq - 14 St""L03","L03",90
+"874","L","""Union Sq - 14 St""L03","L03","""6 Av""L02","L02",90
+"875","L","""6 Av""L02","L02","""8 Av""L01","L01",60
+"876","L","""8 Av""L01","L01","""6 Av""L02","L02",90
+"877","L","""6 Av""L02","L02","""8 Av""L01","L01",60
+"879","L","""8 Av""L01","L01","""6 Av""L02","L02",90
+"880","L","""6 Av""L02","L02","""Union Sq - 14 St""L03","L03",120
+"881","L","""Union Sq - 14 St""L03","L03","""3 Av""L05","L05",60
+"882","L","""3 Av""L05","L05","""1 Av""L06","L06",60
+"883","L","""1 Av""L06","L06","""Bedford Av""L08","L08",240
+"884","M","""Bedford Av""L08","L08","""Central Av""M10","M10",240
+"885","M","""Central Av""M10","M10","""Knickerbocker Av""M09","M09",90
+"886","M","""Knickerbocker Av""M09","M09","""Myrtle - Wyckoff Avs""M08","M08",120
+"887","M","""Myrtle - Wyckoff Avs""M08","M08","""Seneca Av""M06","M06",90
+"888","M","""Seneca Av""M06","M06","""Forest Av""M05","M05",60
+"889","M","""Forest Av""M05","M05","""Fresh Pond Rd""M04","M04",90
+"890","M","""Fresh Pond Rd""M04","M04","""Middle Village - Metropolitan Av""M01","M01",120
+"891","M","""Middle Village - Metropolitan Av""M01","M01","""14 St""D19","D19",90
+"892","M","""14 St""D19","D19","""23 St""D18","D18",90
+"893","M","""23 St""D18","D18","""34 St - Herald Sq""D17","D17",120
+"894","M","""34 St - Herald Sq""D17","D17","""42 St - Bryant Pk""D16","D16",90
+"895","M","""42 St - Bryant Pk""D16","D16","""47-50 Sts - Rockefeller Ctr""D15","D15",120
+"896","M","""47-50 Sts - Rockefeller Ctr""D15","D15","""5 Av/53 St""F12","F12",120
+"897","M","""5 Av/53 St""F12","F12","""Lexington Av/53 St""F11","F11",120
+"898","M","""Lexington Av/53 St""F11","F11","""Court Sq""F09","F09",210
+"899","M","""Court Sq""F09","F09","""Queens Plaza""G21","G21",90
+"900","M","""Queens Plaza""G21","G21","""36 St""G20","G20",120
+"901","M","""36 St""G20","G20","""Steinway St""G19","G19",120
+"902","M","""Steinway St""G19","G19","""46 St""G18","G18",90
+"903","M","""46 St""G18","G18","""Northern Blvd""G16","G16",90
+"904","M","""Northern Blvd""G16","G16","""65 St""G15","G15",60
+"905","M","""65 St""G15","G15","""Jackson Hts - Roosevelt Av""G14","G14",90
+"906","M","""Jackson Hts - Roosevelt Av""G14","G14","""Elmhurst Av""G13","G13",90
+"907","M","""Elmhurst Av""G13","G13","""Grand Av - Newtown""G12","G12",90
+"908","M","""Grand Av - Newtown""G12","G12","""Woodhaven Blvd""G11","G11",120
+"909","M","""Woodhaven Blvd""G11","G11","""63 Dr - Rego Park""G10","G10",60
+"910","M","""63 Dr - Rego Park""G10","G10","""67 Av""G09","G09",120
+"911","M","""67 Av""G09","G09","""Forest Hills - 71 Av""G08","G08",90
+"913","N","""Astoria - Ditmars Blvd""R01","R01","""Astoria Blvd""R03","R03",90
+"914","N","""Astoria Blvd""R03","R03","""30 Av""R04","R04",60
+"915","N","""30 Av""R04","R04","""Broadway""R05","R05",90
+"916","N","""Broadway""R05","R05","""36 Av""R06","R06",120
+"917","N","""36 Av""R06","R06","""39 Av""R08","R08",60
+"918","N","""39 Av""R08","R08","""Queensboro Plaza""R09","R09",150
+"919","N","""Queensboro Plaza""R09","R09","""Lexington Av/59 St""R11","R11",300
+"920","N","""Lexington Av/59 St""R11","R11","""5 Av/59 St""R13","R13",90
+"921","N","""5 Av/59 St""R13","R13","""57 St - 7 Av""R14","R14",150
+"922","N","""57 St - 7 Av""R14","R14","""49 St""R15","R15",90
+"923","N","""49 St""R15","R15","""Times Sq - 42 St""R16","R16",90
+"924","N","""Times Sq - 42 St""R16","R16","""34 St - Herald Sq""R17","R17",90
+"925","N","""34 St - Herald Sq""R17","R17","""28 St""R18","R18",60
+"926","N","""28 St""R18","R18","""23 St""R19","R19",90
+"927","N","""23 St""R19","R19","""14 St - Union Sq""R20","R20",90
+"928","N","""14 St - Union Sq""R20","R20","""8 St - NYU""R21","R21",120
+"929","N","""8 St - NYU""R21","R21","""Prince St""R22","R22",120
+"930","N","""Prince St""R22","R22","""Canal St""Q01","Q01",120
+"931","N","""Canal St""Q01","Q01","""Atlantic Av - Barclays Ctr""R31","R31",750
+"932","N","""Atlantic Av - Barclays Ctr""R31","R31","""36 St""R36","R36",330
+"933","N","""36 St""R36","R36","""59 St""R41","R41",210
+"934","N","""59 St""R41","R41","""8 Av""N02","N02",180
+"935","N","""8 Av""N02","N02","""Fort Hamilton Pkwy""N03","N03",90
+"936","N","""Fort Hamilton Pkwy""N03","N03","""New Utrecht Av""N04","N04",120
+"937","N","""New Utrecht Av""N04","N04","""18 Av""N05","N05",90
+"938","N","""18 Av""N05","N05","""20 Av""N06","N06",90
+"939","N","""20 Av""N06","N06","""Bay Pkwy""N07","N07",90
+"940","N","""Bay Pkwy""N07","N07","""Kings Hwy""N08","N08",120
+"941","N","""Kings Hwy""N08","N08","""Avenue U""N09","N09",120
+"942","N","""Avenue U""N09","N09","""86 St""N10","N10",240
+"943","N","""86 St""N10","N10","""Coney Island - Stillwell Av""D43","D43",420
+"945","Q","""Astoria - Ditmars Blvd""R01","R01","""Astoria Blvd""R03","R03",90
+"946","Q","""Astoria Blvd""R03","R03","""30 Av""R04","R04",60
+"947","Q","""30 Av""R04","R04","""Broadway""R05","R05",90
+"948","Q","""Broadway""R05","R05","""36 Av""R06","R06",120
+"949","Q","""36 Av""R06","R06","""39 Av""R08","R08",60
+"950","Q","""39 Av""R08","R08","""Queensboro Plaza""R09","R09",210
+"951","Q","""Queensboro Plaza""R09","R09","""Lexington Av/59 St""R11","R11",360
+"952","Q","""Lexington Av/59 St""R11","R11","""5 Av/59 St""R13","R13",90
+"953","Q","""5 Av/59 St""R13","R13","""57 St - 7 Av""R14","R14",150
+"954","Q","""57 St - 7 Av""R14","R14","""49 St""R15","R15",90
+"955","Q","""49 St""R15","R15","""Times Sq - 42 St""R16","R16",90
+"956","Q","""Times Sq - 42 St""R16","R16","""34 St - Herald Sq""R17","R17",210
+"957","Q","""34 St - Herald Sq""R17","R17","""14 St - Union Sq""R20","R20",300
+"958","Q","""14 St - Union Sq""R20","R20","""Canal St""Q01","Q01",240
+"959","Q","""Canal St""Q01","Q01","""DeKalb Av""R30","R30",480
+"960","Q","""DeKalb Av""R30","R30","""Atlantic Av - Barclays Ctr""D24","D24",90
+"961","Q","""Atlantic Av - Barclays Ctr""D24","D24","""7 Av""D25","D25",150
+"962","Q","""7 Av""D25","D25","""Prospect Park""D26","D26",240
+"963","Q","""Prospect Park""D26","D26","""Parkside Av""D27","D27",90
+"964","Q","""Parkside Av""D27","D27","""Church Av""D28","D28",90
+"965","Q","""Church Av""D28","D28","""Beverley Rd""D29","D29",90
+"966","Q","""Beverley Rd""D29","D29","""Cortelyou Rd""D30","D30",60
+"967","Q","""Cortelyou Rd""D30","D30","""Newkirk Plaza""D31","D31",90
+"968","Q","""Newkirk Plaza""D31","D31","""Avenue H""D32","D32",60
+"969","Q","""Avenue H""D32","D32","""Avenue J""D33","D33",90
+"970","Q","""Avenue J""D33","D33","""Avenue M""D34","D34",90
+"971","Q","""Avenue M""D34","D34","""Kings Hwy""D35","D35",150
+"972","Q","""Kings Hwy""D35","D35","""Avenue U""D37","D37",150
+"973","Q","""Avenue U""D37","D37","""Neck Rd""D38","D38",60
+"974","Q","""Neck Rd""D38","D38","""Sheepshead Bay""D39","D39",150
+"975","Q","""Sheepshead Bay""D39","D39","""Brighton Beach""D40","D40",120
+"976","Q","""Brighton Beach""D40","D40","""Ocean Pkwy""D41","D41",120
+"977","Q","""Ocean Pkwy""D41","D41","""W 8 St - NY Aquarium""D42","D42",120
+"978","Q","""W 8 St - NY Aquarium""D42","D42","""Coney Island - Stillwell Av""D43","D43",90
+"980","R","""Forest Hills - 71 Av""G08","G08","""67 Av""G09","G09",90
+"981","R","""67 Av""G09","G09","""63 Dr - Rego Park""G10","G10",120
+"982","R","""63 Dr - Rego Park""G10","G10","""Woodhaven Blvd""G11","G11",60
+"983","R","""Woodhaven Blvd""G11","G11","""Grand Av - Newtown""G12","G12",120
+"984","R","""Grand Av - Newtown""G12","G12","""Elmhurst Av""G13","G13",90
+"985","R","""Elmhurst Av""G13","G13","""Jackson Hts - Roosevelt Av""G14","G14",90
+"986","R","""Jackson Hts - Roosevelt Av""G14","G14","""65 St""G15","G15",90
+"987","R","""65 St""G15","G15","""Northern Blvd""G16","G16",90
+"988","R","""Northern Blvd""G16","G16","""46 St""G18","G18",90
+"989","R","""46 St""G18","G18","""Steinway St""G19","G19",90
+"990","R","""Steinway St""G19","G19","""36 St""G20","G20",120
+"991","R","""36 St""G20","G20","""Queens Plaza""G21","G21",120
+"992","R","""Queens Plaza""G21","G21","""Lexington Av/59 St""R11","R11",330
+"993","R","""Lexington Av/59 St""R11","R11","""5 Av/59 St""R13","R13",90
+"994","R","""5 Av/59 St""R13","R13","""57 St - 7 Av""R14","R14",150
+"995","R","""57 St - 7 Av""R14","R14","""49 St""R15","R15",90
+"996","R","""49 St""R15","R15","""Times Sq - 42 St""R16","R16",90
+"997","R","""Times Sq - 42 St""R16","R16","""34 St - Herald Sq""R17","R17",90
+"998","R","""34 St - Herald Sq""R17","R17","""28 St""R18","R18",60
+"999","R","""28 St""R18","R18","""23 St""R19","R19",90
+"1000","R","""23 St""R19","R19","""14 St - Union Sq""R20","R20",90
+"1001","R","""14 St - Union Sq""R20","R20","""8 St - NYU""R21","R21",90
+"1002","R","""8 St - NYU""R21","R21","""Prince St""R22","R22",150
+"1003","R","""Prince St""R22","R22","""Canal St""R23","R23",90
+"1004","R","""Canal St""R23","R23","""City Hall""R24","R24",150
+"1005","R","""City Hall""R24","R24","""Cortlandt St""R25","R25",120
+"1006","R","""Cortlandt St""R25","R25","""Rector St""R26","R26",90
+"1007","R","""Rector St""R26","R26","""Whitehall St""R27","R27",120
+"1008","R","""Whitehall St""R27","R27","""Court St""R28","R28",210
+"1009","R","""Court St""R28","R28","""Jay St - MetroTech""R29","R29",120
+"1010","R","""Jay St - MetroTech""R29","R29","""DeKalb Av""R30","R30",180
+"1011","R","""DeKalb Av""R30","R30","""Atlantic Av - Barclays Ctr""R31","R31",240
+"1012","R","""Atlantic Av - Barclays Ctr""R31","R31","""Union St""R32","R32",120
+"1013","R","""Union St""R32","R32","""9 St""R33","R33",90
+"1014","R","""9 St""R33","R33","""Prospect Av""R34","R34",120
+"1015","R","""Prospect Av""R34","R34","""25 St""R35","R35",90
+"1016","R","""25 St""R35","R35","""36 St""R36","R36",90
+"1017","R","""36 St""R36","R36","""45 St""R39","R39",120
+"1018","R","""45 St""R39","R39","""53 St""R40","R40",90
+"1019","R","""53 St""R40","R40","""59 St""R41","R41",90
+"1020","R","""59 St""R41","R41","""Bay Ridge Av""R42","R42",120
+"1021","R","""Bay Ridge Av""R42","R42","""77 St""R43","R43",90
+"1022","R","""77 St""R43","R43","""86 St""R44","R44",120
+"1023","R","""86 St""R44","R44","""Bay Ridge - 95 St""R45","R45",120
+"1025","SI","""Tottenville""S09","S09","""Atlantic""S10","S10",120
+"1026","SI","""Atlantic""S10","S10","""Nassau""S12","S12",60
+"1027","SI","""Nassau""S12","S12","""Richmond Valley""S13","S13",120
+"1028","SI","""Richmond Valley""S13","S13","""Pleasant Plains""S14","S14",120
+"1029","SI","""Pleasant Plains""S14","S14","""Prince's Bay""S15","S15",120
+"1030","SI","""Prince's Bay""S15","S15","""Huguenot""S16","S16",120
+"1031","SI","""Huguenot""S16","S16","""Annadale""S17","S17",120
+"1032","SI","""Annadale""S17","S17","""Eltingville""S18","S18",120
+"1033","SI","""Eltingville""S18","S18","""Great Kills""S19","S19",120
+"1034","SI","""Great Kills""S19","S19","""Bay Terrace""S20","S20",120
+"1035","SI","""Bay Terrace""S20","S20","""Oakwood Heights""S21","S21",120
+"1036","SI","""Oakwood Heights""S21","S21","""New Dorp""S22","S22",120
+"1037","SI","""New Dorp""S22","S22","""Grant City""S23","S23",120
+"1038","SI","""Grant City""S23","S23","""Jefferson Av""S24","S24",60
+"1039","SI","""Jefferson Av""S24","S24","""Dongan Hills""S25","S25",120
+"1040","SI","""Dongan Hills""S25","S25","""Old Town""S26","S26",120
+"1041","SI","""Old Town""S26","S26","""Grasmere""S27","S27",120
+"1042","SI","""Grasmere""S27","S27","""Clifton""S28","S28",180
+"1043","SI","""Clifton""S28","S28","""Stapleton""S29","S29",120
+"1044","SI","""Stapleton""S29","S29","""Tompkinsville""S30","S30",120
+"1045","SI","""Tompkinsville""S30","S30","""St George""S31","S31",180
+"1047","Z","""Broad St""M23","M23","""Fulton St""M22","M22",120
+"1048","Z","""Fulton St""M22","M22","""Chambers St""M21","M21",120
+"1049","Z","""Chambers St""M21","M21","""Canal St""M20","M20",120
+"1050","Z","""Canal St""M20","M20","""Bowery""M19","M19",150
+"1051","Z","""Bowery""M19","M19","""Essex St""M18","M18",120
+"1052","Z","""Essex St""M18","M18","""Marcy Av""M16","M16",450
+"1053","Z","""Marcy Av""M16","M16","""Myrtle Av""M11","M11",240
+"1054","Z","""Myrtle Av""M11","M11","""Gates Av""J30","J30",180
+"1055","Z","""Gates Av""J30","J30","""Chauncey St""J28","J28",150
+"1056","Z","""Chauncey St""J28","J28","""Broadway Jct""J27","J27",60
+"1057","Z","""Broadway Jct""J27","J27","""Alabama Av""J24","J24",90
+"1058","Z","""Alabama Av""J24","J24","""Van Siclen Av""J23","J23",60
+"1059","Z","""Van Siclen Av""J23","J23","""Norwood Av""J21","J21",150
+"1060","Z","""Norwood Av""J21","J21","""Crescent St""J20","J20",90
+"1061","Z","""Crescent St""J20","J20","""75 St""J17","J17",150
+"1062","Z","""75 St""J17","J17","""Woodhaven Blvd""J15","J15",180
+"1063","Z","""Woodhaven Blvd""J15","J15","""104 St""J14","J14",90
+"1064","Z","""104 St""J14","J14","""121 St""J12","J12",180
+"1065","Z","""121 St""J12","J12","""Sutphin Blvd - Archer Av - JFK Airport""G06","G06",240
+"1066","Z","""Sutphin Blvd - Archer Av - JFK Airport""G06","G06","""Jamaica Center - Parsons/Archer""G05","G05",60
