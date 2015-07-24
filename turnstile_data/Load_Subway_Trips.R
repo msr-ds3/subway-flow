@@ -44,7 +44,7 @@ for (txt in txts) {
    subwaydata <- rbind(subwaydata, tmp)
 }
 setwd("~/Desktop/subway-flow/MergingData/new_ts")
-subwaydata = read.table("turnstile_150704.txt",header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE) 
+#subwaydata = read.table("turnstile_150704.txt",header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE) 
 subwaydata <- right_join(subwaydata, names_lines, by = c("STATION", "AEILMN" = "line_name"))
 
 # creating dataframe with num_entries, num_exits, and time difference
@@ -163,4 +163,5 @@ dev.off()
 
 write.csv(subwaydata_fil, file = "turnstyle_df.csv")
 write.csv(stations_type, file = "station_classifications.csv")
-
+write.csv(subwaydata, file="master_subwaydata_dataframe.csv")
+write.csv(subwa)
