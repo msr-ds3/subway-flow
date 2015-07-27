@@ -5,10 +5,10 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-#graphme = raw_input("Which train are you taking?      ") 
+graphme = raw_input("Which train are you taking?      ") 
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("/home/ewahmed/subway-flow/TrainTravel_LineNames_StopIDs.csv")
+openingfile = open("/home/ewahmed/subway-flow/TrainTravel.csv")
 traindata = openingfile.readlines()
 openingfile.close()
 
@@ -18,23 +18,16 @@ openingfile.close()
 trains=[]
 fromstation=[]
 tostation=[]
-fromstopid=[]
-tostopid=[]
 traveltime=[]
-fromline=[]
-toline=[]
+
 
 #Extracting data into select initalized lists ^ 
 for line in traindata:
 	traintravel = line.rstrip('\n').split(',')
 	trains.append(traintravel[1])
-	fromstopid.append(traintravel[2])
-	tostopid.append(traintravel[5])
 	fromstation.append(traintravel[3])
-	tostation.append(traintravel[6])
-	traveltime.append(traintravel[8])
-	fromline.append(traintravel[4])
-	toline.append(traintravel[7])
+	tostation.append(traintravel[5])
+	traveltime.append(traintravel[6])
 
 #length of our lists - to use in loops
 length=range(0,len(trains))
@@ -44,41 +37,37 @@ for i in length:
 	trains[i] = trains[i].replace('"', '').strip()
 	fromstation[i] = fromstation[i].replace('"','').strip()
 	tostation[i] = tostation[i].replace('"','').strip()
-	fromstopid[i] = fromstopid[i].replace('"','').strip()
-	tostopid[i] = tostopid[i].replace('"','').strip()
 	traveltime[i] = traveltime[i].replace('"','').strip()
-	fromline[i] = fromline[i].replace('"','').strip()
-	toline[i] = toline[i].replace('"','').strip()
-
-#change this directory to where you located the Transfers file
-openingfile= open("/home/ewahmed/subway-flow/CleanTransfers/differentstopids.txt")
-transfers = openingfile.readlines()
-openingfile.close()
-
-#initalize lists to graph with later (make connections)
-transferfrom=[]
-transferto=[]
-transfertime=[]
-
-#Parsing data into lists
-for transfer in transfers:
-	stoptransfers = transfer.rstrip('\n').split(',')
-	transferfrom.append(stoptransfers[0])
-	transferto.append(stoptransfers[1])
-	transfertime.append(stoptransfers[2])	
 
 #initializing a graph to represent the connections on 
 G= nx.DiGraph()
 
-#Connecting stations with one another on the graph
-length= range(1,len(trains))
-for i in length:
-	G.add_cycle([fromstopid[i],tostopid[i]],fromname=fromstation[i])
+#Looking where the train's data begins and ends (index)
+starttrain=-1
 
-#Connecting transfers to one another on the graph
-length = range(1,len(transferto))
+for train in trains:
+	starttrain+=1
+	if(train==graphme):
+		break
+
+endtrain=starttrain
+for train in trains:
+	if(train==graphme):
+		endtrain+=1
+
+endtrain=endtrain-1
+
+#initalizing 
+Gfromstation = fromstation[starttrain:endtrain]
+Gtostation = tostation[starttrain:endtrain]
+
+print Gfromstation
+print Gtostation
+
+#Connecting stations with one another on the graph
+length=range(starttrain,endtrain)
 for i in length:
-	G.add_cycle([transferfrom[i],transferto[i]],transfertime=transfertime[i])
+ 	G.add_cycle([fromstation[i],tostation[i]])
 
 #Print flow function
 def print_flow(flow):
@@ -88,7 +77,7 @@ def print_flow(flow):
 
 print_flow(G)
 
-nx.draw(G, with_labels=True, node_color='w', node_size=500, font_size=10)
+nx.draw_spring(G, with_labels=True, node_color='w', node_size=300, font_size=10)
 
 #paths = nx.shortest_path(G, 'D40','635') #From brighton to fulton st aka my school route
 #print paths
