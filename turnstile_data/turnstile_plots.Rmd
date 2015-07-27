@@ -22,14 +22,14 @@ library(plotrix)
 #########################################
 # entries dataframe
 entries <- subwaydata_fil %>%
-  select(station, linename,date.time, time, day_of_week,entries.delta, entries_per_timediff) %>%
+  select(station, aeilmn,date.time, time, day_of_week,entries.delta, entries_per_timediff) %>%
   mutate(type = "entry")
 entries <- dplyr::rename(entries, entries_exits_rate = entries_per_timediff)
 entries <- dplyr::rename(entries, entries_exits = entries.delta)
 
 # exits dataframee
 exits <- subwaydata_fil %>%
-  select(station, linename,date.time, time, day_of_week, exits.delta, exits_per_timediff) %>%
+  select(station, aeilmn,date.time, time, day_of_week, exits.delta, exits_per_timediff) %>%
   mutate(type = "exit")
 exits <- dplyr::rename(exits, entries_exits_rate = exits_per_timediff) 
 exits <- dplyr::rename(exits, entries_exits = exits.delta)
@@ -48,7 +48,7 @@ subwaydata <- subset()
 
 entries <- data.frame()
 entries <- subwaydata_total %>%
-  select(station, linename,date.time, time, day_of_week,entries.delta, entries_per_timediff) %>%
+  select(station, aeilmn,date.time, time, day_of_week,entries.delta, entries_per_timediff) %>%
   mutate(type = "entry")
 entries <- dplyr::rename(entries, entries_exits_rate = entries_per_timediff)
 entries <- dplyr::rename(entries, entries_exits = entries.delta)
@@ -56,7 +56,7 @@ entries <- dplyr::rename(entries, entries_exits = entries.delta)
 # exits dataframee
 exits <- data.frame()
 exits <- subwaydata_total %>%
-  select(station, linename,date.time, time, day_of_week, exits.delta, exits_per_timediff) %>%
+  select(station, aeilmn,date.time, time, day_of_week, exits.delta, exits_per_timediff) %>%
   mutate(type = "exit")
 exits <- dplyr::rename(exits, entries_exits_rate = exits_per_timediff) 
 exits <- dplyr::rename(exits, entries_exits = exits.delta)
