@@ -1,9 +1,13 @@
+# CURRENT
+# Riva Tropp
+# 7/27/2015
+
 import pylev
 import re
 import sys
 
 #Function to give numbers larger weight for distance
-def samewords(name1, name2):
+def samewords(name1, name2): #Checks if two phrases consist of the same words.
     set1 = set()
     set2 = set()
     arr1 = name1.split()
@@ -17,7 +21,7 @@ def samewords(name1, name2):
     else:
         return 0
 
-def distanceoffset(name1, name2):
+def distanceoffset(name1, name2): #Checks if the numbers in the strings are the same.
     a = re.compile(r'[^0-9]*([0-9]+)[^0-9]*')
 
     if (not a.match(name1) and a.match(name2)) or (not a.match(name2) and a.match(name1)):
@@ -53,11 +57,13 @@ def wordnospaces(name1):
         name1_ns = name1_ns + x
     return name1_ns
 
+#Checks if one string is inside the other.
 def isinside(name1, name2):
     if name1 in name2 or name2 in name1:
         return -2
     return 0
 
+#Invoked when entering the files in, changes forms of 'avenue' into 'av'.
 def one_ave(string1, pattern, string2):
     arr1 = string1.replace('-', ' ').rsplit()
     outbound = ""
@@ -67,15 +73,14 @@ def one_ave(string1, pattern, string2):
         outbound = outbound + " " + arr1[x]
     return outbound
 
+#Further penalties if distance == one of the strings, to prevent overmatching small strings.
 def penalize(string1, string2):
     if pylev.levenshtein(string1, string2) > min(len(string1), len(string2)):
         return 3
     return 0
 
-#Break up dataset into numbered and non-numbered streets
-
 ################################################################################
-
+#Actual code starts here:
 ################################################################################
 
 #Files are already lowercase. (Command line).
@@ -95,11 +100,14 @@ r_best = {}
 
 pattern = re.compile(r'av[enu]+')
 
+#Don't give me any PATH trains.
 path = set(["NEWARK BM BW", "NEWARK C", "NEWARK HM HE", "NEWARK HW BMEBE", "HARRISON", "JOURNAL SQUARE", "GROVE STREET", "EXCHANGE PLACE", "PAVONIA NEWPORT", "CHRISTOPHER ST", "CITY   BUS"]) #Hard Coded Path trains.
 
+#Don't give me any Staten Island Railroad stations.
 SIRS = set(["Nassau", "Annadale", "Tottenville", "Stapleton", "Clifton", "Grasmere", "Old Town", "Dongan Hills", "Jefferson Av", "Grant City", "New Dorp", "Oakwood Heights", "Bay Terrace", "Great Kills", "Eltingville", "Huguenot", "Prince's Bay", "Pleasant Plains", "Richmond Valley", "Nassau", "Atlantic"])
-for t in turns:
-    a = t.strip('"').replace("/", ' ').replace("-", " ").strip()
+
+for t in turns: #Do some formatting, put in a list, put original in an identically indexed list.
+    a = t.strip('"').replace("/", ' ').replace("-", " ").strip() 
     if a not in path:
         temp1 = one_ave(a.lower(), pattern, "av")
         turn_terms.append(temp1)
@@ -107,7 +115,7 @@ for t in turns:
 
 f1.close()
 
-for g in google:
+for g in google: #Same thing for GTFS
     a = g.replace('"', '').replace("/", ' ').replace("-", " ").strip()
     if a not in SIRS:
         temp1 = one_ave(a.lower(), pattern, "av")
@@ -116,29 +124,32 @@ for g in google:
 
 f2.close()
 
-bestmatches = {}
+bestmatches = {} #Where we'll store matches.
 
 #Compare each station in the turnstile data to each station in the google feed. 
 for t in xrange(0, len(turn_terms)):
     for g in xrange(0, len(google_terms)):
-    #Make the highest default so anything better will take its place.          
+       
+	#Compute distance:
         tinylist = [int(distanceoffset(turn_terms[t], google_terms[g])) + int(pylev.levenshtein(google_terms[g], turn_terms[t])) + isinside(turn_terms[t], google_terms[g]) + samewords(turn_terms[t], google_terms[g]) + penalize(turn_terms[t], google_terms[g]), orig_google[g], google_terms[g], orig_turn[t]]
         
+	#Make the highest default so anything better will take its place.   
         bestmatches.setdefault(turn_terms[t], [len(turn_terms[t])])
         r_best.setdefault(g, [len(google_terms[g])])
-        #Compute distance with levenshtein and numbers
+
+	#Check against previous, update if it's a better match for both words than the things they matched before.
         if tinylist[0] < bestmatches[turn_terms[t]][0] and tinylist[0] < r_best[g]:
             bestmatches[turn_terms[t]] = tinylist
             r_best[g] = [tinylist[0], turn_terms[t]]
 
-f3 = open('./matchtable.txt', 'w')
+f3 = open('./matchtable.txt', 'w') #Now stick it all in a nice file.
 
 for g in bestmatches:
     f3.write(g + ",")
     for x in xrange(0, len(bestmatches[g])):
         if x == len(bestmatches[g])-1:
-            f3.write(str(bestmatches[g][x]).strip())
+            f3.write(str(bestmatches[g][x]).strip().strip('"'))
         else:
-            f3.write(str(bestmatches[g][x]).strip() + ",")
+            f3.write(str(bestmatches[g][x]).strip().strip('"') + ",")
     f3.write("\n")
 f3.close()
