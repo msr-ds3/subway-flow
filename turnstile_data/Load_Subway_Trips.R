@@ -2,91 +2,89 @@
 # Description: Code to load turnstile data into master dataframe
 #################################################################
 library(dplyr)
-<<<<<<< HEAD
 library(timeDate) 
 library(reshape)
 library(ggplot2)
 library(data.table)
 
-setwd("~/Desktop/subway-flow/MergingData")
+setwd("~/subway-flow")
 ######################################################################################################################
 # Merging turnstile data with GTSF data
 ######################################################################################################################
-=======
-library(timeDate) # to get day of week function
-library(reshape2)
-library(stats)
-
-# get data
-# note is sorted by SCP (individual turnstyles)
-# when dealing with more weeks, should be sorted by SCP
-setwd("~/Documents/subway-flow/MergingData")
-#n_names = read.table("./MergingData/readyformerge.txt",header=FALSE, sep=",", # current turnstyle dataframe
-#                     quote = "", row.names = NULL, strip.white = TRUE, 
-#                    stringsAsFactors = FALSE) 
->>>>>>> 4510d97d3450c5ee3b93637407856889af8ca17c
-n_names = read.table("readyformerge.txt",header=FALSE, sep=",", # current turnstyle dataframe
+#My Merge Table is read in.
+n_names = read.table("./MergingData/readyformerge.txt",header=FALSE, sep=",", # current turnstyle dataframe
                      quote = "", row.names = NULL, strip.white = TRUE, 
                      stringsAsFactors = FALSE) 
-names(n_names)[0:5] <- c("Transformed Turnstile Name", "Distance", "stop_name", "Transformed Google Name", "STATION")
 
+#Formatting stuff
+names(n_names)[0:5] <- c("Transformed Turnstile Name", "Distance", "stop_name", "Transformed Google Name", "STATION")
 n_names <- data.frame(n_names[,c(3,5)])
 
-<<<<<<< HEAD
-=======
-# l_lines = read.table("./MergingData/s_gtfs_names.csv",header=TRUE, sep=",", #Stop_ids
-#                      fill=TRUE,quote = "", row.names = NULL, strip.white = TRUE,
-#                      stringsAsFactors = FALSE) 
->>>>>>> 4510d97d3450c5ee3b93637407856889af8ca17c
-l_lines = read.table("s_gtfs_names.csv",header=TRUE, sep=",", #Stop_ids
+#Eiman's Station names are read in:
+l_lines = read.table("./GoogleLineNames.csv",header=TRUE, sep=",", #Stop_ids
                      fill=TRUE,quote = "", row.names = NULL, strip.white = TRUE,
                      stringsAsFactors = FALSE) 
-all_lines <- as.data.frame(sapply(l_lines, function(x) gsub("\"", "", x)))
 
+#MOAR Formatting!
+all_lines <- as.data.frame(sapply(l_lines, function(x) gsub("\"", "", x)))
 all_lines <- data.frame(all_lines[,c(2,3,4)])
 names(all_lines) <- c("station_id", "line_name", "stop_name")
 
+#Eiman's stuff is combined with the nametable
 names_lines <- left_join(n_names, all_lines)
 names_lines <- data.frame(names_lines[,c(2,3,4)])
-<<<<<<< HEAD
 
-setwd("~/Desktop/subway-flow/MergingData/new_ts") # go to file to store merged turnstile data
-txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', "~/Desktop/subway-flow/MergingData/new_ts"))
-txts <- txts[12] # take three months of data
-=======
-# 
-setwd("~/Documents/subway-flow/MergingData/new_ts")
-txts <-c()
-#txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', "~/Documents/subway-flow/MergingData/new_ts"))
->>>>>>> 4510d97d3450c5ee3b93637407856889af8ca17c
-subwaydata <- data.frame()
+#Now we just have the station, E's ID, and the linenames.
+
+#Loading in all TS Files.
+data_dir <- "./MergingData/new_ts/"
+txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', data_dir))
+ts_data <- data.frame()
+txts <- txts[1]
 for (txt in txts) {
-   tmp <- read.table(txt, header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
-   subwaydata <- rbind(subwaydata, tmp)
+  tmp <- read.table(txt, header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
+  ts_data <- rbind(ts_data, tmp)
 }
-<<<<<<< HEAD
-setwd("~/Desktop/subway-flow/MergingData/new_ts")
-subwaydata <- right_join(subwaydata, names_lines, by = c("STATION", "AEILMN" = "line_name"))
+
+#Joining TS Files with Eiman's Station Names
+all_ts <- left_join(names_lines, ts_data, by = "STATION")
+
+#Turn both linename fields to strings
+all_ts$AEILMN <- sapply(all_ts$AEILMN, toString)
+all_ts$line_name <- sapply(all_ts$line_name, toString)
+
+#Sebastian's function to get intersection lengths.
+overlap <- function(x,y) {length(intersect(strsplit(x, "")[[1]], strsplit(y, "")[[1]]))}
+
+#Columns to get intersection, get min length of string
+all_ts$intersect <- mapply(overlap, all_ts$AEILMN, all_ts$line_name)
+all_ts$lenline <- sapply(all_ts$line_name, nchar)
+all_ts$lenaiel <- sapply(all_ts$AEILMN, nchar)
+all_ts$minline <- mapply(min, all_ts$lenaiel, all_ts$lenline)
+all_ts$lenline <- NULL
+all_ts$lenaiel <- NULL
+
+#Test if the intersection is meaningful.
+all_ts <- all_ts %>% mutate(matches = (intersect == minline))
+all_ts$minline <- NULL
+all_ts$intersect <- NULL
+
+#Filter out nonmeaningful intersections (i.e, station names without shared lines).
+all_ts <- all_ts %>% filter(matches == TRUE)
+all_ts$matches <- NULL
+
 ######################################################################################################################
 # modify subwaydata dataframe
 ######################################################################################################################
-=======
-setwd("~/Documents/subway-flow/MergingData/new_ts")
-subwaydata = read.table("turnstile_150704.txt",header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE) 
-subwaydata <- right_join(subwaydata, names_lines, by = c("STATION", "AEILMN" = "line_name"))
-
->>>>>>> 4510d97d3450c5ee3b93637407856889af8ca17c
+subwaydata <- as.data.frame(all_ts) %>%select(-AEILMN) # drop aeilmn column
+  
 # creating dataframe with num_entries, num_exits, and time difference
 names(subwaydata) <- tolower(names(subwaydata))
-setnames(subwaydata, old=c("aeilmn"), new=c("line_name"))
 subwaydata$date.time <- with(subwaydata, paste(date, time, sep=' '))
 subwaydata$date.time <- with(subwaydata, strptime(date.time, "%m/%d/%Y %H:%M:%S"))
 subwaydata$date.time <- with(subwaydata, as.POSIXct((date.time)))
-<<<<<<< HEAD
+
 subwaydata <- group_by(subwaydata, c.a, unit, scp, station, line_name)
-=======
-subwaydata <- group_by(subwaydata, c.a, unit, scp, station,aeilmn)
->>>>>>> 4510d97d3450c5ee3b93637407856889af8ca17c
 
 subwaydata <- arrange(subwaydata, date.time) %>%
   mutate(time.delta = as.numeric(date.time-lag(date.time),units="hours"),
@@ -95,7 +93,7 @@ subwaydata <- arrange(subwaydata, date.time) %>%
          day_of_week = dayOfWeek(as.timeDate(date)),
          is_weekday = ifelse(isWeekday(date.time) == TRUE, 1, 0))
 
-<<<<<<< HEAD
+
 subwaydata <- filter(subwaydata, time.delta <= 12) 
 
 # create time periods
@@ -106,63 +104,38 @@ subwaydata <-subwaydata %>%
                               ifelse(time > "12:00:00" & time <= "16:00:00", "12:16",
                               ifelse(time > "16:00:00" & time <= "20:00:00", "16:20", '20:0'))))))
 
+################################################################################################################
+# filter subwaydata
+################################################################################################################
+
+subwaydata <- filter(subwaydata, time.delta <= 12) 
+
+subwaydata <- subwaydata %>% 
+  filter(entries.delta < 100000) %>%
+  filter(exits.delta < 100000) %>%
+  filter(exits.delta > -1) %>%
+  filter(entries.delta > -1) %>%
+  filter(is_weekday == 1)
+
 # compute hourly entries/exits 
 entry_exit_rates <- group_by(subwaydata, station, line_name , entry_exits_period, date) %>%
   summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4)
+
+
 
 # determine part of day
 entry_exit_rates <- subwaydata %>% 
   mutate(is_night = ifelse(time <= "16:00:00" & time >= "04:00:00",  1, 0))
 
+
 ################################################################################################################
-# filter subwaydata
+# get total entries/exits for each station to compute flow
 ################################################################################################################
+entries_exits <- as.data.frame(subwaydata) %>%
+  group_by(station, line_name, station_id) %>%
+  summarise(entries = sum(entries.delta), exits = sum(exits.delta))
+write.csv(entries_exits, file = "subway_entries_exits.csv")
 
-subwaydata <- subwaydata %>% 
-=======
-
-
-subwaydata <- filter(subwaydata, time.delta <= 12) 
-
-subwaydata <-mutate(subwaydata, entry_exits_period = ifelse(time > "0:00:00" & time <= "04:00:00", "0:4",
-                                   ifelse(time > "04:00:00" & time <= "08:00:00", "4:8",
-                                          ifelse(time > "08:00:00" & time <= "12:00:00", "8:12",
-                                                 ifelse(time > "12:00:00" & time <= "16:00:00", "12:16",
-                                                        ifelse(time > "16:00:00" & time <= "20:00:00", "16:20", "20:0"))))))
-
-subwaydata <- subwaydata %>% 
-  filter(entries.delta < 100000) %>%
-  filter(exits.delta < 100000) %>%
-  filter(exits.delta > -1) %>%
-  filter(entries.delta > -1) %>%
-  filter(is_weekday == 1)
-
-subwaydata<-group_by(subwaydata, station, aeilmn , entry_exits_period, date) %>%
-  summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4)
-# subwaydata <- mutate(subwaydata,
-#                      time.delta = order_by(date.time, difftime(date.time, lag(date.time), units = "hours")),
-#                      entries.delta = order_by(date.time, entries - lag(entries)),
-#                      exits.delta = order_by(date.time, exits - lag(exits)),
-#                      day_of_week = dayOfWeek(as.timeDate(date)),
-#                      entries_per_timediff = entries.delta / as.numeric(time.delta),
-#                      exits_per_timediff = exits.delta / as.numeric(time.delta),
-#                      is_weekday = ifelse(isWeekday(date.time) == TRUE, 1, 0))
-
-
-######################################################################
-# filter subwaydata
-######################################################################
-
-# removed NAs and rows with 0 < num_entries or num_exits < 6000 
-subwaydata_fil <- as.data.frame(subwaydata)
-subwaydata_fil <- subwaydata_fil %>% 
->>>>>>> 4510d97d3450c5ee3b93637407856889af8ca17c
-  filter(entries.delta < 100000) %>%
-  filter(exits.delta < 100000) %>%
-  filter(exits.delta > -1) %>%
-  filter(entries.delta > -1) %>%
-  filter(is_weekday == 1)
-     
 ################################################################################################################
 # hourly entries/exits stats
 ################################################################################################################
@@ -199,13 +172,6 @@ ggplot(data=subway_time_ratios, aes(x=station,
   ylab("No. Entries & Exits per HR")+
   geom_boxplot() 
 
-ggplot(data=subwaydata, aes(x=station,
-                     y=hourly_entries)) +
-  ggtitle("Entries/HR for all stations") +
-  xlab("station") +
-  ylab("No. Entries & Exits per hr")+
-  geom_boxplot() 
-
 #################################################################################################
 # get mean entries and exits for day and night
 #################################################################################################
@@ -236,7 +202,6 @@ mean_night_exits <- as.data.frame(stations_type) %>%
   select(mean_exits)
 mean_night_exits <- rename(mean_night_exits, c(mean_exits="mean_night_exits"))
 
-<<<<<<< HEAD
 stations <- unique(stations_type$station)
 
 stations_stats <- data.frame() # store new stats in new dataframe
@@ -245,21 +210,6 @@ stations_stats <- cbind(stations, mean_day_exits, mean_day_entries, mean_night_e
 stations_type <- stations_stats %>%
   mutate(station_type = ifelse(mean_day_entries > 2*mean_day_exits & mean_night_exits > 2*mean_night_entries, "residential", 
                                 ifelse(mean_day_entries < 2*mean_day_exits & mean_night_exits < 2 * mean_night_entries, "commercial", "commuter")))
-=======
-# removing path trains from data
-subwaydata_fil<-subwaydata_fil[!subwaydata_fil$division == "PTH", ]
-
-
-station <- group_by(subwaydata_fil,station,aeilmn) %>%
-  summarise(mean_time = entries.delta)
-
-# check ratio of entries and exits per time chunk
-subwaydata_fil <- subwaydata_fil %>%
-  mutate(entry_exits_period = ifelse(time > "0:00:00" & time <= "04:00:00", "0:4",
-                                     ifelse(time > "04:00:00" & time <= "08:00:00", "4:8",
-                                            ifelse(time > "08:00:00" & time <= "12:00:00", "8:12",
-                                                   ifelse(time > "12:00:00" & time <= "16:00:00", "12:16",
-                                                          ifelse(time > "16:00:00" & time <= "20:00:00", "16:20", "20:0"))))))
 
 # get entries/exits per day ratios in time period for all stations 
 subway_time_ratios <- subwaydata_fil %>%
@@ -272,23 +222,6 @@ subway_time_ratios <- subwaydata_fil %>%
   group_by(entry_exits_period, station,aeilmn,is_weehekday) %>%
   filter(is_weekday == 1) %>%
   summarize(entries_per_hr=mean(entries_per_timediff), exits_per_hr=mean(exits_per_timediff), entries_exits_ratio=entries_per_hr/exits_per_hr, standard_entries = sd(entries_per_timediff), standard_exits = sd(exits_per_timediff))
-
-# find missing stations 20:0
-# reason not all stations have times after 20:00
-a <- filter(subwaydata_fil, entry_exits_period == "20:0") 
-missing_stations <- anti_join(subwaydata_fil, a, by="station")
-unique(missing_stations$station)
-
-# get entries/exits per day ratios for all stations, used for network flow
-subway_time_ratios <- subwaydata_fil %>%
-  group_by(is_weekday,station_id, station) %>% 
-  filter(is_weekday == 1) %>%
-  summarize(entries_per_hr=mean(entries_per_timediff), exits_per_hr=mean(exits_per_timediff),
-            entries_exits_ratio=entries_per_hr/exits_per_hr) %>%
-  select(station,station_id,entries_per_hr,exits_per_hr)
-
-temp <- as.data.frame(subway_time_ratios) %>% select(station, station_id, entries_per_hr, exits_per_hr)
-write.csv(subwaydata_fil, file = "hourly_entries_exits.csv")
 
 ################################################################################################
 # add station type
@@ -334,8 +267,6 @@ stations_type <- stations_stats %>%
   mutate(station_type = ifelse(mean_day_entries > 2*mean_day_exits & mean_night_exits > 2*mean_night_entries, "residential", 
                                ifelse(mean_day_entries < 2*mean_day_exits & mean_night_exits < 2 * mean_night_entries, "commercial", "commuter")))
 
-# percent of rows kept - 99.3%
-length(subwaydata_fil$station) / length(subwaydata$station)
 
 #####################################################################################################
 # plot 
@@ -346,10 +277,4 @@ par(mar=c(2,2,2,2))
 png(filename="hist_morning_entry_ratio.png")
 hist(stations_type$morning_entry_ratio, breaks=20)
 dev.off()
-
-write.csv(subwaydata_fil, file = "turnstyle_df.csv")
-write.csv(stations_type, file = "station_classifications.csv")
-write.csv(subwaydata, file="master_subwaydata_dataframe.csv")
->>>>>>> 4510d97d3450c5ee3b93637407856889af8ca17c
-
 
