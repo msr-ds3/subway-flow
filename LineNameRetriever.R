@@ -60,8 +60,8 @@ unique_train_stops$StopID= substr(unique_train_stops$StopID,0,3)
 trains_names$stop_id= substr(trains_names$stop_id,0,3)
 
 #Combining Stations + StopIDs as one feature
-#unique_train_stops$Station <- paste(unique_train_stops$Station,unique_train_stops$StopID, sep="")
-#trains_names$X.stop_name. <- paste(trains_names$X.stop_name.,trains_names$stop_id,sep="")
+unique_train_stops$Station <- paste(unique_train_stops$Station,unique_train_stops$StopID, sep="")
+trains_names$X.stop_name. <- paste(trains_names$X.stop_name.,trains_names$stop_id,sep="")
 
 #Getting the LineName so we can later join with Turnstile data
 unique_train_stops$LineName = ""
@@ -103,14 +103,6 @@ unique_train_lines <- unique_train_stops
 unique_train_lines$LineName = NULL
 unique_train_lines<- inner_join(unique_train_lines,unique_stopids)
 
-#Making seperate csv for train, stopids, and the lines on those stopids
-train_stopid_lines <- data.frame(unique_train_lines[,c(1,3,5,7)])
-#getting rid of duplicates from this data frame
-train_stopid_lines <- train_stopid_lines %>% group_by(Train) %>% arrange(StopID)
-train_stopid_lines <- train_stopid_lines[!duplicated(train_stopid_lines),] 
-#exporting as CSV
-write.csv(train_stopid_lines, "/home/ewahmed/subway-flow/Train_StopIDs_Lines.csv") 
-
 #Loading unique transfer data (differentstopids)
 setwd("/home/ewahmed/subway-flow/CleanTransfers/")
 transfers <- read.table("differentstopids.txt",header=TRUE, 
@@ -118,7 +110,14 @@ transfers <- read.table("differentstopids.txt",header=TRUE,
                          stringsAsFactors = FALSE) 
 #Renaming so we can join the transfer data to the train_stopid_lines dataframe
 names(transfers)<- c('StopID','TransferID','TransferTime')
-transfers_stopids_lines <- inner_join(train_stopid_lines,transfers)
+names(stops)<- c('TransferID','StationName')
+transfers <- inner_join(transfers, stops)
+
+#Combining Stations + TransferIDs as one feature
+
+transfers$StationName <- paste(transfers$StationName,transfers$TransferID, sep="")
+#joining 
+transfers_stopids_lines <- inner_join(unique_train_lines,transfers)
 #joining the two data frames together
 transfer_lines <- train_stopid_lines
 transfer_lines$Station=NULL
@@ -164,9 +163,7 @@ names(transfers_lines)<- c('stop_id','line_name')
 transfers_lines <- inner_join(transfers_lines,stops)
 names(transfers_lines)<- c('stop_id','line_name','google_station')
 #Export as R file - change the dir/file name per needs
-write.csv(transfers_lines, "/home/ewahmed/subway-flow/GoogleLineNames.csv") 
-
-
+write.csv(transfers_lines, "/home/ewahmed/subway-flow/OldGoogleLineNames.csv") 
 
 #Put it in the order we want so we can manipulate the data 
 unique_train_lines <- mutate(unique_train_lines, TrainStop2 = lag(TrainStop))
@@ -185,4 +182,4 @@ unique_train_lines <-data.frame(unique_train_lines[,c(1,10,9,11,5,3,7,4)])
 names(unique_train_lines)<- c('Train','FromStopID','FromStation','FromLine', 'ToStopID','ToStation','ToLine' ,'TravelTime')
 
 #Export as R file - change the dir/file name per needs
-write.csv(unique_train_lines, "/home/ewahmed/subway-flow/TrainTravel_LineNames_StopIDs.csv")  
+write.csv(unique_train_lines, "/home/ewahmed/subway-flow/TrainTravel_StopIDs.csv")  
