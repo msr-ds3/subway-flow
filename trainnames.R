@@ -60,14 +60,3 @@ all_ts$intersect <- NULL
 #Filter out nonmeaningful intersections (i.e, station names without shared lines).
 all_ts <- all_ts %>% filter(matches == TRUE)
 
-
-
-
-
-
-#Make a new column with overlap
-#Keep if overlap == smaller of the two linenames.
-
-
-write.table(station_names, "mergedstations.csv")
-?write.csv
