@@ -59,12 +59,27 @@ subwaydata <- arrange(subwaydata, date.time) %>%
          entries.delta = entries - lag(entries),
          exits.delta = exits - lag(exits),
          day_of_week = dayOfWeek(as.timeDate(date)),
-         entries_per_timediff = entries.delta / time.delta,
-         exits_per_timediff = exits.delta / time.delta,
          is_weekday = ifelse(isWeekday(date.time) == TRUE, 1, 0))
 
-subwaydata <- filter(subwaydata, time.delta>.2) 
 
+
+subwaydata <- filter(subwaydata, time.delta <= 12) 
+
+subwaydata <-mutate(subwaydata, entry_exits_period = ifelse(time > "0:00:00" & time <= "04:00:00", "0:4",
+                                   ifelse(time > "04:00:00" & time <= "08:00:00", "4:8",
+                                          ifelse(time > "08:00:00" & time <= "12:00:00", "8:12",
+                                                 ifelse(time > "12:00:00" & time <= "16:00:00", "12:16",
+                                                        ifelse(time > "16:00:00" & time <= "20:00:00", "16:20", "20:0"))))))
+
+subwaydata <- subwaydata %>% 
+  filter(entries.delta < 100000) %>%
+  filter(exits.delta < 100000) %>%
+  filter(exits.delta > -1) %>%
+  filter(entries.delta > -1) %>%
+  filter(is_weekday == 1)
+
+subwaydata<-group_by(subwaydata, station, aeilmn , entry_exits_period, date) %>%
+  summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4)
 # subwaydata <- mutate(subwaydata,
 #                      time.delta = order_by(date.time, difftime(date.time, lag(date.time), units = "hours")),
 #                      entries.delta = order_by(date.time, entries - lag(entries)),
