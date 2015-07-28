@@ -36,20 +36,22 @@ mean_day_entries <- as.data.frame(entries_exits_rates) %>%
   filter(is_night == 0) %>%
   select(mean_hourly_entries)
 
+# get mean day exits
 mean_day_exits <- as.data.frame(entries_exits_rates) %>%
   group_by(station,station_id) %>%
   filter(is_night == 0) %>%
   summarise(mean_hourly_exits)
 mean_day_entries <- rename(mean_day_entries, c(mean_entries="mean_day_entries"))
 
+# get mean night entries
 mean_night_entries <- as.data.frame(entries_exits_rates) %>%
   filter(is_night == 1) %>%
-  select(mean_exits) 
+  select(mean_hourly_entries) 
 mean_day_exits <- rename(mean_day_exits, c(mean_exits="mean_day_exits"))
 
 mean_night_exits <- as.data.frame(entries_exits_rates) %>% 
   filter(is_night == 1) %>%
-  select(mean_exits)
+  select(mean_hourly_exits)
 mean_night_exits <- rename(mean_night_exits, c(mean_exits="mean_night_exits"))
 
 stations <- unique(entries_exits_rates$station)
