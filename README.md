@@ -2,7 +2,7 @@
 
 This is the shared repository for Microsoft Research NYC's 2015 Data Science Summer School (DS3) Subway-Flow Team.
 
-* [CleanTransfers](Step1/): Run c_order.py
+* [Step 1](Step1/): Run c_order.py
      
 * [Step 2](Step2/): Run join.sh
 
