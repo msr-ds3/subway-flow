@@ -159,7 +159,48 @@ seperate_linenames<- trains_linenames
 
 #Making a seperate file station_ids, station names, and linenames 
 #(this file will be made to merge with the turnstile data)
+#google_linenames<- data.frame(seperate_linenames[,c(8,7,4)])
+#google_linenames <- google_linenames %>% group_by(station_id) %>% arrange(station_id)  # getting rid of duplicates
+#google_linenames <- google_linenames[!duplicated(google_linenames),] 
+#write.csv(google_linenames,"/home/ewahmed/subway-flow/GoogleLineNames.csv")
+
+#Getting rid of staten island data since no turnstile data for staten island
+#Making H train lines as AS
+
+seperate_linenames$station <- sapply(seperate_linenames$station,function(x) gsub ("\"", "", x))
+
+seperate_linenames <- filter(seperate_linenames, train!="SI")
+seperate_linenames[seperate_linenames$train == "H",]$line_name="AS"
+seperate_linenames[seperate_linenames$station_id == "L03",]$station_id="635"
+seperate_linenames[seperate_linenames$station== "Middle Village - Metropolitan Av",]$station = "Metropolitan Av"
+seperate_linenames[seperate_linenames$station== "Broadway" & seperate_linenames$line_name== "NQ" ,]$station = "Broadway-31 St"
+seperate_linenames[seperate_linenames$station== "Bay Pkwy" & seperate_linenames$line_name== "N" ,]$station = "Bay Pky-22 Ave"
+seperate_linenames[seperate_linenames$station== "Myrtle - Wyckoff Avs" & seperate_linenames$line_name== "LM" ,]$station = "Myrtle Ave"
+seperate_linenames[seperate_linenames$station== "21 St - Queensbridge" & seperate_linenames$line_name== "F" ,]$station = "21 St"
+seperate_linenames[seperate_linenames$station== "Lexington Av/63 St" & seperate_linenames$line_name== "456FNR" ,]$station = "Lexington Ave"
+seperate_linenames[seperate_linenames$station== "Sutphin Blvd - Archer Av - JFK Airport" & seperate_linenames$line_name== "EJZ" ,]$station = "Sutphin Blvd"
+seperate_linenames[seperate_linenames$station== "Court St" & seperate_linenames$line_name== "2345NR" ,]$station = "Borough Hall/Ct"
+seperate_linenames[seperate_linenames$station== "Jackson Hts - Roosevelt Av" & seperate_linenames$line_name== "7EFMR" ,]$station = "Roosevelt Ave"
+seperate_linenames[seperate_linenames$station== "Broadway-Lafayette St" & seperate_linenames$line_name== "6BDFM" ,]$station = "Broadway/Lafay"
+#seperate_linenames[seperate_linenames$station== "Broadway/Lafay" & seperate_linenames$line_name== "6BDFM" ,]$line_name = "BDFQ6"
+seperate_linenames[seperate_linenames$station== "Broad Channel",]$line_name = "AS"
+seperate_linenames[seperate_linenames$station== "5 Av",]$station = "5 Ave-Bryant Pk"
+seperate_linenames[seperate_linenames$station== "E 105 St" & seperate_linenames$line_name== "L" ,]$station = "East 105 St"
+seperate_linenames[seperate_linenames$station== "Bedford Park Blvd - Lehman College" ,]$station = "Bedford Park Bl"
+seperate_linenames[seperate_linenames$station== "Sutter Av - Rutland Rd" & seperate_linenames$line_name=="34",]$station = "Sutter Ave"
+seperate_linenames[seperate_linenames$station== "Central Park North (110 St)" & seperate_linenames$line_name== "23" ,]$station = "110 St-CPN"
+seperate_linenames[seperate_linenames$station== "West Farms Sq - E Tremont Av" ,]$station = "E Tremont Ave"
+#seperate_linenames[seperate_linenames$station=="West Farms Sq - E Tremont Av",]$line_name = "25"
+seperate_linenames[seperate_linenames$station=="62 St",]$station = "New Utrecht Ave"
+seperate_linenames[seperate_linenames$station=="Christopher St - Sheridan Sq",]$station = "Christopher St"
+seperate_linenames[seperate_linenames$station=="Cathedral Pkwy",]$station = "110 St-Cathedrl"
+seperate_linenames[seperate_linenames$station=="168 St - Washington Hts",]$station = "168 St-Broadway"
+#Buhre and Zerega are closed for 2015
+#Cortlandt st for the 1 train is closed for now 
+
+#Making a seperate file station_ids, station names, and linenames 
+#(this file will be made to merge with the turnstile data)
 google_linenames<- data.frame(seperate_linenames[,c(8,7,4)])
 google_linenames <- google_linenames %>% group_by(station_id) %>% arrange(station_id)  # getting rid of duplicates
 google_linenames <- google_linenames[!duplicated(google_linenames),] 
-write.csv(google_linenames,"/home/ewahmed/subway-flow/GoogleLineNames.csv")
+write.csv(google_linenames,"/home/ewahmed/subway-flow/NewGoogleLineNames.csv")
