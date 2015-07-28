@@ -33,7 +33,10 @@ names_lines <- data.frame(names_lines[,c(2,3,4)])
 data_dir <- "./MergingData/new_ts/"
 txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', data_dir))
 ts_data <- data.frame()
+<<<<<<< HEAD
 txts <- txts[1]
+=======
+>>>>>>> 46c0471c3f3f4ab3ca4a142956d75d427658a67c
 for (txt in txts) {
   tmp <- read.table(txt, header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
   ts_data <- rbind(ts_data, tmp)
