@@ -78,16 +78,9 @@ subwaydata <- subwaydata %>%
   filter(entries.delta > -1) %>%
   filter(is_weekday == 1)
 
-subwaydata<-group_by(subwaydata, station, aeilmn , entry_exits_period, date) %>%
+
+hourly_entries_exits<-group_by(subwaydata, station, aeilmn , entry_exits_period, date) %>%
   summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4)
-# subwaydata <- mutate(subwaydata,
-#                      time.delta = order_by(date.time, difftime(date.time, lag(date.time), units = "hours")),
-#                      entries.delta = order_by(date.time, entries - lag(entries)),
-#                      exits.delta = order_by(date.time, exits - lag(exits)),
-#                      day_of_week = dayOfWeek(as.timeDate(date)),
-#                      entries_per_timediff = entries.delta / as.numeric(time.delta),
-#                      exits_per_timediff = exits.delta / as.numeric(time.delta),
-#                      is_weekday = ifelse(isWeekday(date.time) == TRUE, 1, 0))
 
 
 ######################################################################
@@ -101,6 +94,75 @@ subwaydata_fil <- subwaydata_fil %>%
   filter(exits.delta < 100000) %>%
   filter(exits.delta > -1) %>%
   filter(entries.delta > -1)
+
+
+
+station<- select(subwaydata ,day_of_week, exits.delta, entries.delta) %>% 
+  group_by(day_of_week) %>%
+  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
+
+
+station<- gather(station, exit_or_entry, total, total_entries:total_exits)
+
+sterling_station<- filter(subwaydata, station == "STERLING ST")
+sterling_station<- select(sterling_station ,day_of_week, exits.delta, entries.delta) %>% 
+  group_by(day_of_week) %>%
+  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
+
+sterling_station<- gather(sterling_station, exit_or_entry, total, total_entries:total_exits)
+
+##PLot
+
+
+ggplot(data=sterling_station, aes(x=day_of_week, y=total, fill=exit_or_entry)) + 
+  geom_bar(colour="black", stat="identity",
+           position=position_dodge(),
+           size=.3) +                        # Thinner lines
+  scale_fill_hue(name="Entry or Exit") +      # Set legend title
+  xlab("Day of week") + ylab("Count") + # Set axis labels
+  ggtitle("Sterling St") +     # Set title
+  theme_bw()
+
+####42nd street
+
+lexington_station<- filter(subwaydata, station == "LEXINGTON AVE")
+lexington_station<- select(lexington_station ,day_of_week, exits.delta, entries.delta) %>% 
+  group_by(day_of_week) %>%
+  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
+lexington_station<- gather(lexington_station, exit_or_entry, total, total_entries:total_exits)
+
+##PLot
+
+
+ggplot(data=lexington_station, aes(x=day_of_week, y=total, fill=exit_or_entry)) + 
+  geom_bar(colour="black", stat="identity",
+           position=position_dodge(),
+           size=.3) +                        # Thinner lines
+  scale_fill_hue(name="Entry or Exit") +      # Set legend title
+  xlab("Day of week") + ylab("Count") + # Set axis labels
+  ggtitle("LEXINGTON AVE") +     # Set title
+  theme_bw()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # removing path trains from data
 subwaydata_fil<-subwaydata_fil[!subwaydata_fil$division == "PTH", ]
