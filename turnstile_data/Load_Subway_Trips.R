@@ -125,12 +125,12 @@ subwaydata <- subwaydata %>%
 # hourly entries/exits stats
 ################################################################################################################
 # compute entries/exits for time period for each day for all stations
-entries_exits_rates <- group_by(subwaydata, station, station_id,line_name , entry_exits_period, date) %>%
+entries_exits_rates <- group_by(subwaydata, station_id, entry_exits_period, date) %>%
   summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4) 
 
 write.csv(entries_exits_rates, file = "subway_entries_exits.csv")
 
-entries_exits_avg <- group_by(subwaydata, station, station_id,line_name , entry_exits_period) %>%
+entries_exits_avg <- group_by(subwaydata, station_id, entry_exits_period) %>%
   summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4) 
 
 write.csv(entries_exits_avg, file = "entries_exits_average.csv")
