@@ -16,6 +16,65 @@ library(ggplot2)
 library(reshape)
 library(scales)
 library(plotrix)
+library(tidyr)
+library(dplyr)
+library(data.table)
+
+
+# load hourly entries dataframe
+entries_exits_rates <- read.csv("entries_exits_average.csv")  # read csv file 
+entries_exits_rates$X <- NULL # remove X column
+
+################################################################################################
+# add station type
+################################################################################################
+entries_exits_rates <- entries_exits_rates %>%
+  mutate(is_night = ifelse(entry_exits_period == "4:8" | entry_exits_period == "8:12" | entry_exits_period == "12:16",  0, 1))
+
+# get mean day entries
+mean_day_entries <- as.data.frame(entries_exits_rates) %>%
+  filter(is_night == 0) %>%
+  select(mean_hourly_entries)
+
+mean_day_exits <- as.data.frame(entries_exits_rates) %>%
+  group_by(station,station_id) %>%
+  filter(is_night == 0) %>%
+  summarise(mean_day_entries = mean(value))
+mean_day_entries <- rename(mean_day_entries, c(mean_entries="mean_day_entries"))
+
+mean_day_exits <- as.data.frame(entries_exits_rates) %>%
+  filter(is_night == 0) %>%
+  select(mean_exits) 
+mean_day_exits <- rename(mean_day_exits, c(mean_exits="mean_day_exits"))
+
+mean_night_exits <- as.data.frame(entries_exits_rates) %>% 
+  filter(is_night == 1) %>%
+  select(mean_exits)
+mean_night_exits <- rename(mean_night_exits, c(mean_exits="mean_night_exits"))
+
+stations <- unique(entries_exits_rates$station)
+
+stations_stats <- data.frame() # store new stats in new dataframe
+stations_stats <- cbind(stations, mean_day_exits, mean_day_entries, mean_night_exits, mean_night_entries)
+
+entries_exits_rates <- stations_stats %>%
+  mutate(station_type = ifelse(mean_day_entries > 2*mean_day_exits & mean_night_exits > 2*mean_night_entries, "residential", 
+                               ifelse(mean_day_entries < 2*mean_day_exits & mean_night_exits < 2 * mean_night_entries, "commercial", "commuter")))
+
+# place entries and exits in one column for pretty plotting
+entries_exits_rates <- gather(entries_exits_rates, exit_or_entry, total, mean_hourly_entries:mean_hourly_exits)
+setnames(entries_exits_rates, old=c("variable","value"), new=c("exit_or_entry", "total"))
+entries_exits_rates <- entries_exits_rates %>%
+  mutate(is_night = ifelse(entry_exits_period == "4:8" | entry_exits_period == "8:12" | entry_exits_period == "12:16",  0, 1))
+
+
+# get mean entries and exits for day and night for each station in single dataframe for plotting
+mean_entries_exits <- as.data.frame(entries_exits_rates) %>%
+  group_by(station,station_id,is_night, exit_or_entry) %>%
+  summarise(mean_day_entries = mean(total))
+
+ggplot(data = entries_exits_rates, aes(x=mean(entry_exits_period), y=value, color=entry_or_exit)) +
+         geom_point()
 
 #########################################
 # create new dataframe for facet graphing
