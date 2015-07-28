@@ -1,3 +1,7 @@
+# CURRENT
+# Riva Tropp
+# 07/27/2015
+
 library(dplyr)
 setwd("~/subway-flow")
 #My Merge Table is read in.
@@ -10,17 +14,17 @@ names(n_names)[0:5] <- c("Transformed Turnstile Name", "Distance", "stop_name", 
 n_names <- data.frame(n_names[,c(3,5)])
 
 #Eiman's Station names are read in:
-l_lines = read.table("./GoogleLineNames.csv",header=TRUE, sep=",", #Stop_ids
+l_lines = read.table("./NewGoogleLineNames.csv",header=TRUE, sep=",", #Stop_ids
                      fill=TRUE,quote = "", row.names = NULL, strip.white = TRUE,
                      stringsAsFactors = FALSE) 
 
-#MOAR Formatting!
+#More Formatting!
 all_lines <- as.data.frame(sapply(l_lines, function(x) gsub("\"", "", x)))
 all_lines <- data.frame(all_lines[,c(2,3,4)])
 names(all_lines) <- c("station_id", "line_name", "stop_name")
 
 #Eiman's stuff is combined with the nametable
-names_lines <- left_join(n_names, all_lines)
+names_lines <- inner_join(n_names, all_lines)
 names_lines <- data.frame(names_lines[,c(2,3,4)])
 
 #Now we just have the station, E's ID, and the linenames.
@@ -60,3 +64,9 @@ all_ts$intersect <- NULL
 #Filter out nonmeaningful intersections (i.e, station names without shared lines).
 all_ts <- all_ts %>% filter(matches == TRUE)
 all_ts$matches <- NULL
+View(all_ts)
+
+
+#NTS: scale, convert to integers, check how different, then adjust as needed.
+
+
