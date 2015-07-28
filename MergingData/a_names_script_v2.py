@@ -153,3 +153,5 @@ for g in bestmatches:
             f3.write(str(bestmatches[g][x]).strip().strip('"') + ",")
     f3.write("\n")
 f3.close()
+
+print bestmatches
