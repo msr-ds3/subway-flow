@@ -2,16 +2,16 @@
 
 This is the shared repository for Microsoft Research NYC's 2015 Data Science Summer School (DS3) Subway-Flow Team.
 
-* [Step 1](Step1/): Run c_order.py
+* [Step 1](MergingData/): Run c_order.py
      
 * [Step 2](Step2/): Run join.sh
 
-* [Step 3](Step3/): Run pp_namesformerge.awk
+* [Step 3](MergingData/): Run pp_namesformerge.awk
 
-* [Step 4](Step4/): Run TrainTravel.R
+* [Step 4](subway-flow/TrainTravel.R): Run TrainTravel.R
 
-* [Step 5](Step5/): properstationflow.py
+* [Step 5](subway-flow/properstationflow.py): Run properstationflow.py
 
-* [Step 6](Step6/): Run Load_Subway_Trips.R
+* [Step 6](turnstile_data/Load_Subway_Trips.R): Run Load_Subway_Trips.R
 
 * [Step 7](Step7/): Run balance_entries_exits.R
