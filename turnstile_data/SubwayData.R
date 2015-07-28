@@ -18,7 +18,7 @@ library(tidyr)
 mydata = read.table("turnstile_150704.txt",header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
 
 #week of 7/4/15 to 7/8/15
-mydata2 = read.table("turnstile_150711.txt",header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
+mydata2 = read.table("turnstile_141213.txt",header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
 
 # set the data directory
 data_dir <- '.'
@@ -34,20 +34,25 @@ for (txt in txts) {
 
 
 
+
 #Creating dataframe with num_entries and num_exits
-#data <- read.delim('turnstile_150704.txt', header=TRUE, sep=',')
+data <- read.delim('turnstile_150704.txt', header=TRUE, sep=',')
 names(data) <- tolower(names(data))
 data$date.time <- with(data, paste(date, time, sep=' '))
 data$date.time <- with(data, strptime(date.time, "%m/%d/%Y %H:%M:%S"))
 data$date.time <- with(data, as.POSIXct((date.time)))
 
-data <- group_by(data, c.a, unit, scp, station)
-data <- mutate(data,
-               time.delta = order_by(date.time, date.time - lag(date.time)),
-               entries.delta = order_by(date.time, entries - lag(entries)),
-               exits.delta = order_by(date.time, exits - lag(exits)),
-               day_of_week = dayOfWeek(as.timeDate(date)) 
-)
+data <- group_by(data, c.a, unit, scp, station, linename)
+data <- arrange(data, date.time) %>% 
+  mutate(time.delta = as.numeric(date.time-lag(date.time),units="hours"),
+         entries.delta = entries - lag(entries),
+         exits.delta = exits - lag(exits),
+         day_of_week = dayOfWeek(as.timeDate(date)),
+         entries_per_timediff = entries.delta / time.delta,
+         exits_per_timediff = exits.delta / time.delta,
+         is_weekday = ifelse(isWeekday(date.time) == TRUE, 1, 0))
+
+
 ##removing path trains from data
 data<-data[!data$division == "PTH", ]
 
