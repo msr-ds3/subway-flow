@@ -1,6 +1,7 @@
-#################################################################
-# Description: Code to load turnstile data into master dataframe
-#################################################################
+########################################################################################################################################################################
+# Description: Code to load turnstile data into master dataframe and review statistics
+# 
+########################################################################################################################################################################
 library(dplyr)
 library(timeDate) 
 library(reshape)
@@ -31,7 +32,7 @@ all_lines <- data.frame(all_lines[,c(2,3,4)])
 names(all_lines) <- c("station_id", "line_name", "stop_name")
 
 #Eiman's stuff is combined with the nametable
-names_lines <- left_join(n_names, all_lines)
+names_lines <- inner_join(n_names, all_lines)
 names_lines <- data.frame(names_lines[,c(2,3,4)])
 
 #Now we just have the station, E's ID, and the linenames.
@@ -40,7 +41,7 @@ names_lines <- data.frame(names_lines[,c(2,3,4)])
 data_dir <- "./MergingData/new_ts/"
 txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', data_dir))
 ts_data <- data.frame()
-txts <- txts[1]
+txts <- txts[12:16]
 for (txt in txts) {
   tmp <- read.table(txt, header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
   ts_data <- rbind(ts_data, tmp)
@@ -84,25 +85,28 @@ subwaydata$date.time <- with(subwaydata, paste(date, time, sep=' '))
 subwaydata$date.time <- with(subwaydata, strptime(date.time, "%m/%d/%Y %H:%M:%S"))
 subwaydata$date.time <- with(subwaydata, as.POSIXct((date.time)))
 
-subwaydata <- group_by(subwaydata, c.a, unit, scp, station, line_name)
+subwaydata <- group_by(subwaydata, c.a, unit, scp, station, line_name) # select unique turnstiles for each station
 
 subwaydata <- arrange(subwaydata, date.time) %>%
   mutate(time.delta = as.numeric(date.time-lag(date.time),units="hours"),
-         entries.delta = entries - lag(entries),
-         exits.delta = exits - lag(exits),
-         day_of_week = dayOfWeek(as.timeDate(date)),
-         is_weekday = ifelse(isWeekday(date.time) == TRUE, 1, 0))
+  entries.delta = entries - lag(entries),
+  exits.delta = exits - lag(exits),
+  day_of_week = dayOfWeek(as.timeDate(date)))
+
+subwaydata <- subwaydata %>% # rid data of weekends
+  filter(day_of_week != "Sun" & day_of_week != "Sat")
 
 
 subwaydata <- filter(subwaydata, time.delta <= 12) 
 
 # create time periods
 subwaydata <-subwaydata %>%
-  mutate(entry_exits_period = ifelse(time > "0:00:00" & time <= "04:00:00", "0:4",
+  mutate(entry_exits_period = as.character(ifelse(time > "0:00:00" & time <= "04:00:00", as.character("0:4"),
                               ifelse(time > "04:00:00" & time <= "08:00:00", "4:8",
                               ifelse(time > "08:00:00" & time <= "12:00:00", "8:12",
                               ifelse(time > "12:00:00" & time <= "16:00:00", "12:16",
-                              ifelse(time > "16:00:00" & time <= "20:00:00", "16:20", '20:0'))))))
+                              ifelse(time > "16:00:00" & time <= "20:00:00", "16:20", "20:0")))))))
+
 
 ################################################################################################################
 # filter subwaydata
@@ -114,55 +118,43 @@ subwaydata <- subwaydata %>%
   filter(entries.delta < 100000) %>%
   filter(exits.delta < 100000) %>%
   filter(exits.delta > -1) %>%
-  filter(entries.delta > -1) %>%
-  filter(is_weekday == 1)
-
-# compute hourly entries/exits 
-entry_exit_rates <- group_by(subwaydata, station, line_name , entry_exits_period, date) %>%
-  summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4)
-
-
+  filter(entries.delta > -1) 
 
 # determine part of day
-entry_exit_rates <- subwaydata %>% 
+is_morning <- subwaydata %>% 
   mutate(is_night = ifelse(time <= "16:00:00" & time >= "04:00:00",  1, 0))
-
-
-################################################################################################################
-# get total entries/exits for each station to compute flow
-################################################################################################################
-entries_exits <- as.data.frame(subwaydata) %>%
-  group_by(station, line_name, station_id) %>%
-  summarise(entries = sum(entries.delta), exits = sum(exits.delta))
-write.csv(entries_exits, file = "subway_entries_exits.csv")
 
 ################################################################################################################
 # hourly entries/exits stats
 ################################################################################################################
+# compute entries/exits for time period for each day of week for all stations
+entry_exit_rates <- group_by(subwaydata, station, station_id,line_name , entry_exits_period,day_of_week) %>%
+  summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4) 
 
-# get entries/exits per day ratios in time period for all stations 
-subway_time_ratios <- subwaydata %>%
-  group_by(entry_exits_period, is_weekday) %>% 
-  filter(is_weekday == 1) %>%
-  summarize(entries_per_hr=mean(hourly_entries), exits_per_hr=mean(hourly_exits), entries_exits_ratio=entries_per_hr/exits_per_hr)
+# get entries/exits for each weekday ratios for all stations 
+subway_time_ratios <- entry_exit_rates %>%
+  group_by(day_of_week) %>% 
+  summarize(mean_daily_entries=mean(hourly_entries), mean_daily_exits=mean(hourly_exits), entries_error = sd(hourly_entries), exits_error = sd(hourly_exits))
 
-# get entries/exits for each weeekday ratios in time period for all stations
-subway_time_ratios <- subwaydata %>%
-  group_by(entry_exits_period, station, is_weekday, station_id, day_of_week) %>%
-  filter(is_weekday == 1) %>%
-  summarize(entries_per_hr=mean(hourly_entries), exits_per_hr=mean(hourly_exits), entries_exits_ratio=entries_per_hr/exits_per_hr, standard_entries = sd(hourly_entries), standard_exits = sd(hourly_exits))
+subway_time_ratios<- gather(subway_time_ratios, exit_or_entry, total, total_entries:total_exits)
+
+ggplot(data = subway_time_ratios, aes(x = ))
+
+
+# get entries/exits for each time period for all stations
+subway_time_ratios <- entry_exit_rates %>%
+  group_by(entry_exits_period) %>% 
+  summarize(mean_hourly_entries=mean(hourly_entries), mean_hourly_exits=mean(hourly_exits), entries_error = sd(hourly_entries), exits_error = sd(exits_per_timediff))
 
 # get entries/exits per day ratios in time period for individual stations
-subway_time_ratios <- subwaydata %>%
-  group_by(entry_exits_period, station, is_weekday, station_id) %>%
-  filter(is_weekday == 1) %>%
-  summarize(entries_per_hr=mean(hourly_entries), exits_per_hr=mean(hourly_exits), entries_exits_ratio=entries_per_hr/exits_per_hr, standard_entries = sd(hourly_entries), standard_exits = sd(hourly_exits))
+subway_time_ratios <- entry_exit_rates %>%
+  group_by(station, line_name,station_id, day_of_week) %>% 
+  summarize(mean_hourly_entries=mean(hourly_entries), mean_hourly_exits=mean(hourly_exits))
 
-# get entries/exits for each weekday ratios in time period for individual stations
-subway_time_ratios <- subwaydata %>%
-  group_by(entry_exits_period, station, is_weekday, station_id, day_of_week) %>%
-  filter(is_weekday == 1) %>%
-  summarize(entries_per_hr=mean(hourly_entries), exits_per_hr=mean(hourly_exits), entries_exits_ratio=entries_per_hr/exits_per_hr, standard_entries = sd(hourly_entries), standard_exits = sd(hourly_exits))
+# get entries/exits per time period for individual stations
+subway_time_ratios <- entry_exit_rates %>%
+  group_by(station, line_name,station_id, time_period) %>% 
+  summarize(mean_hourly_entries=mean(hourly_entries), mean_hourly_exits=mean(hourly_exits))
 
 # boxplot of entries_per_hr for all stations
 ggplot(data=subway_time_ratios, aes(x=station,
@@ -171,57 +163,6 @@ ggplot(data=subway_time_ratios, aes(x=station,
   xlab("station") +
   ylab("No. Entries & Exits per HR")+
   geom_boxplot() 
-
-#################################################################################################
-# get mean entries and exits for day and night
-#################################################################################################
-
-# get mean entries and exits for day and night
-stations_type <- stations_type %>% 
-  select(station, time, hourly_entries, hourly_exits, is_night) %>%
-  group_by(station, is_night) %>%
-  summarize(mean_entries = mean(hourly_exits), mean_exits=mean(hourly_entries))
-
-mean_day_entries <- subwaydata %>%
-  filter(is_night == 0) %>%
-  select(mean_entries)
-mean_day_entries <- rename(mean_day_entries, c(mean_entries="mean_day_entries"))
-  
-mean_night_entries <- as.data.frame(stations_type) %>%
-  filter(is_night == 1) %>%
-  select(mean_entries)
-mean_night_entries <- rename(mean_night_entries, c(mean_entries="mean_night_entries"))
-
-mean_day_exits <- as.data.frame(stations_type) %>%
-  filter(is_night == 0) %>%
-  select(mean_exits) 
-mean_day_exits <- rename(mean_day_exits, c(mean_exits="mean_day_exits"))
-
-mean_night_exits <- as.data.frame(stations_type) %>% 
-  filter(is_night == 1) %>%
-  select(mean_exits)
-mean_night_exits <- rename(mean_night_exits, c(mean_exits="mean_night_exits"))
-
-stations <- unique(stations_type$station)
-
-stations_stats <- data.frame() # store new stats in new dataframe
-stations_stats <- cbind(stations, mean_day_exits, mean_day_entries, mean_night_exits, mean_night_entries)
-
-stations_type <- stations_stats %>%
-  mutate(station_type = ifelse(mean_day_entries > 2*mean_day_exits & mean_night_exits > 2*mean_night_entries, "residential", 
-                                ifelse(mean_day_entries < 2*mean_day_exits & mean_night_exits < 2 * mean_night_entries, "commercial", "commuter")))
-
-# get entries/exits per day ratios in time period for all stations 
-subway_time_ratios <- subwaydata_fil %>%
-  group_by(entry_exits_period, is_weekday) %>% 
-  filter(is_weekday == 1) %>%
-  summarize(entries_per_day=mean(entries_per_timediff), exits_per_day=mean(exits_per_timediff), entries_exits_ratio=entries_per_day/exits_per_day)
-
-# get entries/exits per day ratios in time period for individual stations
-subway_time_ratios <- subwaydata_fil %>%
-  group_by(entry_exits_period, station,aeilmn,is_weehekday) %>%
-  filter(is_weekday == 1) %>%
-  summarize(entries_per_hr=mean(entries_per_timediff), exits_per_hr=mean(exits_per_timediff), entries_exits_ratio=entries_per_hr/exits_per_hr, standard_entries = sd(entries_per_timediff), standard_exits = sd(exits_per_timediff))
 
 ################################################################################################
 # add station type
@@ -267,11 +208,39 @@ stations_type <- stations_stats %>%
   mutate(station_type = ifelse(mean_day_entries > 2*mean_day_exits & mean_night_exits > 2*mean_night_entries, "residential", 
                                ifelse(mean_day_entries < 2*mean_day_exits & mean_night_exits < 2 * mean_night_entries, "commercial", "commuter")))
 
+################################################################################################################
+# get total entries/exits for each station to compute flow
+################################################################################################################
+entries_exits <- as.data.frame(subwaydata) %>%
+  group_by(station_id, day_of_week, entry_exits_period, day_of_week) %>%
+  summarise(entries = sum(entries.delta), exits = sum(exits.delta))
+write.csv(entries_exits, file = "subway_entries_exits.csv")
 
 #####################################################################################################
 # plot 
 #####################################################################################################
 stations_type$morning_entry_ratio <- stations_type$mean_day_entries/stations_type$mean_day_exits
+
+temp <- subset(entry_exit_rates, "FULTON ST" == station & line_name == "2345ACJZ")
+ggplot(data=temp, aes(x = date, y = hourly_entries)) +
+  facet_wrap(~entry_exits_period) +
+  geom_point()
+
+lexington_station<- filter(subwaydata, station == "LEXINGTON AVE")
+lexington_station<- select(lexington_station ,day_of_week, exits.delta, entries.delta) %>%
+  group_by(day_of_week) %>%
+  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
+lexington_station<- gather(lexington_station, exit_or_entry, total, total_entries:total_exits)
+
+##PLot
+ggplot(data=lexington_station, aes(x=day_of_week, y=total, fill=exit_or_entry)) +
+  geom_bar(colour="black", stat="identity",
+           position=position_dodge(),
+           size=.3) +                        # Thinner lines
+  scale_fill_hue(name="Entry or Exit") +      # Set legend title
+  xlab("Day of week") + ylab("Count") + # Set axis labels
+  ggtitle("LEXINGTON AVE") +     # Set title
+  theme_bw() 
 
 par(mar=c(2,2,2,2))
 png(filename="hist_morning_entry_ratio.png")
