@@ -131,7 +131,7 @@ for t in xrange(0, len(turn_terms)):
     for g in xrange(0, len(google_terms)):
        
 	#Compute distance:
-        tinylist = [int(distanceoffset(turn_terms[t], google_terms[g])) + int(pylev.levenshtein(google_terms[g], turn_terms[t])) + isinside(turn_terms[t], google_terms[g]) + samewords(turn_terms[t], google_terms[g]) + penalize(turn_terms[t], google_terms[g]), orig_google[g], google_terms[g], orig_turn[t]]
+        tinylist = [int(distanceoffset(turn_terms[t], google_terms[g])) + int(pylev.levenshtein(google_terms[g], turn_terms[t])) + int(isinside(turn_terms[t], google_terms[g])) + int(samewords(turn_terms[t], google_terms[g])) + int(penalize(google_terms[g], turn_terms[t])), orig_google[g], google_terms[g], orig_turn[t]]
         
 	#Make the highest default so anything better will take its place.   
         bestmatches.setdefault(turn_terms[t], [len(turn_terms[t])])
@@ -141,6 +141,9 @@ for t in xrange(0, len(turn_terms)):
         if tinylist[0] < bestmatches[turn_terms[t]][0] and tinylist[0] < r_best[g]:
             bestmatches[turn_terms[t]] = tinylist
             r_best[g] = [tinylist[0], turn_terms[t]]
+#            print turn_terms[t], tinylist
+#            if "av n" in turn_terms[t]:
+#                print bestmatches[turn_terms[t]], tinylist
 
 f3 = open('./matchtable.txt', 'w') #Now stick it all in a nice file.
 
@@ -154,4 +157,4 @@ for g in bestmatches:
     f3.write("\n")
 f3.close()
 
-print bestmatches
+#print bestmatches
