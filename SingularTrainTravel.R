@@ -165,7 +165,6 @@ trains_linenames[trains_linenames$station_id == "L03",]$station_id="635"
 trains_linenames[trains_linenames$stop_id == "L03",]$station='"14 St - Union Sq"'
 trains_linenames <- filter(trains_linenames,station_id!="606" & station_id!="602" & station_id!="138")
 
-
 trains_linenames$station <- paste(trains_linenames$station,trains_linenames$station_id,sep="")
 
 write.csv(trains_linenames,"/home/ewahmed/subway-flow/SingularTrainFlow.csv",quote=FALSE)
