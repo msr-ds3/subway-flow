@@ -5,6 +5,7 @@ n_names = read.table("./MergingData/readyformerge.txt",header=FALSE, sep=",", # 
                      quote = "", row.names = NULL, strip.white = TRUE, 
                      stringsAsFactors = FALSE) 
 
+
 #Formatting stuff
 names(n_names)[0:5] <- c("Transformed Turnstile Name", "Distance", "stop_name", "Transformed Google Name", "STATION")
 n_names <- rbind(n_names, c("168 St - Washington Hts", 0, "168 St - Washington Hts", "168 St-Broadway", toupper("168 St-Broadway")))
