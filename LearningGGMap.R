@@ -10,6 +10,7 @@ ggmap(candle, zoom = 4)
 
 newmap <- get_map(location = 'Manhattan', zoom = 12)
 
-mapPoints <- ggmap(newmap)
+ggmap(newmap)
+
 head(mapPoints)
-plot(newmap, zoom 14)
+plot(newmap, zoom = 14)

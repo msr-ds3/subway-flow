@@ -1,5 +1,5 @@
 ---
-Authors: Shannon Evans and Steven Vazquez and Riva Troop and Eiman Bubbles
+Authors: Shannon Evans and Steven Vazquez and Riva Tropp and Eiman Ahmed
 Date: 7/22/2015
 Description: Script to plot all individual stations entries and exits vs. time, 
              as well as total entries and exits vs. time
@@ -20,73 +20,18 @@ library(tidyr)
 library(dplyr)
 library(data.table)
 
-
+setwd("~/Desktop/subway-flow/PrePres")
 # load hourly entries dataframe
-entries_exits_stats <- read.csv("entries_exits_stats.csv")  # read csv file 
+entries_exits_stats <- read.csv("subway_entries_exits.csv")  # read csv file 
 entries_exits_stats$X <- NULL # remove X column
 
 entries_exits_stats <- entries_exits_stats %>%
   mutate(is_night = ifelse(entry_exits_period == "4:8" | entry_exits_period == "8:12" | entry_exits_period == "12:16",  0, 1))
 
-entries_exits_stats <- gather(entries_exits_stats, exit_or_entry, total, hourly_entries:hourly_exits)
-setnames(entries_exits_stats, old=c("variable","value"), new=c("exit_or_entry", "total"))
-
-# entries/exits per time period for individual stations
-entries_exits_stats <- entries_exits_stats %>%
-  group_by(station, station_id, exit_or_entry, entry_exits_period) %>%
-  summarise(total = mean(total))
-
-entries_exits_stats$entry_exits_period <- factor(entries_exits_stats$entry_exits_period, levels = c("0:4", "4:8", "8:12", "12:16", "16:20", "20:0"))
-
-# subset for TIMES SQ
-jpeg('plots/timesq_plot.jpg')
-plot_stats <- entries_exits_stats
-plot_stats <- subset(plot_stats,  station_id == 127)
-ggplot(data=plot_stats, aes(x=entry_exits_period,
-                               y=total,
-                               group=exit_or_entry,
-                               colour=exit_or_entry)) +
-          ggtitle("Hourly Entries/Exits per Time Block for Times Sq") +
-          xlab("Time Blocks") +
-          ylab("No. Entries & Exits per HR")+
-          geom_smooth()
-
-dev.off()
-
-# subset for 103 St (commuter)
-jpeg('plots/103st_plot.jpg')
-plot_stats <- entries_exits_stats
-plot_stats <- subset(plot_stats,  station_id == 119)
-ggplot(data=plot_stats, aes(x=entry_exits_period,
-                               y=total,
-                               group=exit_or_entry,
-                               colour=exit_or_entry)) +
-          ggtitle("Hourly Entries/Exits per Time Block for 103 St") +
-          xlab("Time Blocks") +
-          ylab("No. Entries & Exits per HR")+
-          geom_smooth()
-
-dev.off()
-
-# subset for Middletown road (Residential)
-jpeg('plots/middletown_plot.jpg')
-plot_stats <- subset(plot_stats,  station_id == 603)
-ggplot(data=station_types, aes(x=ent,
-                               y=total,
-                               group=exit_or_entry,
-                               colour=exit_or_entry)) +
-          ggtitle("Hourly Entries/Exits per Time Block for Middletown Rd") +
-          xlab("Time Blocks") +
-          ylab("No. Entries & Exits per HR")+
-          facet_wrap(~station_type)
-          geom_smooth()
-
-dev.off()
-
-
 ################################################################################################
 # add station type
 ################################################################################################
+setwd("~/Desktop/subway-flow/plots")
 # get mean day entries
 day_entries_exits <- as.data.frame(entries_exits_stats) %>%
   group_by(station,station_id, is_night) %>%
@@ -99,15 +44,13 @@ night_entries_exits <- as.data.frame(entries_exits_stats) %>%
   filter(is_night == 1) %>%
   summarise(night_entries = mean(hourly_entries), night_exits = mean(hourly_exits))
 night_entries_exits$is_night <- NULL
-night_entries_exits$station <- NULL
-night_entries_exits$station_id <- NULL
 
 # bind day entries/exits and night entries/exits
-station_types <- cbind(day_entries_exits,night_entries_exits)
+station_types <- inner_join(day_entries_exits,night_entries_exits)
 
 station_types <- station_types%>%
   mutate(station_type = ifelse(day_entries > 2*day_exits & night_exits > 2*night_entries, "residential", 
-                        ifelse(day_entries < 2*day_exits & night_exits < 2 * night_entries, "commercial", "commuter")))
+                        ifelse(day_entries < 2*day_exits & night_exits < 2 * night_entries, "commercial", "link")))
 
 station_types <- station_types %>%
   group_by(station_type) %>%
@@ -117,7 +60,7 @@ station_types <- station_types %>%
             night_exits_avg = mean(night_exits))
 
 # Station Types Entries/Exits
-jpeg('plots/station_type.jpg')
+jpeg('station_type.jpg')
 station_types<- gather(as.data.frame(station_types), type, total, day_entries_avg:night_exits_avg)
 setnames(station_types, old=c("variable","value"), new=c("entries_exits_avg", "total"))
 ggplot(data=station_types, aes(x=station_type,
@@ -132,201 +75,56 @@ dev.off()
 ggplot(data=station_types, aes(x=station_type, y=total, color=entries_exits_avg))+
   geom_histogram(stat="identity")
 
-#################################################################################################################################
-stations <- unique(entries_exits_stats$station)
-
-stations_stats <- data.frame() # store new stats in new dataframe
-stations_stats <- cbind(stations, mean_day_exits, mean_day_entries, mean_night_exits, mean_night_entries)
-
-# place entries and exits in one column for pretty plotting
-entries_exits_stats <- gather(entries_exits_stats, exit_or_entry, total, mean_hourly_entries:mean_hourly_exits)
+############################################################################################################################################################
+# plot stats
+############################################################################################################################################################
+# melt entries and exits for facetting
+entries_exits_stats <- gather(entries_exits_stats, exit_or_entry, total, hourly_entries:hourly_exits)
 setnames(entries_exits_stats, old=c("variable","value"), new=c("exit_or_entry", "total"))
+
+# entries/exits per time period for individual stations
 entries_exits_stats <- entries_exits_stats %>%
-  mutate(is_night = ifelse(entry_exits_period == "4:8" | entry_exits_period == "8:12" | entry_exits_period == "12:16",  0, 1))
+  group_by(station, station_id, exit_or_entry, entry_exits_period) %>%
+  summarise(total = mean(total))
 
+entries_exits_stats$entry_exits_period <- factor(entries_exits_stats$entry_exits_period, levels = c("0:4", "4:8", "8:12", "12:16", "16:20", "20:0"))
 
-# get mean entries and exits for day and night for each station in single dataframe for plotting
-mean_entries_exits <- as.data.frame(entries_exits_stats) %>%
-  group_by(station,station_id,is_night, exit_or_entry) %>%
-  summarise(mean_day_entries = mean(total))
-
-ggplot(data = entries_exits_stats, aes(x=mean(entry_exits_period), y=value, color=entry_or_exit)) +
-         geom_point()
-
-##############################
-# total exits vs. total time
-##############################
-subwaydata_total <- subwaydata_fil
-subwaydata <- subset()
-
-entries <- data.frame()
-entries <- subwaydata_total %>%
-  select(station, aeilmn,date.time, time, day_of_week,entries.delta, entries_per_timediff) %>%
-  mutate(type = "entry")
-entries <- dplyr::rename(entries, entries_exits_rate = entries_per_timediff)
-entries <- dplyr::rename(entries, entries_exits = entries.delta)
-
-# exits dataframee
-exits <- data.frame()
-exits <- subwaydata_total %>%
-  select(station, aeilmn,date.time, time, day_of_week, exits.delta, exits_per_timediff) %>%
-  mutate(type = "exit")
-exits <- dplyr::rename(exits, entries_exits_rate = exits_per_timediff) 
-exits <- dplyr::rename(exits, entries_exits = exits.delta)
-
-# bind dataframes
-subwaydata_total <- data.frame()
-subwaydata_total <- rbind(entries,exits)
-subwaydata_total <- as.data.frame(subwaydata_total)
-
-subwaydata_t <- subset(subwaydata_fil, entries.delta > 6000 & exits.delta > 60000)
-
-a <- subset(subwaydata_fil, entries.delta > 6000 & exits.delta > 6000)
-
-                               y=entries_exits_rate,
-# plot it 
-ggplot(data=subwaydata_total, aes(x=time,
-                               y=
-                               group=type,
-                               colour=type)) +
-  ggtitle("Total Entries and Exits vs. Time of Day") +
-  xlab("Time of Day") +
-  ylab("No. Entries & Exits per HR")+
-  geom_smooth() +
-  facet_wrap(~ day_of_week) 
-
-#############################################
-# plot graphs for each individual station
-#############################################
-# Make list of variable names to loop over.
-unique_stations <- as.character(unique(subway_facet$station))
-
-# Make plots.
-plot_list = list()
-for (i in unique_stations) {
-    unique_subwaydata <- subset(subway_facet, date.time == "")
-    p <- ggplot(data=unique_subwaydata, aes(x=time,
-                               y=entries_exits_rate,
-                               group=type,
-                               colour=type)) +
-          ggtitle(i) +
-          xlab("Time of Day") +
+# subset for TIMES SQ
+plot_stats <- entries_exits_stats
+plot_stats <- subset(plot_stats,  station_id == 127)
+ggplot(data=plot_stats, aes(x=entry_exits_period,
+                               y=total,
+                               group=exit_or_entry,
+                               colour=exit_or_entry)) +
+          ggtitle("Hourly Entries/Exits per Time Block for Times Sq") +
+          xlab("Time Blocks") +
           ylab("No. Entries & Exits per HR")+
-          geom_smooth() +
-          facet_wrap(~ day_of_week)
-    plot_list[[i]] = p
-}
+          geom_smooth()
+ggsave(file='timesq_plot.jpg')
 
-# create pdf where each page is a separate plot.
-pdf("plots1.pdf")
-for (i in unique_stations) {
-    print(plot_list[[i]])
-}
-dev.off()
+# subset for 103 St (commuter)
+plot_stats <- entries_exits_stats
+plot_stats <- subset(plot_stats,  station_id == 119)
+ggplot(data=plot_stats, aes(x=entry_exits_period,
+                               y=total,
+                               group=exit_or_entry,
+                               colour=exit_or_entry)) +
+          ggtitle("Hourly Entries/Exits per Time Block for 103 St") +
+          xlab("Time Blocks") +
+          ylab("No. Entries & Exits per HR")+
+          geom_smooth()
+ggsave(file='plots/103st_plot.jpg')
 
-#######################################################################
-# Shannons plots
-#######################################################################
+# subset for Middletown road (Residential)
+plot_stats <- entries_exits_stats
+plot_stats <- subset(plot_stats,  station_id == 603)
+ggplot(data=plot_stats, aes(x=entry_exits_period,
+                               y=total,
+                               group=exit_or_entry,
+                               colour=exit_or_entry)) +
+          ggtitle("Hourly Entries/Exits per Time Block for Middletown Rd") +
+          xlab("Time Blocks") +
+          ylab("No. Entries & Exits per HR")+
+          geom_smooth()
+ggsave(file='middletown_plot.jpg')
 
-# lexington ave bar plot
-lexave_station<- filter(subwaydata_facet, station == "LEXINGTON AVE")
-lexave_station<- select(lexave_station,day_of_week, exits.delta, entries.delta) %>% 
-  group_by(day_of_week) %>%
-  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
-
-lexave_station<- gather(lexave_station, type, total, total_entries:total_exits)
-
-ggplot(data=lexave_station, aes(x=day_of_week, y=total, fill=exit_or_entry)) + 
-  geom_bar(colour="black", stat="identity",
-           position=position_dodge(),
-           size=.3) +                        # Thinner lines
-  scale_fill_hue(name="Entry or Exit") +      # Set legend title
-  xlab("Day of week") + ylab("Count") + # Set axis labels
-  ggtitle("Entries vs Exits") +     # Set title
-  theme_bw()
-
-
-
-#trying another station
-
-sterling_station<- filter(data, station == "STERLING ST", entries.delta > 0 , exits.delta > 0)
-sterling_station<- select(sterling_station,day_of_week, exits.delta, entries.delta) %>% 
-  group_by(day_of_week) %>%
-  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
-
-sterling_station<- gather(sterling_station, exit_or_entry, total, total_entries:total_exits)
-
-
-
-##PLot
-
-ggplot(data=sterling_station, aes(x=day_of_week, y=total, fill=exit_or_entry)) + 
-  geom_bar(colour="black", stat="identity",
-           position=position_dodge(),
-           size=.3) +                        # Thinner lines
-  scale_fill_hue(name="Entry or Exit") +      # Set legend title
-  xlab("Day of week") + ylab("Count") + # Set axis labels
-  ggtitle("Entries vs Exits") +     # Set title
-  theme_bw()
-
-
-
-#trying whole network
-
-station<- filter(data, entries.delta > 0 & entries.delta <6000 , exits.delta > 0 & exits.delta <6000)
-station<- select(station,day_of_week, exits.delta, entries.delta) %>% 
-  group_by(day_of_week) %>%
-  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
-
-#sort by day of week here
-
-#lexave_station<-arrange(lexave_station,day_of_week)
-
-station<- gather(station, exit_or_entry, total, total_entries:total_exits)
-
-
-
-##PLot
-
-ggplot(data=station, aes(x=day_of_week, y=total/length(unique(data$date)), fill=exit_or_entry)) + 
-  geom_bar(colour="black", stat="identity",
-           position=position_dodge(),
-           size=.3) +                        # Thinner lines
-  scale_fill_hue(name="Entry or Exit") +      # Set legend title
-  xlab("Day of week") + ylab("Count") + # Set axis labels
-  ggtitle("Lexington Station") +     # Set title
-  theme_bw() 
-
-
-
-#trying whole network
-
-station<- filter(data, entries.delta > 0 & entries.delta <6000 , exits.delta > 0 & exits.delta <6000)
-station<- select(station,day_of_week, exits.delta, entries.delta) %>% 
-  group_by(day_of_week) %>%
-  summarise(total_entries=sum(entries.delta),total_exits=sum(exits.delta))
-
-#sort by day of week here
-
-#lexave_station<-arrange(lexave_station,day_of_week)
-
-station<- gather(station, exit_or_entry, total, total_entries:total_exits)
-
-
-
-##PLot
-
-ggplot(data=station, aes(x=day_of_week, y=total/length(unique(data$date)), fill=exit_or_entry)) + 
-  geom_bar(colour="black", stat="identity",
-           position=position_dodge(),
-           size=.3) +                        # Thinner lines
-  scale_fill_hue(name="Entry or Exit") +      # Set legend title
-  xlab("Day of week") + ylab("Count") + # Set axis labels
-  ggtitle("Entries vs Exits") +     # Set title
-  theme_bw()
-
-
-
-
-
-```
