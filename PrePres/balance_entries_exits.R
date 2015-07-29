@@ -17,7 +17,7 @@ names(traintravel) <- c('train','train_stop','stop_id','station','time_travel','
 
 ############################################################################################3
 
-setwd("~/subway-flow/")
+setwd("~/subway-flow/PrePres/")
 all_sub <- read.table("entries_exits_average.csv",header=TRUE, sep=",", # current turnstyle dataframe
                      quote = "\"", row.names = NULL, strip.white = TRUE, 
                      stringsAsFactors = FALSE) 
