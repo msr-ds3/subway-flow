@@ -1,31 +1,44 @@
-# CURRENT
-# Riva Tropp
-# 07/27/2015
-
 library(dplyr)
 setwd("~/subway-flow")
 #My Merge Table is read in.
 n_names = read.table("./MergingData/readyformerge.txt",header=FALSE, sep=",", # current turnstyle dataframe
-                       quote = "", row.names = NULL, strip.white = TRUE, 
-                       stringsAsFactors = FALSE) 
+                     quote = "", row.names = NULL, strip.white = TRUE, 
+                     stringsAsFactors = FALSE) 
 
 #Formatting stuff
 names(n_names)[0:5] <- c("Transformed Turnstile Name", "Distance", "stop_name", "Transformed Google Name", "STATION")
-n_names <- data.frame(n_names[,c(3,5)])
 
-#Eiman's Station names are read in:
+n_names <- rbind(n_names, c("Metropolitan Av", 0, "Middle Village - Metropolitan Av", "Middle Village - Metropolitan Av", "Metropolitan Av"))
+n_names <- rbind(n_names, c("Bay Pky-22 Ave", 0, "Bay Pkwy", "Bay Pkwy", "Bay Pky-22 Ave"))
+n_names <- rbind(n_names, c("Myrtle Ave", "Myrtle - Wyckoff Avs", "Myrtle - Wyckoff Avs", "Myrtle Ave"))
+n_names <- rbind(n_names, c("21 St", "21 St - Queensbridge", "21 St - Queensbridge", "21 St"))
+n_names <- rbind(n_names, c("Lexington Ave", "Lexington Av/63 St", "Lexington Av/63 St", "Lexington Ave"))
+n_names <- rbind(n_names, c("Sutphin Blvd", "Sutphin Blvd - Archer Av - JFK Airport", "Sutphin Blvd - Archer Av - JFK Airport", "Sutphin Blvd"))
+n_names <- rbind(n_names, c("Borough Hall/Ct", "Court St", "Court St", "Borough Hall/Ct"))
+n_names <- rbind(n_names, c("Roosevelt Ave", "Jackson Hts - Roosevelt Av", "Jackson Hts - Roosevelt Av", "Roosevelt Ave"))
+n_names <- rbind(n_names, c("Broadway/Lafay", "Broadway-Lafayette St", "Broadway-Lafayette St", "Broadway/Lafay"))
+n_names <- rbind(n_names, c("5 Ave-Bryant Pk", "5 Av", "5 Av", "5 Ave-Bryant Pk"))
+n_names <- rbind(n_names, c("East 105 St", "E 105 St", "E 105 St", "East 105 St"))
+n_names <- rbind(n_names, c("Bedford Park Bl", "Bedford Park Blvd - Lehman College", "Bedford Park Blvd - Lehman College", "Bedford Park Bl"))
+n_names <- rbind(n_names, c("Sutter Ave", "Sutter Av - Rutland Rd", "Sutter Av - Rutland Rd", "Sutter Ave"))
+n_names <- rbind(n_names, c("110 St-CPN", "Central Park North (110 St)", "Central Park North (110 St)", "110 St-CPN"))
+n_names <- rbind(n_names, c("E Tremont Ave", "West Farms Sq - E Tremont Av", "West Farms Sq - E Tremont Av", "E Tremont Ave"))
+n_names <- rbind(n_names, c("New Utrecht Ave", "62 St", "62 St", "New Utrecht Ave"))
+n_names <- rbind(n_names, c("Christopher St", "Christopher St - Sheridan Sq", "Christopher St - Sheridan Sq", "Christopher St")) 
+n_names <- rbind(n_names, c("110 St-Cathedrl", "Cathedral Pkwy", "Cathedral Pkwy", "110 St-Cathedrl"))
+n_names <- rbind(n_names, c("168 St - Washington Hts", "168 St-Broadway", "168 St-Broadway", "168 St - Washington Hts"))
+
 l_lines = read.table("./NewGoogleLineNames.csv",header=TRUE, sep=",", #Stop_ids
-                     fill=TRUE,quote = "", row.names = NULL, strip.white = TRUE,
+                     fill=TRUE,quote = "\"", row.names = NULL, strip.white = TRUE,
                      stringsAsFactors = FALSE) 
 
 #More Formatting!
-all_lines <- as.data.frame(sapply(l_lines, function(x) gsub("\"", "", x)))
-all_lines <- data.frame(all_lines[,c(2,3,4)])
+all_lines = subset(l_lines[,c(2,3,4)])
 names(all_lines) <- c("station_id", "line_name", "stop_name")
 
 #Eiman's stuff is combined with the nametable
-names_lines <- inner_join(n_names, all_lines)
-names_lines <- data.frame(names_lines[,c(2,3,4)])
+names_lines <- right_join(n_names, all_lines)
+names_lines <- data.frame(names_lines[, c(5,6,7)])
 
 #Now we just have the station, E's ID, and the linenames.
 
@@ -33,10 +46,9 @@ names_lines <- data.frame(names_lines[,c(2,3,4)])
 data_dir <- "./MergingData/new_ts/"
 txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', data_dir))
 ts_data <- data.frame()
-<<<<<<< HEAD
+
 txts <- txts[1]
-=======
->>>>>>> 46c0471c3f3f4ab3ca4a142956d75d427658a67c
+
 for (txt in txts) {
   tmp <- read.table(txt, header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
   ts_data <- rbind(ts_data, tmp)
