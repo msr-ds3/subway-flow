@@ -4,7 +4,7 @@
 
 library(dplyr)
 library(dplyr)
-setwd("/home/ewahmed/subway-flow/")
+setwd("~/subway-flow/")
 
 #Reading in train travel info 
 traintravel <- read.table("SingularTrainFlow.csv",header=TRUE, 
