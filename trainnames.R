@@ -21,18 +21,18 @@ n_names <- rbind(n_names, c("Lexington Ave", 0, "Lexington Av/63 St", "Lexington
 n_names <- rbind(n_names, c("Sutphin Blvd", 0, "Sutphin Blvd - Archer Av - JFK Airport", "Sutphin Blvd - Archer Av - JFK Airport",  toupper("Sutphin Blvd")))
 n_names <- rbind(n_names, c("Court St", 0, "Court St", "Court St",  toupper("Borough Hall/Ct")))
 n_names <- rbind(n_names, c("Roosevelt Ave", 0, "Jackson Hts - Roosevelt Av", "Jackson Hts - Roosevelt Av", "ROOSEVELT AVE"))
-n_names <- rbind(n_names, c("Broadway/Lafay", 0, "Broadway-Lafayette St", "Broadway-Lafayette St",  toupper("Broadway/Lafay")))
+n_names <- rbind(n_names, c("BROADWAY/LAFAY", 0, "Broadway-Lafayette St", "Broadway-Lafayette St", "BROADWAY/LAFAY"))
 n_names <- rbind(n_names, c("5 Ave-Bryant Pk", 0, "5 Av", "5 Av",  toupper("5 Ave-Bryant Pk")))
 n_names <- rbind(n_names, c("East 105 St", 0, "E 105 St", "E 105 St", toupper("East 105 St")))
 n_names <- rbind(n_names, c("Bedford Park Bl", 0, "Bedford Park Blvd - Lehman College", "Bedford Park Blvd - Lehman College", toupper("Bedford Park Bl")))
 n_names <- rbind(n_names, c("Sutter Ave", 0, "Sutter Av - Rutland Rd", "Sutter Av - Rutland Rd", toupper("Sutter Ave")))
 n_names <- rbind(n_names, c("Union Sq - 14 St", 0, "Union Sq - 14 St", "14 ST-UNION SQ", "14 ST-UNION SQ"))
+n_names <- rbind(n_names, c("Broadway", 0, "Broadway", "Broadway", "BROADWAY-31 ST"))
 
 
 l_lines = read.table("./GoogleLineNames.csv",header=TRUE, sep=",", #Stop_ids
                      fill=TRUE,quote = "\"", row.names = NULL, strip.white = TRUE,
                      stringsAsFactors = FALSE) 
-
 #More Formatting!
 
 all_lines = subset(l_lines[,c(2,3,4,5,6)])
@@ -41,8 +41,7 @@ names(all_lines) <- c("station_id", "line_name", "stop_name", "lat", "long")
 
 #Eiman's stuff is combined with the nametable
 names_lines <- right_join(n_names, all_lines)
-
-
+names_lines <- names_lines[,c(3,5,6,7,8)]
 #Now we just have the station, E's ID, and the linenames.
 
 #Loading in all TS Files.
@@ -88,3 +87,4 @@ all_ts$matches <- NULL
 #View(all_ts)
 write.csv(all_ts, "allts.csv", quote = FALSE)
 #NTS: scale, convert to integers, check how different, then adjust as needed.
+View(all_ts)
