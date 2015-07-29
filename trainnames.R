@@ -80,6 +80,7 @@ all_ts$intersect <- NULL
 #Filter out nonmeaningful intersections (i.e, station names without shared lines).
 all_ts <- all_ts %>% filter(matches == TRUE)
 all_ts$matches <- NULL
+write.csv(all_ts, file = "all_ts.csv")
 View(all_ts)
 
 
