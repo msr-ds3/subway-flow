@@ -87,4 +87,3 @@ all_ts$matches <- NULL
 #View(all_ts)
 write.csv(all_ts, "allts.csv", quote = FALSE)
 #NTS: scale, convert to integers, check how different, then adjust as needed.
-View(all_ts)
