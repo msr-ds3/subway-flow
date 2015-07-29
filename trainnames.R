@@ -82,7 +82,8 @@ all_ts$intersect <- NULL
 all_ts <- all_ts %>% filter(matches == TRUE)
 all_ts$matches <- NULL
 
+
 #save(all_ts, file = "allts")
 #View(all_ts)
-#write.csv(all_ts, "allts.csv", quote = FALSE)
+write.csv(all_ts, "allts.csv", quote = FALSE)
 #NTS: scale, convert to integers, check how different, then adjust as needed.

@@ -1,6 +1,7 @@
 library(ggmap)
 library(ggplot2)
 
+data <- read.csv("GoogleLineNames.csv")
 murder <- subset(crime, offense == "murder")
 
 qmplot(lon, lat, data = murder, color = I('white'), size = I(3), darken = .25)

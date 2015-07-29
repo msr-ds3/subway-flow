@@ -23,7 +23,7 @@ names(n_names)[0:5] <- c("Transformed Turnstile Name", "Distance", "stop_name", 
 n_names <- data.frame(n_names[,c(3,5)])
 
 #Eiman's Station names are read in:
-l_lines = read.table("./NewGoogleLineNames.csv",header=TRUE, sep=",", #Stop_ids
+l_lines = read.table("./GoogleLineNames.csv",header=TRUE, sep=",", #Stop_ids
                      fill=TRUE,quote = "", row.names = NULL, strip.white = TRUE,
                      stringsAsFactors = FALSE) 
 
@@ -128,14 +128,18 @@ subwaydata <- subwaydata %>%
 entries_exits_rates <- group_by(subwaydata, station_id, entry_exits_period, date) %>%
   summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4) 
 
-write.csv(entries_exits_rates, file = "subway_entries_exits.csv")
+write.csv(entries_exits_rates, file = "PrePres/subway_entries_exits.csv")
 
 entries_exits_avg <- group_by(subwaydata, station_id, entry_exits_period) %>%
   summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4) 
 
-write.csv(entries_exits_avg, file = "entries_exits_average.csv")
+write.csv(entries_exits_avg, file = "PrePres/entries_exits_average.csv")
 
+# for statistics and plots
+entries_exits_stats <- group_by(subwaydata, station, station_id, entry_exits_period) %>%
+  summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4) 
 
+write.csv(entries_exits_stats, file = "entries_exits_stats.csv")
 
 
 
