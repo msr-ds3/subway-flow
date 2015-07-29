@@ -57,7 +57,7 @@ new_sub2 %>% mutate(new_rounded_hourly_entries = ifelse(station_id == "127", rou
 View(new_sub2)
 
 head(new_sub2)
-the_wanted <- subset(new_sub2,select=c('entry_exits_period','station','rounded_scaled_exits','new_rounded_hourly_entries'))
+the_wanted <- subset(new_sub2,select=c('entry_exits_period','station.x','rounded_scaled_exits','new_rounded_hourly_entries'))
 
 latenight <- filter(the_wanted, entry_exits_period == "0:4")
 morning <- filter(the_wanted, entry_exits_period == "4:8")
