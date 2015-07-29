@@ -169,12 +169,6 @@ seperate_linenames<- trains_linenames
 
 seperate_linenames$station <- sapply(seperate_linenames$station,function(x) gsub ("\"", "", x))
 
-seperate_linenames[seperate_linenames$train == "H",]$line_name="AS"
-seperate_linenames[seperate_linenames$station_id == "L03",]$station_id="635"
-seperate_linenames[seperate_linenames$stop_id == "L03",]$station='"14 St - Union Sq"'
-seperate_linenames <- filter(seperate_linenames,station_id!="606" & station_id!="602" & station_id!="138")
-seperate_linenames[seperate_linenames$station_id == "D21",]$line_name="BDFQ6"
-
 #Buhre and Zerega are closed for 2015
 #Cortlandt st for the 1 train is closed for now 
 
