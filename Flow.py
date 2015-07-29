@@ -1,4 +1,4 @@
-#Author : Eiman Ahmed
+#sAuthor : Eiman Ahmed
 import sys
 import fileinput
 import networkx as nx
@@ -24,7 +24,7 @@ for line in traindata:
 	traintravel = line.rstrip('\n').split(',')
 	trains.append(traintravel[1])
 	stations.append(traintravel[4])
-	traveltime.append(traintravel[5])
+	traveltime.append(int(traintravel[5]))
 
 #initializing a graph to represent the connections on 
 G= nx.DiGraph()
@@ -37,11 +37,10 @@ for i in length:
 		G.add_edge(stations[i-1],stations[i],weight=traveltime[i])
 		G.add_edge(stations[i],stations[i-1],weight=traveltime[i])
 
-
 #nx.draw_spring(G, with_labels=True, node_color='w', node_size=300, font_size=6)
 #plt.show()
 
-openingfile = open("/home/ewahmed/subway-flow/f_noon.csv")
+openingfile = open("/home/ewahmed/subway-flow/PrePres/f_noon.csv")
 noondata = openingfile.readlines()
 openingfile.close()
 
@@ -53,11 +52,6 @@ for line in noondata:
 	G.node[station]["demand"]=int(exits)-int(entries)
 	total += int(exits) - int(entries)
 
-#print "Total = ", total
-#print "Demands recorded = ", len(noondata)
-#print "Number of nodes = ", G.number_of_nodes()
-
-
 for n in G.nodes():
 	if "demand" not in G.node[n]:
 		G.remove_node(n)
@@ -65,18 +59,12 @@ for n in G.nodes():
 turnstile_stations = [record.strip().split(',')[2] for record in noondata]
 gtfs_stations = G.nodes()
 
-# print "Number of turnstile stations = ", len(turnstile_stations)
-#print "Deduped number = ", len(set(turnstile_stations))
-
 #print set(turnstile_stations) - set(gtfs_stations)
 extra_nodes = set(gtfs_stations) - set(turnstile_stations)
 
-#print G.number_of_nodes()
-#print len(noondata)
-#print sum(G.node[n]["demand"] for n in G.nodes())
+nx.draw_spring(G, with_labels=True, node_color='w', node_size=300, font_size=6)
+#plt.show()
 
-#flow = nx.min_cost_flow(G)
-#for n1 in flow:
-#	for n2 in flow[n1]:
-#		print n1, n2, flow[n1][n2]
+flow = nx.min_cost_flow(G)
+
 
