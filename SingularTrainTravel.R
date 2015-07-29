@@ -164,6 +164,7 @@ trains_linenames[trains_linenames$train == "H",]$line_name="AS"
 trains_linenames[trains_linenames$station_id == "L03",]$station_id="635"
 trains_linenames[trains_linenames$stop_id == "L03",]$station='"14 St - Union Sq"'
 trains_linenames <- filter(trains_linenames,station_id!="606" & station_id!="602" & station_id!="138")
+trains_linenames[trains_linenames$station_id== "D21",]$line_name="BDMQ6"
 
 trains_linenames$station <- paste(trains_linenames$station,trains_linenames$station_id,sep="")
 
