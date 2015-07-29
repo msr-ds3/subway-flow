@@ -50,7 +50,7 @@ data_dir <- "./MergingData/new_ts/"
 txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', data_dir))
 ts_data <- data.frame()
 
-txts <- txts[1:]
+txts <- txts[1]
 for (txt in txts) {
   tmp <- read.table(txt, header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
   ts_data <- rbind(ts_data, tmp)

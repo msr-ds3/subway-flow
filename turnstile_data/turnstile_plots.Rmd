@@ -60,17 +60,14 @@ station_types <- station_types %>%
             night_exits_avg = mean(night_exits))
 
 # Station Types Entries/Exits
-jpeg('station_type.jpg')
 station_types<- gather(as.data.frame(station_types), type, total, day_entries_avg:night_exits_avg)
 setnames(station_types, old=c("variable","value"), new=c("entries_exits_avg", "total"))
-ggplot(data=station_types, aes(x=station_type,
-                               y=total,
-                               color=entries_exits_avg)) +
+ggplot(data=station_types, aes(x=station_type,y=total,color=entries_exits_avg)) +
           ggtitle("Day and Night Entries and Exits for each Station Type") +
           xlab("Station_Type") +
           ylab("Entries and Exits")+
-          geom_histogram()
-dev.off()
+          geom_boxplot()
+ggsave("station_type.jpg")
 
 ggplot(data=station_types, aes(x=station_type, y=total, color=entries_exits_avg))+
   geom_histogram(stat="identity")
