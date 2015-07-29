@@ -42,7 +42,7 @@ names(all_lines) <- c("station_id", "line_name", "stop_name", "lat", "long")
 
 #Eiman's stuff is combined with the nametable
 names_lines <- right_join(n_names, all_lines)
-names_lines <- names_lines[,c(3,5,6,7,8)]
+names_lines <- names_lines[,c(3,5,6,7,8,9)]
 #Now we just have the station, E's ID, and the linenames.
 
 #Loading in all TS Files.
