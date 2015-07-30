@@ -183,10 +183,21 @@ stops<- unique(subset(stops,select=c("stop_id","stop_lat","stop_lon")))
 
 seperate_linenames<- inner_join(seperate_linenames,stops)
 
+seperate_linenames[seperate_linenames$train == "H",]$line_name="AS"
+seperate_linenames[seperate_linenames$station_id == "L03",]$station_id="635"
+seperate_linenames[seperate_linenames$stop_id == "L03",]$station='14 St - Union Sq'
+seperate_linenames <- filter(seperate_linenames,station_id!="606" & station_id!="602" & station_id!="138")
+seperate_linenames[seperate_linenames$station_id== "D21",]$line_name="BDFQ6"
+
+
 #Making a seperate file station_ids, station names, and linenames 
 #(this file will be made to merge with the turnstile data)
 google_linenames<- data.frame(seperate_linenames[,c(8,7,4,9,10)])
 google_linenames <- google_linenames %>% group_by(station_id) %>% arrange(station_id)  # getting rid of duplicates
 google_linenames <- google_linenames[!duplicated(google_linenames),] 
+
+#taking only the first lat long for each station
+firstids <- google_linenames %>% group_by(station_id) %>% summarise(stop_lat=first(stop_lat),stop_lon=first(stop_lon))
+google_linenames <- inner_join(google_linenames,firstids)
 
 write.csv(google_linenames,"/home/ewahmed/subway-flow/GoogleLineNames.csv")
