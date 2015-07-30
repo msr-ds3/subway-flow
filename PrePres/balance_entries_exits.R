@@ -45,7 +45,6 @@ new_sub2 %>% group_by(entry_exits_period) %>%
   summarise(sum_entries = sum(rounded_hourly_entries), sum_exits = sum(rounded_scaled_exits)) -> diff_sub
 
 diff_sub$diff <- diff_sub$sum_entries-diff_sub$sum_exits
-head(diff_sub)
 
 diff_sub <- data.frame(diff_sub[,c(1,4)])
 
@@ -61,7 +60,7 @@ the_wanted <- subset(new_sub2,select=c('entry_exits_period','station.x','rounded
 
 latenight <- filter(the_wanted, entry_exits_period == "0:4")
 morning <- filter(the_wanted, entry_exits_period == "4:8")
-earlymorning <- filter(the_wanted, entry_exits_period == "8:12")
+latemorning <- filter(the_wanted, entry_exits_period == "8:12")
 noon <- filter(the_wanted, entry_exits_period == "12:16")
 evening <- filter(the_wanted, entry_exits_period == "16:20")
 night <- filter(the_wanted, entry_exits_period == "20:0")
@@ -75,6 +74,11 @@ write.csv(morning, "f_morning.csv",quote=FALSE)
 write.csv(noon, "f_noon.csv",quote=FALSE)
 write.csv(evening, "f_evening.csv",quote=FALSE)
 write.csv(night, "f_night.csv",quote=FALSE)
+write.csv(latemorning, "f_latemorning.csv",quote=FALSE)
+write.csv(allday, "f_allday.csv",quote=FALSE)
+write.csv(am, "f_am.csv",quote=FALSE)
+write.csv(pm, "f_pm.csv",quote=FALSE)
+
 
 #Checking to make sure it's 0:
 
