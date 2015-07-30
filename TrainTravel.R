@@ -6,7 +6,7 @@ stop_times <- read.table("stop_times.txt",header=TRUE,
                          stringsAsFactors = FALSE) 
 
 #Reading in the information from stops.txt
-stops <- read.table("modifiedstops.txt",header=TRUE, 
+stops <- read.table("modifiedstops2.txt",header=TRUE, 
                     sep=",",fill=TRUE,quote = "",row.names = NULL,
                     stringsAsFactors = FALSE) 
 
@@ -172,15 +172,8 @@ names(trains_linenames)<- c('Train','FromStationID','FromStation','ToStationID',
 
 #Adding the station_id next to the train so that it is easier to graph through network x
 #skip if any other graphing tool is being used
-trains_linenames$FromStation <- paste(trains_linenames$FromStation,trains_linenames$FromStationID,sep=" ")
-trains_linenames$ToStation <- paste(trains_linenames$ToStation,trains_linenames$ToStationID, sep = " ")
+trains_linenames$FromStation <- paste(trains_linenames$FromStation,trains_linenames$FromStationID,sep="")
+trains_linenames$ToStation <- paste(trains_linenames$ToStation,trains_linenames$ToStationID, sep = "")
 
 #Export file as TrainTravel.csv 
 write.csv(trains_linenames,"/home/ewahmed/subway-flow/TrainTravel.csv")
-
-#Making a seperate file station_ids, station names, and linenames 
-#(this file will be made to merge with the turnstile data)
-#google_linenames<- data.frame(seperate_linenames[,c(8,7,4)])
-#google_linenames <- google_linenames %>% group_by(station_id) %>% arrange(station_id)  # getting rid of duplicates
-#google_linenames <- google_linenames[!duplicated(google_linenames),] 
-#write.csv(google_linenames,"/home/ewahmed/subway-flow/GoogleLineNames.csv")

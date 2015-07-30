@@ -4,7 +4,6 @@ import fileinput
 import networkx as nx
 import matplotlib.pyplot as plt
 
-
 graphme = raw_input("Which train are you taking?      ") 
 
 #change this directory to wherever you located the TrainTravel.csv file 

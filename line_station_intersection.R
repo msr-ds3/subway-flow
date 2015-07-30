@@ -3,7 +3,7 @@
 # 7/24/2015
 
 # read in data
-setwd("C:/Users/slahaie/Documents/GitHub/subway-flow/")
+setwd("/home/ewahmed/subway-flow/")
 data <- read.delim('GoogleLineNames.csv', header=TRUE, sep=',')
 
 # remove unnecessary first column

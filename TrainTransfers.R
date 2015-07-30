@@ -81,4 +81,3 @@ transfers<- inner_join(unique_train_stops,transfers)
 transfers <- data.frame(transfers[,c(1,2,5,3,4,7,9,8)])
 names(transfers) <- c('Train','TrainStop','StopID','Station','TravelTime','TransferID','TransferStation','TransferTime')
 write.csv(transfers, "/home/ewahmed/subway-flow/UniqueTransfers.csv")
-##########################################################3
