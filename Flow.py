@@ -3,9 +3,10 @@ import sys
 import fileinput
 import networkx as nx
 import matplotlib.pyplot as plt
+import csv
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("/home/ewahmed/subway-flow/SingularTrainFlow.csv")
+openingfile = open("~/subway-flow/SingularTrainFlow.csv")
 traindata = openingfile.readlines()
 openingfile.close()
 
@@ -16,9 +17,7 @@ trains=[]
 stations=[]
 traveltime=[]
 
-
 traindata.pop(0)
-
 #Extracting data into select initalized lists ^ 
 for line in traindata:
 	traintravel = line.rstrip('\n').split(',')
@@ -30,7 +29,7 @@ for line in traindata:
 G= nx.DiGraph()
 
 #Connecting all stations with one another on the graph
-length = range(1, len(trains))
+length = xrange(1, len(trains))
 
 for i in length:
 	if(trains[i-1]==trains[i]):
@@ -40,7 +39,7 @@ for i in length:
 #nx.draw_spring(G, with_labels=True, node_color='w', node_size=300, font_size=6)
 #plt.show()
 
-openingfile = open("/home/ewahmed/subway-flow/PrePres/f_noon.csv")
+openingfile = open("~/subway-flow/PrePres/f_noon.csv")
 noondata = openingfile.readlines()
 openingfile.close()
 
@@ -48,8 +47,11 @@ openingfile.close()
 noondata.pop(0)
 total = 0
 for line in noondata:
-	_, _, station, exits, entries = line.rstrip('\n').split(',')
+	_, _, station, exits, entries,stationid = line.rstrip('\n').split(',')
+	G.node[station]["entries"] = int(entries)
+	G.node[station]["exits"] = int(exits)
 	G.node[station]["demand"]=int(exits)-int(entries)
+	G.node[station]["stationid"]=stationid
 	total += int(exits) - int(entries)
 
 for n in G.nodes():
@@ -62,9 +64,42 @@ gtfs_stations = G.nodes()
 #print set(turnstile_stations) - set(gtfs_stations)
 extra_nodes = set(gtfs_stations) - set(turnstile_stations)
 
-nx.draw_spring(G, with_labels=True, node_color='w', node_size=300, font_size=6)
+nx.draw_spring(G, with_labels=True, node_color='w', node_size=350, font_size=7)
 #plt.show()
 
 flow = nx.min_cost_flow(G)
+
+fromstations=[]
+tostations=[]
+flows=[]
+
+for x in flow:
+    for y in flow[x]:
+    	fromstations.append(x)
+    	tostations.append(y)
+
+length = xrange(0, len(fromstations))
+
+fromids = []
+toids=[]
+
+for i in length:
+	flows.append(flow[fromstations[i]][tostations[i]])
+	fromids.append(fromstations[i][len(fromstations[i])-3:])
+	toids.append(tostations[i][len(tostations[i])-3:len(tostations[i])])
+
+rows = zip(fromids,toids,flows)
+
+out= open("~/subway-flow/PrePres/noon"+"flows.csv", "wb")
+out.write('\n')
+for i in length: 
+	out.write(fromstations[i] +',' + fromids[i] + ',' + tostations[i] + ',' + toids[i] + ',' + str(flows[i]) + '\n')
+out.close()
+   
+#write.csv()
+
+
+
+
 
 
