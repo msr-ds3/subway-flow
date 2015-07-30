@@ -9,6 +9,8 @@ library(ggplot2)
 library(data.table)
 library(tidyr)
 
+setwd("~/subway-flow")
+
 ######################################################################################################################
 # Merging turnstile data with GTSF data
 ######################################################################################################################
@@ -17,6 +19,7 @@ source("trainnames.R")
 ######################################################################################################################
 # modify subwaydata dataframe
 ######################################################################################################################
+allts <- read.csv("allts.csv")  # read csv file 
 subwaydata <- as.data.frame(all_ts) %>%select(-AEILMN) # drop aeilmn column
 
 # creating dataframe with num_entries, num_exits, and time difference
@@ -75,6 +78,28 @@ entries_exits_period <- group_by(entries_exits_rates, station_id, entry_exits_pe
 
 write.csv(entries_exits_period, file = "PrePres/entries_exits_average.csv")
 
+# average whole day entries/exits, not six 4-hr periods
+entries_exits_daily <- entries_exits_period %>%
+  group_by(station,station_id) %>%
+  summarise(daily_entries = sum(hourly_entries)/6, daily_exits = sum(hourly_exits)/6)
+
+write.csv(entries_exits_daily, file = "PrePres/entries_exits_wholeday.csv")
+
+# average 0:12 entries/exits, 
+entries_exits_012 <- entries_exits_period %>%
+  filter(entry_exits_period  == "0:4" | entry_exits_period == "4:8" | entry_exits_period == "8:12")   %>%
+  group_by(station,station_id) %>%
+  summarise(daily_entries = sum(hourly_entries)/3, daily_exits = sum(hourly_exits)/3)
+
+write.csv(entries_exits_012, file = "PrePres/entries_exits_012.csv")
+
+# average 12:24 entries/exits, 
+entries_exits_1224 <- entries_exits_period %>%
+  group_by(station,station_id) %>%
+  filter(entry_exits_period  == "12:16" | entry_exits_period == "16:20" | entry_exits_period == "20:0") %>%
+  summarise(daily_entries = sum(hourly_entries)/3, daily_exits = sum(hourly_exits)/3)
+
+write.csv(entries_exits_1224, file = "PrePres/entries_exits_1224.csv")
 
 
 
