@@ -1,6 +1,6 @@
 library(dplyr)
 #Reading in the information from stop_times.txt
-setwd("/home/ewahmed/Desktop/SubwayData/")
+setwd("~/subway-flow/gtfs_data")
 stop_times <- read.table("stop_times.txt",header=TRUE, 
                          sep=",",fill=TRUE,quote = "",row.names = NULL,
                          stringsAsFactors = FALSE) 
@@ -128,7 +128,7 @@ trains_info<- data.frame(trains_info[,c(1,6,3,2,5,4)])
 names(trains_info) <- c('train','train_stop','stop_id','station_name','time_travel','stop')
 
 #Reading in the line names data
-setwd("/home/ewahmed/subway-flow/")
+setwd("~/subway-flow/")
 linenames <- read.table("new_google_data.txt",header=TRUE, 
                         sep=",",fill=TRUE,quote = "",row.names = NULL,
                         stringsAsFactors = FALSE) 
@@ -168,4 +168,4 @@ trains_linenames[trains_linenames$station_id== "D21",]$line_name="BDMQ6"
 
 trains_linenames$station <- paste(trains_linenames$station,trains_linenames$station_id,sep="")
 
-write.csv(trains_linenames,"/home/ewahmed/subway-flow/SingularTrainFlow.csv",quote=FALSE)
+write.csv(trains_linenames,"~/subway-flow/SingularTrainFlow.csv",quote=FALSE)
