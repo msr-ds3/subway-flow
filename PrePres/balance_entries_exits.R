@@ -61,9 +61,14 @@ the_wanted <- subset(new_sub2,select=c('entry_exits_period','station.x','rounded
 
 latenight <- filter(the_wanted, entry_exits_period == "0:4")
 morning <- filter(the_wanted, entry_exits_period == "4:8")
+earlymorning <- filter(the_wanted, entry_exits_period == "8:12")
 noon <- filter(the_wanted, entry_exits_period == "12:16")
 evening <- filter(the_wanted, entry_exits_period == "16:20")
 night <- filter(the_wanted, entry_exits_period == "20:0")
+allday <- the_wanted
+am <- filter(the_wanted, entry_exits_period == "0:4" | entry_exits_period == "4:8" | entry_exits_period == "8:12")
+pm <- filter(the_wanted, entry_exits_period == "12:16" | entry_exits_period == "16:20" | entry_exits_period == "20:0")
+
 
 write.csv(latenight, "f_latenight.csv",quote=FALSE)
 write.csv(morning, "f_morning.csv",quote=FALSE)
