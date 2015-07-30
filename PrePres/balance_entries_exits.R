@@ -56,7 +56,7 @@ new_sub2 %>% mutate(new_rounded_hourly_entries = ifelse(station_id == "127", rou
 View(new_sub2)
 
 head(new_sub2)
-the_wanted <- subset(new_sub2,select=c('entry_exits_period','station.x','rounded_scaled_exits','new_rounded_hourly_entries'))
+the_wanted <- subset(new_sub2,select=c('entry_exits_period','station.x','rounded_scaled_exits','new_rounded_hourly_entries','station_id'))
 
 latenight <- filter(the_wanted, entry_exits_period == "0:4")
 morning <- filter(the_wanted, entry_exits_period == "4:8")
@@ -78,7 +78,6 @@ write.csv(latemorning, "f_latemorning.csv",quote=FALSE)
 write.csv(allday, "f_allday.csv",quote=FALSE)
 write.csv(am, "f_am.csv",quote=FALSE)
 write.csv(pm, "f_pm.csv",quote=FALSE)
-
 
 #Checking to make sure it's 0:
 
