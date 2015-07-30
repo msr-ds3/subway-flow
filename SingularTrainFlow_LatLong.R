@@ -1,12 +1,12 @@
 library(dplyr)
 
 #Reading in the information from stop_times.txt
-setwd("/home/ewahmed/Desktop/SubwayData/")
+setwd("~/subway-flow/gtfs_data")
 stops <- read.table("stops.txt",header=TRUE, 
                          sep=",",fill=TRUE,quote = "",row.names = NULL,
                          stringsAsFactors = FALSE) 
 
-setwd("/home/ewahmed/subway-flow/")
+setwd("~/subway-flow/")
 flow <- read.table("SingularTrainFlow.csv",header=TRUE, 
                    sep=",",fill=TRUE,quote = "",row.names = NULL,
                    stringsAsFactors = FALSE) 
@@ -24,4 +24,4 @@ stops_flow <- inner_join(stops_flow,firstids,by="station_id")
 
 stops_flow <- subset(stops_flow,select=c("train","train_stop","station_id","station","time_travel","line_name","stop_lat","stop_lon"))
 
-write.csv(stops_flow,"/home/ewahmed/subway-flow/SingularTrainFlowLatLon.csv",quote=FALSE)
+write.csv(stops_flow,"~/subway-flow/SingularTrainFlowLatLon.csv",quote=FALSE)
