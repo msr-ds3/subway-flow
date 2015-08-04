@@ -101,5 +101,5 @@ entries_exits_1224 <- entries_exits_period %>%
 
 write.csv(entries_exits_1224, file = "PrePres/entries_exits_1224.csv")
 
-
-
+temp <- group_by(entries_exits_rates,station, station_id, line_name) %>% summarise(lat = lat[1],long=long[1]) 
+temp <- mutate(temp, station_color = ifelse(line_name[1] == "1", "red", "blue"))
