@@ -20,7 +20,7 @@ source("trainnames.R")
 # modify subwaydata dataframe
 ######################################################################################################################
 allts <- read.csv("allts.csv")  # read csv file 
-subwaydata <- as.data.frame(all_ts) %>%select(-AEILMN) # drop aeilmn column
+subwaydata <- as.data.frame(allts) %>%select(-AEILMN) # drop aeilmn column
 
 # creating dataframe with num_entries, num_exits, and time difference
 names(subwaydata) <- tolower(names(subwaydata))
@@ -35,10 +35,6 @@ subwaydata <- arrange(subwaydata, date.time) %>%
          entries.delta = entries - lag(entries),
          exits.delta = exits - lag(exits),
          day_of_week = dayOfWeek(as.timeDate(date)))
-
-subwaydata <- subwaydata %>% # rid data of weekends
-  filter(day_of_week != "Sun" & day_of_week != "Sat")
-
 
 subwaydata <- filter(subwaydata, time.delta <= 12) 
 
@@ -62,6 +58,15 @@ subwaydata <- subwaydata %>%
   filter(exits.delta < 100000) %>%
   filter(exits.delta > -1) %>%
   filter(entries.delta > -1) 
+
+# compute entries/exits for time period for each date for all stations
+entries_exits_rates_weekends <- group_by(subwaydata, station_id, entry_exits_period, date) %>%
+  summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4, station = station[1], line_name=line_name[1], lat=lat[1], long=long[1]) 
+
+write.csv(entries_exits_rates_weekends, file = "PrePres/subway_entries_exits_weekends.csv")
+
+subwaydata <- subwaydata %>% # rid data of weekends
+  filter(day_of_week != "Sun" & day_of_week != "Sat")
 
 ################################################################################################################
 # hourly entries/exits stats
@@ -101,5 +106,5 @@ entries_exits_1224 <- entries_exits_period %>%
 
 write.csv(entries_exits_1224, file = "PrePres/entries_exits_1224.csv")
 
-
-
+temp <- group_by(entries_exits_rates,station, station_id, line_name) %>% summarise(lat = lat[1],long=long[1]) 
+temp <- mutate(temp, station_color = ifelse(line_name[1] == "1", "red", "blue"))
