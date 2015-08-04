@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import csv
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("~/subway-flow/SingularTrainFlow.csv")
+openingfile = open("/home/ewahmed/subway-flow/SingularTrainFlow.csv")
 traindata = openingfile.readlines()
 openingfile.close()
 
@@ -39,7 +39,7 @@ for i in length:
 #nx.draw_spring(G, with_labels=True, node_color='w', node_size=300, font_size=6)
 #plt.show()
 
-openingfile = open("~/subway-flow/PrePres/f_noon.csv")
+openingfile = open("/home/ewahmed/subway-flow/PrePres/f_noon.csv")
 noondata = openingfile.readlines()
 openingfile.close()
 
@@ -69,32 +69,7 @@ nx.draw_spring(G, with_labels=True, node_color='w', node_size=350, font_size=7)
 
 flow = nx.min_cost_flow(G)
 
-fromstations=[]
-tostations=[]
-flows=[]
 
-for x in flow:
-    for y in flow[x]:
-    	fromstations.append(x)
-    	tostations.append(y)
-
-length = xrange(0, len(fromstations))
-
-fromids = []
-toids=[]
-
-for i in length:
-	flows.append(flow[fromstations[i]][tostations[i]])
-	fromids.append(fromstations[i][len(fromstations[i])-3:])
-	toids.append(tostations[i][len(tostations[i])-3:len(tostations[i])])
-
-rows = zip(fromids,toids,flows)
-
-out= open("~/subway-flow/PrePres/noon"+"flows.csv", "wb")
-out.write('\n')
-for i in length: 
-	out.write(fromstations[i] +',' + fromids[i] + ',' + tostations[i] + ',' + toids[i] + ',' + str(flows[i]) + '\n')
-out.close()
    
 #write.csv()
 
