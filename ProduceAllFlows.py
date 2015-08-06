@@ -1,4 +1,4 @@
-#sAuthor : Eiman Ahmed
+#Author : Eiman Ahmed
 import sys
 import fileinput
 import networkx as nx

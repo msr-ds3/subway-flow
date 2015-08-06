@@ -19,8 +19,8 @@ names(traintravel) <- c('train','train_stop','stop_id','station','time_travel','
 
 setwd("~/subway-flow/PrePres/")
 all_sub <- read.table("entries_exits_average.csv",header=TRUE, sep=",", # current turnstyle dataframe
-                     quote = "\"", row.names = NULL, strip.white = TRUE, 
-                     stringsAsFactors = FALSE) 
+                      quote = "\"", row.names = NULL, strip.white = TRUE, 
+                      stringsAsFactors = FALSE) 
 
 balancethings <- function(all_sub){
   uniquetravel<- unique(subset(traintravel,select=c("station_id","station")))
@@ -74,8 +74,8 @@ write.csv(the_wanted, "all_entries_exits.csv", quote = FALSE)
 
 #Morning hours
 am_sub <- read.table("entries_exits_012.csv",header=TRUE, sep=",", # current turnstyle dataframe
-                      quote = "\"", row.names = NULL, strip.white = TRUE, 
-                      stringsAsFactors = FALSE) 
+                     quote = "\"", row.names = NULL, strip.white = TRUE, 
+                     stringsAsFactors = FALSE) 
 am_sub2 <- balancethings(am_sub)
 am_wanted <- subset(am_sub2,select=c('entry_exits_period','station.x','rounded_scaled_exits','new_rounded_hourly_entries','station_id'))
 write.csv(am_wanted, "f_am.csv",quote=FALSE)
@@ -90,8 +90,8 @@ write.csv(pm_wanted, "f_pm.csv",quote=FALSE)
 
 #All hours
 sub <- read.table("entries_exits_wholeday.csv",header=TRUE, sep=",", # current turnstyle dataframe
-                     quote = "\"", row.names = NULL, strip.white = TRUE, 
-                     stringsAsFactors = FALSE) 
+                  quote = "\"", row.names = NULL, strip.white = TRUE, 
+                  stringsAsFactors = FALSE) 
 sub2 <- balancethings(sub)
 sub_wanted <- subset(sub2,select=c('entry_exits_period','station.x','rounded_scaled_exits','new_rounded_hourly_entries','station_id'))
 write.csv(sub_wanted, "f_allday.csv",quote=FALSE)
@@ -103,4 +103,5 @@ new_sub2 %>% group_by(entry_exits_period) %>%
 
 diff_sub$diff <- diff_sub$sum_entries-diff_sub$sum_exits
 head(diff_sub)
+
 
