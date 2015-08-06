@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import csv
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("../../../subway-flow/SingularTrainFlow.csv")
+openingfile = open("../../subway-flow/SingularTrainFlow.csv")
 traindata = openingfile.readlines()
 openingfile.close()
 
