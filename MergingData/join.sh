@@ -1,6 +1,7 @@
 #1:Take turnstile data:
 #turnstile_141018.txt
 #turnstile_150711.txt
+cd ./MergingData
 rm ./turnstile_150711.txt
 cp ../turnstile_data/turnstile_150711.txt ./turnstile_150711.txt
 cat ../turnstile_data/turnstile_141018.txt >> turnstile_150711.txt
@@ -19,6 +20,7 @@ python a_names_script_v2.py #(It goes to matchtable.txt)
 awk -f takethetop.awk #(goes to unmatchedwords.txt and easymatches.txt)
 awk -f smalledits.awk #(goes to readyformerge.txt)
 
+cd ../
 #12: Eiman's file:
 #../GoogleLineNames.csv
 
