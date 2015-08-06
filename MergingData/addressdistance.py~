@@ -1,7 +1,0 @@
-f1 = open("stops2.txt")
-
-file2 = f1.readlines()
-
-def addressdistance(turnstile, google):
-    turnstile.replace('-', ' ').split(' ')
-    
