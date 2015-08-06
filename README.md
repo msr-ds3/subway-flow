@@ -4,7 +4,7 @@ This is the shared repository for Microsoft Research NYC's 2015 Data Science Sum
 
 * [Step 1](MergingData/c_order.py): Run c_order.py
      
-* [Step 2](Step2/): Run join.sh
+* [Step 2](MergingData/join.sh): Run join.sh
 
 * [Step 3](MergingData/pp_namesformerge.awk): Run pp_namesformerge.awk
 
