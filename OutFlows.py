@@ -74,37 +74,32 @@ for name in files:
 
 	flow = nx.min_cost_flow(G)
 
-	fromstations=[]
-	tostations=[]
-	flows=[]
+	inflowstation=[]
+	outflow=[]
+	
+	for x in G.nodes():
+		total = 0
+		inflowstation.append(x)
+		for p in G.successors(x):
+			total = total+ flow[p][x]
+		total = total + G.node[x]["demand"] 
+		outflow.append(int(total))
 
-	for x in flow:
-	    for y in flow[x]:
-	    	fromstations.append(x)
-	    	tostations.append(y)
+	print type(outflow[2])
+	length= range(0,len(inflowstation))
 
-	length = xrange(0, len(fromstations))
+	# for i in length:
+	# 	total = outflow[i]
+	# 	adding = 0
+	# 	for x in flow[inflowstation[i]]:
+	# 		adding = flow[inflowstation[i][x]]
+	# 		total = total + int(adding)
 
-	fromids = []
-	toids=[]
+	rows = zip(inflowstation,outflow)
 
-	for i in length:
-		flows.append(flow[fromstations[i]][tostations[i]])
-		fromids.append(fromstations[i][len(fromstations[i])-3:])
-		toids.append(tostations[i][len(tostations[i])-3:len(tostations[i])])
-
-	rows = zip(fromids,toids,flows)
-
-	out= open("/home/ewahmed/subway-flow/PrePres/" + name+"flows.csv", "wb")
+	out= open("/home/ewahmed/subway-flow/PrePres/OutFlows/" + name+"outflows.csv", "wb")
 	out.write('\n')
 	for i in length: 
-		out.write(fromstations[i] +',' + fromids[i] + ',' + tostations[i] + ',' + toids[i] + ',' + str(flows[i]) + '\n')
+		out.write(inflowstation[i] +',' + str(outflow[i]) + '\n')
 	out.close()
 	
-	   
-
-
-
-
-
-
