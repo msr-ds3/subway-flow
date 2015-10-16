@@ -1,7 +1,7 @@
 #1:Take turnstile data:
 #turnstile_141018.txt
 #turnstile_150711.txt
-cd ./MergingData
+#cd ./MergingData
 rm ./turnstile_150711.txt
 cp ../turnstile_data/turnstile_150711.txt ./turnstile_150711.txt
 cat ../turnstile_data/turnstile_141018.txt >> turnstile_150711.txt
