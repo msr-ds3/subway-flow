@@ -1,0 +1,127 @@
+---
+Authors: Shannon Evans and Steven Vazquez and Riva Tropp and Eiman Ahmed
+Date: 7/22/2015
+Description: Script to plot all individual stations entries and exits vs. time, 
+             as well as total entries and exits vs. time
+output: 
+  html_document:
+    keep_md: true
+---
+```{r}
+########################################################################################################
+# Plots
+# *Note: facet wrapping dataframe is only used where facet wrapping or filling occurs
+########################################################################################################
+library(ggplot2)
+library(reshape)
+library(scales)
+library(plotrix)
+library(tidyr)
+library(dplyr)
+library(data.table)
+
+setwd("~/Desktop/subway-flow/PrePres")
+# load hourly entries dataframe
+entries_exits_stats <- read.csv("subway_entries_exits.csv")  # read csv file 
+entries_exits_stats$X <- NULL # remove X column
+
+entries_exits_stats <- entries_exits_stats %>%
+  mutate(is_night = ifelse(entry_exits_period == "4:8" | entry_exits_period == "8:12" | entry_exits_period == "12:16",  0, 1))
+
+################################################################################################
+# add station type
+################################################################################################
+setwd("~/Desktop/subway-flow/plots")
+# get mean day entries
+day_entries_exits <- as.data.frame(entries_exits_stats) %>%
+  group_by(station,station_id, is_night) %>%
+  filter(is_night == 0) %>%
+  summarise(day_entries = mean(hourly_entries), day_exits = mean(hourly_exits))
+day_entries_exits$is_night <- NULL
+ 
+night_entries_exits <- as.data.frame(entries_exits_stats) %>%
+  group_by(station,station_id, is_night) %>%
+  filter(is_night == 1) %>%
+  summarise(night_entries = mean(hourly_entries), night_exits = mean(hourly_exits))
+night_entries_exits$is_night <- NULL
+
+# bind day entries/exits and night entries/exits
+station_types <- inner_join(day_entries_exits,night_entries_exits)
+
+station_types <- station_types%>%
+  mutate(station_type = ifelse(day_entries > 2*day_exits & night_exits > 2*night_entries, "residential", 
+                        ifelse(day_entries < 2*day_exits & night_exits < 2 * night_entries, "commercial", "link")))
+
+station_types <- station_types %>%
+  group_by(station_type) %>%
+  summarise(day_entries_avg = mean(day_entries), 
+            day_exits_avg = mean(day_exits), 
+            night_entries_avg = mean(night_entries),
+            night_exits_avg = mean(night_exits))
+
+# Station Types Entries/Exits
+station_types<- gather(as.data.frame(station_types), type, total, day_entries_avg:night_exits_avg)
+setnames(station_types, old=c("variable","value"), new=c("entries_exits_avg", "total"))
+ggplot(data=station_types, aes(x=station_type,y=total,color=entries_exits_avg)) +
+          ggtitle("Day and Night Entries and Exits for each Station Type") +
+          xlab("Station_Type") +
+          ylab("Entries and Exits")+
+          geom_boxplot()
+ggsave("station_type.jpg")
+
+ggplot(data=station_types, aes(x=station_type, y=total, color=entries_exits_avg))+
+  geom_histogram(stat="identity")
+
+############################################################################################################################################################
+# plot stats
+############################################################################################################################################################
+# melt entries and exits for facetting
+entries_exits_stats <- gather(entries_exits_stats, exit_or_entry, total, hourly_entries:hourly_exits)
+setnames(entries_exits_stats, old=c("variable","value"), new=c("exit_or_entry", "total"))
+
+# entries/exits per time period for individual stations
+entries_exits_stats <- entries_exits_stats %>%
+  group_by(station, station_id, exit_or_entry, entry_exits_period) %>%
+  summarise(total = mean(total))
+
+entries_exits_stats$entry_exits_period <- factor(entries_exits_stats$entry_exits_period, levels = c("0:4", "4:8", "8:12", "12:16", "16:20", "20:0"))
+
+# subset for TIMES SQ
+plot_stats <- entries_exits_stats
+plot_stats <- subset(plot_stats,  station_id == 127)
+ggplot(data=plot_stats, aes(x=entry_exits_period,
+                               y=total,
+                               group=exit_or_entry,
+                               colour=exit_or_entry)) +
+          ggtitle("Hourly Entries/Exits per Time Block for Times Sq") +
+          xlab("Time Blocks") +
+          ylab("No. Entries & Exits per HR")+
+          geom_smooth()
+ggsave(file='timesq_plot.jpg')
+
+# subset for 103 St (commuter)
+plot_stats <- entries_exits_stats
+plot_stats <- subset(plot_stats,  station_id == 119)
+ggplot(data=plot_stats, aes(x=entry_exits_period,
+                               y=total,
+                               group=exit_or_entry,
+                               colour=exit_or_entry)) +
+          ggtitle("Hourly Entries/Exits per Time Block for 103 St") +
+          xlab("Time Blocks") +
+          ylab("No. Entries & Exits per HR")+
+          geom_smooth()
+ggsave(file='plots/103st_plot.jpg')
+
+# subset for Middletown road (Residential)
+plot_stats <- entries_exits_stats
+plot_stats <- subset(plot_stats,  station_id == 603)
+ggplot(data=plot_stats, aes(x=entry_exits_period,
+                               y=total,
+                               group=exit_or_entry,
+                               colour=exit_or_entry)) +
+          ggtitle("Hourly Entries/Exits per Time Block for Middletown Rd") +
+          xlab("Time Blocks") +
+          ylab("No. Entries & Exits per HR")+
+          geom_smooth()
+ggsave(file='middletown_plot.jpg')
+
