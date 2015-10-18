@@ -1,4 +1,5 @@
 #Author : Eiman Ahmed
+#Python file to calculate and export inflows of any given station at any given time
 import sys
 import fileinput
 import networkx as nx
@@ -6,7 +7,7 @@ import matplotlib.pyplot as plt
 import csv
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("/home/ewahmed/subway-flow/SingularTrainFlow.csv")
+openingfile = open("SingularTrainFlow.csv")
 traindata = openingfile.readlines()
 openingfile.close()
 
@@ -89,9 +90,11 @@ for name in files:
 
 	length= range(0,len(inflowstation))
 
-	out= open("/home/ewahmed/subway-flow/PrePres/Inflows/" + name+"inflows.csv", "wb")
+        if not os.path.exists('Inflows'):
+            os.mkdir('Inflows')
+
+	out= open("Inflows/" + name+"inflows.csv", "wb")
 	out.write('\n')
 	for i in length: 
 		out.write(inflowstation[i] +',' + str(inflow[i]) + '\n')
 	out.close()
-	
