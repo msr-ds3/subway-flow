@@ -1,12 +1,12 @@
 library(dplyr)
 #Reading in the information from stop_times.txt
-setwd("/home/ewahmed/Desktop/SubwayData/")
+setwd("gtfs_data")
 stop_times <- read.table("stop_times.txt",header=TRUE, 
                          sep=",",fill=TRUE,quote = "",row.names = NULL,
                          stringsAsFactors = FALSE) 
 
 #Reading in the information from stops.txt
-stops <- read.table("modifiedstops2.txt",header=TRUE, 
+stops <- read.table("modifiedstops.txt",header=TRUE, 
                     sep=",",fill=TRUE,quote = "",row.names = NULL,
                     stringsAsFactors = FALSE) 
 
@@ -62,13 +62,14 @@ trains_info$stop_id <- substr(trains_info$stop_id,0,3)
 #Entire 1 track is from rows 25894 - 25931
 train_extraction<- rbind(trains_info[25894:25931,])
 #Entire 2 track is from rows 36200  - 36251
-train_extraction <- rbind(train_extraction,trains_info[36200:36251,])
+#train_extraction <- rbind(train_extraction,trains_info[36200:36251,])
+train_extraction <- rbind(train_extraction,trains_info[33965:34013,])
 #Entire 3 track is from 41064 - 41097
 train_extraction <- rbind(train_extraction,trains_info[41064:41097,])
 #Entire 4 track is from rows 551 - 585
 train_extraction <- rbind(train_extraction,trains_info[551:585,])
 #Entire 5 track is from 4701- 4726
-train_extraction <- rbind(train_extraction,trains_info[4701:4726,])
+train_extraction <- rbind(train_extraction,trains_info[4799:4834,])
 #Entire 6 track is from 10454 - 10491
 train_extraction <- rbind(train_extraction,trains_info[10454:10491,])
 #Entire 6X track is from 10763 - 10795
@@ -78,7 +79,7 @@ train_extraction <- rbind(train_extraction,trains_info[19960:19980,])
 #Entire 7X track is from 20128 - 20138
 train_extraction <- rbind(train_extraction,trains_info[20128:20138,])
 #Entire A track is from 86703 - 86739
-train_extraction <- rbind(train_extraction,trains_info[86703:86739,])
+train_extraction <- rbind(train_extraction,trains_info[86776:86812,])
 #Entire B track is from 91513 - 91549
 train_extraction <- rbind(train_extraction,trains_info[91513:91549,])
 #Entire C track is from 94855 - 94894
@@ -102,7 +103,7 @@ train_extraction<- rbind(train_extraction,trains_info[60819:60848,])
 #Entire L track is from 64186 - 64209
 train_extraction <- rbind(train_extraction,trains_info[64186:64209,])
 #Entire M track is from 69305 -  69340 
-train_extraction <- rbind(train_extraction,trains_info[69305:69340,])
+train_extraction <- rbind(train_extraction,trains_info[69377:69412,])
 #Entire N track is from 73407 - 73438 
 train_extraction <- rbind(train_extraction,trains_info[73407:73438,])
 #Entire Q track is from 77073 - 77107
@@ -110,7 +111,7 @@ train_extraction <- rbind(train_extraction,trains_info[77073:77107,])
 #Entire R track is from 81046 - 81090 
 train_extraction <- rbind(train_extraction,trains_info[81046:81090,])
 #Entire SI track is from 103409 - 103430
-train_extraction <- rbind(train_extraction,trains_info[103409:103430,])
+#train_extraction <- rbind(train_extraction,trains_info[103409:103430,])
 #Entire Z track is from 62521 - 62541
 train_extraction <- rbind(train_extraction,trains_info[62521:62541,])
 
@@ -127,7 +128,7 @@ trains_info<- data.frame(trains_info[,c(1,6,3,2,5,4)])
 names(trains_info) <- c('train','train_stop','stop_id','station_name','time_travel','stop')
 
 #Reading in the line names data
-setwd("/home/ewahmed/subway-flow/")
+setwd("~/subway-flow/")
 linenames <- read.table("new_google_data.txt",header=TRUE, 
                         sep=",",fill=TRUE,quote = "",row.names = NULL,
                         stringsAsFactors = FALSE) 
@@ -155,25 +156,16 @@ trains_linenames <- inner_join(trains_linenames,firstids)
 
 #Taking out the stopids and replacing with stationids
 names(trains_linenames) <- c('train','train_stop','stop_id','station','time_travel','stop','line_name','station_id')
-seperate_linenames<- trains_linenames
 
-#Put it in the order we want so we can manipulate the data
-trains_linenames <- mutate(trains_linenames, train_stop2 = lag(train_stop))
-trains_linenames <- mutate(trains_linenames, station2= lag(station))
-trains_linenames <- mutate(trains_linenames,station_id2= lag(station_id))
+#Getting rid of staten island data since no turnstile data for staten island
+#trains_linenames <- filter(trains_linenames, train!="SI")
 
-#Get rid of NA
-trains_linenames[trains_linenames$stop == "01",]$station=NA
-trains_linenames<- trains_linenames[complete.cases(trains_linenames),]
+trains_linenames[trains_linenames$train == "H",]$line_name="AS"
+trains_linenames[trains_linenames$station_id == "L03",]$station_id="635"
+trains_linenames[trains_linenames$stop_id == "L03",]$station='"14 St - Union Sq"'
+trains_linenames <- filter(trains_linenames,station_id!="606" & station_id!="602" & station_id!="138")
+trains_linenames[trains_linenames$station_id== "D21",]$line_name="BDMQ6"
 
-#Reformatting 
-trains_linenames <- data.frame(trains_linenames[,c(1,11,10,8,4,5)])
-names(trains_linenames)<- c('Train','FromStationID','FromStation','ToStationID','ToStation','TimeTravel')
+trains_linenames$station <- paste(trains_linenames$station,trains_linenames$station_id,sep="")
 
-#Adding the station_id next to the train so that it is easier to graph through network x
-#skip if any other graphing tool is being used
-trains_linenames$FromStation <- paste(trains_linenames$FromStation,trains_linenames$FromStationID,sep="")
-trains_linenames$ToStation <- paste(trains_linenames$ToStation,trains_linenames$ToStationID, sep = "")
-
-#Export file as TrainTravel.csv 
-write.csv(trains_linenames,"/home/ewahmed/subway-flow/TrainTravel.csv")
+write.csv(trains_linenames,"~/subway-flow/SingularTrainFlow.csv",quote=FALSE)
