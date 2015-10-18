@@ -19,7 +19,7 @@ source("trainnames.R")
 ######################################################################################################################
 # modify subwaydata dataframe
 ######################################################################################################################
-allts <- read.csv("allts.csv")  # read csv file 
+allts <- read.csv("allts.csv", stringsAsFactors = FALSE)  # read csv file 
 subwaydata <- as.data.frame(allts) %>%select(-AEILMN) # drop aeilmn column
 
 # creating dataframe with num_entries, num_exits, and time difference
@@ -38,6 +38,7 @@ subwaydata <- arrange(subwaydata, date.time) %>%
 
 subwaydata <- filter(subwaydata, time.delta <= 12) 
 
+subwaydata$time
 # create time periods
 subwaydata <-subwaydata %>%
   mutate(entry_exits_period = as.character(ifelse(time > "0:00:00" & time <= "04:00:00", as.character("0:4"),
@@ -63,7 +64,7 @@ subwaydata <- subwaydata %>%
 entries_exits_rates_weekends <- group_by(subwaydata, station_id, entry_exits_period, date) %>%
   summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4, station = station[1], line_name=line_name[1], lat=lat[1], long=long[1]) 
 
-write.csv(entries_exits_rates_weekends, file = "PrePres/subway_entries_exits_weekends.csv")
+write.csv(entries_exits_rates_weekends, file = "subway_entries_exits_weekends.csv")
 
 subwaydata <- subwaydata %>% # rid data of weekends
   filter(day_of_week != "Sun" & day_of_week != "Sat")
@@ -75,20 +76,20 @@ subwaydata <- subwaydata %>% # rid data of weekends
 entries_exits_rates <- group_by(subwaydata, station_id, entry_exits_period, date) %>%
   summarise(hourly_entries = sum(entries.delta)/4,hourly_exits = sum(exits.delta)/4, station = station[1], line_name=line_name[1], lat=lat[1], long=long[1]) 
 
-write.csv(entries_exits_rates, file = "PrePres/subway_entries_exits.csv")
+write.csv(entries_exits_rates, file = "subway_entries_exits.csv")
 
 # average over all days, do not care about date
 entries_exits_period <- group_by(entries_exits_rates, station_id, entry_exits_period) %>%
   summarise(hourly_entries = mean(hourly_entries),hourly_exits = mean(hourly_exits), station = station[1], line_name=line_name[1], lat=lat[1], long=long[1]) 
 
-write.csv(entries_exits_period, file = "PrePres/entries_exits_average.csv")
+write.csv(entries_exits_period, file = "entries_exits_average.csv")
 
 # average whole day entries/exits, not six 4-hr periods
 entries_exits_daily <- entries_exits_period %>%
   group_by(station,station_id) %>%
   summarise(daily_entries = sum(hourly_entries)/6, daily_exits = sum(hourly_exits)/6)
 
-write.csv(entries_exits_daily, file = "PrePres/entries_exits_wholeday.csv")
+write.csv(entries_exits_daily, file = "entries_exits_wholeday.csv")
 
 # average 0:12 entries/exits, 
 entries_exits_012 <- entries_exits_period %>%
@@ -96,7 +97,7 @@ entries_exits_012 <- entries_exits_period %>%
   group_by(station,station_id) %>%
   summarise(daily_entries = sum(hourly_entries)/3, daily_exits = sum(hourly_exits)/3)
 
-write.csv(entries_exits_012, file = "PrePres/entries_exits_012.csv")
+write.csv(entries_exits_012, file = "entries_exits_012.csv")
 
 # average 12:24 entries/exits, 
 entries_exits_1224 <- entries_exits_period %>%
@@ -104,7 +105,7 @@ entries_exits_1224 <- entries_exits_period %>%
   filter(entry_exits_period  == "12:16" | entry_exits_period == "16:20" | entry_exits_period == "20:0") %>%
   summarise(daily_entries = sum(hourly_entries)/3, daily_exits = sum(hourly_exits)/3)
 
-write.csv(entries_exits_1224, file = "PrePres/entries_exits_1224.csv")
+write.csv(entries_exits_1224, file = "entries_exits_1224.csv")
 
 temp <- group_by(entries_exits_rates,station, station_id, line_name) %>% summarise(lat = lat[1],long=long[1]) 
 temp <- mutate(temp, station_color = ifelse(line_name[1] == "1", "red", "blue"))
