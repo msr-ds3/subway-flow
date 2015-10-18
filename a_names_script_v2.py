@@ -89,14 +89,14 @@ f1 = open("ts2.txt")
 f2 = open("stops2.txt") 
 
 turns = f1.readlines()
-google = f2.readlines()
+gtfs = f2.readlines()
 
 #Making lists to read all the station names into.
 
 turn_terms = [] #Turnstile
-google_terms = [] #Google
+gtfs_terms = [] #gtfs
 orig_turn = []    
-orig_google = []
+orig_gtfs = []
 r_best = {}
 
 pattern = re.compile(r'av[enu]+')
@@ -116,27 +116,27 @@ for t in turns: #Do some formatting, put in a list, put original in an identical
 
 f1.close()
 
-for g in google: #Same thing for GTFS
+for g in gtfs: #Same thing for GTFS
     a = g.replace('"', '').replace("/", ' ').replace("-", " ").strip()
     if a not in SIRS:
         temp1 = one_ave(a.lower(), pattern, "av")
-        google_terms.append(temp1)
-        orig_google.append(g)
+        gtfs_terms.append(temp1)
+        orig_gtfs.append(g)
 
 f2.close()
 
 bestmatches = {} #Where we'll store matches.
 
-#Compare each station in the turnstile data to each station in the google feed. 
+#Compare each station in the turnstile data to each station in the gtfs feed. 
 for t in xrange(0, len(turn_terms)):
-    for g in xrange(0, len(google_terms)):
+    for g in xrange(0, len(gtfs_terms)):
        
 	#Compute distance:
-        tinylist = [int(distanceoffset(turn_terms[t], google_terms[g])) + int(pylev.levenshtein(google_terms[g], turn_terms[t])) + int(isinside(turn_terms[t], google_terms[g])) + int(samewords(turn_terms[t], google_terms[g])) + int(penalize(google_terms[g], turn_terms[t])), orig_google[g], google_terms[g], orig_turn[t]]
+        tinylist = [int(distanceoffset(turn_terms[t], gtfs_terms[g])) + int(pylev.levenshtein(gtfs_terms[g], turn_terms[t])) + int(isinside(turn_terms[t], gtfs_terms[g])) + int(samewords(turn_terms[t], gtfs_terms[g])) + int(penalize(gtfs_terms[g], turn_terms[t])), orig_gtfs[g], gtfs_terms[g], orig_turn[t]]
         
 	#Make the highest default so anything better will take its place.   
         bestmatches.setdefault(turn_terms[t], [len(turn_terms[t])])
-        r_best.setdefault(g, [len(google_terms[g])])
+        r_best.setdefault(g, [len(gtfs_terms[g])])
 
 	#Check against previous, update if it's a better match for both words than the things they matched before.
         if tinylist[0] < bestmatches[turn_terms[t]][0] and tinylist[0] < r_best[g]:
