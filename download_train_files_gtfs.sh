@@ -23,7 +23,7 @@ cd $DATA_DIR
 mkdir GTFSData
 
 # unzip and get all files need to run the GTFS R Scripts
-unzip google_transit.zip -d GTFSData
+unzip google_transit.zip -d gtfs_data
 
 
 
