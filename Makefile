@@ -8,7 +8,7 @@ entries_exits_average.csv: Load_Subway_Trips.R trainnames.R readyformerge.txt Go
 	Rscript Load_Subway_Trips.R
 
 readyformerge.txt: join.sh ./turnstile_data/turnstile_*.txt ./gtfs_data/stops.txt
-	bash ./MergingData/join.sh
+	./join.sh
 
 join.sh: pp_namesformerge.awk takethetop.awk smalledits.awk a_names_script_v2.py
 	chmod 777 join.sh
