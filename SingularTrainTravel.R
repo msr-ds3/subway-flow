@@ -5,6 +5,7 @@ stop_times <- read.table("stop_times.txt",header=TRUE,
                          sep=",",fill=TRUE,quote = "",row.names = NULL,
                          stringsAsFactors = FALSE) 
 
+setwd("~/subway-flow")
 #Reading in the information from stops.txt
 stops <- read.table("modifiedstops.txt",header=TRUE, 
                     sep=",",fill=TRUE,quote = "",row.names = NULL,
@@ -20,7 +21,8 @@ stop_times$departure_time <- as.POSIXct(stop_times$departure_time, format='%H:%M
 #Joining the stop names with the stop_times data frame so we know the names of the various stops
 stop_times_names <- inner_join(stop_times,stops)
 
-#Read in the information so that I have trips only 
+#Read in the information so that I have trips only
+setwd("~/subway-flow/gtfs_data")
 trips <- read.table("trips.txt",header=TRUE, 
                     sep=",",fill=TRUE,quote = "",row.names = NULL,
                     stringsAsFactors = FALSE) 

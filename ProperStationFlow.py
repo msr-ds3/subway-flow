@@ -5,7 +5,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("/home/ewahmed/subway-flow/TrainTravel.csv")
+openingfile = open("TrainTravel.csv")
 traindata = openingfile.readlines()
 openingfile.close()
 

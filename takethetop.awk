@@ -8,15 +8,15 @@ function shut(list){
 BEGIN{
 
 table = "matchtable.txt"
-notcorrect = "easymatches.txt"
-correct = "readyformerge.txt"
+incorrect = "unmatchedwords.txt"
+correct = "easymatches.txt"
 
 FS = ","
 while((getline < table) > 0){
     if ($2 <= 1)
 	print $0 > correct
     else
-	print $0 > notcorrect
+	print $0 > incorrect
 }
 shut(table)
 }
