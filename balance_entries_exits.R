@@ -1,10 +1,10 @@
 # Riva Tropp
 # 7/27/2015
-# Simple script to grab one chunk of data (all stations for one day at one four hour interval)
+# Simple script to scale up exits to match entries for use in min-cost-flow algorithm.
 
 library(dplyr)
 library(dplyr)
-setwd("~/subway-flow/")
+setwd("~/subway-flow")
 
 #Reading in train travel info 
 traintravel <- read.table("SingularTrainFlow.csv",header=TRUE, 
@@ -51,7 +51,7 @@ balancethings <- function(all_sub){
   return(new_sub2)
 }
 
-#joinng 
+#joining 
 new_sub2 <- balancethings(all_sub)
 the_wanted <- subset(new_sub2,select=c('entry_exits_period','station.x','rounded_scaled_exits','new_rounded_hourly_entries','station_id'))
 
@@ -65,7 +65,7 @@ night <- filter(the_wanted, entry_exits_period == "20:0")
 
 write.csv(latenight, "f_latenight.csv",quote=FALSE)
 write.csv(morning, "f_morning.csv",quote=FALSE)
-write.csv(noon, "f_noon2.csv",quote=FALSE)
+write.csv(noon, "f_noon.csv",quote=FALSE)
 write.csv(evening, "f_evening.csv",quote=FALSE)
 write.csv(night, "f_night.csv",quote=FALSE)
 write.csv(latemorning, "f_latemorning.csv",quote=FALSE)
