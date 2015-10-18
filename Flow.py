@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import csv
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("/home/ewahmed/subway-flow/SingularTrainFlow.csv")
+openingfile = open("SingularTrainFlow.csv")
 traindata = openingfile.readlines()
 openingfile.close()
 
@@ -39,7 +39,7 @@ for i in length:
 #nx.draw_spring(G, with_labels=True, node_color='w', node_size=300, font_size=6)
 #plt.show()
 
-openingfile = open("/home/ewahmed/subway-flow/PrePres/f_noon.csv")
+openingfile = open("f_noon.csv")
 noondata = openingfile.readlines()
 openingfile.close()
 
