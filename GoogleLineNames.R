@@ -1,10 +1,11 @@
 library(dplyr)
 #Reading in the information from stop_times.txt
-setwd("/home/ewahmed/Desktop/SubwayData/")
+setwd("~/subway-flow/gtfs_data/")
 stop_times <- read.table("stop_times.txt",header=TRUE, 
                          sep=",",fill=TRUE,quote = "",row.names = NULL,
                          stringsAsFactors = FALSE) 
 
+setwd("~/subway-flow")
 #Reading in the information from stops.txt
 stops <- read.table("modifiedstops.txt",header=TRUE, 
                     sep=",",fill=TRUE,quote = "",row.names = NULL,
@@ -20,6 +21,7 @@ stop_times$departure_time <- as.POSIXct(stop_times$departure_time, format='%H:%M
 #Joining the stop names with the stop_times data frame so we know the names of the various stops
 stop_times_names <- inner_join(stop_times,stops)
 
+setwd("~/subway-flow/gtfs_data/")
 #Read in the information so that I have trips only 
 trips <- read.table("trips.txt",header=TRUE, 
                     sep=",",fill=TRUE,quote = "",row.names = NULL,
@@ -127,7 +129,7 @@ trains_info<- data.frame(trains_info[,c(1,6,3,2,5,4)])
 names(trains_info) <- c('train','train_stop','stop_id','station_name','time_travel','stop')
 
 #Reading in the line names data
-setwd("/home/ewahmed/subway-flow/")
+setwd("~/subway-flow")
 linenames <- read.table("new_google_data.txt",header=TRUE, 
                         sep=",",fill=TRUE,quote = "",row.names = NULL,
                         stringsAsFactors = FALSE) 
@@ -173,7 +175,7 @@ seperate_linenames$station <- sapply(seperate_linenames$station,function(x) gsub
 #Cortlandt st for the 1 train is closed for now 
 
 #Reading in the information from stop_times.txt
-setwd("/home/ewahmed/Desktop/SubwayData/")
+setwd("~/subway-flow/gtfs_data/")
 stops <- read.table("stops.txt",header=TRUE, 
                     sep=",",fill=TRUE,quote = "",row.names = NULL,
                     stringsAsFactors = FALSE) 
@@ -200,4 +202,4 @@ google_linenames <- google_linenames[!duplicated(google_linenames),]
 firstids <- google_linenames %>% group_by(station_id) %>% summarise(stop_lat=first(stop_lat),stop_lon=first(stop_lon))
 google_linenames <- inner_join(google_linenames,firstids)
 
-write.csv(google_linenames,"/home/ewahmed/subway-flow/GoogleLineNames.csv")
+write.csv(google_linenames,"GoogleLineNames.csv")
