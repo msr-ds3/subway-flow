@@ -3,7 +3,7 @@
 # 7/27/2015
 # Put linenames in TS data in a specific order.
 # Requires mkdir new_ts.
-import commands
+
 import re
 import sys
 import os
@@ -23,8 +23,9 @@ for week in arr0: 	#Open each file.
     numbers = re.compile('([0-9])') #Each numbered line
     letters = re.compile('([A-WYZ])') #All letters except X (express).
 
-    mkd = commands.getoutput('mkdir new_ts')
-    file2 = open("/new_ts/" + week, "w") #Open a similarly named file in a different folder to write to.
+    if not os.path.exists('new_ts'):
+        os.mkdir('new_ts')
+    file2 = open("new_ts/" + week, 'w+') #Open a similarly named file in a different folder to write to.
     for x in turnstile:			  
         fields = x.split(',')
         if len(fields) is 11: #There's one incomplete line in all this data. One!
