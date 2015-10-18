@@ -1,14 +1,16 @@
 library(dplyr)
 #Reading in the information from stop_times.txt
-setwd("gtfs_data")
+setwd("~/subway-flow/gtfs_data")
 stop_times <- read.table("stop_times.txt",header=TRUE, 
                          sep=",",fill=TRUE,quote = "",row.names = NULL,
                          stringsAsFactors = FALSE) 
 
+setwd("..")
 #Reading in the information from stops.txt
-stops <- read.table("modifiedstops.txt",header=TRUE, 
+stops <- read.table("stops2.txt",header=TRUE, 
                     sep=",",fill=TRUE,quote = "",row.names = NULL,
                     stringsAsFactors = FALSE) 
+#Previously said modified stops. ??
 
 #Getting rid of the following columns: stop_headsign, pickup_type, drop_off_type, shape_dist_traveled
 stop_times <- data.frame(stop_times[,c("trip_id","arrival_time","departure_time","stop_id","stop_sequence")])

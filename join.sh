@@ -8,7 +8,7 @@ awk -f pp_turnstile.awk |  sort | uniq > ts2.txt
 
 #5: GTFS Data:
 #stops.txt
-awk -f pp_namesformerge.awk | cut -d, -f2 | sort | uniq > stops2.txt
+awk -f pp_namesformerge.awk | cut -d, -f2 | sort | uniq > modifiedstops.txt
 #8: (rm stops1.txt, rm stops2.txt)
 
 python a_names_script_v2.py #(It goes to matchtable.txt)
