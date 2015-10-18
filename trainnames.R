@@ -1,7 +1,7 @@
 library(dplyr)
 setwd("~/subway-flow")
 #My Merge Table is read in.
-n_names = read.table("./MergingData/readyformerge.txt",header=FALSE, sep=",", # current turnstyle dataframe
+n_names = read.table("readyformerge.txt",header=FALSE, sep=",", # current turnstyle dataframe
                      quote = "", row.names = NULL, strip.white = TRUE, 
                      stringsAsFactors = FALSE) 
 
@@ -46,11 +46,11 @@ names_lines <- names_lines[,c(3,5,6,7,8,9)]
 #Now we just have the station, E's ID, and the linenames.
 
 #Loading in all TS Files.
-data_dir <- "./MergingData/new_ts/"
+data_dir <- "new_ts/"
 txts <- Sys.glob(sprintf('%s/turnstile_1*.txt', data_dir))
 ts_data <- data.frame()
 
-txts <- txts[1]
+#txts <- txts[1]
 for (txt in txts) {
   tmp <- read.table(txt, header=TRUE, sep=",",fill=TRUE,quote = "",row.names = NULL, stringsAsFactors = FALSE)
   ts_data <- rbind(ts_data, tmp)
