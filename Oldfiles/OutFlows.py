@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import csv
 
 #change this directory to wherever you located the TrainTravel.csv file 
-openingfile = open("/home/ewahmed/subway-flow/SingularTrainFlow.csv")
+openingfile = open("SingularTrainFlow.csv")
 traindata = openingfile.readlines()
 openingfile.close()
 
@@ -42,7 +42,7 @@ for i in length:
 files = ['f_latenight.csv','f_morning.csv','f_noon2.csv','f_evening.csv','f_night.csv','f_latemorning.csv','f_am.csv','f_pm.csv','f_allday.csv']
 for name in files:
 
-	openingfile = open("/home/ewahmed/subway-flow/PrePres/"+name)
+	openingfile = open(name)
 	noondata = openingfile.readlines()
 	openingfile.close()
 
@@ -97,7 +97,7 @@ for name in files:
 
 	rows = zip(inflowstation,outflow)
 
-	out= open("/home/ewahmed/subway-flow/PrePres/OutFlows/" + name+"outflows.csv", "wb")
+	out= open("OutFlows/" + name+"outflows.csv", "wb")
 	out.write('\n')
 	for i in length: 
 		out.write(inflowstation[i] +',' + str(outflow[i]) + '\n')
