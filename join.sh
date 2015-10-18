@@ -8,7 +8,7 @@ awk -f pp_turnstile.awk |  sort | uniq > ts2.txt
 
 #5: GTFS Data:
 #stops.txt
-#awk -f pp_namesformerge.awk | cut -d, -f2 | sort | uniq > modifiedstops.txt
+awk -f pp_namesformerge.awk | cut -d, -f2 | sort | uniq > stops2.txt
 awk -f pp_namesformerge.awk | sort -r | uniq > modifiedstops.txt #Do we need stops2
 #8: (rm stops1.txt, rm stops2.txt)
 
