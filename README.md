@@ -16,4 +16,3 @@ This is the shared repository for Microsoft Research NYC's 2015 Data Science Sum
 * [Step 6](turnstile_data/Load_Subway_Trips.R): Run Load_Subway_Trips.R
 
 * [Step 7](PrePres/balance_entries_exits.R): Run balance_entries_exits.R
->>>>>>> upstream/master
