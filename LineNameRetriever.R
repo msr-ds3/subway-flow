@@ -178,4 +178,4 @@ stops <- read.table("modifiedstops.txt",header=TRUE,
 transfers_lines <- inner_join(transfers_lines,stops)
 names(transfers_lines)<- c('stop_id','line_name','google_station')
 #Export as R file - change the dir/file name per needs
-write.csv(google_linenames,"OldGoogleLineNames.csv")
+write.csv(transfers_lines,"OldGoogleLineNames.csv")
