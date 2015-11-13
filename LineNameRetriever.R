@@ -105,6 +105,12 @@ unique_train_lines <- unique_train_stops
 unique_train_lines$LineName = NULL
 unique_train_lines<- inner_join(unique_train_lines,unique_stopids)
 
+#Making seperate csv for train, stopids, and the lines on those stopids
+train_stopid_lines <- data.frame(unique_train_lines[,c(1,3,5,7)])
+#getting rid of duplicates from this data frame
+train_stopid_lines <- train_stopid_lines %>% group_by(Train) %>% arrange(StopID)
+train_stopid_lines <- train_stopid_lines[!duplicated(train_stopid_lines),] 
+
 #Loading unique transfer data (differentstopids)
 setwd("~/subway-flow/")
 transfers <- read.table("differentstopids.txt",header=TRUE, 
@@ -162,7 +168,14 @@ transfers_lines <- inner_join(transfers_lines,maxcdf)
 transfers_lines<- filter(transfers_lines, cdf == maxcdf)
 transfers_lines <- data.frame(transfers_lines[,c(1,2)])
 names(transfers_lines)<- c('stop_id','line_name')
+
+#Reading in train stations with their stop_ids file
+setwd("~/subway-flow/")
+stops <- read.table("modifiedstops.txt",header=TRUE, 
+                    sep=",",fill=TRUE,quote = "",row.names = NULL,
+                    stringsAsFactors = FALSE) 
+
 transfers_lines <- inner_join(transfers_lines,stops)
 names(transfers_lines)<- c('stop_id','line_name','google_station')
 #Export as R file - change the dir/file name per needs
-write.csv(transfers_lines, "~/subway-flow/OldGoogleLineNames.csv") 
+write.csv(google_linenames,"OldGoogleLineNames.csv")
