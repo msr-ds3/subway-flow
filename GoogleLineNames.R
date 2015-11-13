@@ -203,3 +203,4 @@ firstids <- google_linenames %>% group_by(station_id) %>% summarise(stop_lat=fir
 google_linenames <- inner_join(google_linenames,firstids)
 
 write.csv(google_linenames,"GoogleLineNames.csv")
+
