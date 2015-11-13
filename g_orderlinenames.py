@@ -7,10 +7,11 @@ import re
 import sys
 import os
 
-f1 = open("../GoogleLineNames.csv") #Open file with station names
+#Changed to Old
+f1 = open("OldGoogleLineNames.csv") #Open file with station names
 turnstilefiles = f1.readlines()
 
-file2 = open("../new_google_data.txt", "w") #Write here.
+file2 = open("new_google_data.txt", "w") #Write here.
 numbers = re.compile('([0-9])')
 letters = re.compile('([A-WYZ])') #All letters but X (express).
     
