@@ -5,7 +5,7 @@ function shut(list){
 }
 BEGIN{
 
-file = "../../data/transfers.txt"
+file = "gtfs_data/transfers.txt"
 
 FS = ","
 
