@@ -1,5 +1,5 @@
 library(dplyr)
-setwd("/home/ewahmed/Desktop/SubwayData")
+setwd("~/subway-flow/gtfs_data/")
 #Reading in the train sequences file
 stop_times <- read.table("stop_times.txt",header=TRUE, 
                          sep=",",fill=TRUE,quote = "",row.names = NULL,
@@ -9,6 +9,7 @@ stop_times <- read.table("stop_times.txt",header=TRUE,
 stop_times <- data.frame(stop_times[,c(1,2,3,4,5)])
 
 #Reading in train stations with their stop_ids file
+setwd("~/subway-flow/")
 stops <- read.table("modifiedstops.txt",header=TRUE, 
                     sep=",",fill=TRUE,quote = "",row.names = NULL,
                     stringsAsFactors = FALSE) 
@@ -16,6 +17,7 @@ stops <- read.table("modifiedstops.txt",header=TRUE,
 #Joining the two data frames so that we know which trains go to which stops (only had ids before)
 stop_times_names <- inner_join(stop_times,stops)
 
+setwd("~/subway-flow/gtfs_data/")
 #Read in the information of the trips 
 trips <- read.table("trips.txt",header=TRUE, 
                     sep=",",fill=TRUE,quote = "",row.names = NULL,
