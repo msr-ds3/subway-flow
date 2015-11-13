@@ -202,5 +202,6 @@ google_linenames <- google_linenames[!duplicated(google_linenames),]
 firstids <- google_linenames %>% group_by(station_id) %>% summarise(stop_lat=first(stop_lat),stop_lon=first(stop_lon))
 google_linenames <- inner_join(google_linenames,firstids)
 
+setwd("~/subway-flow/")
 write.csv(google_linenames,"GoogleLineNames.csv")
 
