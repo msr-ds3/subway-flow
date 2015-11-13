@@ -5,6 +5,7 @@ cp turnstile_data/turnstile_150711.txt ./turnstile_150711.txt
 cat turnstile_data/turnstile_141018.txt >> turnstile_150711.txt
 
 awk -f pp_turnstile.awk |  sort | uniq > ts2.txt
+awk -f diffids.awk > differentstopids.txt
 
 #5: GTFS Data:
 #stops.txt
