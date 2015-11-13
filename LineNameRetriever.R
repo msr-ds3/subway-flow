@@ -106,7 +106,7 @@ unique_train_lines$LineName = NULL
 unique_train_lines<- inner_join(unique_train_lines,unique_stopids)
 
 #Loading unique transfer data (differentstopids)
-setwd("/home/ewahmed/subway-flow/CleanTransfers/")
+setwd("~/subway-flow/")
 transfers <- read.table("differentstopids.txt",header=TRUE, 
                          sep=",",fill=TRUE,quote = "",row.names = NULL,
                          stringsAsFactors = FALSE) 
@@ -165,4 +165,4 @@ names(transfers_lines)<- c('stop_id','line_name')
 transfers_lines <- inner_join(transfers_lines,stops)
 names(transfers_lines)<- c('stop_id','line_name','google_station')
 #Export as R file - change the dir/file name per needs
-write.csv(transfers_lines, "/home/ewahmed/subway-flow/OldGoogleLineNames.csv") 
+write.csv(transfers_lines, "~/subway-flow/OldGoogleLineNames.csv") 
