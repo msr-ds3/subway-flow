@@ -31,12 +31,18 @@ n_names <- rbind(n_names, c("Union Sq - 14 St", 0, "Union Sq - 14 St", "14 ST-UN
 n_names <- rbind(n_names, c("Broadway", 0, "Broadway", "Broadway", "BROADWAY-31 ST"))
 
 
-l_lines = read.table("./GoogleLineNames.csv",header=TRUE, sep=",", #Stop_ids
+all_lines = read.table("./GoogleLineNames.csv",header=TRUE, sep=",", #Stop_ids
                      fill=TRUE,quote = "\"", row.names = NULL, strip.white = TRUE,
                      stringsAsFactors = FALSE) 
 #More Formatting!
 
-all_lines = subset(l_lines[,c(2,3,4,5,6)])
+all_lines = subset(all_lines[-c(1)])
+
+#Thank you, stackoverflow.
+trim <- function (x) gsub("^\\s+|\\s+$", "", x)
+all_lines$stop_name <- trim(all_lines$stop_name)
+n_names$stop_name <- trim(n_names$stop_name)
+
 names(all_lines) <- c("station_id", "line_name", "stop_name", "lat", "long")
 
 
